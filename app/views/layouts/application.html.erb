@@ -1,3 +1,7 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<% end %>
+
 <% content_for :page_title do %>
   Work you could do
 <% end %>
@@ -17,6 +21,12 @@
     </div>
   </div>
 </div>
+<% end %>
+
+<% content_for :content do %>
+  <main id="content">
+    <%= yield(:application_content) %>
+  </main>
 <% end %>
 
 <%= render template: "layouts/govuk_template" %>
