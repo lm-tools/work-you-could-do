@@ -8,3 +8,18 @@
   <li>skills and qualifications required</li>
   <li>tasks and hours</li>
 </ul>
+ 
+<%= form_tag("/search", method: "get") do %>
+  <div class="form-group ">
+    <label for="id_sector_form-sector_0">
+      <span class="form-label">Work, skills and interests</span>
+    </label>
+    <%= text_field_tag(:keyword_1, nil, class: 'form-control') %>
+    <%= text_field_tag(:keyword_2, nil, class: 'form-control') %>
+    <%= text_field_tag(:keyword_3, nil, class: 'form-control') %>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="button button-start">Next</button>
+  </div>
+<% end %>
