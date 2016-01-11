@@ -5,3 +5,25 @@
 @import "grid_layout";
 @import "design-patterns/buttons";
 @import "elements";
+
+.multi-entry-text-input {
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+.job-description-title {
+  padding-bottom: 1em;
+}
+
+.right {
+  float: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#content {
+  padding-top: 20px;
+}

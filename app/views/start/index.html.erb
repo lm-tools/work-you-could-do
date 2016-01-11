@@ -9,14 +9,22 @@
   <li>tasks and hours</li>
 </ul>
  
-<%= form_tag("/search", method: "get") do %>
+<%= form_tag("/select_soc_codes", method: "get") do %>
   <div class="form-group ">
     <label for="id_sector_form-sector_0">
       <span class="form-label">Work, skills and interests</span>
     </label>
-    <%= text_field_tag(:keyword_1, nil, class: 'form-control') %>
-    <%= text_field_tag(:keyword_2, nil, class: 'form-control') %>
-    <%= text_field_tag(:keyword_3, nil, class: 'form-control') %>
+    <ul class="multi-entry-text-input">
+    <li>
+      <%= text_field_tag(:keyword_1, nil, class: 'form-control') %>
+    </li>
+    <li>
+      <%= text_field_tag(:keyword_2, nil, class: 'form-control') %>
+    </li>
+    <li>
+      <%= text_field_tag(:keyword_3, nil, class: 'form-control') %>
+    </li>
+    </ul>
   </div>
 
   <div class="form-group">
