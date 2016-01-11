@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'start#index'
 
   get 'select_soc_codes' => 'start#select_soc_codes'
+  get 'report' => 'start#report'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
