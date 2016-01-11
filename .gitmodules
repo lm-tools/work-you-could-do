@@ -1,0 +1,3 @@
+[submodule "app/assets/elements"]
+	path = app/assets/elements
+	url = https://github.com/alphagov/govuk_elements.git
