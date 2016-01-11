@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>WorkYouCouldDo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<% content_for :page_title do %>
+  Work you could do
+<% end %>
 
-<%= yield %>
+<% content_for :cookie_message do %>
+  <p>We uses cookies to make the site simpler.
+  <a href="/cookies">Find out more about cookies</a></p>
+<% end %>
 
-</body>
-</html>
+<% content_for :header_class do %>with-proposition<% end %>
+
+<% content_for :proposition_header do %>
+<div class="header-proposition">
+  <div class="content">
+    <div id="proposition-menu">
+      <h1 id="proposition-name">Work you could do</h1>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<%= render template: "layouts/govuk_template" %>
