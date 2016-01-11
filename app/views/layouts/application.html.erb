@@ -25,7 +25,7 @@
 
 <% content_for :content do %>
   <main id="content">
-    <%= yield(:application_content) %>
+    <%= content_for?(:application_content) ? yield(:application_content) : yield %>
   </main>
 <% end %>
 
