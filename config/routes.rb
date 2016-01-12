@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'start#index'
 
   get 'cookies' => 'start#cookies'
-  get 'select_soc_codes' => 'start#select_soc_codes'
+  post 'keywords' => 'start#keywords'
+  get ':guid/select_soc_codes' => 'report#select_soc_codes'
   get 'report' => 'start#report'
 
   # Example of regular route:
