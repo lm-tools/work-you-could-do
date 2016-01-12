@@ -8,13 +8,9 @@ class Keyword < ActiveRecord::Base
       lmi_occupation["soc"]
     end
     occupations = soc_codes.map do |soc_code|
-      soc_url = "http://api.lmiforall.org.uk/api/v1/soc/code/#{soc_code}"
-      lmi_occupation = HTTParty.get(soc_url)
-      # TODO: qualifications, tasks, add_titles
+      soc_occupation = SocOccupation.find_or_import_from_lmi(soc_code)
       Occupation.new(
-        soc_code: soc_code,
-        title: lmi_occupation["title"],
-        description: lmi_occupation["description"]
+        soc_occupation: soc_occupation,
       )
     end
     self.occupations = occupations

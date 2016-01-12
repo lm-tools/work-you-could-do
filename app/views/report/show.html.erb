@@ -41,13 +41,13 @@
         <div class="column-half">
           <h3 class="heading-small">Typical pay and hours</h3>
           <ul>
-            <li>Normal hours worked per week: 40</li>
-            <li>Estimated weekly pay: £360</li>
+            <li>Normal hours worked per week: <%= occupation.week_hours %></li>
+            <li>Estimated weekly pay: £<%= occupation.week_pay %></li>
           </ul>
         </div>
         <div class="column-half">
           <h3 class="heading-small">Typical qualifications required</h3>
-          <p>There are no formal academic entry requirements, although entrants typically possess GCSEs/S grades or an equivalent qualification. NVQs/SVQs and other vocational qualifications in hospitality and catering at levels 2 and 3 are available.</p>
+          <p><%= occupation.qualifications %></p>
         </div>
       </div>
 
@@ -55,21 +55,15 @@
         <div class="column-half">
          <h3 class="heading-small">Typical tasks</h3>
           <ul class="list-bullet">
-
-              <li>Controls the purchase and storing of food, cleaning materials, linen and other household supplies;</li>
-
-              <li>Maintains household records;</li>
-
-              <li>Performs a variety of domestic tasks including food preparation and service, cleaning and laundry;</li>
-
-              <li>Assists employer in washing, dressing, packing and other personal activities.</li>
-
+            <% occupation.tasks.split(";").each do |task| %>
+              <li><%=task.humanize%></li>
+            <% end %>
           </ul>
         </div>
 
         <div class="column-half">
           <h3 class="heading-small">Useful search terms</h3>
-            <em>Companion-housekeeper, House Keeper, Companion-help, Cook-housekeeper, House Keeper-companion, House, Daily Keeper, Lifestyle Manager, Civilian Orderly, Companion, Valet, Lady's Maid, Flats Steward</em>
+          <em><%= occupation.additional_titles %></em>
         </div>
       </div>
     </div>
