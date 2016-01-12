@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'start#index'
 
+  get 'cookies' => 'start#cookies'
   get 'select_soc_codes' => 'start#select_soc_codes'
   get 'report' => 'start#report'
 
