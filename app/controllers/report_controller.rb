@@ -28,4 +28,17 @@ class ReportController < ApplicationController
     report = Report.find(params[:guid])
     @selected_occupations = report.occupations.where(selected: true)
   end
+
+  def email
+    report = Report.find(params[:guid])
+    @selected_occupations = report.occupations.where(selected: true)
+    if params[:email].empty?
+      @error = "Please provide an email address."
+      render :show
+    else
+      # TODO: send an actual email
+      @notice = "Sent to #{params[:email]}"
+      render :show
+    end
+  end
 end

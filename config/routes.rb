@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   get 'cookies' => 'start#cookies'
   post 'keywords' => 'start#keywords'
-  post ':guid/save_soc_codes' => 'report#save_soc_codes'
   get ':guid/select_soc_codes' => 'report#select_soc_codes'
+  post ':guid/save_soc_codes' => 'report#save_soc_codes'
   get ':guid/report' => 'report#show'
+  post ':guid/email' => 'report#email'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
