@@ -4,21 +4,21 @@
   </div>
   <div class="column-one-third">
     <p>
-      <a href="/" class="right">Change search</a>
+      <a href="<%=root_url%>" class="right">Change search</a>
     </p>
   </div>
 </div>
 
 <p class="lede">These are some job roles related to your search.</p>
 
-<%= form_tag("/report", method: "get") do %>
+<form action="/report" method="get">
   <% @keywords.each do |keyword| %>
     <section>
       <fieldset class="form-group">
         <h3 class="bold-medium job-description-title">Jobs related to ‘<%=keyword[:title]%>‘</h3>
         <% keyword[:results].each do |result| %>
           <label class="block-label">
-            <%= check_box_tag 'TODO' %>
+            <input type="checkbox"/>
             <h4 class="bold-small"><%= result[:title] %></h4>
             <p><%= result[:description] %></p>
           </label>
@@ -30,8 +30,8 @@
   <div class="form-group">
     <button type=submit class=button>Next</button>
   </div>
-<% end %>
+</form>
 
 <footer>
-  <a href="/" class="link-back">start again</a>
+  <a href="<%=root_url%>" class="link-back">start again</a>
 </footer>
