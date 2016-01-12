@@ -20,17 +20,16 @@ class StartController < ApplicationController
   end
 
   # To be refactored once population is done via LMI For All
-
   private
 
   def create_occupations_for_keyword(keyword)
     occupation_1 = Occupation.create(
-      soc_code: 1,
+      soc_code: Random.new.rand(1000),
       title: "Occupation",
       description: "Description of the occupation in a longer version lorem ipsum"
     )
     occupation_2 = Occupation.create(
-      soc_code: 1,
+      soc_code: Random.new.rand(1000),
       title: "Other occupation",
       description: "Description of the other occupation in a longer version lorem ipsum"
     )

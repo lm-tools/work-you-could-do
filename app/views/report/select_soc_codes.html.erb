@@ -11,16 +11,25 @@
 
 <p class="lede">These are some job roles related to your search.</p>
 
-<form action="/report" method="get">
+<%= form_tag(controller: "report", action: "save_soc_codes")%>
+  <% if @error %>
+    <div class="form-group error">
+      <span class="error-message">
+        <ul class="errorlist nonfield">
+          <li><%=@error%></li>
+        </ul>
+      </span>
+    </div>
+  <% end %>
   <% @keywords.each do |keyword| %>
     <section>
       <fieldset class="form-group">
-        <h3 class="bold-medium job-description-title">Jobs related to ‘<%=keyword[:title]%>‘</h3>
-        <% keyword[:results].each do |result| %>
+        <h3 class="bold-medium job-description-title">Jobs related to ‘<%=keyword.keyword%>‘</h3>
+        <% keyword.occupations.each do |occupation| %>
           <label class="block-label">
-            <input type="checkbox"/>
-            <h4 class="bold-small"><%= result[:title] %></h4>
-            <p><%= result[:description] %></p>
+            <%= check_box_tag "occupation_#{occupation.id}" %>
+            <h4 class="bold-small"><%= occupation.title %></h4>
+            <p><%= occupation.description %></p>
           </label>
         <% end %>
       </fieldset>
