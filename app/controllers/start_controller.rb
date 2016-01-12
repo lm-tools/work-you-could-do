@@ -7,7 +7,7 @@ class StartController < ApplicationController
       render action: "index"
     else
       report = Report.generate_report_for_keywords(keywords.values)
-      redirect_to controller: :report, action: :select_soc_codes, guid: report.id
+      redirect_to controller: :report, action: :select_soc_codes, guid: report.guid
     end
   end
 

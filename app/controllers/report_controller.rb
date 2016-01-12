@@ -1,11 +1,11 @@
 class ReportController < ApplicationController
   def select_soc_codes
-    report = Report.find(params[:guid])
+    report = Report.where(guid: params[:guid]).first
     @keywords = report.keywords
   end
 
   def save_soc_codes
-    report = Report.find(params[:guid])
+    report = Report.where(guid: params[:guid]).first
     occupations = params.select {|k,v| /occupation_[\d]+/.match(k) }
     if occupations.empty?
       @error = "Please select at least 1 job."
@@ -20,17 +20,17 @@ class ReportController < ApplicationController
         occupation.selected = true
         occupation.save
       end
-      redirect_to controller: :report, action: :show, guid: report.id
+      redirect_to controller: :report, action: :show, guid: report.guid
     end
   end
 
   def show
-    report = Report.find(params[:guid])
+    report = Report.where(guid: params[:guid]).first
     @selected_occupations = report.occupations.where(selected: true)
   end
 
   def email
-    report = Report.find(params[:guid])
+    report = Report.where(guid: params[:guid]).first
     @selected_occupations = report.occupations.where(selected: true)
     if params[:email].empty?
       @error = "Please provide an email address."

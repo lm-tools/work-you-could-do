@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112220941) do
+ActiveRecord::Schema.define(version: 20160112173635) do
 
   create_table "keywords", force: :cascade do |t|
     t.integer  "report_id"
@@ -24,15 +24,17 @@ ActiveRecord::Schema.define(version: 20160112220941) do
 
   create_table "occupations", force: :cascade do |t|
     t.integer  "keyword_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
     t.boolean  "selected"
     t.integer  "soc_occupation_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id"
+  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id"
 
   create_table "reports", force: :cascade do |t|
+    t.string   "guid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,7 +51,5 @@ ActiveRecord::Schema.define(version: 20160112220941) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
-
-  add_index "soc_occupations", ["soc_code"], name: "index_soc_occupations_on_soc_code", unique: true
 
 end

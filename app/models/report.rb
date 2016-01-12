@@ -8,7 +8,8 @@ class Report < ActiveRecord::Base
       keyword.add_new_occupations
     end
     Report.create(
-      keywords: keywords
+      keywords: keywords,
+      guid: SecureRandom.hex(10)
     )
   end
 end
