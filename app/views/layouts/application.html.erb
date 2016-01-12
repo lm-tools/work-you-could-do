@@ -10,6 +10,10 @@
   Work you could do
 <% end %>
 
+<% content_for :body_start do %>
+  <%= render "shared/tag_manager" %>
+<% end %>
+
 <% content_for :cookie_message do %>
   <p>We uses cookies to make the site simpler.
   <a href="/cookies">Find out more about cookies</a></p>
