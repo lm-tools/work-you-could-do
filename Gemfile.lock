@@ -60,6 +60,9 @@ GEM
       sass (>= 3.2.0)
     govuk_template (0.16.0)
       rails (>= 3.1)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -78,6 +81,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
@@ -158,6 +162,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   govuk_frontend_toolkit
   govuk_template
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   pry
