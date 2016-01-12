@@ -2,17 +2,21 @@ class SocOccupation < ActiveRecord::Base
   has_many :occupations
 
   def self.find_or_import_from_lmi(soc_code)
-    soc_url = "http://api.lmiforall.org.uk/api/v1/soc/code/#{soc_code}"
-    lmi_occupation = HTTParty.get(soc_url)
-    self.create(
-      title: friendly_soc_title(lmi_occupation["title"]),
-      description: friendly_soc_description(lmi_occupation["description"]),
-      tasks: lmi_occupation["tasks"],
-      qualifications: lmi_occupation["qualifications"],
-      additional_titles: clean_add_titles(lmi_occupation["add_titles"]),
-      week_hours: 999, #TODO,
-      week_pay: 999 #TODO
-    )
+    begin
+      self.find_by_soc_code(soc_code)
+    rescue RecordNotFound
+      soc_url = "http://api.lmiforall.org.uk/api/v1/soc/code/#{soc_code}"
+      lmi_occupation = HTTParty.get(soc_url)
+      self.create(
+        title: friendly_soc_title(lmi_occupation["title"]),
+        description: friendly_soc_description(lmi_occupation["description"]),
+        tasks: lmi_occupation["tasks"],
+        qualifications: lmi_occupation["qualifications"],
+        additional_titles: clean_add_titles(lmi_occupation["add_titles"]),
+        week_hours: 999, #TODO,
+        week_pay: 999 #TODO
+      )
+    end
   end
 
   private
