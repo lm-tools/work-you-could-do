@@ -47,6 +47,16 @@
 </section>
 
 <%= form_for([ @report, occupation]) do |f| %>
-  <%= submit_tag "Accept", value: "accept", class: "button" %>
-  <%= submit_tag "Refuse", value: "refuse", class: "button" %>
+  <a id="show-accept" href="#show-accept" class="button hide-if-accept">Accept</a>
+  <%= submit_tag "Accept", class: "button show-if-accept" %>
+  <%= submit_tag "Refuse", class: "button" %>
+  <div class="show-if-accept"</div>
+    <% @actions.each do |action, details| %>
+      <label class="block-label">
+        <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
+        <h4 class="bold-small"><%=details["title"]%></h4>
+        <p><%=details["description"]%></p>
+      </label>
+    <% end %>
+  </div>
 <% end %>

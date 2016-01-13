@@ -20,6 +20,7 @@ class ReportsController < ApplicationController
     if @report.complete?
       render 'show'
     elsif @report.occupations_to_review?
+      @actions = YAML.load_file(Rails.root.join('config', 'actions.yml'))
       render 'review_occupation'
     else
       render 'select_soc_codes'

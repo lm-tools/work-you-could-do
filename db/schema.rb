@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160113203237) do
+ActiveRecord::Schema.define(version: 20160113223222) do
+
+  create_table "actions", force: :cascade do |t|
+    t.integer  "occupation_id"
+    t.string   "action_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "actions", ["occupation_id"], name: "index_actions_on_occupation_id"
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
