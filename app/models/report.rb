@@ -18,6 +18,10 @@ class Report < ActiveRecord::Base
     )
   end
 
+  def self.find_for_guid(guid)
+    where(guid: guid).first
+  end
+
   def find_occupation(occupation_id)
     occupations.find { |o| o.id == occupation_id }
   end
@@ -34,9 +38,9 @@ class Report < ActiveRecord::Base
   end
 
   def occupations_to_review
-    occupations.to_a.select{ |o| o.selected }
-                    .uniq{ |o| o.soc_occupation_id }
-                    .select { |o| o.accepted == nil }
+    occupations.to_a.select(&:selected)
+      .uniq(&:soc_occupation_id)
+      .select { |o| o.accepted.nil? }
   end
 
   def occupations_to_review?
@@ -44,11 +48,11 @@ class Report < ActiveRecord::Base
   end
 
   def accepted_occupations
-    occupations.select{ |o| o.accepted }
+    occupations.select(&:accepted)
   end
 
   def selected_occupations
-    occupations.select{ |o| o.selected }
+    occupations.select(&:selected)
   end
 
   def complete?
@@ -56,11 +60,11 @@ class Report < ActiveRecord::Base
   end
 
   def unique_actions
-    actions.to_a.uniq{ |a| a.action_type }
+    actions.to_a.uniq(&:action_type)
   end
 
   def accepted_occupations_for_action_type(action_type)
-    result = accepted_occupations.select do |o|
+    accepted_occupations.select do |o|
       o.actions.map(&:action_type).include?(action_type)
     end
   end
