@@ -11,7 +11,7 @@
 
 <p class="lede">These are some job roles related to your search.</p>
 
-<%= form_tag(controller: "report", action: "save_soc_codes")%>
+<%= form_for @report, url: save_soc_codes_report_url(@report) do %>
   <% if @error %>
     <div class="form-group error">
       <span class="error-message">
@@ -21,7 +21,7 @@
       </span>
     </div>
   <% end %>
-  <% @keywords.each do |keyword| %>
+  <% @report.keywords.each do |keyword| %>
     <section>
       <fieldset class="form-group">
         <h3 class="bold-medium job-description-title">Jobs related to ‘<%=keyword.keyword%>‘</h3>
@@ -43,7 +43,7 @@
   <div class="form-group">
     <button type=submit class=button>Next</button>
   </div>
-</form>
+<% end %>
 
 <footer>
   <a href="<%=root_url%>" class="link-back">start again</a>

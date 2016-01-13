@@ -7,11 +7,11 @@ class LmiForAll
     lmi_occupation = @lmi_client.soc_code_lookup(soc_code)
     {
       soc_code: soc_code,
-      title: friendly_soc_title(lmi_occupation[:title]),
-      description: friendly_soc_description(lmi_occupation[:description]),
-      tasks: lmi_occupation[:tasks],
-      qualifications: lmi_occupation[:qualifications],
-      additional_titles: clean_add_titles(lmi_occupation[:add_titles]),
+      title: friendly_soc_title(lmi_occupation["title"]),
+      description: friendly_soc_description(lmi_occupation["description"]),
+      tasks: lmi_occupation["tasks"],
+      qualifications: lmi_occupation["qualifications"],
+      additional_titles: clean_add_titles(lmi_occupation["add_titles"]),
       week_hours: @lmi_client.hours_lookup(soc_code),
       week_pay: @lmi_client.pay_lookup(soc_code)
     }
