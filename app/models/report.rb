@@ -1,8 +1,6 @@
 class Report < ActiveRecord::Base
   extend FriendlyId
-
   friendly_id :guid
-
   has_many :keywords
   has_many :occupations, through: :keywords
 
