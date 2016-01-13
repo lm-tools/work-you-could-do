@@ -19,13 +19,10 @@ class ReportsController < ApplicationController
 
   def show
     @report = Report.where(guid: params[:id]).first
-    p @report
-    p @report.occupations.to_a.select{ |o| o.selected && o.accepted == nil }
-    p @report.occupations.to_a.select{ |o| o.selected }
-    p @report.occupations.to_a
     if @report.complete?
       render 'show'
     elsif @report.occupations_to_review?
+      @actions = YAML.load_file(Rails.root.join('config', 'actions.yml'))
       render 'review_occupation'
     else
       render 'select_soc_codes'
