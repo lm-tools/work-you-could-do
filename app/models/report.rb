@@ -15,14 +15,41 @@ class Report < ActiveRecord::Base
     )
   end
 
+  def find_occupation(occupation_id)
+    occupations.find { |o| o.id == occupation_id }
+  end
+
   def mark_occupations_as_selected(occupation_ids)
     occupations.where(id: occupation_ids).select do |occupation|
       occupation.selected = true
       occupation.save
     end
+    occupations.where.not(id: occupation_ids).select do |occupation|
+      occupation.selected = false
+      occupation.accepted = false
+      occupation.save
+    end
+  end
+
+  def occupations_to_review
+    occupations.to_a.select{ |o| o.selected }
+                    .uniq{ |o| o.soc_occupation_id }
+                    .select { |o| o.accepted == nil }
+  end
+
+  def occupations_to_review?
+    occupations_to_review.count > 0
+  end
+
+  def accepted_occupations
+    occupations.select{ |o| o.accepted }
   end
 
   def selected_occupations
-    occupations.where(selected: true)
+    occupations.select{ |o| o.selected }
+  end
+
+  def complete?
+    selected_occupations.count > 0 && !occupations_to_review?
   end
 end

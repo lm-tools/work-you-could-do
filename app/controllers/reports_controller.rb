@@ -10,15 +10,26 @@ class ReportsController < ApplicationController
     if keywords.empty?
       @error = 'Please enter at least 1 job or sector.'
       @report = Report.new
-      render action: 'new'
+      render 'new'
     else
       @report = Report.generate_report_for_keywords(keywords.values)
-      render action: 'select_soc_codes', guid: @report.guid
+      redirect_to report_path(@report)
     end
   end
 
   def show
     @report = Report.where(guid: params[:id]).first
+    p @report
+    p @report.occupations.to_a.select{ |o| o.selected && o.accepted == nil }
+    p @report.occupations.to_a.select{ |o| o.selected }
+    p @report.occupations.to_a
+    if @report.complete?
+      render 'show'
+    elsif @report.occupations_to_review?
+      render 'review_occupation'
+    else
+      render 'select_soc_codes'
+    end
   end
 
   def save_soc_codes
@@ -26,7 +37,7 @@ class ReportsController < ApplicationController
     occupation_params = params.select { |k, _v| /occupation_[\d]+/.match(k) }
     if occupation_params.empty?
       @error = 'Please select at least 1 job.'
-      render action: 'select_soc_codes'
+      render 'select_soc_codes'
     else
       @report.mark_occupations_as_selected(occupation_ids(occupation_params))
       redirect_to report_path(@report)
