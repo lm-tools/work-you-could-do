@@ -13,7 +13,7 @@
 <% end %>
 
 <p class="heading-small email-help">Send this to your email account so you can refer to it later.</p>
-<%= form_tag(controller: "report", action: "email") %>
+<%= form_for @report, url: email_report_url(@report) do %>
   <fieldset class="form-fieldset">
     <div class="form-group <% if @error %>error<% end %>">
       <label class="form-label" for="email">
@@ -26,9 +26,9 @@
       <input type="submit" class="button" value="Send">
     </div>
   </fieldset>
-</form>
+<% end %>
 
-<% @selected_occupations.each do |occupation| %>
+<% @report.selected_occupations.each do |occupation| %>
   <section>
     <div class="job_item">
       <header>

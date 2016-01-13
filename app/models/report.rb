@@ -1,4 +1,6 @@
 class Report < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :guid
   has_many :keywords
   has_many :occupations, through: :keywords
 
@@ -11,5 +13,9 @@ class Report < ActiveRecord::Base
       keywords: keywords,
       guid: SecureRandom.hex(10)
     )
+  end
+
+  def selected_occupations
+    occupations.where(selected: true)
   end
 end

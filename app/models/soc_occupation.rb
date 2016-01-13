@@ -8,7 +8,7 @@ class SocOccupation < ActiveRecord::Base
     soc_occupation_lookup = self.where(soc_code: soc_code)
     if soc_occupation_lookup.empty?
       lmi_client = LmiClient.new
-      soc_occupation_lookup = LmiForAll.new(lmi_client, soc_code).lookup
+      soc_occupation_lookup = LmiForAll.new(lmi_client).lookup(soc_code)
       soc_occupation = self.create(soc_occupation_lookup)
     else
       soc_occupation_lookup.first

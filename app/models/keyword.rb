@@ -1,3 +1,5 @@
+require 'lmi_client'
+
 class Keyword < ActiveRecord::Base
   has_many :occupations
 
