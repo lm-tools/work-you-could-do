@@ -2,8 +2,8 @@ class Keyword < ActiveRecord::Base
   has_many :occupations
 
   def add_new_occupations
-    search_url = "http://api.lmiforall.org.uk/api/v1/soc/search"
-    lmi_occupations = HTTParty.get(search_url, { query: {q: self.keyword} })[0..4]
+    lmi_client = LmiClient.new
+    lmi_occupations = lmi_client.occupation_search(keyword)[0..4]
     soc_codes = lmi_occupations.map do |lmi_occupation|
       lmi_occupation["soc"]
     end

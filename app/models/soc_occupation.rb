@@ -7,7 +7,8 @@ class SocOccupation < ActiveRecord::Base
   def self.find_or_import_from_lmi(soc_code)
     soc_occupation_lookup = self.where(soc_code: soc_code)
     if soc_occupation_lookup.empty?
-      soc_occupation_lookup = LmiForAll.new(soc_code).lookup
+      lmi_client = LmiClient.new
+      soc_occupation_lookup = LmiForAll.new(lmi_client, soc_code).lookup
       soc_occupation = self.create(soc_occupation_lookup)
     else
       soc_occupation_lookup.first
