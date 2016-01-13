@@ -11,12 +11,19 @@ class ReportsController < ApplicationController
       render action: 'select_soc_codes', guid: @report.guid
     else
       @error = 'Please enter at least 1 job or sector.'
-      render action: 'new'
+      render 'new'
     end
   end
 
   def show
     @report = Report.friendly.find(params[:id])
+    if @report.complete?
+      render 'show'
+    elsif @report.occupations_to_review?
+      render 'review_occupation'
+    else
+      render 'select_soc_codes'
+    end
   end
 
   def save_soc_codes
@@ -26,7 +33,7 @@ class ReportsController < ApplicationController
       redirect_to report_path(@report)
     else
       @error = 'Please select at least 1 job.'
-      render action: 'select_soc_codes'
+      render 'select_soc_codes'
     end
   end
 
