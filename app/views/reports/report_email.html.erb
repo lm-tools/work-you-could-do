@@ -1,0 +1,53 @@
+<html>
+  <body>
+    <header>
+      <h1>Work you could do</h1>
+      <p>To help with your work search, use this information to find job adverts online, tailor your CV and plan your career.</p>
+      <p>Continue to explore work you could do by signing into your Universal Credit account and going to your to-do list.</p>
+      <p>If you didn’t request this information, please ignore this email.</p>
+    </header>
+
+    <% @report.selected_occupations.each do |occupation| %>
+      <section>
+        <div class="job_item">
+          <header>
+            <h2 class="heading-large"><%= occupation.title %></h2>
+          </header>
+
+          <p><%= occupation.description %></p>
+
+          <div class="grid-row">
+            <div class="column-half">
+              <h3 class="heading-small">Typical pay and hours</h3>
+              <ul>
+                <li>Normal hours worked per week: <%= occupation.week_hours %></li>
+                <li>Estimated weekly pay: £<%= occupation.week_pay %></li>
+              </ul>
+            </div>
+            <div class="column-half">
+              <h3 class="heading-small">Typical qualifications required</h3>
+              <p><%= occupation.qualifications %></p>
+            </div>
+          </div>
+
+          <div class="grid-row">
+            <div class="column-half">
+             <h3 class="heading-small">Typical tasks</h3>
+              <ul class="list-bullet">
+                <% occupation.formatted_tasks.each do |task| %>
+                  <li><%=task%></li>
+                <% end %>
+              </ul>
+            </div>
+
+            <div class="column-half">
+              <h3 class="heading-small">Useful search terms</h3>
+              <em><%= occupation.additional_titles %></em>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </section>
+    <% end %>
+  </body>
+</html>
