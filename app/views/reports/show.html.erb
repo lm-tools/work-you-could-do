@@ -28,6 +28,14 @@
   </fieldset>
 <% end %>
 
+<% @report.unique_actions.each do |action| %>
+  <p><%= action.title %></p>
+  <p><%= action.description %></p>
+  <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
+    <p><%=occ.title%></p>
+  <% end %>
+<% end %>
+
 <% @report.accepted_occupations.each do |occupation| %>
   <section>
     <div class="job_item">

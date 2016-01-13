@@ -54,8 +54,8 @@
     <% @actions.each do |action, details| %>
       <label class="block-label">
         <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
-        <h4 class="bold-small"><%=details["title"]%></h4>
-        <p><%=details["description"]%></p>
+        <h4 class="bold-small"><%=details[:title]%></h4>
+        <p><%=details[:description]%></p>
       </label>
     <% end %>
   </div>
