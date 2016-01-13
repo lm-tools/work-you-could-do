@@ -39,11 +39,11 @@ class LmiForAll
       title.length >= 4 && !title.include?('(')
     end[0..19]
     formattable_titles.map do |formattable_title|
-      if formattable_title.include?(',')
-        a, b = formattable_title.split(',', 2)
+      if formattable_title.include?(",")
+        a, b = formattable_title.split(",", 2)
         formattable_title = "#{b} #{a}"
       end
       formattable_title.strip.titleize
-    end.join('; ')
+    end.join("; ")
   end
 end

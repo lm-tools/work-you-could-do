@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -39,6 +40,10 @@ group :development do
 
   gem 'spring'
   gem 'spring-commands-rspec'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :production do

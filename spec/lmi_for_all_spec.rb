@@ -2,15 +2,16 @@ require 'rails_helper'
 require 'lmi_for_all'
 
 describe LmiForAll do
-  let(:lmi_client) do
+
+  let(:lmi_client) {
     double(
       :lmi_client,
-      soc_code_lookup: soc_code_details.deep_stringify_keys,
+      soc_code_lookup: soc_code_details,
       hours_lookup: hours_details,
       pay_lookup: pay_details
     )
-  end
-  let(:soc_code_details) do
+  }
+  let(:soc_code_details) {
     {
       title: title,
       description: description,
