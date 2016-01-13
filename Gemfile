@@ -33,11 +33,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'sqlite3'
+  gem 'rubocop'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-
   gem 'spring'
   gem 'spring-commands-rspec'
 end

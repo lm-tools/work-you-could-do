@@ -2,16 +2,15 @@ require 'rails_helper'
 require 'lmi_for_all'
 
 describe LmiForAll do
-
-  let(:lmi_client) {
+  let(:lmi_client) do
     double(
       :lmi_client,
       soc_code_lookup: soc_code_details,
       hours_lookup: hours_details,
       pay_lookup: pay_details
     )
-  }
-  let(:soc_code_details) {
+  end
+  let(:soc_code_details) do
     {
       title: title,
       description: description,
