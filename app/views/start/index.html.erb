@@ -20,7 +20,7 @@
     <ul class="multi-entry-text-input">
     <% (1..3).each do |index| %>
       <li>
-        <%= text_field_tag "keyword_#{index}", nil, class: 'form-control' %>
+        <%= text_field_tag "keyword_#{index}", nil, class: 'form-control', "title": "Work, skills and interests #{index}" %>
       </li>
     <% end %>
     </ul>
