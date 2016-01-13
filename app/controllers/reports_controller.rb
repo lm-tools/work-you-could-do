@@ -47,4 +47,29 @@ class ReportsController < ApplicationController
       /occupation_(\d+)/.match(occupation)[1].to_i
     end
   end
+
+  def send_report_email(address)
+    mail = Mail.new do
+      from ENV["EMAIL_SENDER"]
+      subject 'Work you could do'
+    end
+    report_view_folder = "#{Rails.root}/app/views/reports/"
+    text = File.open("#{report_view_folder}report_email.txt.erb").read
+    text_template = ERB.new(text)
+    text_content = text_template.result(binding)
+    text_part = Mail::Part.new do
+      body text_content
+    end
+    html = File.open("#{report_view_folder}report_email.html.erb").read
+    html_template = ERB.new(html)
+    html_content = html_template.result(binding)
+    html_part = Mail::Part.new do
+      content_type 'text/html; charset=UTF-8'
+      body html_content
+    end
+    mail["to"] = address
+    mail.text_part = text_part
+    mail.html_part = html_part
+    mail.deliver!
+  end
 end
