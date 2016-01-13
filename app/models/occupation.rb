@@ -10,7 +10,6 @@ class Occupation < ActiveRecord::Base
            to: :soc_occupation
 
   def formatted_tasks
-    tasks.split(";").map(&:strip).map(&:capitalize)
+    tasks.split(';').map(&:strip).map(&:capitalize)
   end
-
 end
