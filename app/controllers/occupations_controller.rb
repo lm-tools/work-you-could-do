@@ -9,8 +9,7 @@ class OccupationsController < ApplicationController
       action_types = action_params.keys.map do |occupation|
         /action_(.*)/.match(occupation)[1]
       end
-      actions = YAML.load_file(Rails.root.join('config', 'actions.yml')).keys
-      actions_to_save = actions && action_types
+      actions_to_save = Action::ACTION_TYPES.keys.map(&:to_s) && action_types
       occupation.actions = actions_to_save.map do |action_to_save|
         Action.new(action_type: action_to_save)
       end

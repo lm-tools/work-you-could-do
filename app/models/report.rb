@@ -3,6 +3,7 @@ class Report < ActiveRecord::Base
   friendly_id :guid
   has_many :keywords
   has_many :occupations, through: :keywords
+  has_many :actions, through: :occupations
 
   validates :keywords, length: { minimum: 1 }
 
@@ -52,5 +53,15 @@ class Report < ActiveRecord::Base
 
   def complete?
     selected_occupations.count > 0 && !occupations_to_review?
+  end
+
+  def unique_actions
+    actions.to_a.uniq{ |a| a.action_type }
+  end
+
+  def accepted_occupations_for_action_type(action_type)
+    result = accepted_occupations.select do |o|
+      o.actions.map(&:action_type).include?(action_type)
+    end
   end
 end
