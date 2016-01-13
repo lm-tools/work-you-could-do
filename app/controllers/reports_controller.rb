@@ -15,6 +15,10 @@ class ReportsController < ApplicationController
     end
   end
 
+  def show
+    @report = Report.where(guid: params[:id]).first
+  end
+
   def save_soc_codes
     @report = Report.where(guid: params[:id]).first
     occupation_params = params.select { |k, _v| /occupation_[\d]+/.match(k) }
@@ -23,7 +27,7 @@ class ReportsController < ApplicationController
       render action: 'select_soc_codes'
     else
       @report.mark_occupations_as_selected(occupation_ids(occupation_params))
-      render action: 'show'
+      redirect_to report_path(@report)
     end
   end
 
@@ -32,11 +36,12 @@ class ReportsController < ApplicationController
     @address = params[:email]
     if @address.empty?
       @error = 'Please provide an email address.'
+      render :show
     else
       send_report_email(params[:email])
       @notice = "Sent to #{params[:email]}"
+      redirect_to report_path(@report)
     end
-    render :show
   end
 
   private
