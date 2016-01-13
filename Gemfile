@@ -22,6 +22,9 @@ gem 'httparty'
 # GUIDs as resource ID
 gem 'friendly_id'
 
+# Mailer
+gem 'mail'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
