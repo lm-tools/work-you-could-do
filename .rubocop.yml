@@ -7,6 +7,7 @@ AllCops:
     - 'spec/rails_helper.rb'
     - 'spec/spec_helper.rb'
     - 'test/test_helper.rb'
+    - 'vendor/**/*'
 
 Documentation:
   Enabled: false
