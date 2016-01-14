@@ -16,9 +16,8 @@ class Report < ActiveRecord::Base
   end
 
   def mark_occupations_as_selected(occupation_ids)
-    occupations.where(id: occupation_ids).select do |occupation|
-      occupation.selected = true
-      occupation.save
+    occupations.where(id: occupation_ids).each do |occupation|
+      occupation.update_attribute(:selected, true)
     end
   end
 
