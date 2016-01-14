@@ -10,7 +10,7 @@ class Keyword < ActiveRecord::Base
         soc_occupation: soc_occupation
       )
     end
-    self.occupations = occupations
+    self.occupations += occupations
     self
   end
 
