@@ -21,8 +21,8 @@ class ReportsController < ApplicationController
 
   def save_soc_codes
     @report = Report.where(guid: params[:id]).first
-    @report.mark_occupations_as_selected(params[:occupations].keys.map(&:to_i))
-    if @report.mark_occupations_as_selected(params[:occupations].keys.map(&:to_i))
+    occupation_ids = params[:occupations].keys.map(&:to_i)
+    if @report.mark_occupations_as_selected(occupation_ids)
       redirect_to report_path(@report)
     else
       @error = 'Please select at least 1 job.'
