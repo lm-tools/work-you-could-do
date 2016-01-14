@@ -13,7 +13,7 @@
 <% end %>
 
 <p class="heading-small email-help">Send this to your email account so you can refer to it later.</p>
-<%= form_for @report, url: email_report_url(@report) do %>
+<%= form_for @report, url: email_report_url(@report), method: "post" do %>
   <fieldset class="form-fieldset">
     <div class="form-group <% if @error %>error<% end %>">
       <label class="form-label" for="email">
