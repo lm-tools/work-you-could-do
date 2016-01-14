@@ -4,7 +4,7 @@ class OccupationsController < ApplicationController
     occupation = report.find_occupation(params[:id].to_i)
     occupation.accepted = occupation_accepted?(params)
     occupation.actions = action_instances_to_save(params)
-    occupation.save
+    occupation.save!
     redirect_to report_path(report)
   end
 
