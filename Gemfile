@@ -25,6 +25,8 @@ gem 'friendly_id'
 # Mailer
 gem 'mail'
 
+gem 'therubyracer', platforms: :ruby
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
