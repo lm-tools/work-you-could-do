@@ -2,6 +2,7 @@ require 'lmi_client'
 
 class Keyword < ActiveRecord::Base
   has_many :occupations
+  validates :keyword, presence: true, allow_blank: false
 
   def add_new_occupations
     occupations = soc_codes.map do |soc_code|
