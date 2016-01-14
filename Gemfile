@@ -25,11 +25,12 @@ gem 'friendly_id'
 # Mailer
 gem 'mail'
 
+gem 'therubyracer', platforms: :ruby
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'sqlite3'
   gem 'rubocop'
 end
 

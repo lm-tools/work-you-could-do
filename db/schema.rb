@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160112173635) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "keywords", force: :cascade do |t|
     t.integer  "report_id"
     t.string   "keyword"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160112173635) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "keywords", ["report_id"], name: "index_keywords_on_report_id"
+  add_index "keywords", ["report_id"], name: "index_keywords_on_report_id", using: :btree
 
   create_table "occupations", force: :cascade do |t|
     t.integer  "keyword_id"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 20160112173635) do
     t.datetime "updated_at",        null: false
   end
 
-  add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id"
-  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id"
+  add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id", using: :btree
+  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id", using: :btree
 
   create_table "reports", force: :cascade do |t|
     t.string   "guid"
