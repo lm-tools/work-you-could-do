@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get 'cookies' => 'start#cookies'
 
   resources :reports, :path => '/' do
+    resources :occupations
     member do
       get 'select_soc_codes'
-      get 'show'
       patch 'save_soc_codes'
       patch 'email'
     end
