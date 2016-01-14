@@ -1,4 +1,3 @@
-require 'active_record/errors'
 require 'lmi_for_all'
 
 class SocOccupation < ActiveRecord::Base
