@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
   end
 
   def create
-    keywords = params["keywords"].values.select{ |k| !k.empty? }
+    keywords = params['keywords'].values.select { |k| !k.empty? }
     if keywords.empty?
       @error = 'Please enter at least 1 job or sector.'
       @report = Report.new
