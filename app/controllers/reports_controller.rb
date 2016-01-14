@@ -6,14 +6,12 @@ class ReportsController < ApplicationController
   end
 
   def create
-    keywords = params['keywords'].values.select { |k| !k.empty? }
-    if keywords.empty?
-      @error = 'Please enter at least 1 job or sector.'
-      @report = Report.new
-      render action: 'new'
-    else
-      @report = Report.generate_report_for_keywords(keywords)
+    @report = Report.generate_report_for_keywords(params['keywords'].values)
+    if @report.save
       render action: 'select_soc_codes', guid: @report.guid
+    else
+      @error = 'Please enter at least 1 job or sector.'
+      render action: 'new'
     end
   end
 
