@@ -1,9 +1,12 @@
 class Report < ActiveRecord::Base
   extend FriendlyId
+
   friendly_id :guid
+
   has_many :keywords
-  validates :keywords, :length => { :minimum => 1 }
   has_many :occupations, through: :keywords
+
+  validates :keywords, length: { minimum: 1 }
 
   def self.generate_report_for_keywords(search_keywords)
     keywords = search_keywords.reject(&:empty?).map do |search_keyword|

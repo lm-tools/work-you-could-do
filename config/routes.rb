@@ -9,9 +9,8 @@ Rails.application.routes.draw do
   resources :reports, :path => '/' do
     member do
       get 'select_soc_codes'
-      get 'show'
       patch 'save_soc_codes'
-      patch 'email'
+      post 'email'
     end
   end
 
