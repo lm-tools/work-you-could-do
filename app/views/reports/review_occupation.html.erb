@@ -47,18 +47,23 @@
 </section>
 
 <%= form_for([ @report, occupation]) do |f| %>
-  <a id="show-accept" href="#show-accept" class="button hide-if-accept">Accept</a>
-  <%= submit_tag "Accept", class: "button show-if-accept" %>
-  <%= submit_tag "Refuse", class: "button" %>
-  <div class="show-if-accept"</div>
-    <% @actions.each do |action, details| %>
-      <label class="block-label">
-        <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
-        <h4 class="bold-small"><%=details[:title]%></h4>
-        <% if details[:notes] %>
-          <%= text_area_tag "notes_#{action}" %>
-        <% end %>
-      </label>
-    <% end %>
+  <a id="show-accept" href="#show-accept" class="button button-large hide-if-accept">Accept</a>
+  <%= submit_tag "Accept", class: "button button-large show-if-accept" %>
+  <%= submit_tag "Refuse", class: "button button-large" %>
+  <div class="show-if-accept">
+    <h3 class="heading-medium">What would you like to do</h3>
+    <section>
+      <fieldset class="form-group">
+          <% @actions.each do |action, details| %>
+            <label class="block-label action-label">
+              <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
+              <h4 class="bold-small"><%=details[:title]%></h4>
+              <% if details[:notes] %>
+                <%= text_area_tag "notes_#{action}", nil, rows: 5, class: "notes-area" %>
+              <% end %>
+            </label>
+          <% end %>
+      </fieldset>
+    </section>
   </div>
 <% end %>

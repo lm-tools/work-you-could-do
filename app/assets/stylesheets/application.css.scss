@@ -35,3 +35,17 @@
 .button-warning{
   @include button($red);
 }
+
+.action-label {
+  width: 50%;
+}
+
+.notes-area {
+  width: 100%;
+}
+
+.button-large {
+  padding: em(7) em(16) em(4) em(16);
+  font-weight: 700;
+  font-size: 24px;
+}
