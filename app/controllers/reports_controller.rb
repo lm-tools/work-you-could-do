@@ -21,13 +21,12 @@ class ReportsController < ApplicationController
 
   def save_soc_codes
     @report = Report.where(guid: params[:id]).first
-    occupation_params = params.select { |k, _v| /occupation_[\d]+/.match(k) }
-    if occupation_params.empty?
+    @report.mark_occupations_as_selected(params[:occupations].keys.map(&:to_i))
+    if @report.mark_occupations_as_selected(params[:occupations].keys.map(&:to_i))
+      redirect_to report_path(@report)
+    else
       @error = 'Please select at least 1 job.'
       render action: 'select_soc_codes'
-    else
-      @report.mark_occupations_as_selected(occupation_ids(occupation_params))
-      redirect_to report_path(@report)
     end
   end
 
@@ -41,14 +40,6 @@ class ReportsController < ApplicationController
       ReportEmailSender.new(@report).send(email)
       @notice = "Sent to #{email}"
       render :show
-    end
-  end
-
-  private
-
-  def occupation_ids(occupation_params)
-    occupation_params.keys.map do |occupation|
-      /occupation_(\d+)/.match(occupation)[1].to_i
     end
   end
 end

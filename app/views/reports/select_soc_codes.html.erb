@@ -30,7 +30,7 @@
         <% else %>
           <% keyword.occupations.each do |occupation| %>
             <label class="block-label">
-              <%= check_box_tag "occupation_#{occupation.id}", nil, false, "title": "Select occupation #{occupation.title}" %>
+              <%= check_box_tag "occupations[#{occupation.id}]", nil, false, "title": "Select occupation #{occupation.title}" %>
               <h4 class="bold-small"><%= occupation.title %></h4>
               <p><%= occupation.description %></p>
             </label>
