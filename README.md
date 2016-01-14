@@ -9,8 +9,7 @@ Work you could do
 - `cd ~/dev`
 - `git clone https://github.com/lm-tools/work-you-could-do.git`
 - `cd work-you-could-do`
-- `bundle`
-- `git submodule update --init --recursive`
+- `bin/setup`
 
 ### Run locally
 
