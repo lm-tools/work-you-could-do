@@ -17,9 +17,9 @@ class Report < ActiveRecord::Base
   end
 
   def mark_occupations_as_selected(occupation_ids)
-    selected_occupations = occupations.map do |occupation|
+    occupations.map do |occupation|
       occupation.update_attributes(
-        { :selected => occupation_ids.include?(occupation.id) }
+        selected: occupation_ids.include?(occupation.id)
       )
     end
     !occupation_ids.empty?

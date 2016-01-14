@@ -8,8 +8,4 @@ class Occupation < ActiveRecord::Base
            :qualifications,
            :additional_titles,
            to: :soc_occupation
-
-  def formatted_tasks
-    tasks.split(';').map(&:strip).map(&:capitalize)
-  end
 end
