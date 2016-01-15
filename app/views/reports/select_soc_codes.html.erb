@@ -1,0 +1,50 @@
+<div class="grid-row full-width">
+  <div class="column-two-thirds">
+    <h2 class="bold-large">Results</h2>
+  </div>
+  <div class="column-one-third">
+    <p>
+      <a href="<%=root_url%>" class="right">Change search</a>
+    </p>
+  </div>
+</div>
+
+<p class="lede">These are some job roles related to your search.</p>
+
+<%= form_for @report, url: save_soc_codes_report_url(@report) do %>
+  <% if @error %>
+    <div class="form-group error">
+      <span class="error-message">
+        <ul class="errorlist nonfield">
+          <li><%=@error%></li>
+        </ul>
+      </span>
+    </div>
+  <% end %>
+  <% @report.keywords.each do |keyword| %>
+    <section>
+      <fieldset class="form-group">
+        <h3 class="bold-medium job-description-title">Jobs related to ‘<%=keyword.keyword%>‘</h3>
+        <% if keyword.occupations.empty? %>
+          <p>Sorry, we couldn't find any results for this job role</p>
+        <% else %>
+          <% keyword.occupations.each do |occupation| %>
+            <label class="block-label">
+              <%= check_box_tag "occupations[#{occupation.id}]", nil, false, "title": "Select occupation #{occupation.title}" %>
+              <h4 class="bold-small"><%= occupation.title %></h4>
+              <p><%= occupation.description %></p>
+            </label>
+          <% end %>
+        <% end %>
+      </fieldset>
+    </section>
+  <% end %>
+
+  <div class="form-group">
+    <button type=submit class=button>Next</button>
+  </div>
+<% end %>
+
+<footer>
+  <a href="<%=root_url%>" class="link-back">start again</a>
+</footer>

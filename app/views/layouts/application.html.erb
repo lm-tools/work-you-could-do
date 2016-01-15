@@ -1,9 +1,17 @@
+<% content_for :homepage_url do %>
+  <%= root_url %>
+<% end %>
+
 <% content_for :head do %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 <% end %>
 
 <% content_for :page_title do %>
   Work you could do
+<% end %>
+
+<% content_for :body_start do %>
+  <%= render "shared/tag_manager" %>
 <% end %>
 
 <% content_for :cookie_message do %>

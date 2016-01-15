@@ -9,25 +9,24 @@
   <li>tasks and hours</li>
 </ul>
 
-<form action="/select_soc_codes" method="get">
-  <div class="form-group ">
+<%= form_for @report do |f| %>
+  <div class="form-group <% if @error %>error<%end%>">
     <label for="id_sector_form-sector_0">
       <span class="heading-small">Work, skills and interests</span>
+      <% if @error %>
+        <span class="error-message"><%= @error %></spsan>
+      <% end %>
     </label>
     <ul class="multi-entry-text-input">
-    <li>
-      <input type="text" class="form-control">
-    </li>
-    <li>
-      <input type="text" class="form-control">
-    </li>
-    <li>
-      <input type="text" class="form-control">
-    </li>
+    <% 3.times do |index| %>
+      <li>
+        <%= text_field_tag "keywords[]", nil, class: 'form-control', "title": "Work, skills and interests #{index+1}" %>
+      </li>
+    <% end %>
     </ul>
   </div>
 
   <div class="form-group">
-    <button type="submit" class="button button-start">Next</button>
+    <button type="submit" class="button">Next</button>
   </div>
-</form>
+<% end %>
