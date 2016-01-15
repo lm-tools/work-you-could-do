@@ -14,11 +14,11 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = Report.where(guid: params[:id]).first
+    @report = Report.friendly.find(params[:id])
   end
 
   def save_soc_codes
-    @report = Report.where(guid: params[:id]).first
+    @report = Report.friendly.find(params[:id])
     occupation_ids = params[:occupations].keys.map(&:to_i)
     if @report.mark_occupations_as_selected(occupation_ids)
       redirect_to report_path(@report)
@@ -29,7 +29,7 @@ class ReportsController < ApplicationController
   end
 
   def email
-    @report = Report.where(guid: params[:id]).first
+    @report = Report.friendly.find(params[:id])
     email = params[:email]
     if email.empty?
       @error = 'Please provide an email address.'
