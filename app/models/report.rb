@@ -39,8 +39,8 @@ class Report < ActiveRecord::Base
 
   def occupations_to_review
     occupations.to_a.select(&:selected)
-      .uniq(&:soc_occupation_id)
-      .select { |o| o.accepted.nil? }
+               .uniq(&:soc_occupation_id)
+               .select { |o| o.accepted.nil? }
   end
 
   def occupations_to_review?

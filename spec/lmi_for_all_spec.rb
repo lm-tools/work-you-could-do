@@ -5,7 +5,7 @@ describe LmiForAll do
   let(:lmi_client) do
     double(
       :lmi_client,
-      soc_code_lookup: soc_code_details,
+      soc_code_lookup: soc_code_details.deep_stringify_keys,
       hours_lookup: hours_details,
       pay_lookup: pay_details
     )

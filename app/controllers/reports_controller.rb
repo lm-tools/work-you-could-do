@@ -1,5 +1,3 @@
-require 'report_email_sender'
-
 class ReportsController < ApplicationController
   def new
     @report = Report.new
@@ -48,13 +46,5 @@ class ReportsController < ApplicationController
       @notice = "Sent to #{email}"
     end
     render :show
-  end
-
-  private
-
-  def occupation_ids(occupation_params)
-    occupation_params.keys.map do |occupation|
-      /occupation_(\d+)/.match(occupation)[1].to_i
-    end
   end
 end
