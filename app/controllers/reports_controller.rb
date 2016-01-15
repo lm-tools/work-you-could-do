@@ -1,5 +1,3 @@
-require 'report_email_sender'
-
 class ReportsController < ApplicationController
   def new
     @report = Report.new
