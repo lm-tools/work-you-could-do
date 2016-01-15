@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.generate_report_for_keywords(params['keywords'].values)
+    @report = Report.generate_report_for_keywords(params['keywords'])
     if @report.save
       render action: 'select_soc_codes', guid: @report.guid
     else
