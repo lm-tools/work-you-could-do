@@ -27,6 +27,8 @@ gem 'mail'
 
 gem 'therubyracer', platforms: :ruby
 
+gem 'unicorn'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
