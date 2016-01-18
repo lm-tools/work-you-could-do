@@ -1,17 +1,18 @@
 <header>
-  <h2 class="heading-xlarge">Work you could do</h2>
+  <h2 class="bold-large">Work you could do</h2>
 </header>
-
-<p class="lede">Use this information to search online, tailor your CV and plan your career.</p>
 
 <% occupation = @report.occupations_to_review.first %>
 <section>
   <div class="job_item">
     <header>
-      <h2 class="heading-large"><%= occupation.title %></h2>
+      <% total_to_review = @report.occupations_to_review.count + @report.occupations_reviewed.count %>
+      <p class="text-secondary">Job description <%= @report.occupations_reviewed.count + 1 %> of <%= total_to_review %></p>
+      <h2 class="bold-large"><%= occupation.title %></h2>
     </header>
-
     <p><%= occupation.description %></p>
+
+    <p class="lede">Use this information to search online, tailor your CV and plan your career.</p>
 
     <div class="grid-row">
       <div class="column-half">
