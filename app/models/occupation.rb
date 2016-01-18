@@ -15,19 +15,16 @@ class Occupation < ActiveRecord::Base
   end
 
   def mark_as_refused
-    self.accepted = false
-    self.save!
+    update(accepted: false)
   end
 
   def mark_as_accepted_with_actions(params)
     self.accepted = true
-    self.actions = params["actions"].keys.map do |action_key|
-      action = Action.new(action_type: action_key[1..-1])
-      if action_key == ":notes"
-        action.notes = params["notes"]
-      end
+    self.actions = params[:actions].keys.map do |action_key|
+      action = Action.new(action_type: action_key)
+      action.notes = params[:notes] if action_key == 'notes'
       action
     end
-    self.save!
+    save!
   end
 end

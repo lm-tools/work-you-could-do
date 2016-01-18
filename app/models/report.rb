@@ -18,12 +18,8 @@ class Report < ActiveRecord::Base
     )
   end
 
-  def self.find_for_guid(guid)
-    where(guid: guid).first
-  end
-
   def find_occupation(occupation_id)
-    occupations.find { |o| o.id == occupation_id }
+    occupations.find(occupation_id)
   end
 
   def mark_occupations_as_selected(occupation_ids)
@@ -56,7 +52,7 @@ class Report < ActiveRecord::Base
   end
 
   def complete?
-    selected_occupations.count > 0 && !occupations_to_review?
+    selected_occupations.any? && !occupations_to_review?
   end
 
   def unique_actions
