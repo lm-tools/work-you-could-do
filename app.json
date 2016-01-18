@@ -1,0 +1,11 @@
+{
+  "name": "Work you could do",
+  "buildpacks": [
+    {
+      "url": "https://github.com/gjvis/heroku-buildpack-submodules"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
