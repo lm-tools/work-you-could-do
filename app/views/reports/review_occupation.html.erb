@@ -56,10 +56,10 @@
       <fieldset class="form-group">
           <% @actions.each do |action, details| %>
             <label class="block-label action-label">
-              <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
+              <%= check_box_tag "actions[:#{action}]", nil, false, "title": "Select action 1" %>
               <h4 class="bold-small"><%=details[:title]%></h4>
-              <% if action == "notes" %>
-                <%= text_area_tag "notes_#{action}", nil, rows: 5, class: "notes-area" %>
+              <% if action == :notes %>
+                <%= text_area_tag "notes", nil, rows: 5, class: "notes-area" %>
               <% end %>
             </label>
           <% end %>

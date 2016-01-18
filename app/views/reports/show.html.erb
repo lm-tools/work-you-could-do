@@ -23,6 +23,9 @@ job descriptions you found interesting.</p>
   <ul class="list list-bullet">
     <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
       <li><%=occ.title%></li>
+      <% if action.action_type == "notes" %>
+        <pre><%=action.notes %></pre>
+      <% end %>
     <% end %>
   </ul>
 <% end %>

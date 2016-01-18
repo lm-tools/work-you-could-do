@@ -3,6 +3,7 @@ class CreateActions < ActiveRecord::Migration
     create_table :actions do |t|
       t.belongs_to :occupation, index: true
       t.string :action_type
+      t.text :notes
 
       t.timestamps null: false
     end
