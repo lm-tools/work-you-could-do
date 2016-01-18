@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112173635) do
+ActiveRecord::Schema.define(version: 20160113223222) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "actions", force: :cascade do |t|
+    t.integer  "occupation_id"
+    t.string   "action_type"
+    t.text     "notes"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "actions", ["occupation_id"], name: "index_actions_on_occupation_id"
 
   create_table "keywords", force: :cascade do |t|
     t.integer  "report_id"
@@ -23,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160112173635) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "keywords", ["report_id"], name: "index_keywords_on_report_id", using: :btree
+  add_index "keywords", ["report_id"], name: "index_keywords_on_report_id"
 
   create_table "occupations", force: :cascade do |t|
     t.integer  "keyword_id"
@@ -31,10 +38,11 @@ ActiveRecord::Schema.define(version: 20160112173635) do
     t.integer  "soc_occupation_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.boolean  "accepted"
   end
 
-  add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id", using: :btree
-  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id", using: :btree
+  add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id"
+  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id"
 
   create_table "reports", force: :cascade do |t|
     t.string   "guid"

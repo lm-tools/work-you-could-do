@@ -1,4 +1,6 @@
 class ReportEmailSender
+  include ApplicationHelper
+
   def initialize(report)
     @report = report
   end

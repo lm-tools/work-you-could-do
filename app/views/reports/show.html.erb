@@ -1,8 +1,6 @@
 <header>
-  <h2 class="heading-xlarge">Work you could do</h2>
+  <h2 class="heading-xlarge">Your work search activities</h2>
 </header>
-
-<p class="lede">Use this information to search online, tailor your CV and plan your career.</p>
 
 <% if @notice %>
   <div id="success" class="error-summary information-box" role="group">
@@ -12,6 +10,26 @@
   </div>
 <% end %>
 
+<p class="heading-small">You have highlighted <%=@report.accepted_occupations.count%>
+job descriptions you found interesting.</p>
+<ul class="list list-bullet">
+<% @report.accepted_occupations.each do |occupation| %>
+  <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
+<% end %>
+</ul>
+
+<% @report.unique_actions.each do |action| %>
+  <p class="heading-small"><%= action.title %></p>
+  <ul class="list list-bullet">
+    <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
+      <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
+      <% if action.action_type == "notes" %>
+        <pre><%=action.notes %></pre>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
+<hr>
 <p class="heading-small email-help">Send this to your email account so you can refer to it later.</p>
 <%= form_for @report, url: email_report_url(@report), method: "post" do %>
   <fieldset class="form-fieldset">
@@ -27,9 +45,14 @@
     </div>
   </fieldset>
 <% end %>
+<p class="heading-small">Save this link to your journal so that you and your work coach can refer to it later.</p>
+<div class="form-label"><%=root_url+@report.guid%></div>
+<hr>
 
-<% @report.selected_occupations.each do |occupation| %>
-  <section>
+<h2 class="heading-xlarge">Work you could do</h2>
+
+<% @report.accepted_occupations.each do |occupation| %>
+  <section id="<%=occupation.id%>">
     <div class="job_item">
       <header>
         <h2 class="heading-large"><%= occupation.title %></h2>

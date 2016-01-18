@@ -1,10 +1,9 @@
 class Report < ActiveRecord::Base
   extend FriendlyId
-
   friendly_id :guid
-
   has_many :keywords
   has_many :occupations, through: :keywords
+  has_many :actions, through: :occupations
 
   validates :keywords, length: { minimum: 1 }
 
@@ -19,16 +18,50 @@ class Report < ActiveRecord::Base
     )
   end
 
+  def find_occupation(occupation_id)
+    occupations.find(occupation_id)
+  end
+
   def mark_occupations_as_selected(occupation_ids)
     occupations.map do |occupation|
+      is_selected = occupation_ids.include?(occupation.id)
       occupation.update_attributes(
-        selected: occupation_ids.include?(occupation.id)
+        selected: is_selected,
+        accepted: is_selected ? nil : false
       )
     end
     !occupation_ids.empty?
   end
 
+  def occupations_to_review
+    occupations.to_a.select(&:selected)
+               .uniq(&:soc_occupation_id)
+               .select { |o| o.accepted.nil? }
+  end
+
+  def occupations_to_review?
+    occupations_to_review.count > 0
+  end
+
+  def accepted_occupations
+    occupations.select(&:accepted)
+  end
+
   def selected_occupations
-    occupations.where(selected: true)
+    occupations.select(&:selected)
+  end
+
+  def complete?
+    selected_occupations.any? && !occupations_to_review?
+  end
+
+  def unique_actions
+    actions.to_a.uniq(&:action_type)
+  end
+
+  def accepted_occupations_for_action_type(action_type)
+    accepted_occupations.select do |o|
+      o.actions.map(&:action_type).include?(action_type)
+    end
   end
 end

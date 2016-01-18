@@ -27,10 +27,14 @@ gem 'mail'
 
 gem 'therubyracer', platforms: :ruby
 
+gem 'unicorn'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'sqlite3'
   gem 'rubocop'
 end
 
