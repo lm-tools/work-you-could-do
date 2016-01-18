@@ -10,6 +10,10 @@ class Occupation < ActiveRecord::Base
            to: :soc_occupation
   has_many :actions
 
+  def action_by_type(action_type)
+    actions.where(action_type: action_type).first
+  end
+
   def mark_as_refused
     update(accepted: false)
   end

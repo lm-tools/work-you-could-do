@@ -24,7 +24,7 @@ job descriptions you found interesting.</p>
     <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
       <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
       <% if action.action_type == "notes" %>
-        <pre><%=action.notes %></pre>
+        <pre><%=occ.action_by_type(action.action_type).notes %></pre>
       <% end %>
     <% end %>
   </ul>
