@@ -20,4 +20,7 @@ $( document ).ready(function() {
     $(".hide-if-accept").hide();
     $(".show-if-accept").show();
   });
+  $("#notes").focus(function(){
+    $("#actions_notes").prop('checked', true);
+  });
 });
