@@ -10,10 +10,6 @@ class Occupation < ActiveRecord::Base
            to: :soc_occupation
   has_many :actions
 
-  def formatted_tasks
-    tasks.split(';').map(&:strip).map(&:capitalize)
-  end
-
   def mark_as_refused
     update(accepted: false)
   end
