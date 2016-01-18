@@ -14,7 +14,7 @@
 job descriptions you found interesting.</p>
 <ul class="list list-bullet">
 <% @report.accepted_occupations.each do |occupation| %>
-  <li><%=occupation.title%></li>
+  <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
 <% end %>
 </ul>
 
@@ -22,7 +22,7 @@ job descriptions you found interesting.</p>
   <p class="heading-small"><%= action.title %></p>
   <ul class="list list-bullet">
     <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
-      <li><%=occ.title%></li>
+      <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
       <% if action.action_type == "notes" %>
         <pre><%=action.notes %></pre>
       <% end %>
@@ -52,7 +52,7 @@ job descriptions you found interesting.</p>
 <h2 class="heading-xlarge">Work you could do</h2>
 
 <% @report.accepted_occupations.each do |occupation| %>
-  <section>
+  <section id="<%=occupation.id%>">
     <div class="job_item">
       <header>
         <h2 class="heading-large"><%= occupation.title %></h2>
