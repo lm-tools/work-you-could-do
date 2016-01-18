@@ -58,7 +58,7 @@
             <label class="block-label action-label">
               <%= check_box_tag "action_#{action}", nil, false, "title": "Select action 1" %>
               <h4 class="bold-small"><%=details[:title]%></h4>
-              <% if details[:notes] %>
+              <% if action == "notes" %>
                 <%= text_area_tag "notes_#{action}", nil, rows: 5, class: "notes-area" %>
               <% end %>
             </label>
