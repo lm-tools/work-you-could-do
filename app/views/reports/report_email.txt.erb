@@ -1,1 +1,43 @@
-nothing
+Your work search activities
+
+You have highlighted <%=@report.accepted_occupations.count%> job descriptions you found interesting.
+<% @report.accepted_occupations.each do |occupation| %>
+- <%=occupation.title%>
+<% end %>
+
+<% @report.unique_actions.each do |action| %>
+  <%= action.title %>
+  <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
+    - <%=occ.title%>
+    <% if action.action_type == "notes" %>
+      <%=action.notes %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% @report.accepted_occupations.each do |occupation| %>
+  <%= occupation.title %>
+  -----------------------
+
+  <%= occupation.description %>
+
+  Typical pay and hours
+
+    - Normal hours worked per week: <%= occupation.week_hours %>
+    - Estimated weekly pay: £<%= occupation.week_pay %>
+  
+  Typical qualifications required
+  
+  <%= occupation.qualifications %>
+  
+  Typical tasks
+
+  <% formatted_tasks(occupation.tasks).each do |task| %>
+    - <%=task%>
+  <% end %>
+
+  Useful search terms
+
+  <%= occupation.additional_titles %>
+<% end %>
+
