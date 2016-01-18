@@ -48,9 +48,6 @@
 </section>
 
 <%= form_for([ @report, occupation]) do |f| %>
-  <a id="show-accept" href="#show-accept" class="button button-large hide-if-accept">Accept</a>
-  <%= submit_tag "Accept", class: "button button-large show-if-accept" %>
-  <%= submit_tag "Refuse", class: "button button-large" %>
   <div class="show-if-accept">
     <h3 class="heading-medium">What would you like to do</h3>
     <section>
