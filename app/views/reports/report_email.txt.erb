@@ -30,11 +30,11 @@ Work you could do
     - Normal hours worked per week: <%= occupation.week_hours %>
     - Estimated weekly pay: £<%= occupation.week_pay %>
   
-  Typical qualifications required
+  Qualifications required
   
   <%= occupation.qualifications %>
   
-  Typical tasks
+  Tasks
 
   <% formatted_tasks(occupation.tasks).each do |task| %>
     - <%=task%>
