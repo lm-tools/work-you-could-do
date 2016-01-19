@@ -13,8 +13,10 @@ class OccupationsController < ApplicationController
   private
 
   def occupation_accepted?(params)
-    true
-    #params[:commit].downcase != 'refuse'
+    not_no_actions = action_params[:actions].select do |action|
+      action != "no"
+    end
+    !not_no_actions.empty?
   end
 
   def action_params
