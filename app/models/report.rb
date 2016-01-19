@@ -39,6 +39,12 @@ class Report < ActiveRecord::Base
                .select { |o| o.accepted.nil? }
   end
 
+  def occupations_reviewed
+    occupations.to_a.select(&:selected)
+               .uniq(&:soc_occupation_id)
+               .select { |o| !o.accepted.nil? }
+  end
+
   def occupations_to_review?
     occupations_to_review.count > 0
   end
