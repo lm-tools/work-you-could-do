@@ -13,10 +13,14 @@ class OccupationsController < ApplicationController
   private
 
   def occupation_accepted?(_params)
-    not_no_actions = action_params[:actions].select do |action|
-      action != 'no'
+    actions = action_params[:actions]
+    if actions
+      not_no_actions = action_params[:actions].select do |action|
+        action != 'no'
+      end
+      return !not_no_actions.empty?
     end
-    !not_no_actions.empty?
+    false
   end
 
   def action_params

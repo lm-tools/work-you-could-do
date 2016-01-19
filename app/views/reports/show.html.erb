@@ -10,25 +10,58 @@
   </div>
 <% end %>
 
-<p class="heading-small">You have highlighted <%=@report.accepted_occupations.count%>
-job descriptions you found interesting.</p>
-<ul class="list list-bullet">
-<% @report.accepted_occupations.each do |occupation| %>
-  <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
-<% end %>
-</ul>
+<div class="grid-row">
 
-<% @report.unique_actions.each do |action| %>
-  <p class="heading-small"><%= action.title %></p>
-  <ul class="list list-bullet">
-    <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
-      <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
-      <% if action.action_type == "notes" %>
-        <pre><%=occ.action_by_type(action.action_type).notes %></pre>
+  <div class="column-one-half">
+    <% @report.unique_actions.each do |action| %>
+      <p class="heading-small"><%= action.title %></p>
+      <ul class="list list-bullet">
+        <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
+          <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="column-one-half">
+    <p class="heading-small">You have highlighted <%=@report.accepted_occupations.count%>
+    job descriptions you found interesting.</p>
+    <ul class="list list-bullet">
+    <% @report.accepted_occupations.each do |occupation| %>
+      <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
+      <% if occupation.action_by_type("notes") %>
+        <pre><%=occupation.action_by_type("notes").notes %></pre>
       <% end %>
     <% end %>
-  </ul>
-<% end %>
+    </ul>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="grid-row">
+
+  <div class="column-one-half">
+    <p class="heading-small">Keywords you have searched for</p>
+    <ul class="list list-bullet">
+      <% @report.keywords.each do |keyword| %>
+        <li><%=keyword.keyword%></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="column-one-half">
+    <p class="heading-small">Occupations you have not found interesting</p>
+    <ul class="list list-bullet">
+      <% @report.unaccepted_occupations.each do |occupation| %>
+        <li><%=occupation.title%></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
 <hr>
 <p class="heading-small email-help">Send this to your email account so you can refer to it later.</p>
 <%= form_for @report, url: email_report_url(@report), method: "post" do %>

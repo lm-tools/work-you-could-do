@@ -46,11 +46,17 @@ class Report < ActiveRecord::Base
   end
 
   def occupations_to_review?
-    occupations_to_review.count > 0
+    occupations_to_review.any?
   end
 
   def accepted_occupations
     occupations.select(&:accepted)
+  end
+
+  def unaccepted_occupations
+    occupations.select { |o|
+      !o.accepted
+    }
   end
 
   def selected_occupations
@@ -62,7 +68,9 @@ class Report < ActiveRecord::Base
   end
 
   def unique_actions
-    actions.to_a.uniq(&:action_type)
+    actions.to_a.uniq(&:action_type).select do |a|
+      a.action_type != "no" && a.action_type != "notes"
+    end
   end
 
   def accepted_occupations_for_action_type(action_type)
