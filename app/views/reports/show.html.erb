@@ -24,8 +24,7 @@
   </div>
 
   <div class="column-one-half">
-    <p class="heading-small">You have highlighted <%=@report.accepted_occupations.count%>
-    job descriptions you found interesting.</p>
+    <p class="heading-small">Jobs you found interesting in this session</p>
     <ul class="list list-bullet">
     <% @report.accepted_occupations.each do |occupation| %>
       <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
