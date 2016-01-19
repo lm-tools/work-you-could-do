@@ -24,7 +24,7 @@
   </div>
 
   <div class="column-one-half">
-    <p class="heading-small"><%=pluralize("Job", @report.accepted_occupations.count)%> you found interesting in this session</p>
+    <p class="heading-small"><%=pluralize(@report.accepted_occupations.count, "Job")%> you found interesting in this session</p>
     <ul class="list list-bullet">
       <% @report.accepted_occupations.each do |occupation| %>
         <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
@@ -46,7 +46,7 @@
 <div class="grid-row">
 
   <div class="column-one-half">
-    <p class="heading-small"><%=pluralize("Keyword", @report.keywords.count %> you have searched for</p>
+    <p class="heading-small"><%=pluralize(@report.keywords.count, "Keyword")%> you have searched for</p>
     <ul class="list list-bullet">
       <% @report.keywords.each do |keyword| %>
         <li><%=keyword.keyword%></li>
@@ -56,7 +56,7 @@
 
   <div class="column-one-half">
     <% if @report.unaccepted_occupations.any? %>
-      <p class="heading-small"><%=pluralize("Occupation", @report.unaccepted_occupations.count)%> you have not found interesting</p>
+      <p class="heading-small"><%=pluralize(@report.unaccepted_occupations.count, "Occupation")%> you have not found interesting</p>
       <ul class="list list-bullet">
         <% @report.unaccepted_occupations.each do |occupation| %>
           <li><%=occupation.title%></li>

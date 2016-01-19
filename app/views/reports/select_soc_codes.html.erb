@@ -24,7 +24,7 @@
   <% @report.keywords.each do |keyword| %>
     <section>
       <fieldset class="form-group">
-        <h3 class="bold-medium job-description-title"><%=pluralize("Job", keyword.occupations.count)%> related to ‘<%=keyword.keyword%>‘</h3>
+        <h3 class="bold-medium job-description-title"><%=pluralize(keyword.occupations.count, "Job")%> related to ‘<%=keyword.keyword%>‘</h3>
         <% if keyword.occupations.empty? %>
           <p>Sorry, we couldn't find any results for this job role</p>
         <% else %>
