@@ -13,10 +13,11 @@ class OccupationsController < ApplicationController
   private
 
   def occupation_accepted?(params)
-    params[:commit].downcase != 'refuse'
+    true
+    #params[:commit].downcase != 'refuse'
   end
 
   def action_params
-    params.permit(:notes, actions: Action::ACTION_TYPES.keys)
+    params.permit(:notes, actions: Action::ACTION_TYPES.map{|a| a[:key]})
   end
 end

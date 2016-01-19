@@ -1,26 +1,41 @@
 class Action < ActiveRecord::Base
-  ACTION_TYPES = {
-    cv: {
-      title: 'Tailor your CV'
+
+  ACTION_TYPES = [
+    {
+      key: 'interesting',
+      title: 'This sounds interesting'
     },
-    research: {
-      title: 'Research skills needed'
-    },
-    apply: {
-      title: 'Apply for these sorts of jobs'
-    },
-    work_coach: {
+    {
+      key: 'work_coach',
       title: 'Ask my work coach a question'
     },
-    notes: {
-      title: 'My notes'
+    {
+      key: 'research',
+      title: 'Research skills or experience needed'
     },
-    show_more: {
-      title: 'Show me more related roles'
+    {
+      key: 'related',
+      title: 'Show me related roles'
+    },
+    {
+      key: 'cv',
+      title: 'Tailor my CV'
+    },
+    {
+      key: 'apply',
+      title: 'Apply for roles in this area'
+    },
+    {
+      key: 'no',
+      title: 'This role isn\'t interesting to me at the moment'
+    },
+    {
+      key: 'notes',
+      title: 'My notes'
     }
-  }.freeze
+  ].freeze
 
   def title
-    ACTION_TYPES[action_type.to_sym][:title]
+    ACTION_TYPES.select {|e| e[:key] == action_type}.first.fetch(:title)
   end
 end
