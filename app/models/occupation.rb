@@ -15,9 +15,9 @@ class Occupation < ActiveRecord::Base
   end
 
   def update_with_actions(occupation_params, action_params)
-    actions = action_params.map { |action_key| 
+    actions = action_params.map do |action_key|
       Action.new(action_type: action_key)
-    }
+    end
     params = occupation_params.merge(
       actions: actions
     )
