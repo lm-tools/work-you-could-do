@@ -2,21 +2,25 @@ class OccupationsController < ApplicationController
   def update
     report = Report.friendly.find(params[:report_id])
     occupation = report.find_occupation(params[:id])
-    if occupation_accepted?(params)
-      occupation.mark_as_accepted_with_actions(action_params)
-    else
-      occupation.mark_as_refused
-    end
+    occupation.update_with_actions(occupation_params, action_params)
     redirect_to report_path(report)
   end
 
   private
 
-  def occupation_accepted?(_params)
-    action_params.fetch(:actions, []).any? { |action| action != 'no' }
+  def occupation_accepted?
+    action_params.any? { |action| action != 'no' }
   end
 
   def action_params
-    params.permit(:notes, actions: Action::ACTION_TYPES.keys)
+    filtered_params.fetch(:actions, [])
+  end
+
+  def filtered_params
+    params.permit(:notes, actions: [])
+  end
+
+  def occupation_params
+    filtered_params.merge(accepted: occupation_accepted?)
   end
 end

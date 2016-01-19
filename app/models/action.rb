@@ -20,9 +20,6 @@ class Action < ActiveRecord::Base
     },
     no: {
       title: 'This role isn\'t interesting to me at the moment'
-    },
-    notes: {
-      title: 'My notes'
     }
   }.freeze
 

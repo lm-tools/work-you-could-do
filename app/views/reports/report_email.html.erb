@@ -3,7 +3,7 @@
 </header>
 
 <p class="heading-small">You have highlighted <%=@report.accepted_occupations.count%>
-job <%=pluralize(@report.accepted_occupations.count, "description")%> you found interesting.</p>
+job <%=pluralize_without_count(@report.accepted_occupations.count, "description")%> you found interesting.</p>
 <ul class="list list-bullet">
 <% @report.accepted_occupations.each do |occupation| %>
   <li><%=occupation.title%></li>

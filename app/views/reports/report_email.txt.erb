@@ -1,7 +1,7 @@
 Your work search activities
 ===========================
 
-You have highlighted <%=@report.accepted_occupations.count%> job <%=pluralize(@report.accepted_occupations.count, "description")%> you found interesting.
+You have highlighted <%=@report.accepted_occupations.count%> job <%=pluralize_without_count(@report.accepted_occupations.count, "description")%> you found interesting.
 <% @report.accepted_occupations.each do |occupation| %>
 - <%=occupation.title%>
 <% end %>
