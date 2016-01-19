@@ -1,5 +1,4 @@
 class Action < ActiveRecord::Base
-
   ACTION_TYPES = [
     {
       key: 'interesting',
@@ -36,6 +35,6 @@ class Action < ActiveRecord::Base
   ].freeze
 
   def title
-    ACTION_TYPES.select {|e| e[:key] == action_type}.first.fetch(:title)
+    ACTION_TYPES.find { |e| e[:key] == action_type }.fetch(:title)
   end
 end

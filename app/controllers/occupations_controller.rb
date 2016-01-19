@@ -12,14 +12,14 @@ class OccupationsController < ApplicationController
 
   private
 
-  def occupation_accepted?(params)
+  def occupation_accepted?(_params)
     not_no_actions = action_params[:actions].select do |action|
-      action != "no"
+      action != 'no'
     end
     !not_no_actions.empty?
   end
 
   def action_params
-    params.permit(:notes, actions: Action::ACTION_TYPES.map{|a| a[:key]})
+    params.permit(:notes, actions: Action::ACTION_TYPES.map { |a| a[:key] })
   end
 end

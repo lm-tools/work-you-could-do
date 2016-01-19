@@ -65,7 +65,10 @@
       <fieldset class="form-group width-action-select">
         <a href="<%=root_url%>" class="link-back">start again</a>
         <button type=submit class="button right">Next</button>
-      </div>
+      </fieldset>
+      <fieldset class="width-action-select">
+        <p class="font-xsmall right"> <%=@report.occupations_to_review.count - 1 %> job descriptions left to read</p>
+      </fieldset>
     </section>
   </div>
 <% end %>
