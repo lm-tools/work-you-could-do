@@ -55,7 +55,7 @@ class Report < ActiveRecord::Base
 
   def unaccepted_occupations
     occupations.select do |o|
-      !o.accepted
+      !o.accepted && o.selected
     end
   end
 
