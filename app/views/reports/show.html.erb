@@ -29,7 +29,11 @@
     <% @report.accepted_occupations.each do |occupation| %>
       <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
       <% if occupation.action_by_type("notes") %>
-        <pre><%=occupation.action_by_type("notes").notes %></pre>
+        <div class="panel panel-border-wide">
+          <p>
+            <%=occupation.action_by_type("notes").notes %>
+          </p>
+        </div>
       <% end %>
     <% end %>
     </ul>
