@@ -48,22 +48,26 @@
 </section>
 
 <%= form_for([ @report, occupation]) do |f| %>
-  <a id="show-accept" href="#show-accept" class="button button-large hide-if-accept">Accept</a>
-  <%= submit_tag "Accept", class: "button button-large show-if-accept" %>
-  <%= submit_tag "Refuse", class: "button button-large" %>
   <div class="show-if-accept">
     <h3 class="heading-medium">What would you like to do</h3>
     <section>
       <fieldset class="form-group">
           <% @actions.each do |action, details| %>
             <label class="block-label action-label">
-              <%= check_box_tag "actions[#{action}]", nil, false, "title": "Select action 1" %>
+              <%= check_box_tag "actions[#{action}]", nil, false, "title": "Select action #{action}" %>
               <h4 class="bold-small"><%=details[:title]%></h4>
               <% if action == :notes %>
                 <%= text_area_tag "notes", nil, rows: 5, class: "notes-area" %>
               <% end %>
             </label>
           <% end %>
+      </fieldset>
+      <fieldset class="form-group width-action-select">
+        <a href="<%=root_url%>" class="link-back">start again</a>
+        <button type=submit class="button right">Next</button>
+      </fieldset>
+      <fieldset class="width-action-select">
+        <p class="font-xsmall right"> <%=@report.occupations_to_review.count - 1 %> job descriptions left to read</p>
       </fieldset>
     </section>
   </div>
