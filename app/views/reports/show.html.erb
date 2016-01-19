@@ -24,18 +24,18 @@
   </div>
 
   <div class="column-one-half">
-    <p class="heading-small">Jobs you found interesting in this session</p>
+    <p class="heading-small"><%=pluralize("Job", @report.accepted_occupations.count)%> you found interesting in this session</p>
     <ul class="list list-bullet">
-    <% @report.accepted_occupations.each do |occupation| %>
-      <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
-      <% if occupation.action_by_type("notes") %>
-        <div class="panel panel-border-wide">
-          <p>
-            <%=occupation.action_by_type("notes").notes %>
-          </p>
-        </div>
+      <% @report.accepted_occupations.each do |occupation| %>
+        <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
+        <% if occupation.action_by_type("notes") %>
+          <div class="panel panel-border-wide">
+            <p>
+              <%=occupation.action_by_type("notes").notes %>
+            </p>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
     </ul>
   </div>
 
@@ -46,7 +46,7 @@
 <div class="grid-row">
 
   <div class="column-one-half">
-    <p class="heading-small">Keywords you have searched for</p>
+    <p class="heading-small"><%=pluralize("Keyword", @report.keywords.count %> you have searched for</p>
     <ul class="list list-bullet">
       <% @report.keywords.each do |keyword| %>
         <li><%=keyword.keyword%></li>
@@ -55,12 +55,14 @@
   </div>
 
   <div class="column-one-half">
-    <p class="heading-small">Occupations you have not found interesting</p>
-    <ul class="list list-bullet">
-      <% @report.unaccepted_occupations.each do |occupation| %>
-        <li><%=occupation.title%></li>
-      <% end %>
-    </ul>
+    <% if @report.unaccepted_occupations.any? %>
+      <p class="heading-small"><%=pluralize("Occupation", @report.unaccepted_occupations.count)%> you have not found interesting</p>
+      <ul class="list list-bullet">
+        <% @report.unaccepted_occupations.each do |occupation| %>
+          <li><%=occupation.title%></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 
 </div>
