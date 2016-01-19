@@ -1,40 +1,32 @@
 class Action < ActiveRecord::Base
-  ACTION_TYPES = [
-    {
-      key: 'interesting',
+  ACTION_TYPES = {
+    interesting: {
       title: 'This sounds interesting'
     },
-    {
-      key: 'work_coach',
+    work_coach: {
       title: 'Ask my work coach a question'
     },
-    {
-      key: 'research',
+    research: {
       title: 'Research skills or experience needed'
     },
-    {
-      key: 'related',
+    related: {
       title: 'Show me related roles'
     },
-    {
-      key: 'cv',
+    cv: {
       title: 'Tailor my CV'
     },
-    {
-      key: 'apply',
+    apply: {
       title: 'Apply for roles in this area'
     },
-    {
-      key: 'no',
+    no: {
       title: 'This role isn\'t interesting to me at the moment'
     },
-    {
-      key: 'notes',
+    notes: {
       title: 'My notes'
     }
-  ].freeze
+  }.freeze
 
   def title
-    ACTION_TYPES.find { |e| e[:key] == action_type }.fetch(:title)
+    ACTION_TYPES.fetch(action_type.to_sym).fetch(:title)
   end
 end

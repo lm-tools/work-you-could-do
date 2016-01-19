@@ -24,6 +24,6 @@ class OccupationsController < ApplicationController
   end
 
   def action_params
-    params.permit(:notes, actions: Action::ACTION_TYPES.map { |a| a[:key] })
+    params.permit(:notes, actions: Action::ACTION_TYPES.keys)
   end
 end

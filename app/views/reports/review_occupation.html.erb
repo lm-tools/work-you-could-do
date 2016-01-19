@@ -52,11 +52,11 @@
     <h3 class="heading-medium">What would you like to do</h3>
     <section>
       <fieldset class="form-group">
-          <% @actions.each do |action| %>
+          <% @actions.each do |action, details| %>
             <label class="block-label action-label">
-              <%= check_box_tag "actions[#{action[:key]}]", nil, false, "title": "Select action #{action[:key]}" %>
-              <h4 class="bold-small"><%=action[:title]%></h4>
-              <% if action[:key] == "notes" %>
+              <%= check_box_tag "actions[#{action}]", nil, false, "title": "Select action #{action}" %>
+              <h4 class="bold-small"><%=details[:title]%></h4>
+              <% if action == :notes %>
                 <%= text_area_tag "notes", nil, rows: 5, class: "notes-area" %>
               <% end %>
             </label>
