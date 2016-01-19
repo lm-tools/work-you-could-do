@@ -1,19 +1,24 @@
-<header>
-  <h2 class="bold-large">Work you could do</h2>
-</header>
-
 <% occupation = @report.occupations_to_review.first %>
 <section>
+
+  <div class="grid-row">
+
+    <div class="column-three-quarters">
+      <p class="lede">Use this information to search online, tailor your CV and plan your career.</p>
+    </div>
+
+    <div class="column-one-quarter">
+      <% total_to_review = @report.occupations_to_review.count + @report.occupations_reviewed.count %>
+      <p class="text-secondary right"><%= @report.occupations_reviewed.count + 1 %> of <%= total_to_review %></p>
+    </div>
+
+  </div>
+
   <div class="job_item">
     <header>
-      <% total_to_review = @report.occupations_to_review.count + @report.occupations_reviewed.count %>
-      <p class="text-secondary">Job description <%= @report.occupations_reviewed.count + 1 %> of <%= total_to_review %></p>
       <h2 class="bold-large"><%= occupation.title %></h2>
     </header>
     <p><%= occupation.description %></p>
-
-    <p class="lede">Use this information to search online, tailor your CV and plan your career.</p>
-
     <div class="grid-row">
       <div class="column-half">
         <h3 class="heading-small">Typical pay and hours</h3>
@@ -23,14 +28,14 @@
         </ul>
       </div>
       <div class="column-half">
-        <h3 class="heading-small">Typical qualifications required</h3>
+        <h3 class="heading-small">Qualifications required</h3>
         <p><%= occupation.qualifications %></p>
       </div>
     </div>
 
     <div class="grid-row">
       <div class="column-half">
-       <h3 class="heading-small">Typical tasks</h3>
+       <h3 class="heading-small">Tasks</h3>
         <ul class="list-bullet">
           <% formatted_tasks(occupation.tasks).each do |task| %>
             <li><%=task%></li>
