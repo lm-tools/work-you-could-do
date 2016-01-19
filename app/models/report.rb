@@ -54,9 +54,9 @@ class Report < ActiveRecord::Base
   end
 
   def unaccepted_occupations
-    occupations.select { |o|
+    occupations.select do |o|
       !o.accepted
-    }
+    end
   end
 
   def selected_occupations
@@ -69,8 +69,8 @@ class Report < ActiveRecord::Base
 
   def unique_actions
     actions.to_a.uniq(&:action_type).select do |a|
-      a.action_type != "no" && a.action_type != "notes"
-    end
+      a.action_type != 'no' && a.action_type != 'notes'
+    end.sort_by(&:index_in_action_order)
   end
 
   def accepted_occupations_for_action_type(action_type)
