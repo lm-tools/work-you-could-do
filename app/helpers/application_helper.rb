@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def pluralize_without_count(count, noun)
-    count == 1 ? "#{noun}" : "#{noun.pluralize}"
+    count == 1 ? noun : noun.to_s.pluralize
   end
 end
