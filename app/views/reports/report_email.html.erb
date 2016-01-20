@@ -27,7 +27,44 @@ job <%=pluralize_without_count(@report.accepted_occupations.count, "description"
 
 <% @report.accepted_occupations.each do |occupation| %>
   <section>
-    <%= render partial: "occupation", locals: { occupation: occupation } %>
+    <div class="job_item">
+      <header>
+        <h2 class="heading-large"><%= occupation.title %></h2>
+      </header>
+
+      <p><%= occupation.description %></p>
+
+      <div class="grid-row">
+        <div class="column-half">
+          <h3 class="heading-small">Your typical pay and hours</h3>
+          <ul>
+            <li><%= occupation.week_hours %> hours a week</li>
+            <li>£<%= occupation.week_pay %> a week</li>
+          </ul>
+        </div>
+        <div class="column-half">
+          <h3 class="heading-small">Qualifications you'll need</h3>
+          <p><%= occupation.qualifications %></p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-half">
+         <h3 class="heading-small">Kind of work you’d do</h3>
+          <ul class="list-bullet">
+            <% formatted_tasks(occupation.tasks).each do |task| %>
+              <li><%=task%></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="column-half">
+          <h3 class="heading-small">Words to use in your online search</h3>
+          <em><%= occupation.additional_titles %></em>
+        </div>
+      </div>
+    </div>
+
     <hr>
   </section>
 <% end %>
