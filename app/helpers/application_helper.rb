@@ -3,7 +3,7 @@ module ApplicationHelper
     tasks.split(';').map(&:strip).map(&:capitalize)
   end
 
-  def pluralize_without_count(count, noun, text = nil)
-    count == 1 ? "#{noun}#{text}" : "#{noun.pluralize}#{text}"
+  def pluralize_without_count(count, noun)
+    count == 1 ? "#{noun}" : "#{noun.pluralize}"
   end
 end
