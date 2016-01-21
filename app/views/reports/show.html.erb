@@ -18,7 +18,7 @@
         <p class="heading-small"><%= action.title %></p>
         <ul class="list list-bullet">
           <% @report.accepted_occupations_for_action_type(action.action_type).each do |occ| %>
-            <li><a href="#<%=occ.id%>"><%=occ.title%></a></li>
+            <li><%=occ.title%></li>
           <% end %>
         </ul>
       <% end %>
