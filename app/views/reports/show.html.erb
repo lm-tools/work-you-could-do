@@ -32,7 +32,7 @@
       <p class="heading-small"><%=pluralize_without_count(@report.accepted_occupations.count, "Job")%> you found interesting in this session</p>
       <ul class="list list-bullet">
         <% @report.accepted_occupations.each do |occupation| %>
-          <li><a href="#<%=occupation.id%>"><%=occupation.title%></a></li>
+          <li><%=occupation.title%></li>
           <% unless occupation.notes.blank? %>
             <div class="panel panel-border-wide">
               <p>
