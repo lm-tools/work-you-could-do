@@ -14,17 +14,13 @@ class Occupation < ActiveRecord::Base
     actions.where(action_type: action_type).first
   end
 
-  def mark_as_refused
-    update(accepted: false)
-  end
-
-  def mark_as_accepted_with_actions(params)
-    self.accepted = true
-    self.actions = params[:actions].keys.map do |action_key|
-      action = Action.new(action_type: action_key)
-      action.notes = params[:notes] if action_key == 'notes'
-      action
+  def update_with_actions(occupation_params, action_params)
+    actions = action_params.map do |action_key|
+      Action.new(action_type: action_key)
     end
-    save!
+    params = occupation_params.merge(
+      actions: actions
+    )
+    update(params)
   end
 end

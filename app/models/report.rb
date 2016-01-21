@@ -68,8 +68,8 @@ class Report < ActiveRecord::Base
   end
 
   def unique_actions
-    actions.to_a.uniq(&:action_type).select do |a|
-      a.action_type != 'no' && a.action_type != 'notes'
+    actions.to_a.uniq(&:action_type).reject do |a|
+      %w(interesting no notes).include?(a.action_type)
     end.sort_by(&:index_in_action_order)
   end
 
