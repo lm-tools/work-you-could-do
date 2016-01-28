@@ -1,0 +1,5 @@
+<%= form_tag('/', method: "post") do %>
+    <%= label_tag(:id, "UC Referral ID") %>
+    <%= text_field_tag(:id, SecureRandom.hex(10)) %>
+    <%= submit_tag("Submit") %>
+<% end %>

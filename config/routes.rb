@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'reports#new'
   get 'cookies' => 'start#cookies'
+  get 'referral' => 'start#referral'
 
   resources :reports, :path => '/' do
     resources :occupations
