@@ -1,32 +1,27 @@
 class ReportsController < ApplicationController
   def new
-    @report = Report.new( guid: SecureRandom.hex(10) )
-    @report.save
+    @report = Report.create(guid: SecureRandom.hex(10))
   end
 
   def update
-    @report  = Report.friendly.find(params[:id])
+    @report = Report.friendly.find(params[:id])
 
-    unless params['keywords'].reject(&:blank?).any?
+    if params['keywords'].reject(&:blank?).any?
+      add_keywords_to_report(params['keywords'])
+      render action: 'select_soc_codes', guid: @report.guid
+    else
       @error = 'Please enter at least 1 job or sector.'
-      render 'new' and return
+      render 'new'
     end
-
-    @report.keywords = Report.build_keywords_with_occupations(params['keywords'])
-    @report.save
-    render action: 'select_soc_codes', guid: @report.guid
   end
 
   def create
-    @report = Report.friendly.find(params[:id]) rescue nil
+    @report = Report.friendly.find(params[:id])
+    determine_render_from_report
 
-    if @report == nil
-      @report = Report.new(guid: params[:id])
-      @report.save
-      render 'new'
-    else
-      determine_render_from_report
-    end
+  rescue ActiveRecord::RecordNotFound
+    @report = Report.create(guid: params[:id])
+    render 'new'
   end
 
   def show
@@ -70,4 +65,9 @@ class ReportsController < ApplicationController
     end
   end
 
+  def add_keywords_to_report(keywords)
+    @report.keywords =
+      Report.build_keywords_with_occupations(keywords)
+    @report.save
+  end
 end
