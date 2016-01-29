@@ -5,17 +5,18 @@ class Report < ActiveRecord::Base
   has_many :occupations, through: :keywords
   has_many :actions, through: :occupations
 
-  validates :keywords, length: { minimum: 1 }
-
   def self.generate_report_for_keywords(search_keywords)
-    keywords = search_keywords.reject(&:empty?).map do |search_keyword|
+    Report.new(
+      keywords: build_keywords_with_occupations(search_keywords),
+      guid: SecureRandom.hex(10)
+    )
+  end
+
+  def self.build_keywords_with_occupations(search_keywords)
+    search_keywords.reject(&:empty?).map do |search_keyword|
       keyword = Keyword.new(keyword: search_keyword)
       keyword.add_new_occupations
     end
-    Report.new(
-      keywords: keywords,
-      guid: SecureRandom.hex(10)
-    )
   end
 
   def find_occupation(occupation_id)

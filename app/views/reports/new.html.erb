@@ -9,7 +9,7 @@
   <li>tasks and hours</li>
 </ul>
 
-<%= form_for @report do |f| %>
+<%= form_for @report, url: report_path(@report), method: "PUT" do |f| %>
   <div class="form-group <% if @error %>error<%end%>">
     <label for="id_sector_form-sector_0">
       <span class="heading-small">Work, skills and interests</span>
@@ -29,4 +29,5 @@
   <div class="form-group">
     <button type="submit" class="button">Next</button>
   </div>
+  [<%= @report.guid %>]
 <% end %>
