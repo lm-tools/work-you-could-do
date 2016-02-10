@@ -1,7 +1,26 @@
 class ReportsController < ApplicationController
-  def new
-    @report = Report.new
+
+  require 'lmi_for_all'
+
+  def gather_keywords
+    @report = Report.new(guid: params['id'])
   end
+
+  def new
+    @report = Report.new(report_params)
+    @search_results = Hash[
+        params[:keywords].map do |k|
+          [k, search_for_soc_occupations(k)]
+        end
+    ]
+    render 'select_soc_codes'
+  end
+
+  def report_params
+    params.permit(:report, :keywords)
+  end
+
+  #---------------------------
 
   def create
     @report = Report.generate_report_for_keywords(params['keywords'])
@@ -46,5 +65,15 @@ class ReportsController < ApplicationController
       @notice = "Sent to #{email}"
     end
     render :show
+  end
+
+  private
+
+  # takes a keyword and returns a list of SocOccupation models
+  # this actually does the search, and also, hydrates the SocOccupation, and also, caches it in the DB.
+  # YAY
+  def search_for_soc_occupations(keyword)
+    lmi_client = LmiClient.new
+    lmi_client.occupation_search(keyword)
   end
 end
