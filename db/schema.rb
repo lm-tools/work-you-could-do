@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119143526) do
+ActiveRecord::Schema.define(version: 20160210102313) do
 
   create_table "actions", force: :cascade do |t|
     t.integer  "occupation_id"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20160119143526) do
     t.string   "guid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "keywords"
+    t.text     "keyword"
   end
 
   create_table "soc_occupations", force: :cascade do |t|

@@ -3,17 +3,24 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'reports#new'
   get 'cookies' => 'start#cookies'
 
-  resources :reports, :path => '/' do
+  # GET  /?id=(UUID.new)
+  # GET  /reports/new
+  # POST /reports/create  <----- create report in DV, redirect to first occupation
+  #
+  # ---
+  # GET  /reports/report_id/occupations/1245
+  # DELETE /reports/report_id/occupations/1245, redirect to next occuption or report show
+  # GET  /report/report_id/occupations/9875
+  # GET  /reports/report_id
+
+  root to: 'reports#gather_keywords'
+
+  resources :reports do
     resources :occupations
-    member do
-      get 'select_soc_codes'
-      patch 'save_soc_codes'
-      post 'email'
-    end
   end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

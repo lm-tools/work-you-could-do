@@ -11,7 +11,7 @@
 
 <p class="lede">These are some job roles related to your search.</p>
 
-<%= form_for @report, url: save_soc_codes_report_url(@report) do %>
+<%= form_for @report do %>
   <% if @error %>
     <div class="form-group error">
       <span class="error-message">
@@ -21,24 +21,24 @@
       </span>
     </div>
   <% end %>
-  <% @report.keywords.each do |keyword| %>
-    <section>
-      <fieldset class="form-group">
-        <h3 class="bold-medium job-description-title"><%=pluralize_without_count(keyword.occupations.count, "Role")%> related to ‘<%=keyword.keyword%>‘</h3>
-        <% if keyword.occupations.empty? %>
-          <p>Sorry, we couldn't find any results for this job role</p>
-        <% else %>
-          <% keyword.occupations.each do |occupation| %>
-            <label class="block-label">
-              <%= check_box_tag "occupations[#{occupation.id}]", nil, false, "title": "Select occupation #{occupation.title}" %>
-              <h4 class="bold-small"><%= occupation.title %></h4>
-              <p><%= occupation.description %></p>
-            </label>
-          <% end %>
-        <% end %>
-      </fieldset>
-    </section>
-  <% end %>
+    <% @search_results.each do |result| %>
+        <section>
+          <fieldset class="form-group">
+            <h3 class="bold-medium job-description-title"><%=pluralize_without_count(result.count, "Role")%> related to ‘<%=result.keyword%>‘</h3>
+            <% if result.empty? %>
+                <p>Sorry, we couldn't find any results for this job role</p>
+            <% else %>
+                <% result.each do |occupation| %>
+                    <label class="block-label">
+                      <%= check_box_tag "occupations[#{occupation.id}]", nil, false, "title": "Select occupation #{occupation.title}" %>
+                      <h4 class="bold-small"><%= occupation.title %></h4>
+                      <p><%= occupation.description %></p>
+                    </label>
+                <% end %>
+            <% end %>
+          </fieldset>
+        </section>
+    <% end %>
 
   <div class="form-group">
     <button type=submit class=button>Next</button>
