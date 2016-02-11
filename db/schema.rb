@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211225152) do
+ActiveRecord::Schema.define(version: 20160211225916) do
 
   create_table "occupations", force: :cascade do |t|
     t.integer  "soc_code"
@@ -25,5 +25,7 @@ ActiveRecord::Schema.define(version: 20160211225152) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  add_index "occupations", ["soc_code"], name: "index_occupations_on_soc_code", unique: true
 
 end

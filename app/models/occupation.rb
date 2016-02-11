@@ -6,4 +6,8 @@ class Occupation < ActiveRecord::Base
       soc_occupation.assign_attributes(soc_occupation_lookup)
     end
   end
+
+  def to_param
+    soc_code.to_s
+  end
 end
