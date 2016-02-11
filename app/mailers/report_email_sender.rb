@@ -7,10 +7,10 @@ class ReportEmailSender
 
   def send(address)
     mail = Mail.new do
-      from ENV['EMAIL_SENDER']
-      subject 'Work you could do'
+      from ENV["EMAIL_SENDER"]
+      subject "Work you could do"
     end
-    mail['to'] = address
+    mail["to"] = address
     mail.text_part = text_part
     mail.html_part = html_part
     mail.deliver!
@@ -36,7 +36,7 @@ class ReportEmailSender
     html_template = ERB.new(html)
     html_content = html_template.result(binding)
     Mail::Part.new do
-      content_type 'text/html; charset=UTF-8'
+      content_type "text/html; charset=UTF-8"
       body html_content
     end
   end
