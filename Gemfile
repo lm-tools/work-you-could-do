@@ -1,48 +1,36 @@
-source 'https://rubygems.org'
-ruby '2.3.0'
+source "https://rubygems.org"
+ruby "2.3.0"
 
-gem 'rails', '4.2.5'
-gem 'pg'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem "rails", "~> 4.2"
+gem "pg"
+gem "unicorn"
 
-gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem "friendly_id"
+gem "httparty"
+gem "jbuilder", "~> 2.0"
+gem "mail"
 
-# GOV.UK styling
-gem 'govuk_template'
-gem 'govuk_frontend_toolkit'
-
-# Call external API
-gem 'httparty'
-
-# GUIDs as resource ID
-gem 'friendly_id'
-
-# Mailer
-gem 'mail'
-
-gem 'therubyracer', platforms: :ruby
-
-gem 'unicorn'
+gem "govuk_frontend_toolkit"
+gem "govuk_template"
+gem "jquery-rails"
+gem "sass-rails", "~> 5.0"
+gem "therubyracer", platforms: :ruby
+gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
-  gem 'byebug'
-  gem 'pry-rails'
-  gem 'rspec-rails'
-  gem 'rubocop'
-  gem 'sqlite3'
-  gem 'rubocop'
+  gem "pry-byebug"
+  gem "pry-rails"
+  gem "rspec-rails"
+  gem "sqlite3"
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-  gem 'spring-commands-rspec'
+  gem "rubocop"
+  gem "spring"
+  gem "spring-commands-rspec"
+  gem "web-console", "~> 2.0"
 end
 
 group :production do
-  gem 'rails_12factor'
+  gem "rails_12factor"
 end
