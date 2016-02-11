@@ -9,6 +9,6 @@ class SearchesController < ApplicationController
   def search_for_soc_occupations(query)
     LmiClient.new.soc_search(query)
              .map { |result| result["soc"] }
-             .map { |soc_code| SocOccupation.find_or_import_from_lmi(soc_code) }
+             .map { |soc_code| Occupation.find_or_import_from_lmi(soc_code) }
   end
 end
