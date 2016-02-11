@@ -1,0 +1,23 @@
+<h2 class="heading-xlarge">Explore work you could do</h2>
+
+<p class="lede">To help your work search, explore different work and job roles.</p>
+
+<p>Enter different kinds of work, skills and interests to find out:</p>
+<ul class="list list-bullet">
+  <li>words to use when searching online</li>
+  <li>skills and qualifications required</li>
+  <li>tasks and hours</li>
+</ul>
+
+<form action="<%= search_path %>" method="GET" id="search-form">
+  <div class="form-group">
+    <label class="form-label" for="query">
+      <span class="heading-small">Work, skills and interests</span>
+    </label>
+    <input type="text" name="query" id="query" class="form-control" title="Work, skills and interests">
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="button" value="Search">
+  </div>
+</form>

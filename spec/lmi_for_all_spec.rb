@@ -16,7 +16,7 @@ describe LmiForAll do
       description: description,
       add_titles: additional_titles,
       tasks: tasks,
-      qualifications: qualifications
+      qualifications: qualifications,
     }
   end
   let(:hours_details) { double(:hours_details) }

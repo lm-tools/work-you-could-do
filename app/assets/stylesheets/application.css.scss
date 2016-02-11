@@ -58,3 +58,10 @@
   @include grid-column(3/4);
 }
 
+.search-results {
+  @extend %contain-floats;
+}
+
+.TBC {
+  border: 20px solid #FF007F !important;
+}
