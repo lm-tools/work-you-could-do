@@ -2,8 +2,9 @@ language: ruby
 rvm:
   - 2.3.0
 script:
-  - bin/rspec --color --format documentation
   - bin/rubocop
+  - bin/rspec --color --format documentation
+  - bin/cucumber
 before_script:
   - cp config/database.yml.travis config/database.yml
   - bin/setup RAILS_ENV=test
