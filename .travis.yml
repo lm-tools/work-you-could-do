@@ -1,10 +1,8 @@
 language: ruby
-rvm:
-  - 2.3.0
+cache:
+  - bundler
 script:
-  - bin/rubocop
-  - bin/rspec --color --format documentation
-  - bin/cucumber
+  - bin/test
 before_script:
   - cp config/database.yml.travis config/database.yml
   - bin/setup RAILS_ENV=test
