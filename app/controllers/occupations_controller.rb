@@ -4,6 +4,6 @@ class OccupationsController < ApplicationController
   end
 
   def show
-    @occupation = Occupation.find_by!(soc_code: params[:soc_code])
+    @occupation = Occupation.find_or_import_from_lmi(params[:soc_code])
   end
 end
