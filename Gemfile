@@ -27,8 +27,17 @@ end
 group :development do
   gem "rubocop"
   gem "spring"
+  gem "spring-commands-cucumber"
   gem "spring-commands-rspec"
   gem "web-console", "~> 2.0"
+end
+
+group :test do
+  gem "capybara"
+  gem "cucumber-rails", require: false
+  gem "database_cleaner"
+  gem "vcr", "~> 3.0"
+  gem "webmock"
 end
 
 group :production do

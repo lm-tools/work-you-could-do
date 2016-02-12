@@ -1,0 +1,32 @@
+<div class="grid-row full-width">
+  <div class="column-two-thirds">
+    <h2 class="bold-large">Results</h2>
+  </div>
+  <div class="column-one-third">
+    <p class="TBC">
+      <a href="<%= root_url %>" class="right">Change search</a>
+    </p>
+  </div>
+</div>
+
+<p class="lede">These are some job roles related to your search.</p>
+
+<section class="search-results">
+  <h3 class="bold-medium job-description-title">
+    <%= pluralize_without_count(@search_results.count, "Role") %> related to ‘<%= @query %>’
+  </h3>
+  <% if @search_results.empty? %>
+    <p>Sorry, we couldn't find any results for this job role</p>
+  <% else %>
+    <% @search_results.each do |search_result| %>
+      <div class="block-label">
+        <h4 class="bold-small"><a href="<%= occupation_path(search_result) %>"><%= search_result.title %></a></h4>
+        <p><%= search_result.description %></p>
+      </div>
+    <% end %>
+  <% end %>
+</section>
+
+<footer class="TBC">
+  <a href="<%= root_url %>" class="link-back">start again</a>
+</footer>
