@@ -4,7 +4,7 @@
 
 <section class="search-results">
   <h3 class="bold-medium job-description-title">
-    <%= pluralize_without_count(@search_results.count, "Role") %> related to ‘<%= @query %>’
+    <%= pluralize_without_count(@search_results.size, "Role") %> related to ‘<%= @query %>’
   </h3>
   <% if @search_results.empty? %>
     <p>Sorry, we couldn't find any results for this job role</p>
