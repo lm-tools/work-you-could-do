@@ -8,7 +8,7 @@ Given(/^I have searched for something work related$/) do
 end
 
 When(/^I drill into a specific search result$/) do
-  click_link specific_search_result[:title]
+  click_link specific_search_result.fetch(:title)
 end
 
 When(/^I search for something work related$/) do
@@ -35,6 +35,7 @@ end
 
 Then(/^I should see SOC occupations related to my search term$/) do
   expected_search_results.each do |search_result|
-    expect(page).to have_text(search_result[:title])
+    expect(page).to have_text(search_result.fetch(:title))
+    expect(page).to have_text(search_result.fetch(:description))
   end
 end
