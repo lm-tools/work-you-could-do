@@ -11,11 +11,11 @@ end
 
 Dir.chdir APP_ROOT do
   heading "Linting ruby"
-  system("bin/rubocop")
+  system("bin/rubocop") or raise("Linting failed")
 
   heading "Running RSpec tests"
-  system("bin/rspec --color --format documentation")
+  system("bin/rspec --color --format documentation") or raise("RSpec failed")
 
   heading "Running Cucumber tests"
-  system("bin/cucumber")
+  system("bin/cucumber") or raise("Cucumber failed")
 end
