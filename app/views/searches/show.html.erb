@@ -11,7 +11,7 @@
   <% else %>
     <% @search_results.each do |search_result| %>
       <div class="block-label">
-        <h4 class="bold-small"><a href="<%= occupation_path(soc_code: search_result.soc) %>"><%= search_result.title %></a></h4>
+        <h4 class="bold-small"><a href="<%= scrapbook_occupation_path(soc_code: search_result.soc) %>"><%= search_result.title %></a></h4>
         <p><%= search_result.description %></p>
       </div>
     <% end %>
