@@ -1,15 +1,6 @@
-<div class="grid-row full-width">
-  <div class="column-two-thirds">
-    <h2 class="bold-large">Results</h2>
-  </div>
-  <div class="column-one-third">
-    <p class="TBC">
-      <a href="<%= root_url %>" class="right">Change search</a>
-    </p>
-  </div>
-</div>
+<h2 class="heading-xlarge">Explore work you could do</h2>
 
-<p class="lede">These are some job roles related to your search.</p>
+<%= render "searches/form", search_term: @query %>
 
 <section class="search-results">
   <h3 class="bold-medium job-description-title">
