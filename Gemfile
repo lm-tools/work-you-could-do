@@ -5,7 +5,6 @@ gem "rails", "~> 4.2"
 gem "pg"
 gem "unicorn"
 
-gem "friendly_id"
 gem "httparty"
 gem "jbuilder", "~> 2.0"
 gem "mail"
