@@ -29,6 +29,7 @@
 }
 
 .information-box {
+  @extend .error-summary;
   border: 5px solid #005ea5;
 }
 
