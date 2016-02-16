@@ -13,3 +13,8 @@ Scenario: View details for a search result
   Given I have searched for something work related
   When I drill into a specific search result
   Then I should see all of its details
+
+Scenario: Perform searches directly from search results
+  Given I have searched for something work related
+  When I search for something else work related
+  Then I should see SOC occupations related to my search term

@@ -1,12 +1,8 @@
 # rubocop:disable Metrics/LineLength
 
 module Fixtures
-  def work_related_search_term
-    "library"
-  end
-
-  def expected_search_results
-    [
+  SEARCH_RESULTS = {
+    "library" => [
       { soc: 4135, title: "Library clerks and assistants", description: "Library clerks and assistants classify, sort and file publications, documents, audio-visual and computerised material in libraries and offices." },
       { soc: 2451, title: "Librarians", description: "Librarians appraise, obtain, index, collate and make available library acquisitions and organise and control other library services." },
       { soc: 4113, title: "Local government administrative occupations", description: "Job holders in this unit group undertake a variety of administrative and clerical duties in local government offices and departments." },
@@ -15,11 +11,28 @@ module Fixtures
       { soc: 2426, title: "Business and related research professionals", description: "Business and related research professionals carry out a variety of research activities for the broadcast and print media, for the police and armed forces intelligence services, for national security agencies and in other non-scientific areas." },
       { soc: 8211, title: "Large goods vehicle drivers", description: "Large Goods Vehicle (LGV) drivers (formerly HGV drivers), collect, transport and deliver goods in rigid vehicles over 7.5 tonnes, articulated lorries and lorries pulling trailers." },
       { soc: 9233, title: "Cleaners and domestics", description: "Cleaners and domestics clean interiors of private houses, shops, hotels, schools, offices and other buildings." },
-    ]
+    ],
+    "plumber" => [
+      { soc: 5314, title: "Plumbers and heating and ventilating engineers", description: "Jobholders in this unit group assemble, install, maintain and repair plumbing fixtures, heating and ventilating systems and pipes and pipeline systems in commercial, residential and industrial premises and public buildings." },
+      { soc: 9120, title: "Elementary construction occupations", description: "Job holders in this unit group perform a variety of general labouring and construction duties to assist building, civil engineering and related trades workers in the performance of their tasks." },
+      { soc: 5242, title: "Telecommunications engineers", description: "Telecommunications engineers install, maintain and repair public and private telephone systems and maintain, test and repair telecommunications cables." },
+    ],
+  }.freeze
+
+  def expected_search_results(search_term)
+    SEARCH_RESULTS.fetch(search_term)
   end
 
-  # TODO: this is using the tasks and additional_titles as imported by our
-  #       own idiosyncratic. This might need to be improved...
+  def work_related_search_term
+    "library"
+  end
+
+  def other_work_related_search_term
+    "plumber"
+  end
+
+  # TODO: this is using the tasks and additional_titles as imported via our
+  #       own idiosyncratic formatting rules. This might need to be improved...
   def specific_search_result
     {
       soc: 4135,
