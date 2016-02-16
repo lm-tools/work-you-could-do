@@ -7,7 +7,7 @@ Given(/^I have searched for something work related$/) do
   step("I search for something work related")
 end
 
-When(/^I drill into a specific search result$/) do
+When(/^I (?:drill|have drilled) into a specific search result$/) do
   click_link specific_search_result.fetch(:title)
 end
 

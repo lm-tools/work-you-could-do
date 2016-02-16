@@ -4,4 +4,5 @@
   </p>
 </div>
 
-<p><%= link_to("Return to #{@occupation.title}", [current_scrapbook, @occupation]) %></p>
+<p><a href="<%= scrapbook_occupation_path(soc_code: @occupation.soc_code, query: @query) %>" id="back-to-occupation">Return to <%= @occupation.title %></a></p>
+<p><a href="<%= scrapbook_search_path(query: @query) %>" id="back-to-search-results">Back to search results</a></p>

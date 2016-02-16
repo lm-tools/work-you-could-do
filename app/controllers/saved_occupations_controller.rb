@@ -3,6 +3,7 @@ class SavedOccupationsController < ApplicationController
 
   def create
     # rubocop:disable Lint/HandleExceptions
+    @query = params[:query]
     @occupation = Occupation.find(params[:occupation_id])
 
     begin
