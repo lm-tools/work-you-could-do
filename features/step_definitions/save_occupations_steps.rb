@@ -3,7 +3,7 @@ Given(/^I have viewed the details of a specific occupation$/) do
                                   soc_code: specific_search_result.fetch(:soc))
 end
 
-When(/^I save the occupation$/) do
+When(/^I (?:save|have saved) the occupation$/) do
   click_on("save-occupation")
 end
 
