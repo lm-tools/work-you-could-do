@@ -63,6 +63,12 @@
   @extend %contain-floats;
 }
 
+.save-occupation-form {
+  @extend .right;
+  clear: both;
+  margin-top: 1em;
+}
+
 .TBC {
   border: 20px solid #FF007F !important;
 }

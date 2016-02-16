@@ -8,5 +8,5 @@ When(/^I save the occupation$/) do
 end
 
 Then(/^it should appear in my list of saved occupations$/) do
-  visit scrapbook_path(scrapbook_id)
+  click_on("scrapbook")
 end
