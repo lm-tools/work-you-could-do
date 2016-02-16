@@ -6,5 +6,6 @@ class Scrapbook < ActiveRecord::Base
     SecureRandom.uuid
   end
 
-  has_and_belongs_to_many :occupations, join_table: "saved_occupations"
+  has_many :saved_occupations, -> { order(:updated_at) }
+  has_many :occupations, through: :saved_occupations
 end

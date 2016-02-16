@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215133017) do
+ActiveRecord::Schema.define(version: 20160216153958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 20160215133017) do
   add_index "occupations", ["soc_code"], name: "index_occupations_on_soc_code", unique: true, using: :btree
 
   create_table "saved_occupations", id: false, force: :cascade do |t|
-    t.integer "occupation_id"
-    t.uuid    "scrapbook_id"
+    t.integer  "occupation_id"
+    t.uuid     "scrapbook_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "saved_occupations", ["occupation_id", "scrapbook_id"], name: "index_saved_occupations_on_occupation_id_and_scrapbook_id", unique: true, using: :btree
