@@ -2,7 +2,7 @@
   <h2 class="heading-xlarge">Your work search activities</h2>
 </header>
 
-<% @scrapbook.occupations.each do |occupation| %>
+<% current_scrapbook.occupations.each do |occupation| %>
   <section id="<%=occupation.id%>">
     <%= render "occupations/details", occupation: occupation %>
     <hr>

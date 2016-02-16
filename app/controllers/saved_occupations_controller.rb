@@ -1,11 +1,12 @@
 class SavedOccupationsController < ApplicationController
+  before_action :ensure_current_scrapbook
+
   def create
     # rubocop:disable Lint/HandleExceptions
     @occupation = Occupation.find(params[:occupation_id])
-    @scrapbook = Scrapbook.find_or_create_by(id: params[:scrapbook_id])
 
     begin
-      @scrapbook.occupations << @occupation
+      current_scrapbook.occupations << @occupation
     rescue ActiveRecord::RecordNotUnique
       # ignore duplicate entries
     end

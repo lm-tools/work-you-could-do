@@ -1,4 +1,4 @@
-<%= form_tag(scrapbook_saved_occupations_path, method: "POST", class: "right") do |f| %>
+<%= form_tag(scrapbook_saved_occupations_path, method: "POST", class: "save-occupation-form") do |f| %>
   <input type="hidden" name="occupation_id" value="<%= @occupation.id %>">
   <input type="submit" id="save-occupation"  class="button" value="Save to my list">
 <% end %>
