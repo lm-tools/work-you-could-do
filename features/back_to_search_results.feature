@@ -16,3 +16,9 @@ Scenario: Return to search results after saving an occupation
   Given I have saved the occupation
   When I return to the search results
   Then I should see SOC occupations related to my search term
+
+Scenario: Remember search query through returning from saving
+  Given I have saved the occupation
+  And I have returned to the specific search result's details
+  When I return to the search results
+  Then I should see SOC occupations related to my search term
