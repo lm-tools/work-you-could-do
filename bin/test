@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'pathname'
+
+APP_ROOT = Pathname.new(File.expand_path('../../',  __FILE__))
+
+def heading(heading)
+  puts "-" * 72
+  puts heading
+  puts "-" * 72
+end
+
+Dir.chdir APP_ROOT do
+  heading "Linting ruby"
+  system("bin/rubocop") or raise("Linting failed")
+
+  heading "Running RSpec tests"
+  system("bin/rspec --color --format documentation") or raise("RSpec failed")
+
+  heading "Running Cucumber tests"
+  system("bin/cucumber") or raise("Cucumber failed")
+end

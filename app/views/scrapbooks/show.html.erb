@@ -1,0 +1,14 @@
+<header>
+  <h2 class="heading-xlarge">Your work search activities</h2>
+</header>
+
+<% current_scrapbook.occupations.each do |occupation| %>
+  <section id="<%=occupation.id%>">
+    <%= render "occupations/details", occupation: occupation %>
+    <hr>
+  </section>
+<% end %>
+
+<footer class="TBC">
+  <a href="<%=root_url%>" class="link-back">start again</a>
+</footer>

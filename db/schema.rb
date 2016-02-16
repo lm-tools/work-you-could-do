@@ -11,47 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119143526) do
+ActiveRecord::Schema.define(version: 20160216153958) do
 
-  create_table "actions", force: :cascade do |t|
-    t.integer  "occupation_id"
-    t.string   "action_type"
-    t.text     "notes"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "actions", ["occupation_id"], name: "index_actions_on_occupation_id"
-
-  create_table "keywords", force: :cascade do |t|
-    t.integer  "report_id"
-    t.string   "keyword"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "keywords", ["report_id"], name: "index_keywords_on_report_id"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "occupations", force: :cascade do |t|
-    t.integer  "keyword_id"
-    t.boolean  "selected"
-    t.integer  "soc_occupation_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.boolean  "accepted"
-    t.text     "notes"
-  end
-
-  add_index "occupations", ["keyword_id"], name: "index_occupations_on_keyword_id"
-  add_index "occupations", ["soc_occupation_id"], name: "index_occupations_on_soc_occupation_id"
-
-  create_table "reports", force: :cascade do |t|
-    t.string   "guid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "soc_occupations", force: :cascade do |t|
     t.integer  "soc_code"
     t.string   "title"
     t.text     "description"
@@ -62,6 +28,24 @@ ActiveRecord::Schema.define(version: 20160119143526) do
     t.integer  "week_pay"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  add_index "occupations", ["soc_code"], name: "index_occupations_on_soc_code", unique: true, using: :btree
+
+  create_table "saved_occupations", id: false, force: :cascade do |t|
+    t.integer  "occupation_id"
+    t.uuid     "scrapbook_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "saved_occupations", ["occupation_id", "scrapbook_id"], name: "index_saved_occupations_on_occupation_id_and_scrapbook_id", unique: true, using: :btree
+  add_index "saved_occupations", ["occupation_id"], name: "index_saved_occupations_on_occupation_id", using: :btree
+  add_index "saved_occupations", ["scrapbook_id"], name: "index_saved_occupations_on_scrapbook_id", using: :btree
+
+  create_table "scrapbooks", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

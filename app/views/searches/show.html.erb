@@ -1,0 +1,23 @@
+<h2 class="heading-xlarge">Explore work you could do</h2>
+
+<%= render "searches/form", search_term: @query %>
+
+<section class="search-results">
+  <h3 class="bold-medium job-description-title">
+    <%= pluralize_without_count(@search_results.size, "Role") %> related to ‘<%= @query %>’
+  </h3>
+  <% if @search_results.empty? %>
+    <p>Sorry, we couldn't find any results for this job role</p>
+  <% else %>
+    <% @search_results.each do |search_result| %>
+      <div class="block-label">
+        <h4 class="bold-small"><a href="<%= scrapbook_occupation_path(soc_code: search_result.soc, query: @query) %>"><%= search_result.title %></a></h4>
+        <p><%= search_result.description %></p>
+      </div>
+    <% end %>
+  <% end %>
+</section>
+
+<footer class="TBC">
+  <a href="<%= root_url %>" class="link-back">start again</a>
+</footer>

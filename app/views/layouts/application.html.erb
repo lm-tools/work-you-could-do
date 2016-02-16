@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
 <% end %>
 
@@ -34,6 +34,12 @@
 
 <% content_for :content do %>
   <main id="content">
+    <% if current_scrapbook.occupations.any? %>
+      <div class="right">
+        <%= link_to(pluralize(current_scrapbook.occupations.size, "saved occupation"),
+                    current_scrapbook, id: "scrapbook") %>
+      </div>
+    <% end %>
     <%= content_for?(:application_content) ? yield(:application_content) : yield %>
   </main>
 <% end %>

@@ -1,26 +1,13 @@
 class Occupation < ActiveRecord::Base
-  belongs_to :soc_occupation
-  delegate :title,
-           :description,
-           :week_pay,
-           :week_hours,
-           :tasks,
-           :qualifications,
-           :additional_titles,
-           to: :soc_occupation
-  has_many :actions
-
-  def action_by_type(action_type)
-    actions.where(action_type: action_type).first
+  def self.find_or_import_from_lmi(soc_code)
+    where(soc_code: soc_code).first_or_create do |soc_occupation|
+      lmi_client = LmiClient.new
+      soc_occupation_lookup = LmiForAll.new(lmi_client).lookup(soc_code)
+      soc_occupation.assign_attributes(soc_occupation_lookup)
+    end
   end
 
-  def update_with_actions(occupation_params, action_params)
-    actions = action_params.map do |action_key|
-      Action.new(action_type: action_key)
-    end
-    params = occupation_params.merge(
-      actions: actions
-    )
-    update(params)
+  def to_param
+    soc_code.to_s
   end
 end
