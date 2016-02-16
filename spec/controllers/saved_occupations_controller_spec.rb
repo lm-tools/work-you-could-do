@@ -20,5 +20,13 @@ describe SavedOccupationsController do
       scrapbook.reload
       expect(scrapbook.occupations.size).to eq(1)
     end
+
+    it "creates a scrapbook on demand" do
+      scrapbook_id = Scrapbook.new_id
+
+      post :create, scrapbook_id: scrapbook_id, occupation_id: occupation.id
+
+      expect(Scrapbook.find_by(id: scrapbook_id)).not_to be_nil
+    end
   end
 end
