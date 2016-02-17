@@ -19,15 +19,15 @@ module Fixtures
     ],
   }.freeze
 
-  def expected_search_results(search_term)
-    SEARCH_RESULTS.fetch(search_term)
+  def expected_search_results(query)
+    SEARCH_RESULTS.fetch(query)
   end
 
-  def work_related_search_term
+  def work_related_search_query
     "library"
   end
 
-  def other_work_related_search_term
+  def other_work_related_search_query
     "plumber"
   end
 

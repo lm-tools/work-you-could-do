@@ -12,14 +12,14 @@ When(/^I (?:drill|have drilled) into a specific search result$/) do
 end
 
 When(/^I search for something( else)? work related$/) do |other|
-  self.current_search_term = if other
-                               other_work_related_search_term
-                             else
-                               work_related_search_term
-                             end
+  self.current_search_query = if other
+                                other_work_related_search_query
+                              else
+                                work_related_search_query
+                              end
 
   within("#search-form") do
-    fill_in("query", with: current_search_term)
+    fill_in("query", with: current_search_query)
     find("input[type=submit]").click
   end
 end
@@ -40,7 +40,7 @@ Then(/^I should see all of its details$/) do
 end
 
 Then(/^I should see SOC occupations related to my search term$/) do
-  expected_search_results = expected_search_results(current_search_term)
+  expected_search_results = expected_search_results(current_search_query)
   expected_search_results.each do |search_result|
     expect(page).to have_text(search_result.fetch(:title))
     expect(page).to have_text(search_result.fetch(:description))
