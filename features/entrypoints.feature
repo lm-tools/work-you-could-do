@@ -13,3 +13,7 @@ Scenario: Access an existing scrapbook
   Given I have an existing scrapbook
   When I access the tool with my scrapbook identifier
   Then I should see my scrapbook
+
+Scenario: Access the tool without a scrapbook identifier
+  When I access the tool without a scrapbook identifier
+  Then I should see the new search page, within a new scrapbook
