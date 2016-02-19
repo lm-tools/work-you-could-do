@@ -1,8 +1,15 @@
 FROM ruby:2.3.0
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
-RUN mkdir /work-you-could-do
-WORKDIR /work-you-could-do
-ADD Gemfile /work-you-could-do/Gemfile
-ADD Gemfile.lock /work-you-could-do/Gemfile.lock
+
+RUN mkdir -p /srv/app
+WORKDIR /srv/app
+
+ADD Gemfile /srv/app
+ADD Gemfile.lock /srv/app
 RUN bundle install
-ADD . /work-you-could-do
+
+ADD . /srv/app
+RUN RAILS_ENV=production bin/rake assets:precompile
+
+EXPOSE 3000
+
+CMD ["bin/unicorn", "-p", "3000", "-c", "config/unicorn.rb"]
