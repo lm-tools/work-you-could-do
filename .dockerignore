@@ -1,0 +1,11 @@
+.git*
+.travis.yml
+docker-compose.yml
+Dockerfile
+
+/.bundle
+/.env
+/log/*
+/tmp
+
+/public/assets
