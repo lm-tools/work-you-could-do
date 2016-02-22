@@ -7,20 +7,6 @@
 
   <div class="grid-row">
     <div class="column-half">
-      <h3 class="heading-small">Your typical pay and hours</h3>
-      <ul>
-        <li><span id="occupation-week-hours"><%= occupation.week_hours %></span> hours a week</li>
-        <li>£<span id="occupation-week-pay"><%= occupation.week_pay %></span> a week</li>
-      </ul>
-    </div>
-    <div class="column-half">
-      <h3 class="heading-small">Qualifications you'll need</h3>
-      <p id="occupation-qualifications"><%= occupation.qualifications %></p>
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-half">
      <h3 class="heading-small">Kind of work you’d do</h3>
       <ul class="list-bullet" id="occupation-tasks">
         <% formatted_tasks(occupation.tasks).each do |task| %>
@@ -34,4 +20,19 @@
       <em id="occupation-additional-titles"><%= occupation.additional_titles %></em>
     </div>
   </div>
+
+  <div class="grid-row">
+    <div class="column-half">
+      <h3 class="heading-small">Qualifications you’ll need</h3>
+      <p id="occupation-qualifications"><%= occupation.qualifications %></p>
+    </div>
+    <div class="column-half">
+      <h3 class="heading-small">Your typical pay and hours</h3>
+      <ul>
+        <li><span id="occupation-week-hours"><%= occupation.week_hours %></span> hours a week</li>
+        <li>£<span id="occupation-week-pay"><%= occupation.week_pay %></span> a week</li>
+      </ul>
+    </div>
+  </div>
+
 </section>
