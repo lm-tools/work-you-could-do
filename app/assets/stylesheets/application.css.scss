@@ -64,9 +64,32 @@
 }
 
 .save-occupation-form {
-  @extend .right;
   clear: both;
   margin-top: 1em;
+}
+
+a.search-result {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+
+  border: 1px solid $panel-colour;
+  padding: (18px $gutter $gutter-half $gutter*1.8);
+
+  margin-bottom: 10px;
+  cursor: pointer; // Encourage clicking on block labels
+
+  text-decoration: none;
+  color: $text-colour;
+
+  h1, h2, h3, h4, h5 {
+      color: $link-colour;
+  }
+
+  &:hover {
+    border-color: $black;
+  }
 }
 
 .TBC {
