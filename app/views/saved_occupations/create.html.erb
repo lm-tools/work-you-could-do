@@ -1,9 +1,4 @@
-<div id="success" class="information-box">
-  <p>
-    "<%= @occupation.title %>" saved.
-    <p><%= link_to("See saved #{pluralize_without_count(current_scrapbook.saved_occupations.size, "role")}", current_scrapbook) %></p>
-  </p>
-</div>
+<%= render "saved_occupations/confirmation_box", occupation: @occupation %>
 
 <p>
   <a href="<%= scrapbook_occupation_path(soc_code: @occupation.soc_code, query: @query) %>" id="back-to-occupation" class="link-back">Back to "<%= @occupation.title %>"</a><br>
