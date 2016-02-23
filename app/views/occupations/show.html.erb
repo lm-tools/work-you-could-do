@@ -1,4 +1,10 @@
-<a href="<%= scrapbook_search_path(query: @query) %>" id="back-to-search-results" class="link-back">Back to search results</a>
+<% content_for :breadcrumbs do %>
+  <ol>
+    <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
+    <li><a href="<%= scrapbook_search_path(query: @query) %>">Results</a></li>
+    <li><%= @occupation.title %></li>
+  </ol>
+<% end %>
 
 <%= render "occupations/details", occupation: @occupation %>
 
@@ -8,3 +14,5 @@
   <input type="hidden" name="query" value="<%= @query %>">
   <input type="submit" id="save-occupation"  class="button" value="Save">
 <% end %>
+
+<p><a href="<%= scrapbook_search_path(query: @query) %>" id="back-to-search-results" class="link-back">Back to search results</a></p>

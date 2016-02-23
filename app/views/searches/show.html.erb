@@ -1,3 +1,10 @@
+<% content_for :breadcrumbs do %>
+  <ol>
+    <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
+    <li>Results</li>
+  </ol>
+<% end %>
+
 <h2 class="heading-xlarge">Explore work you could do</h2>
 
 <%= render "searches/form", query: @query %>
