@@ -36,8 +36,10 @@
   <main id="content">
     <% if current_scrapbook.occupations.any? %>
       <div class="right">
-        <%= link_to(pluralize(current_scrapbook.occupations.size, "saved occupation"),
-                    current_scrapbook, id: "scrapbook") %>
+        <%= link_to(
+            "See saved #{pluralize_without_count(current_scrapbook.occupations.size, "role")} " +
+              (current_scrapbook.occupations.size > 1 ? "(#{current_scrapbook.occupations.size})" : ""),
+            current_scrapbook, id: "scrapbook") %>
       </div>
     <% end %>
     <%= content_for?(:application_content) ? yield(:application_content) : yield %>
