@@ -1,0 +1,2 @@
+$("#save-occupation-form").replaceWith("<%= escape_javascript(render "saved_occupations/confirmation_box", occupation: @occupation) %>");
+$("#current-scrapbook-link-container").html("<%= escape_javascript(render "scrapbooks/link_to_current_scrapbook") %>");

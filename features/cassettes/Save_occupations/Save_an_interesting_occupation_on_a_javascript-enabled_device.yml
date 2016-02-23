@@ -1,0 +1,149 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:63524/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+      Date:
+      - Tue, 23 Feb 2016 15:56:32 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '70181323747980'
+    http_version: 
+  recorded_at: Tue, 23 Feb 2016 15:56:32 GMT
+- request:
+    method: get
+    uri: http://api.lmiforall.org.uk/api/v1/soc/code/4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Tue, 23 Feb 2016 15:56:33 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1349'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"soc":4135,"tasks":" sorts, catalogues and maintains library records;\n
+        locates and retrieves material on request for borrowers;\n issues library
+        material and records date of issue/ due date for return;\n classifies, labels
+        and indexes new books;\n performs simple repairs on old books.","description":"Library
+        clerks and assistants classify, sort and file publications, documents, audio-visual
+        and computerised material in libraries and offices.","title":"Library clerks
+        and assistants","qualifications":"There are no minimum academic requirements,
+        although entrants usually possess GCSEs/S grades or A-Levels/H grades. Training
+        is usually provided on-the-job. NVQs/ SVQs in Information and Library Services
+        are available at Levels 2 and 3.","add_titles":["Abstractor (press cuttings)","Agent,
+        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
+        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
+        information (educational establishments)","Assistant, information (library)","Assistant,
+        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
+        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
+        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
+        (press cutting agency)","Supervisor, library"]}'
+    http_version: 
+  recorded_at: Tue, 23 Feb 2016 15:56:33 GMT
+- request:
+    method: get
+    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Tue, 23 Feb 2016 15:56:33 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '71'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+    http_version: 
+  recorded_at: Tue, 23 Feb 2016 15:56:33 GMT
+- request:
+    method: get
+    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Tue, 23 Feb 2016 15:56:33 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '75'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470}]}'
+    http_version: 
+  recorded_at: Tue, 23 Feb 2016 15:56:33 GMT
+recorded_with: VCR 3.0.1

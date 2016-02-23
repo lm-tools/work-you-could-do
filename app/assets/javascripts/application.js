@@ -13,8 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-$( document ).ready(function() {
-  $("#notes").focus(function(){
-    $("#actions_notes").prop('checked', true);
-  });
-});
