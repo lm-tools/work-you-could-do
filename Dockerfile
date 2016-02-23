@@ -3,8 +3,8 @@ FROM ruby:2.3.0
 RUN mkdir -p /srv/app
 WORKDIR /srv/app
 
-ADD Gemfile /srv/app
-ADD Gemfile.lock /srv/app
+ADD Gemfile /srv/app/
+ADD Gemfile.lock /srv/app/
 RUN bundle install
 
 ADD . /srv/app
