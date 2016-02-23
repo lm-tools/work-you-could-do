@@ -1,5 +1,12 @@
 <h2 class="heading-xlarge">Explore work you could do</h2>
 
+<% if current_scrapbook.saved_occupations.any? %>
+  <div id="success" class="information-box">
+    <p>You have <%= pluralize(current_scrapbook.saved_occupations.size, "saved role") %>.</p>
+    <p><%= link_to("See saved #{pluralize_without_count(current_scrapbook.saved_occupations.size, "role")}", current_scrapbook) %></p>
+  </div>
+<% end %>
+
 <p class="lede">To help your work search, explore different work and job roles.</p>
 
 <p>Enter different kinds of work, skills and interests to find out:</p>

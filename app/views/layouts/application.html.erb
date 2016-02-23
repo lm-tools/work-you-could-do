@@ -1,7 +1,3 @@
-<% content_for :homepage_url do %>
-  <%= new_scrapbook_search_path(current_scrapbook) %>
-<% end %>
-
 <% content_for :head do %>
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -34,12 +30,15 @@
 
 <% content_for :content do %>
   <main id="content">
-    <% if current_scrapbook.occupations.any? %>
+    <% if show_current_scrapbook_link? %>
       <div class="right">
-        <%= link_to(pluralize(current_scrapbook.occupations.size, "saved occupation"),
-                    current_scrapbook, id: "scrapbook") %>
+        <%= link_to(
+            "See saved #{pluralize_without_count(current_scrapbook.occupations.size, "role")} " +
+              (current_scrapbook.occupations.size > 1 ? "(#{current_scrapbook.occupations.size})" : ""),
+            current_scrapbook, id: "scrapbook") %>
       </div>
     <% end %>
+
     <%= content_for?(:application_content) ? yield(:application_content) : yield %>
   </main>
 <% end %>
