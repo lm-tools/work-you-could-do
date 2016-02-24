@@ -1,0 +1,13 @@
+// This overrides the chvrons in the elements breadcrumbs to use compiled
+// asset urls
+
+#global-breadcrumb {
+  ol {
+    li {
+      background-image: asset-url("separator.png");
+      @include device-pixel-ratio() {
+        background-image: asset-url("separator-2x.png");
+      }
+    }
+  }
+}
