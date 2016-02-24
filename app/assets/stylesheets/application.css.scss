@@ -84,12 +84,29 @@ a.search-result {
   color: $text-colour;
 
   h1, h2, h3, h4, h5 {
-      color: $link-colour;
+    color: $link-colour;
   }
 
   &:hover {
     border-color: $black;
   }
+}
+
+.content-header {
+  @extend %contain-floats;
+}
+
+#global-breadcrumb ol, #current-scrapbook-link-container {
+  padding-top: 0.75em;
+  padding-bottom: 0;
+}
+
+#global-breadcrumb {
+  float: left;
+}
+
+#current-scrapbook-link-container {
+  float: right;
 }
 
 .TBC {

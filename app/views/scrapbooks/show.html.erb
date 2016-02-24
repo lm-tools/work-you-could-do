@@ -1,6 +1,10 @@
-<p><a href="<%= new_scrapbook_search_path(current_scrapbook) %>" class="link-back">Search again</a></p>
+<% content_for :breadcrumbs do %>
+  <ol>
+    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+    <li>Saved roles</li>
+  </ol>
+<% end %>
 
-<header>
   <h2 class="heading-xlarge">Your work search activities</h2>
 </header>
 
