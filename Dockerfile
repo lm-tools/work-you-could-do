@@ -13,3 +13,6 @@ RUN RAILS_ENV=production bin/rake assets:precompile
 EXPOSE 3000
 
 CMD ["bin/unicorn", "-p", "3000", "-c", "config/unicorn.rb"]
+
+ARG version
+RUN echo $version > /srv/app/public/version
