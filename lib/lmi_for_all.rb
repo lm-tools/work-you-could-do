@@ -43,7 +43,7 @@ class LmiForAll
 
   def friendly_soc_description(description)
     description_re = / not elsewhere classified in .*/
-    description.gsub(description_re, "")
+    description.gsub(description_re, ".")
   end
 
   def clean_add_titles(titles)

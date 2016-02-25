@@ -72,14 +72,14 @@ describe LmiForAll do
     context "occupation title contains n.e.c." do
       let(:title) { "Elementary cleaning occupations n.e.c." }
       let(:description) do
-        "Workers in not elsewhere classified in MINOR GROUP 923"
+        "Workers doing stuff not elsewhere classified in MINOR GROUP 923."
       end
       it "cleans the title" do
         expect(result[:title]).to eq("Elementary cleaning occupations")
       end
       it "cleans the description" do
         expect(result[:description]).to eq(
-          "Workers in"
+          "Workers doing stuff."
         )
       end
     end
@@ -121,7 +121,7 @@ describe LmiForAll do
 
     it "cleans up n.e.c. descriptions in search results" do
       lmi_client_search_results = [
-        { "soc" => 1111, "title" => "Result 1", "description" => "Description 1 not elsewhere classified in MINOR GROUP Result 1" },
+        { "soc" => 1111, "title" => "Result 1", "description" => "Description 1 not elsewhere classified in MINOR GROUP Result 1." },
       ]
 
       allow(lmi_client).to \
@@ -129,7 +129,7 @@ describe LmiForAll do
 
       title = lmi_for_all.search("search query").first[:description]
 
-      expect(title).to eq("Description 1")
+      expect(title).to eq("Description 1.")
     end
   end
 end
