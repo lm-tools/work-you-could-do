@@ -5,15 +5,20 @@
   </ol>
 <% end %>
 
-  <h2 class="heading-xlarge">Your work search activities</h2>
-</header>
-
-<% current_scrapbook.occupations.each do |occupation| %>
-  <section id="<%=occupation.id%>">
-    <%= render "occupations/details", occupation: occupation %>
-    <p><a href="#">Remove from list</a></p>
-    <hr>
-  </section>
-<% end %>
+  <h2 class="heading-xlarge">Your saved roles</h2>
+  <p>Now, you can now use this information to:</p>
+  <ul class="list list-bullet">
+    <li>tailor your CV</li>
+    <li>look for training</li>
+    <li>search for jobs online</li>
+  </ul>
+  <p>You can talk to your work coach about these roles too.</p>
+  <% current_scrapbook.occupations.each do |occupation| %>
+    <section id="<%=occupation.id%>">
+      <%= render "occupations/details", occupation: occupation %>
+      <p><a href="#">Remove from list</a></p>
+      <hr>
+    </section>
+  <% end %>
 
 <p><a href="<%= new_scrapbook_search_path(current_scrapbook) %>" class="link-back">Search again</a></p>
