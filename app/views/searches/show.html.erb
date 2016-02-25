@@ -1,28 +1,34 @@
 <% content_for :breadcrumbs do %>
-  <ol>
-    <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
-    <li>Results</li>
-  </ol>
+<ol>
+  <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
+  <li>Results</li>
+</ol>
 <% end %>
 
 <h2 class="heading-xlarge">Explore work you could do</h2>
 
+<% if @query.empty? %>
+  <p>Please enter a role, skill or interest</p>
+<% end %>
+
 <%= render "searches/form", query: @query %>
 
-<section class="search-results">
-  <h3 class="bold-medium job-description-title">
-    <%= pluralize_without_count(@search_results.size, "Role") %> related to ‘<%= @query %>’
-  </h3>
-  <% if @search_results.empty? %>
-    <p>Sorry, we couldn't find any results for this job role</p>
-  <% else %>
-    <% @search_results.each do |search_result| %>
+<% unless @query.empty? %>
+  <section class="search-results">
+    <h3 class="bold-medium job-description-title">
+      <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
+    </h3>
+    <% if @search_results.empty? %>
+      <p>Sorry, we couldn't find any results for this job role</p>
+    <% else %>
+      <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(soc_code: search_result.soc, query: @query) %>" class="search-result">
         <h4 class="bold-small">
-            <%= search_result.title %>
+          <%= search_result.title %>
         </h4>
         <p><%= search_result.description %></p>
       </a>
+      <% end %>
     <% end %>
-  <% end %>
-</section>
+  </section>
+<% end %>

@@ -1,6 +1,6 @@
 <div id="success" class="information-box">
   <p>
-    <%= occupation.title %> saved.
-    <p><%= link_to("See saved #{pluralize_without_count(current_scrapbook.saved_occupations.size, "role")}", current_scrapbook) %></p>
+    <%= occupation.title %> saved
+    <p><%= link_to("Saved #{pluralize_without_count(current_scrapbook.saved_occupations.size, "role")}", current_scrapbook) %></p>
   </p>
 </div>

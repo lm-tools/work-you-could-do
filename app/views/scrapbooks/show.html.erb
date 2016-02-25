@@ -16,7 +16,7 @@
   <% current_scrapbook.occupations.each do |occupation| %>
     <section id="<%=occupation.id%>">
       <%= render "occupations/details", occupation: occupation %>
-      <p><a href="#">Remove from list</a></p>
+      <p><a href="#">Remove role</a></p>
       <hr>
     </section>
   <% end %>
