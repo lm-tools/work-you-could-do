@@ -1,4 +1,4 @@
-require "rails_helper"
+require "spec_helper"
 require "lmi_for_all"
 
 describe LmiForAll do
