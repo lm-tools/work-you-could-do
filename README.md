@@ -2,7 +2,7 @@
 
 A tool to help people explore work they could do.
 
-## Prequisites
+## Prerequisites
 - [Ruby] 2.3.0
 - [Bundler]
 - [PostgreSQL] 9.4
