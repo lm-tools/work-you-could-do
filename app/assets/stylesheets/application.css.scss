@@ -108,7 +108,8 @@ a.search-result {
 }
 
 #current-scrapbook-link-container {
-  float: right;
+    @include core-16;
+    float: right;
 }
 
 .TBC {
