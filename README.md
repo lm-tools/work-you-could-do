@@ -1,23 +1,110 @@
-# work-you-could-do
+# Work you could do
 
-Work you could do
+A tool to help people explore work they could do.
 
-## Running the application locally
+## Prequisites
+- [Ruby] 2.3.0
+- [Bundler]
+- [PostgreSQL] 9.4
 
-(Please make sure you have Ruby and bundler already installed.)
+## Installation
 
-- `cd ~/dev`
-- `git clone https://github.com/lm-tools/work-you-could-do.git`
-- `cd work-you-could-do`
-- `bin/setup`
+Clone the repository:
 
-### Run locally
+```sh
+$ git clone https://github.com/lm-tools/work-you-could-do.git
+```
 
-- `rails s`
-- Go to `http://localhost:3000`
+Make sure that [PostgreSQL] is running, and that your current user (`$ whoami`)
+has full access. Alternatively, custom database details can be provided by setting
+a `DATABASE_URL` environment variable to a valid [PostgreSQL connection string]
 
-### Run in Docker containers
+Setup the application:
 
-- `docker-compose build`
-- `docker-compose up -d`
-- `docker-machine ip default` will return the IP at which the application is viewable. go to that IP address at port 3000
+```sh
+$ bin/setup
+```
+
+## Run locally in development mode
+
+To start a development-mode web server on `http://localhost:3000`:
+
+```sh
+$ bin/rails server
+```
+
+## Run tests
+
+To run all tests, and lint [Ruby] code:
+```sh
+$ bin/test
+```
+
+To run [Ruby] linting only:
+```sh
+$ bin/rubocop
+```
+
+To run [RSpec] tests only:
+```sh
+$ bin/rspec
+```
+
+To run [Cucumber] tests only:
+```sh
+$ bin/cucumber
+```
+
+### Database issues during test runs
+
+If you get a `FATAL:  database "work-you-could-do_test" does not exist` error
+when running tests, run `$ bin/rake db:test:prepare` to re-setup the test
+database.
+
+## Run locally in Docker containers
+
+Currently this is intended for validation of the Dockerfile only, developing
+via Docker containers is not recommended (particularly on OS X).
+
+### Prerequisites
+- [Docker]
+- [Docker Compose]
+- If using OS X, [Docker Machine]
+
+### Run the application
+To start a web server on `http://localhost:3000`.
+
+```sh
+$ docker-compose build
+$ docker-compose up -d
+```
+
+*NOTE:* If using [Docker Machine], then the webserver will be accessible
+**from your docker host**, and can be access via its IP address. To get its IP address
+run `$ docker-machine ip <name-of-machine>`, then open
+`http://<docker-machine ip address>:3000` in a web browser
+
+### Run commands (tests, migrations, etc.) on docker containers
+
+To run commands via docker:
+
+```sh
+$ docker-compose run app <command>
+```
+
+For example, to run all tests and linting:
+
+```sh
+$ docker-compose run app bin/test
+```
+
+
+[Bundler]: http://bundler.io/
+[Ruby]: https://www.ruby-lang.org/
+[PostgreSQL]: http://www.postgresql.org/
+[PostgreSQL connection string]: http://www.postgresql.org/docs/9.4/static/libpq-connect.html#AEN41221
+[RSpec]: http://rspec.info/
+[Cucumber]: https://cucumber.io/
+[Docker]: https://www.docker.com/
+[Docker Compose]: https://www.docker.com/products/docker-compose
+[Docker Machine]: https://www.docker.com/products/docker-machine
