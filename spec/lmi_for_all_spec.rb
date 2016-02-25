@@ -1,16 +1,13 @@
 require "spec_helper"
+
 require "lmi_for_all"
+require "lmi_client"
 
 describe LmiForAll do
+  let(:lmi_client) { double(LmiClient) }
+  let(:lmi_for_all) { described_class.new(lmi_client) }
+
   describe "#lookup" do
-    let(:lmi_client) do
-      double(
-        :lmi_client,
-        soc_code_lookup: soc_code_details.deep_stringify_keys,
-        hours_lookup: hours_details,
-        pay_lookup: pay_details
-      )
-    end
     let(:soc_code_details) do
       {
         title: title,
@@ -34,7 +31,14 @@ describe LmiForAll do
     let(:valid_title) { "occupation, with, commas, manager" }
     let(:soc_code) { double(:soc_code) }
 
-    subject(:result) { described_class.new(lmi_client).lookup(soc_code) }
+    before do
+      allow(lmi_client).to receive(:hours_lookup) { hours_details }
+      allow(lmi_client).to receive(:pay_lookup) { pay_details }
+      allow(lmi_client).to \
+        receive(:soc_code_lookup) { soc_code_details.deep_stringify_keys }
+    end
+
+    subject(:result) { lmi_for_all.lookup(soc_code) }
 
     it "returns the correct details" do
       expect(result[:soc_code]).to eq(soc_code)
@@ -78,6 +82,54 @@ describe LmiForAll do
           "Workers in"
         )
       end
+    end
+  end
+
+  describe "#search" do
+    # rubocop:disable Metrics/LineLength
+    it "returns sliced results from the LMIClient" do
+      lmi_client_search_results = [
+        { "soc" => 1111, "title" => "Result 1", "description" => "Description 1", "additional" => "additional 1", "field" => "field 1" },
+        { "soc" => 1112, "title" => "Result 2", "description" => "Description 2", "additional" => "additional 2", "field" => "field 2" },
+        { "soc" => 1113, "title" => "Result 3", "description" => "Description 3", "additional" => "additional 3", "field" => "field 3" },
+      ]
+
+      expected_results = [
+        { soc: 1111, title: "Result 1", description: "Description 1" },
+        { soc: 1112, title: "Result 2", description: "Description 2" },
+        { soc: 1113, title: "Result 3", description: "Description 3" },
+      ]
+
+      allow(lmi_client).to \
+        receive(:soc_search).with("search query") { lmi_client_search_results }
+
+      expect(lmi_for_all.search("search query")).to eq(expected_results)
+    end
+
+    it "cleans up n.e.c. titles in search results" do
+      lmi_client_search_results = [
+        { "soc" => 1111, "title" => "Result 1 n.e.c.", "description" => "Description 1" },
+      ]
+
+      allow(lmi_client).to \
+        receive(:soc_search).with("search query") { lmi_client_search_results }
+
+      title = lmi_for_all.search("search query").first[:title]
+
+      expect(title).to eq("Result 1")
+    end
+
+    it "cleans up n.e.c. descriptions in search results" do
+      lmi_client_search_results = [
+        { "soc" => 1111, "title" => "Result 1", "description" => "Description 1 not elsewhere classified in MINOR GROUP Result 1" },
+      ]
+
+      allow(lmi_client).to \
+        receive(:soc_search).with("search query") { lmi_client_search_results }
+
+      title = lmi_for_all.search("search query").first[:description]
+
+      expect(title).to eq("Description 1")
     end
   end
 end
