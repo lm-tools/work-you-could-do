@@ -3,6 +3,18 @@ class LmiForAll
     @lmi_client = lmi_client
   end
 
+  def search(query)
+    @lmi_client
+      .soc_search(query)
+      .map do |result|
+        {
+          soc: result["soc"],
+          title: friendly_soc_title(result["title"]),
+          description: friendly_soc_description(result["description"]),
+        }
+      end
+  end
+
   def lookup(soc_code)
     lmi_occupation = @lmi_client.soc_code_lookup(soc_code)
     {
@@ -31,7 +43,7 @@ class LmiForAll
 
   def friendly_soc_description(description)
     description_re = / not elsewhere classified in .*/
-    description.gsub(description_re, "")
+    description.gsub(description_re, ".")
   end
 
   def clean_add_titles(titles)

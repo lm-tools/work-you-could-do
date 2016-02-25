@@ -7,9 +7,8 @@ class SearchesController < ApplicationController
   private
 
   def search_for_soc_occupations(query)
-    LmiClient.new.soc_search(query)
-             .map do |result|
-               OpenStruct.new(result.slice("soc", "title", "description"))
-             end
+    LmiForAll.new(LmiClient.new)
+             .search(query)
+             .map { |result| OpenStruct.new(result) }
   end
 end
