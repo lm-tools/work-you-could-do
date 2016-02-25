@@ -12,7 +12,7 @@ Then(/^it should appear in my list of saved occupations$/) do
 end
 
 Then(/^I should see a confirmation that the occupation is saved$/) do
-  confirmation_message = %("#{specific_search_result.fetch(:title)}" saved)
+  confirmation_message = %(#{specific_search_result.fetch(:title)} saved)
   expect(page).to have_content(confirmation_message)
 end
 
