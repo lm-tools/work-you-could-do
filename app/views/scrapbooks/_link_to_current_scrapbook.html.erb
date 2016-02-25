@@ -1,4 +1,3 @@
 <%= link_to(
-  "See saved #{pluralize_without_count(current_scrapbook.occupations.size, "role")} " +
-  (current_scrapbook.occupations.size > 1 ? "(#{current_scrapbook.occupations.size})" : ""),
+  (current_scrapbook.occupations.size > 0 ? "#{current_scrapbook.occupations.size} saved" : ""),
   current_scrapbook, id: "scrapbook") %>

@@ -2,8 +2,7 @@
 
 <% if current_scrapbook.saved_occupations.any? %>
   <div id="success" class="information-box">
-    <p>You have <%= pluralize(current_scrapbook.saved_occupations.size, "saved role") %>.</p>
-    <p><%= link_to("See saved #{pluralize_without_count(current_scrapbook.saved_occupations.size, "role")}", current_scrapbook) %></p>
+    <p>You have <%= link_to("#{pluralize(current_scrapbook.saved_occupations.size, "saved role")}", current_scrapbook) %>.</p>
   </div>
 <% end %>
 
