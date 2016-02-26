@@ -1,21 +1,21 @@
 $path: "/assets/";
-@import "../elements/public/sass/elements/helpers";
+@import "elements/sass/elements/helpers";
 
-@import "../elements/public/sass/elements/reset";
-@import "../elements/public/sass/elements/elements-typography";
-@import "../elements/public/sass/elements/layout";
+@import "elements/sass/elements/reset";
+@import "elements/sass/elements/elements-typography";
+@import "elements/sass/elements/layout";
 
-@import "../elements/public/sass/elements/forms";
-@import "../elements/public/sass/elements/forms/form-block-labels";
-@import "../elements/public/sass/elements/forms/form-date";
-@import "../elements/public/sass/elements/forms/form-validation";
+@import "elements/sass/elements/forms";
+@import "elements/sass/elements/forms/form-block-labels";
+@import "elements/sass/elements/forms/form-date";
+@import "elements/sass/elements/forms/form-validation";
 
-@import "../elements/public/sass/elements/tables";
-@import "../elements/public/sass/elements/lists";
-@import "../elements/public/sass/elements/details";
-@import "../elements/public/sass/elements/panels";
-@import "../elements/public/sass/elements/buttons";
-@import "../elements/public/sass/elements/icons";
+@import "elements/sass/elements/tables";
+@import "elements/sass/elements/lists";
+@import "elements/sass/elements/details";
+@import "elements/sass/elements/panels";
+@import "elements/sass/elements/buttons";
+@import "elements/sass/elements/icons";
 
-@import "../elements/public/sass/elements/components";
-@import "../elements/public/sass/elements/breadcrumb";
+@import "elements/sass/elements/components";
+@import "elements/sass/elements/breadcrumb";
