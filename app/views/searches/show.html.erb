@@ -7,13 +7,13 @@
 
 <h2 class="heading-xlarge">Explore work you could do</h2>
 
-<% if @query.empty? %>
+<% if @query.blank? %>
   <p>Please enter a role, skill or interest</p>
 <% end %>
 
 <%= render "searches/form", query: @query %>
 
-<% unless @query.empty? %>
+<% unless @query.blank? %>
   <section class="search-results">
     <h3 class="bold-medium job-description-title">
       <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
