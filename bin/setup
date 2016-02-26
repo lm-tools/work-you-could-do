@@ -12,8 +12,6 @@ Dir.chdir APP_ROOT do
   system "gem install bundler --conservative"
   system "bundle check || bundle install"
 
-  puts "== Updating git submodules =="
-  system "git submodule update --init --recursive"
   # puts "\n== Copying sample files =="
   # unless File.exist?("config/database.yml")
   #   system "cp config/database.yml.sample config/database.yml"
