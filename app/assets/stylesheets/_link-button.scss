@@ -1,0 +1,32 @@
+// from http://stackoverflow.com/a/12642009/256642
+
+input[type="button"].link-button,
+input[type="button"].link-button:active,
+input[type="button"].link-button:focus,
+input[type="submit"].link-button,
+input[type="submit"].link-button:active,
+input[type="submit"].link-button:focus,
+button.link-button,
+button.link-button:focus,
+button.link-button:active {
+    /* Remove all decorations to look like normal text */
+    background: none;
+    border: none;
+    display: inline;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    outline-offset: 0;
+    /* Additional styles to look like a link */
+    color: $link-colour;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* Remove extra space inside buttons in Firefox */
+input[type="button"].link-button::-moz-focus-inner,
+input[type="submit"].link-button::-moz-focus-inner,
+button.link-button::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}

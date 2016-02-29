@@ -1,6 +1,6 @@
 Given(/^I have an existing scrapbook$/) do
   scrapbook = Scrapbook.create(id: scrapbook_id)
-  expected_search_results(work_related_search_query).each do |result|
+  search_results_for(work_related_search_query).each do |result|
     scrapbook.occupations << Occupation.find_or_import_from_lmi(result[:soc])
   end
 end

@@ -40,7 +40,7 @@ Then(/^I should see all of its details$/) do
 end
 
 Then(/^I should see SOC occupations related to my search term$/) do
-  expected_search_results = expected_search_results(current_search_query)
+  expected_search_results = search_results_for(current_search_query)
   expected_search_results.each do |search_result|
     expect(page).to have_text(search_result.fetch(:title))
     expect(page).to have_text(search_result.fetch(:description))

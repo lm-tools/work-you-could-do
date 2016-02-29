@@ -1,8 +1,9 @@
 require "rails_helper"
 
 describe SavedOccupationsController do
+  let(:scrapbook) { Scrapbook.create }
+
   describe "#create" do
-    let(:scrapbook) { Scrapbook.create }
     let(:occupation) { Occupation.create }
 
     it "associates an occupation with a scrapbook" do
@@ -27,6 +28,20 @@ describe SavedOccupationsController do
       post :create, scrapbook_id: scrapbook_id, occupation_id: occupation.id
 
       expect(Scrapbook.find_by(id: scrapbook_id)).not_to be_nil
+    end
+  end
+
+  describe "#delete" do
+    it "removes an occupation from a scrapbook" do
+      5.times { |n| scrapbook.occupations << Occupation.create(soc_code: n) }
+      occupation_to_remove = scrapbook.occupations.first
+
+      delete :destroy,
+             scrapbook_id: scrapbook.id,
+             soc_code: occupation_to_remove.soc_code
+
+      scrapbook.reload
+      expect(scrapbook.occupations).not_to include(occupation_to_remove)
     end
   end
 end

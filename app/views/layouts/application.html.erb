@@ -1,6 +1,5 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
 <% end %>
 
 <% content_for :page_title do %>
@@ -43,6 +42,13 @@
 
     <%= content_for?(:application_content) ? yield(:application_content) : yield %>
   </main>
+<% end %>
+
+<% content_for :body_end do %>
+  <%= javascript_include_tag "application" %>
+  <% if Rails.env.test? %>
+    <script>jQuery.fx.off = true;</script>
+  <% end %>
 <% end %>
 
 <%= render template: "layouts/govuk_template" %>

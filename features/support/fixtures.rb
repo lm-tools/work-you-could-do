@@ -19,7 +19,7 @@ module Fixtures
     ],
   }.freeze
 
-  def expected_search_results(query)
+  def search_results_for(query)
     SEARCH_RESULTS.fetch(query)
   end
 
