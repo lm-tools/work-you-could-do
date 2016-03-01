@@ -1,24 +1,20 @@
 {
   "name": "work-you-could-do",
+  "repository": "https://github.com/lm-tools/work-you-could-do",
   "scripts": {
     "postdeploy": "bin/rake db:setup"
   },
   "env": {
-    "EMAIL_SENDER"             : { "required" : true  },
-    "GOOGLE_TAG_MANAGER_ID"    : { "required" : true  },
-    "LANG"                     : { "required" : true  },
-    "RACK_ENV"                 : { "required" : true  },
-    "RAILS_ENV"                : { "required" : true  },
-    "RAILS_SERVE_STATIC_FILES" : { "required" : true  },
-    "SECRET_KEY_BASE"          : { "required" : true  }
+    "EMAIL_SENDER":             { "required": true },
+    "GOOGLE_TAG_MANAGER_ID":    { "required": true },
+    "RAILS_ENV":                { "required": true, "value": "production" },
+    "RAILS_SERVE_STATIC_FILES": { "required": true, "value": "enabled" },
+    "SECRET_KEY_BASE":          { "required": true, "generator": "secret" }
   },
   "addons": [
-    "heroku-postgresql",
-    "sendgrid"
+    "heroku-postgresql"
   ],
   "buildpacks": [
-    {
-      "url": "urn:buildpack:heroku/ruby"
-    }
+    { "url": "https://github.com/heroku/heroku-buildpack-ruby" }
   ]
 }
