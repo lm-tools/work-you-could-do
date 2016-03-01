@@ -7,6 +7,7 @@
 @import "elements";
 
 @import "breadcrumbs-override";
+@import "link-button";
 
 .multi-entry-text-input {
   li {
@@ -108,10 +109,6 @@ a.search-result {
 }
 
 #current-scrapbook-link-container {
-    @include core-16;
-    float: right;
-}
-
-.TBC {
-  border: 20px solid #FF007F !important;
+  @include core-16;
+  float: right;
 }

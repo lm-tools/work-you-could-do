@@ -1,0 +1,13 @@
+<% content_for :breadcrumbs do %>
+  <ol>
+    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+    <li><a href="<%= scrapbook_path(current_scrapbook) %>">Saved roles</a></li>
+    <li>Removed</li>
+  </ol>
+<% end %>
+
+<%= render "saved_occupations/destroy_confirmation_box", occupation: @occupation %>
+
+<p>
+  <a href="<%= scrapbook_path(current_scrapbook) %>" class="link-back">Back to saved roles</a>
+</p>

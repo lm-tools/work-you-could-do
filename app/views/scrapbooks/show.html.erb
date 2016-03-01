@@ -13,12 +13,16 @@
     <li>search for jobs online</li>
   </ul>
   <p>You can talk to your work coach about these roles too.</p>
+  <hr>
   <% current_scrapbook.occupations.each do |occupation| %>
-    <section id="<%=occupation.id%>">
+    <section id="occupation-<%= occupation.soc_code %>">
       <%= render "occupations/details", occupation: occupation %>
-      <p><a href="#">Remove role</a></p>
-      <hr>
+      <%= form_tag(scrapbook_saved_occupation_path(current_scrapbook, occupation), remote: true, method: "DELETE",
+            id: "remove-occupation-#{occupation.soc_code}-form", class: "remove-occupation-form") do |f| %>
+        <input type="submit" id="remove-occupation-<%= occupation.soc_code %>" class="link-button" value="Remove role">
+      <% end %>
     </section>
+    <hr>
   <% end %>
 
 <p><a href="<%= new_scrapbook_search_path(current_scrapbook) %>" class="link-back">Search again</a></p>

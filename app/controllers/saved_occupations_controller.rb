@@ -12,4 +12,9 @@ class SavedOccupationsController < ApplicationController
       # ignore duplicate entries
     end
   end
+
+  def destroy
+    @occupation = Occupation.find_by(soc_code: params[:soc_code])
+    current_scrapbook.occupations.delete(@occupation)
+  end
 end

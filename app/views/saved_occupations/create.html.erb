@@ -1,11 +1,11 @@
-<header id="global-breadcrumb">
+<% content_for :breadcrumbs do %>
   <ol>
     <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
     <li><a href="<%= scrapbook_search_path(query: @query) %>">Results</a></li>
     <li><a href="<%= scrapbook_occupation_path(soc_code: @occupation.soc_code, query: @query) %>"><%= @occupation.title %></a></li>
     <li>Saved</li>
   </ol>
-</header>
+<% end %>
 
 <%= render "saved_occupations/confirmation_box", occupation: @occupation %>
 
