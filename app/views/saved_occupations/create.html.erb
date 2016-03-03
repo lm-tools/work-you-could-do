@@ -2,7 +2,7 @@
   <ol>
     <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
     <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @query) %>">Results</a></li>
-    <li><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @query) %>"><%= @occupation.title %></a></li>
+    <li><a href="<%= scrapbook_occupation_path(current_scrapbook, @occupation, query: @query) %>"><%= @occupation.title %></a></li>
     <li>Saved</li>
   </ol>
 <% end %>
@@ -10,6 +10,6 @@
 <%= render "saved_occupations/confirmation_box", occupation: @occupation %>
 
 <p>
-  <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @query) %>" id="back-to-occupation" class="link-back">Back to "<%= @occupation.title %>"</a><br>
+  <a href="<%= scrapbook_occupation_path(current_scrapbook, @occupation, query: @query) %>" id="back-to-occupation" class="link-back">Back to "<%= @occupation.title %>"</a><br>
   <a href="<%= scrapbook_search_path(current_scrapbook, query: @query) %>" id="back-to-search-results" class="link-back">Back to search results</a>
 </p>
