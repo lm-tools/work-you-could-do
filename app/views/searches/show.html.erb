@@ -1,6 +1,6 @@
 <% content_for :breadcrumbs do %>
 <ol>
-  <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
+  <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
   <li>Results</li>
 </ol>
 <% end %>
@@ -22,7 +22,7 @@
       <p>Sorry, we couldn't find any results for this job role</p>
     <% else %>
       <% @search_results.each do |search_result| %>
-      <a href="<%= scrapbook_occupation_path(soc_code: search_result.soc, query: @query) %>" class="search-result">
+      <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, query: @query) %>" class="search-result">
         <h4 class="bold-small">
           <%= search_result.title %>
         </h4>
