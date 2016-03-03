@@ -1,18 +1,18 @@
 <% content_for :breadcrumbs do %>
   <ol>
-    <li><a href="<%= new_scrapbook_search_path %>">Search</a></li>
-    <li><a href="<%= scrapbook_search_path(query: @query) %>">Results</a></li>
+    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+    <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @query) %>">Results</a></li>
     <li><%= @occupation.title %></li>
   </ol>
 <% end %>
 
 <%= render "occupations/details", occupation: @occupation %>
 
-<%= form_tag(scrapbook_saved_occupations_path, remote: true, method: "POST",
+<%= form_tag(scrapbook_saved_occupations_path(current_scrapbook), remote: true, method: "POST",
              id: "save-occupation-form", class: "save-occupation-form") do |f| %>
-  <input type="hidden" name="occupation_id" value="<%= @occupation.id %>">
+  <input type="hidden" name="soc_code" value="<%= @occupation.soc_code %>">
   <input type="hidden" name="query" value="<%= @query %>">
   <input type="submit" id="save-occupation"  class="button" value="Save">
 <% end %>
 
-<p><a href="<%= scrapbook_search_path(query: @query) %>" id="back-to-search-results" class="link-back">Search results</a></p>
+<p><a href="<%= scrapbook_search_path(current_scrapbook, query: @query) %>" id="back-to-search-results" class="link-back">Search results</a></p>
