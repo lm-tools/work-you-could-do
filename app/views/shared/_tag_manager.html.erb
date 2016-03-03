@@ -1,3 +1,4 @@
+<% if ENV.include?("GOOGLE_TAG_MANAGER_ID") %>
 <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=<%= ENV["GOOGLE_TAG_MANAGER_ID"]%>"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -7,3 +8,4 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','<%= ENV["GOOGLE_TAG_MANAGER_ID"]%>');</script>
 <!-- End Google Tag Manager -->
+<% end %>

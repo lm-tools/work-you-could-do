@@ -5,7 +5,7 @@
     "postdeploy": "bin/rake db:setup"
   },
   "env": {
-    "GOOGLE_TAG_MANAGER_ID":    { "required": true },
+    "GOOGLE_TAG_MANAGER_ID":    { "required": false },
     "RAILS_ENV":                { "required": true, "value": "production" },
     "RAILS_SERVE_STATIC_FILES": { "required": true, "value": "enabled" },
     "SECRET_KEY_BASE":          { "required": true, "generator": "secret" }

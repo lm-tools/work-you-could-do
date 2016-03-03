@@ -1,8 +1,9 @@
 language: ruby
 cache:
   - bundler
+env:
+  - DATABASE_URL=postgres://postgres@localhost
+before_script:
+  - bin/setup RAILS_ENV=test
 script:
   - bin/test
-before_script:
-  - cp config/database.yml.travis config/database.yml
-  - bin/setup RAILS_ENV=test

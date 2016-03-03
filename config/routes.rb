@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'scrapbooks#create'
+  root to: "scrapbooks#create"
   resources :scrapbooks,
-            path: '/',
+            path: "/",
             only: [:show],
             constraints: { id: Scrapbook::VALID_ID } do
     resource :search, only: [:new, :show]
