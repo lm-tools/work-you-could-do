@@ -4,7 +4,7 @@ class SavedOccupationsController < ApplicationController
   def create
     # rubocop:disable Lint/HandleExceptions
     @query = params[:query]
-    @occupation = Occupation.find(params[:occupation_id])
+    @occupation = Occupation.find_by(soc_code: params[:soc_code])
 
     begin
       current_scrapbook.occupations << @occupation
