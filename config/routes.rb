@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resource :search, only: [:new, :show]
     resources :occupations, only: [:show, :index], param: :soc_code
     resources :saved_occupations, only: [:create, :destroy], param: :soc_code
+    get "/cookies", to: "static_pages#cookies"
   end
 end
