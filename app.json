@@ -5,7 +5,6 @@
     "postdeploy": "bin/rake db:setup"
   },
   "env": {
-    "EMAIL_SENDER":             { "required": true },
     "GOOGLE_TAG_MANAGER_ID":    { "required": true },
     "RAILS_ENV":                { "required": true, "value": "production" },
     "RAILS_SERVE_STATIC_FILES": { "required": true, "value": "enabled" },
