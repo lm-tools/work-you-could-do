@@ -7,19 +7,19 @@
 
 <h2 class="heading-xlarge">Explore work you could do</h2>
 
-<% if @query.blank? %>
-  <p>Please enter a role, skill or interest</p>
-<% end %>
 
 <%= render "searches/form", query: @query %>
 
-<% unless @query.blank? %>
+<% if @query.blank? %>
+  <h3 class="bold-medium job-description-title">No search entered</h3>
+  <p>To find work you could do, please enter a role, skill or interest.</p>
+<% else %>
   <section class="search-results">
     <h3 class="bold-medium job-description-title">
       <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
     </h3>
     <% if @search_results.empty? %>
-      <p>Sorry, we couldn't find any results for this job role</p>
+      <p>No roles matched your search. Please check the spelling or try a different search.</p>
     <% else %>
       <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, query: @query) %>" class="search-result">
