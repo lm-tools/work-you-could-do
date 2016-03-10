@@ -20,7 +20,10 @@ Then(/^I should see the new search page, within my scrapbook$/) do
 end
 
 Then(/^I should see the new search page, within a new scrapbook$/) do
-  routing = Rails.application.routes.recognize_path(current_path)
+  current_path_without_prefix = \
+    current_path.sub(/^#{Rails.application.config.relative_url_root}/, "")
+
+  routing = Rails.application.routes.recognize_path(current_path_without_prefix)
 
   expect(routing[:controller]).to eq("searches")
   expect(routing[:action]).to eq("new")

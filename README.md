@@ -61,6 +61,20 @@ If you get a `FATAL:  database "work-you-could-do_test" does not exist` error
 when running tests, run `$ bin/rake db:test:prepare` to re-setup the test
 database.
 
+## Mounting the application in a directory
+
+The app will run mounted at "/" by default. To run within a directory, set the
+`RAILS_RELATIVE_URL_ROOT` environment variable.
+
+For example, to mount the application at "/work-you-could-do", run:
+
+```sh
+$ RAILS_RELATIVE_URL_ROOT=/work-you-could-do bin/rails server
+```
+
+**Note!** [Spring] does not reload the application when environment variables
+change, so use this in development with caution.
+
 ## Run locally in Docker containers
 
 Currently this is intended for validation of the Dockerfile only, developing
@@ -108,3 +122,4 @@ $ docker-compose run app bin/test
 [Docker]: https://www.docker.com/
 [Docker Compose]: https://www.docker.com/products/docker-compose
 [Docker Machine]: https://www.docker.com/products/docker-machine
+[Spring]: https://github.com/rails/spring
