@@ -1,4 +1,5 @@
-$path: "/assets/";
+$path: null; // this has to be set to null explicitly to prevent elements from
+             // "helpfully" setting it to "/public/images" (T_T)
 @import "elements/sass/elements/helpers";
 
 @import "elements/sass/elements/reset";

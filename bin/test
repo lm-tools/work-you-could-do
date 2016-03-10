@@ -18,4 +18,7 @@ Dir.chdir APP_ROOT do
 
   heading "Running Cucumber tests"
   system("bin/cucumber") or raise("Cucumber failed")
+
+  heading "Running Cucumber tests (with the app mounted at /work-you-could-do)"
+  system("RAILS_RELATIVE_URL_ROOT=/work-you-could-do bundle exec cucumber") or raise("Cucumber failed")
 end
