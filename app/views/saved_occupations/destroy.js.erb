@@ -1,1 +1,4 @@
 $("#occupation-<%= @occupation.soc_code %>").replaceWith("<%= escape_javascript(render "saved_occupations/destroy_confirmation_box", occupation: @occupation) %>");
+<% if current_scrapbook.occupations.empty? %>
+  $("#scrapbook-preamble").replaceWith("<%= escape_javascript(render "scrapbooks/preamble_empty") %>");
+<% end %>
