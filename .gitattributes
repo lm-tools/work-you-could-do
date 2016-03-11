@@ -1,1 +1,2 @@
 features/cassettes/**/*.yml binary
+spec/cassettes/**/*.yml binary
