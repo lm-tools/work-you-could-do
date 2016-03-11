@@ -22,7 +22,7 @@
       <p>No roles matched your search. Please check the spelling or try a different search.</p>
     <% else %>
       <% @search_results.each do |search_result| %>
-      <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, query: @query) %>" class="search-result">
+      <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, from_query: @query) %>" class="search-result">
         <h4 class="bold-small">
           <%= search_result.title %>
         </h4>

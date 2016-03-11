@@ -2,7 +2,7 @@ class SavedOccupationsController < ApplicationController
   before_action :ensure_current_scrapbook
 
   def create
-    @query = params[:query]
+    @from_query = params[:from_query]
     @occupation = Occupation.find_by(soc_code: params[:soc_code])
     ensure_occupation_saved_to_current_scrapbook(@occupation)
   end
