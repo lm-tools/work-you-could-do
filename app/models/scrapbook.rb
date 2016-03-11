@@ -8,4 +8,5 @@ class Scrapbook < ActiveRecord::Base
 
   has_many :saved_occupations, -> { order(:updated_at) }
   has_many :occupations, through: :saved_occupations
+  has_many :search_log_entries
 end
