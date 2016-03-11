@@ -17,4 +17,11 @@ Scenario: Remove a previously saved occupation on a javascript-enabled device
   And I am viewing my scrapbook
   When I remove one of my saved occupations
   Then I should see an in-situ confirmation that the occupation is removed
-  Then it should be removed in-situ
+  And it should be removed in-situ
+
+@javascript
+Scenario: Remove a previously saved occupation on a javascript-enabled device
+  Given I have an existing scrapbook
+  And I am viewing my scrapbook
+  When I remove all of my saved occupations
+  Then I should see the empty-scrapbook premable

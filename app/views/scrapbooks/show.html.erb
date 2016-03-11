@@ -8,14 +8,9 @@
   <h2 class="heading-xlarge">Your saved roles</h2>
 
   <% if current_scrapbook.occupations.any? %>
-    <p class="lede">You can use this information to:</p>
-    <ul class="list list-bullet">
-      <li>help your work search</li>
-      <li>tailor your CV</li>
-      <li>look for training</li>
-    </ul>
-    <p>You can talk to your work coach about these roles too.</p>
-    <hr>
+    <div id="scrapbook-preamble">
+      <%= render "scrapbooks/preamble" %>
+    </div>
     <% current_scrapbook.occupations.each do |occupation| %>
       <section id="occupation-<%= occupation.soc_code %>">
         <%= render "occupations/details", occupation: occupation %>
@@ -27,14 +22,9 @@
       <hr>
     <% end %>
   <% else %>
-    <p class="lede">You don’t have any saved roles</p>
-    <p class="lede">Search again to discover more:</p>
-    <ul class="list list-bullet">
-      <li>roles that match your interests</li>
-      <li>types of places you could work</li>
-      <li>ways to use your skills</li>
-    </ul>
-    <hr>
+    <div id="scrapbook-preamble">
+      <%= render "scrapbooks/preamble_empty" %>
+    </div>
   <% end %>
 
 <p><a href="<%= new_scrapbook_search_path(current_scrapbook) %>" class="link-back">Search again</a></p>
