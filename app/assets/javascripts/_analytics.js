@@ -1,5 +1,9 @@
 window.analytics = window.analytics || {
-  virtualPageView: function (path) {
-    window.dataLayer.push({"event": "pageView", "virtualPageViewPath": path});
+  virtualPageView: function (path, title) {
+    window.dataLayer.push({
+      "event": "pageView",
+      "virtualPageViewPath": path,
+      "virtualPageViewTitle": title
+    });
   }
 }
