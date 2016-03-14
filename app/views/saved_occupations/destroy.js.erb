@@ -2,3 +2,4 @@ $("#occupation-<%= @occupation.soc_code %>").replaceWith("<%= escape_javascript(
 <% if current_scrapbook.occupations.empty? %>
   $("#scrapbook-preamble").replaceWith("<%= escape_javascript(render "scrapbooks/preamble_empty") %>");
 <% end %>
+window.analytics.virtualPageView("<%= request.path %>");

@@ -23,5 +23,16 @@ Then(/^I should see an in\-situ confirmation that the occupation is saved$/) do
 
   expect(current_path).to eq view_occupation_details_path
 
+  saved_occupations_path = scrapbook_saved_occupations_path(
+    scrapbook_id: scrapbook_id
+  )
+
+  expect(page).to have_analytics_event(
+    {
+      "event" => "pageView",
+      "virtualPageViewPath" => saved_occupations_path,
+    }
+  )
+
   step("I should see a confirmation that the occupation is saved")
 end
