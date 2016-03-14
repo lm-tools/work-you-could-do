@@ -1,14 +1,12 @@
 <form action="<%= scrapbook_search_path(current_scrapbook) %>" method="GET" id="search-form">
-  <div class="form-group-related">
-    <label class="form-label" for="query">
-      <span class="heading-small">Roles, skills and interests</span>
-    </label>
-    <input type="text" name="query" id="query" class="form-control"
-           title="Work, skills and interests"
-           value="<%= local_assigns[:query] %>">
-  </div>
 
-  <div class="form-group">
-    <input type="submit" class="button" value="Search">
+  <div class="form-group-related">
+      <label class="form-label" for="query">
+        <span class="heading-small">Roles, skills and interests</span>
+      </label>
+      <input type="text" name="query" id="query" class="form-control"
+             title="Work, skills and interests"
+             value="<%= local_assigns[:query] %>">
+      <input type="submit" class="button search-button" value="Search">
   </div>
 </form>

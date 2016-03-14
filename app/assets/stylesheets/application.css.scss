@@ -107,3 +107,14 @@ a.search-result {
   @include core-16;
   float: right;
 }
+
+.search-button {
+  @include box-shadow(none);
+  line-height: 1.13;
+  left: -0.3em;  
+    @include media (mobile) {
+    left: 0em;
+  }
+}
+
+
