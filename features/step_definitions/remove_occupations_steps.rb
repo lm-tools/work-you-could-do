@@ -3,7 +3,7 @@ Given(/^I am viewing my scrapbook$/) do
 end
 
 When(/^I remove one of my saved occupations$/) do
-  click_on("remove-occupation-#{specific_search_result[:soc]}")
+  click_on("remove-occupation-#{specific_search_result.fetch(:soc)}")
 end
 
 When(/^I remove all of my saved occupations$/) do
@@ -20,6 +20,19 @@ end
 
 Then(/^I should see an in-situ confirmation that the occupation is removed$/) do
   expect(current_path).to eq scrapbook_path(id: scrapbook_id)
+
+  saved_occupation_path = scrapbook_saved_occupation_path(
+    scrapbook_id: scrapbook_id,
+    soc_code: specific_search_result.fetch(:soc)
+  )
+
+  expect(page).to have_analytics_event(
+    {
+      "event" => "pageView",
+      "virtualPageViewPath" => saved_occupation_path,
+    }
+  )
+
   step("I should see a confirmation that the occupation is removed")
 end
 

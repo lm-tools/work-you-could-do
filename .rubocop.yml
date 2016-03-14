@@ -16,6 +16,9 @@ Documentation:
 Rails:
   Enabled: true
 
+Style/BracesAroundHashParameters:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
