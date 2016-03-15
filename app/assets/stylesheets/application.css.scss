@@ -108,12 +108,16 @@ a.search-result {
   float: right;
 }
 
-.search-button {
-  @include box-shadow(none);
-  left: -0.3em;  
+#search-form {
+  .button {
+    @include core-19;
+    padding: 6px em(15);
+    margin-left: -4px;
+
     @include media (mobile) {
-    left: 0em;
+      margin-top: $gutter-half;
+      margin-left: 0;
+      width: 100%;
+    }
   }
 }
-
-
