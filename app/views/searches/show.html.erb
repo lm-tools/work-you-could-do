@@ -1,3 +1,5 @@
+<%# NOTE! :page_title_prefix content_for blocks are directly in the erb below %>
+
 <% content_for :breadcrumbs do %>
 <ol>
   <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
@@ -11,6 +13,7 @@
 <%= render "searches/form", query: @query %>
 
 <% if @query.blank? %>
+  <% content_for(:page_title_prefix, "No search entered") %>
   <h3 class="bold-medium job-description-title">No search entered</h3>
   <p>To find work you could do, please enter a role, skill or interest.</p>
 <% else %>
@@ -19,8 +22,10 @@
       <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
     </h3>
     <% if @search_results.empty? %>
+      <% content_for(:page_title_prefix, "No results found") %>
       <p>No roles matched your search. Please check the spelling or try a different search.</p>
     <% else %>
+      <% content_for(:page_title_prefix, "Search results") %>
       <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, from_query: @query) %>" class="search-result">
         <h4 class="bold-small">
