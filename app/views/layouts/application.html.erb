@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_title do %>
-  Work you could do
+  <%= yield(:page_title_prefix) %> - Explore work you could do
 <% end %>
 
 <% content_for :body_start do %>
