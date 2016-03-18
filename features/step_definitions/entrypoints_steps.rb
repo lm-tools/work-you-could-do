@@ -29,7 +29,3 @@ Then(/^I should see the new search page, within a new scrapbook$/) do
   expect(routing[:action]).to eq("new")
   expect(routing[:scrapbook_id]).to match(Scrapbook::VALID_ID)
 end
-
-Then(/^I should see my scrapbook$/) do
-  expect(current_path).to eq scrapbook_path(id: scrapbook_id)
-end
