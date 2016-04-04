@@ -22,10 +22,10 @@
       <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
     </h3>
     <% if @search_results.empty? %>
-      <% content_for(:page_title_prefix, "No results found") %>
+      <% content_for(:page_title_prefix, "No results found for: #{@query}") %>
       <p>No roles matched your search. Please check the spelling or try a different search.</p>
     <% else %>
-      <% content_for(:page_title_prefix, "Search results") %>
+      <% content_for(:page_title_prefix, "Search results for: #{@query}") %>
       <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, from_query: @query) %>" class="search-result">
         <h4 class="bold-small">
