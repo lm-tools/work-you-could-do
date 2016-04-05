@@ -1,0 +1,11 @@
+<% content_for(:page_title_prefix, "Page not found") %>
+
+<% content_for :breadcrumbs do %>
+  <ol>
+    <li><a href="<%= current_scrapbook.present? ? new_scrapbook_search_path(current_scrapbook) : root_path %>">Search</a></li>
+    <li>Page not found</li>
+  </ol>
+<% end %>
+
+<h2 class="heading-xlarge">This page cannot be found</h2>
+<p>Please check that you have entered the correct web address.</p>

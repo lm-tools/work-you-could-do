@@ -1,8 +1,10 @@
+<% if current_scrapbook.present? %>
 <script>
   window.dataLayer = window.dataLayer || [
     { "scrapbookId": "<%= current_scrapbook.id %>" }
   ]
 </script>
+<% end %>
 
 <% if ENV.include?("GOOGLE_TAG_MANAGER_ID") %>
 <!-- Google Tag Manager -->
