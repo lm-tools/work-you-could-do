@@ -8,6 +8,8 @@ module Scrapbooking
   protected
 
   def current_scrapbook
+    return nil unless current_scrapbook_id
+
     @current_scrapbook ||= Scrapbook.find_or_initialize_by(
       id: current_scrapbook_id
     )

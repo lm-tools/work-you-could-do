@@ -8,7 +8,16 @@ module ApplicationHelper
   end
 
   def show_current_scrapbook_link?
-    request.path != scrapbook_path(current_scrapbook) &&
+    current_scrapbook.present? &&
+      request.path != scrapbook_path(current_scrapbook) &&
       current_scrapbook.occupations.any?
+  end
+
+  def cookies_path
+    if current_scrapbook.present?
+      scrapbook_cookies_path(current_scrapbook)
+    else
+      super
+    end
   end
 end

@@ -32,5 +32,6 @@ module WorkYouCouldDo
     config.active_record.raise_in_transactional_callbacks = true
     config.action_view.embed_authenticity_token_in_remote_forms = true
     config.autoload_paths << Rails.root.join("lib")
+    config.exceptions_app = self.routes
   end
 end
