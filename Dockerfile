@@ -8,6 +8,10 @@ ADD Gemfile.lock /srv/app/
 RUN bundle install
 
 ADD . /srv/app
+
+ARG RAILS_RELATIVE_URL_ROOT
+ENV RAILS_RELATIVE_URL_ROOT=$RAILS_RELATIVE_URL_ROOT
+
 RUN RAILS_ENV=production bin/rake assets:precompile
 
 EXPOSE 3000
