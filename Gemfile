@@ -9,6 +9,7 @@ gem "health_check"
 gem "httparty"
 gem "jbuilder", "~> 2.0"
 gem "mail"
+gem "silencer"
 
 gem "govuk_frontend_toolkit"
 gem "govuk_template"
