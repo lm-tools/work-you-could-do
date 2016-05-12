@@ -1,3 +1,5 @@
+require "silencer/logger"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -47,6 +49,13 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
+
+  # silence health_check logs
+  config.middleware.swap(
+    Rails::Rack::Logger,
+    Silencer::Logger,
+    silence: [%r{/health_check}]
+  )
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
