@@ -9,10 +9,13 @@ RUN bundle install
 
 ADD . /srv/app
 
-ARG RAILS_RELATIVE_URL_ROOT
-ENV RAILS_RELATIVE_URL_ROOT=$RAILS_RELATIVE_URL_ROOT
-
 RUN RAILS_ENV=production bin/rake assets:precompile
+
+# Strip out /assets/ from all compiled css, leaving all css-referenced asset paths relative to the
+# stylesheets themselves.
+# This allows the built Docker image to be used with any RAILS_RELATIVE_URL_ROOT.
+RUN for f in $(grep -rl /assets/ public/assets/*.css); \
+    do sed -i s#/assets/##g $f && gzip --keep --force $f; done
 
 EXPOSE 3000
 
