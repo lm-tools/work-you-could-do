@@ -1,21 +1,11 @@
-<% content_for(:page_title_prefix, "Search") %>
+<% content_for(:page_title_prefix, "Find information on roles") %>
 
-<h2 class="heading-xlarge">Explore work you could do</h2>
+<h2 class="heading-xlarge">Find information on roles</h2>
 
 <% if current_scrapbook.saved_occupations.any? %>
   <div id="success" class="information-box">
     <p>You have <%= link_to("#{pluralize(current_scrapbook.saved_occupations.size, "saved role")}", current_scrapbook) %>.</p>
   </div>
 <% end %>
-
-<p class="lede">Use this tool to help your work search and discover:</p>
-
-<ul class="list list-bullet">
-  <li>roles that match your skills and interests</li>
-  <li>types of places you could work</li>
-  <li>typical pay, tasks and hours</li>
-</ul>
-
-<p>You can save these roles and discuss them with your work coach.</p>
 
 <%= render "searches/form" %>

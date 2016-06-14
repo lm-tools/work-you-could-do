@@ -1,6 +1,34 @@
 require "rails_helper"
 
 describe SearchesController do
+  describe "#new" do
+    render_views
+
+    let(:scrapbook) { Scrapbook.create(id: Scrapbook.new_id) }
+
+    subject(:page) do
+      get :new, scrapbook_id: scrapbook.id
+
+      Capybara.string(response.body)
+    end
+
+    context "given saved roles" do
+      before { scrapbook.occupations << Occupation.create(soc_code: 1234) }
+
+      it "displays a prominent link to the current scrapbook" do
+        expect(page).to have_selector(
+          ".information-box a[href='#{scrapbook_path(scrapbook)}']"
+        )
+      end
+    end
+
+    context "given no saved roles" do
+      it "does not display a link to the current scrapbook" do
+        expect(page).to have_no_link(href: scrapbook_path(scrapbook))
+      end
+    end
+  end
+
   describe "#show", :vcr do
     render_views
     it "does not blow up when no query param" do
