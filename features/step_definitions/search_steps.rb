@@ -1,5 +1,5 @@
 Given(/^I am on the search page$/) do
-  visit root_path
+  visit new_scrapbook_search_path(scrapbook_id: scrapbook_id)
 end
 
 Given(/^I have searched for something work related$/) do

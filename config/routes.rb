@@ -4,6 +4,7 @@ Rails.application.routes.draw do
             path: "/",
             only: [:show],
             constraints: { id: Scrapbook::VALID_ID } do
+    resource :introduction, only: [:show]
     resource :search, only: [:new, :show]
     resources :occupations, only: [:show, :index], param: :soc_code
     resources :saved_occupations, only: [:create, :destroy], param: :soc_code

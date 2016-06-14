@@ -7,7 +7,7 @@ Feature: Entrypoints
 
 Scenario: Access the tool for the first time
   When I access the tool with my scrapbook identifier
-  Then I should see the new search page, within my scrapbook
+  Then I should see the introduction page, within my scrapbook
 
 Scenario: Access an existing scrapbook
   Given I have an existing scrapbook
@@ -16,4 +16,4 @@ Scenario: Access an existing scrapbook
 
 Scenario: Access the tool without a scrapbook identifier
   When I access the tool without a scrapbook identifier
-  Then I should see the new search page, within a new scrapbook
+  Then I should see the introduction page, within a new scrapbook
