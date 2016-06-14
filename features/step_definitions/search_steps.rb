@@ -1,3 +1,12 @@
+def search_for(query)
+  self.current_search_query = query
+
+  within("#search-form") do
+    fill_in("query", with: current_search_query)
+    find("input[type=submit]").click
+  end
+end
+
 Given(/^I am on the search page$/) do
   visit new_scrapbook_search_path(scrapbook_id: scrapbook_id)
 end
@@ -12,16 +21,21 @@ When(/^I (?:drill|have drilled) into a specific search result$/) do
 end
 
 When(/^I search for something( else)? work related$/) do |other|
-  self.current_search_query = if other
-                                other_work_related_search_query
-                              else
-                                work_related_search_query
-                              end
+  query = if other
+            other_work_related_search_query
+          else
+            work_related_search_query
+          end
 
-  within("#search-form") do
-    fill_in("query", with: current_search_query)
-    find("input[type=submit]").click
-  end
+  search_for(query)
+end
+
+When(/^I search for something that returns no results$/) do
+  search_for("gobbledygook")
+end
+
+When(/^I search with no search query$/) do
+  search_for("")
 end
 
 Then(/^I should see all of its details$/) do

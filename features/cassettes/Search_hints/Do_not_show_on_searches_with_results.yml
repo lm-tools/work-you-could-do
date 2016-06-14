@@ -1,0 +1,148 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=library
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Tue, 14 Jun 2016 16:27:57 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Auth-Type:
+      - No Key
+    body:
+      encoding: UTF-8
+      string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
+        clerks and assistants classify, sort and file publications, documents, audio-visual
+        and computerised material in libraries and offices.","qualifications":"There
+        are no minimum academic requirements, although entrants usually possess GCSEs/S
+        grades or A-Levels/H grades. Training is usually provided on-the-job. NVQs/
+        SVQs in Information and Library Services are available at Levels 2 and 3.","tasks":"
+        sorts, catalogues and maintains library records;\n locates and retrieves material
+        on request for borrowers;\n issues library material and records date of issue/
+        due date for return;\n classifies, labels and indexes new books;\n performs
+        simple repairs on old books."},{"soc":2451,"title":"Librarians","description":"Librarians
+        appraise, obtain, index, collate and make available library acquisitions and
+        organise and control other library services.","qualifications":"Entry will
+        normally require an accredited degree or postgraduate qualification. Most
+        postgraduate courses require applicants to have had prior relevant work experience.
+        Professional qualifications and NVQs/SVQs in Information and Library Service
+        are available at Levels 2, 3 and 4.","tasks":" selects and arranges for the
+        acquisition of books, periodicals, audio-visual and other material;\n collects,
+        classifies and catalogues information, books and other material;\n prepares
+        and circulates abstracts, bibliographies, book lists, etc.;\n identifies the
+        information needs of clients, seeks out and evaluates information sources;\n
+        establishes information storage systems to deal with queries and to maintain
+        up to date records;\n manages library borrowing and inter-library loan facilities;\n
+        promotes library services through displays and talks\n provides learning and
+        cultural experiences through events such as author talks, reading groups,
+        formal and informal teaching."},{"soc":4113,"title":"Local government administrative
+        occupations","description":"Job holders in this unit group undertake a variety
+        of administrative and clerical duties in local government offices and departments.","qualifications":"Entry
+        is most common with GCSEs/S grades. Evidence of keyboard skills may also be
+        required in some posts. Off- and on-the-job training is provided. NVQs/SVQs
+        in Administration are available at Levels 2 and 3.","tasks":" computes cost
+        of product/services and maintains and balances records of financial transactions;\n
+        prepares and checks invoices and verifies accuracy of records;\n receives
+        and pays out cash and cheques and performs closely related clerical duties;\n
+        updates and maintains data, correspondence and other records for storage or
+        despatch;\n arranges, classifies and indexes publications, correspondence
+        and other material in libraries and offices;\n performs other clerical duties
+        not elsewhere classified including preparing financial information for management,
+        proof reading printed material and drafting letters in reply to correspondence
+        or telephone enquiries."},{"soc":4112,"title":"National government administrative
+        occupations","description":"Job holders in this unit group undertake a variety
+        of administrative and clerical duties in national government departments,
+        and in local offices of national government departments.","qualifications":"Entry
+        is possible to junior grades within this group with GCSEs/S grades, and/or
+        relevant practical experience; higher grades require A levels/H grades or
+        equivalent, although many entrants are graduates. NVQs/SVQs, apprenticeships
+        and professional qualifications are available for certain areas of work.","tasks":"
+        assists senior government officers with policy work, external liaison or general
+        administrative work;\n undertakes administrative duties specific to the operation
+        of HM Revenue and Customs offices, Job Centres, Benefits Agency offices and
+        other local offices of national government;\n maintains and updates correspondence,
+        documents, data and other records for storage in files or on computer;\n classifies,
+        sorts and files publications, correspondence etc. in offices and libraries;\n
+        responds to telephone enquiries and other forms of correspondence;\n performs
+        miscellaneous clerical tasks such as proof reading printed material, drafting
+        letters, taking minutes etc."},{"soc":1259,"title":"Managers and proprietors
+        in other services n.e.c.","description":"Job holders in this unit group perform
+        a variety of managerial tasks in other service industries not elsewhere classified
+        in MINOR GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
+        requirements vary according to the particular company and/or service. Some
+        companies do not require candidates to have academic qualifications but others
+        require a degree or equivalent qualification. Off- and on-the-job training
+        may be provided.","tasks":" determines staffing, financial, material and other
+        short- and long-term requirements;\n ensures that adequate reserves of merchandise
+        are held and that stock keeping is carried out efficiently;\n authorises payment
+        for supplies received and decides on vending price and credit terms;\n examines
+        quality of merchandise and ensures that effective use is made of advertising
+        and display facilities;\n manages agencies to provide services out-sourced
+        by other organisations and businesses;\n ensures maintenance of appropriate
+        service levels to meet the objectives of the business."},{"soc":2426,"title":"Business
+        and related research professionals","description":"Business and related research
+        professionals carry out a variety of research activities for the broadcast
+        and print media, for the police and armed forces intelligence services, for
+        national security agencies and in other non-scientific areas.","qualifications":"Entrants
+        usually possess a degree or equivalent qualification. Training is usually
+        provided on-the-job, or support may be given for postgraduate study. Professional
+        qualifications are available in some areas.","tasks":" liaises with production
+        team to generate and develop ideas for film, television and radio programmes;\n
+        research sources for accurate factual material, finds suitable contributors
+        to programmes or print features and deals with any copyright issues;\n briefs
+        presenters, scriptwriters or journalists as required via verbal or written
+        reports;\n provides administrative support for programme development such
+        as booking facilities;\n provides support to criminal intelligence or to military
+        or other security operations by gathering and verifying intelligence data
+        and sources;\n presents findings in the required format, via written reports
+        or presentations;\n researches images for clients in a wide range of media
+        using specialist picture libraries and archives, museums, galleries etc.,
+        or commissions new images;\n liaises with client on the appropriate image/s
+        to be used;\n deals with copyright issues and negotiates fees."},{"soc":8211,"title":"Large
+        goods vehicle drivers","description":"Large Goods Vehicle (LGV) drivers (formerly
+        HGV drivers), collect, transport and deliver goods in rigid vehicles over
+        7.5 tonnes, articulated lorries and lorries pulling trailers.","qualifications":"No
+        formal academic entry qualifications are required. The LGV test incorporates
+        a medical examination, theory test and assessed road driving. LGV drivers
+        of vehicles of 3.5 tonnes and over require a Driver CPC (Certificate of Professional
+        Competence). The minimum age for LGV driving after obtaining the qualification
+        is 18 years. NVQs/SVQs, other vocational courses and apprenticeships relevant
+        to this occupation are available at various levels.","tasks":" checks tyres,
+        brakes, lights, oil, water and fuel levels and general condition of the vehicle;\n
+        drives vehicle from depot to loading/unloading point;\n agrees delivery schedule
+        and route with transport management;\n assists with loading/unloading and
+        ensures that load is evenly distributed and safely secured;\n drives vehicle
+        to destination in accordance with schedule;\n maintains records of journey
+        times, mileage and hours worked;\n undertakes minor repairs and notifies supervisor
+        of any mechanical faults."},{"soc":9233,"title":"Cleaners and domestics","description":"Cleaners
+        and domestics clean interiors of private houses, shops, hotels, schools, offices
+        and other buildings.","qualifications":"No academic qualifications are required.
+        On-the-job training may be provided. NVQs/SVQs in Cleaning: Building Interiors
+        are available at Levels 1 and 2.","tasks":" scrubs, washes, sweeps and polishes
+        floors, corridors and stairs;\n dusts and polishes furniture and fittings;\n
+        cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
+        ashtrays, waste bins and removes rubbish."}]'
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 16:27:57 GMT
+recorded_with: VCR 3.0.1
