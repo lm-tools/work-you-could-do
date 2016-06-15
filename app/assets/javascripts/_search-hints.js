@@ -16,11 +16,15 @@
     intervalIDs: []
   };
 
+  function incrementOrReset(index, length) {
+    return (index + 1) % length;
+  }
+
   function rotateHintText(element) {
     var index = 0;
     var $element = $(element);
     var updateHintText = function () {
-      index = (index+1) % searchHints.examples.length;
+      index = incrementOrReset(index, searchHints.examples.length);
       $element.fadeOut(300, function() {
         $element
           .text(searchHints.examples[index])
