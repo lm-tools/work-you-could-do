@@ -4,8 +4,14 @@
     // don't forget to update the static html hint in views/searches/_form.html.erb!
     examples: [
       "Retail",
+      "Cook",
       "Administration",
-      "Electrical",
+      "Driving",
+      "Sales",
+      "Nurse",
+      "School",
+      "Communication",
+      "Airport"
     ],
     intervalIDs: []
   };
