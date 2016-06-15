@@ -2,6 +2,9 @@
   <div class="form-group">
     <label class="form-label" for="query">
       <span class="heading-small">Roles, skills and interests</span>
+      <% if local_assigns[:show_hints] %>
+        <span class="form-hint">e.g. <span class="example">Retail</span></span>
+      <% end %>
     </label>
     <input type="text" name="query" id="query" class="form-control"
            title="Work, skills and interests"

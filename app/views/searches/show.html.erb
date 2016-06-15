@@ -9,7 +9,7 @@
 
 <h2 class="heading-xlarge">Find information on roles</h2>
 
-<%= render "searches/form", query: @query %>
+<%= render "searches/form", query: @query, show_hints: @search_results.empty? %>
 
 <% if @query.blank? %>
   <% content_for(:page_title_prefix, "No search entered") %>
