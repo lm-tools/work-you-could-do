@@ -1,6 +1,6 @@
 class LmiClient
   include HTTParty
-  base_uri "api.lmiforall.org.uk/api/v1"
+  base_uri "https://api.lmiforall.org.uk/api/v1"
 
   def soc_search(keyword)
     self.class.get("/soc/search", query: { q: keyword })

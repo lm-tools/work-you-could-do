@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=library
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=library
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 15:03:07 GMT
+      - Thu, 16 Jun 2016 10:30:51 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
@@ -142,10 +144,10 @@ http_interactions:
         cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
         ashtrays, waste bins and removes rubbish."}]'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 15:03:07 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:51 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/4135
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/4135
     body:
       encoding: US-ASCII
       string: ''
@@ -164,13 +166,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 15:03:08 GMT
+      - Thu, 16 Jun 2016 10:30:51 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '1349'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":4135,"tasks":" sorts, catalogues and maintains library records;\n
@@ -191,10 +195,10 @@ http_interactions:
         (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
         (press cutting agency)","Supervisor, library"]}'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 15:03:08 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:51 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
     body:
       encoding: US-ASCII
       string: ''
@@ -213,21 +217,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 15:03:08 GMT
+      - Thu, 16 Jun 2016 10:30:51 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '71'
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 15:03:08 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:52 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
     body:
       encoding: US-ASCII
       string: ''
@@ -246,21 +252,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 15:03:08 GMT
+      - Thu, 16 Jun 2016 10:30:52 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '75'
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470}]}'
+      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 15:03:08 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:52 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=library
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=library
     body:
       encoding: US-ASCII
       string: ''
@@ -279,13 +287,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 15:03:08 GMT
+      - Thu, 16 Jun 2016 10:30:52 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
@@ -400,5 +410,5 @@ http_interactions:
         cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
         ashtrays, waste bins and removes rubbish."}]'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 15:03:08 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:52 GMT
 recorded_with: VCR 3.0.1

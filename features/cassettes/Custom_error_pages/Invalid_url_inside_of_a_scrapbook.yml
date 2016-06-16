@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/4135
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/4135
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:53 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '1349'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":4135,"tasks":" sorts, catalogues and maintains library records;\n
@@ -48,10 +50,10 @@ http_interactions:
         (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
         (press cutting agency)","Supervisor, library"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:53 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
     body:
       encoding: US-ASCII
       string: ''
@@ -70,21 +72,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:53 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:53 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
     body:
       encoding: US-ASCII
       string: ''
@@ -103,21 +107,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:54 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470}]}'
+      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:54 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/2451
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/2451
     body:
       encoding: US-ASCII
       string: ''
@@ -136,13 +142,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:54 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '1583'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":2451,"tasks":" selects and arranges for the acquisition of books,
@@ -166,10 +174,10 @@ http_interactions:
         visual, audio","Librarian","Manager, resource, learning","Scientist, information","Superintendent
         (library)"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:54 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=2451
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=2451
     body:
       encoding: US-ASCII
       string: ''
@@ -188,21 +196,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:54 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":24,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":24,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":38}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:55 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=2451
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=2451
     body:
       encoding: US-ASCII
       string: ''
@@ -221,21 +231,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:55 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":24,"series":[{"year":2012,"estpay":840},{"year":2013,"estpay":850}]}'
+      string: '{"soc":24,"series":[{"year":2012,"estpay":840},{"year":2013,"estpay":850},{"year":2015,"estpay":870}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:55 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/4113
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/4113
     body:
       encoding: US-ASCII
       string: ''
@@ -254,13 +266,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:55 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":4113,"tasks":" computes cost of product/services and maintains
@@ -320,10 +334,10 @@ http_interactions:
         government, local","Operator, bureau, reporting, crime","Planner, duties (police
         service)","Worker, case (police service)","Worker, clerical (local government)"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:55 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4113
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4113
     body:
       encoding: US-ASCII
       string: ''
@@ -342,21 +356,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:24 GMT
+      - Thu, 16 Jun 2016 10:30:56 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:24 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:56 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4113
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4113
     body:
       encoding: US-ASCII
       string: ''
@@ -375,21 +391,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:56 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470}]}'
+      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:56 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/4112
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/4112
     body:
       encoding: US-ASCII
       string: ''
@@ -408,13 +426,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:57 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":4112,"tasks":" assists senior government officers with policy
@@ -500,10 +520,10 @@ http_interactions:
         customs","Watcher (HM Revenue and Customs)","Worker, case (government)","Worker,
         office (government)","Writer (armed forces)","Writer (MOD)"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:57 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4112
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4112
     body:
       encoding: US-ASCII
       string: ''
@@ -522,21 +542,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:57 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":41,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:57 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4112
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4112
     body:
       encoding: US-ASCII
       string: ''
@@ -555,21 +577,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:58 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470}]}'
+      string: '{"soc":41,"series":[{"year":2012,"estpay":470},{"year":2013,"estpay":470},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:58 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/1259
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/1259
     body:
       encoding: US-ASCII
       string: ''
@@ -588,13 +612,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:58 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":1259,"tasks":" determines staffing, financial, material and
@@ -674,10 +700,10 @@ http_interactions:
         (video shop)","Shopkeeper (laundry, launderette, dry cleaning)","Shopkeeper
         (video shop)","Superintendent, market"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:58 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=1259
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=1259
     body:
       encoding: US-ASCII
       string: ''
@@ -696,21 +722,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:58 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":12,"series":[{"year":2012,"hours":41},{"year":2013,"hours":41}]}'
+      string: '{"soc":12,"series":[{"year":2012,"hours":41},{"year":2013,"hours":41},{"year":2015,"hours":41}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:58 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=1259
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=1259
     body:
       encoding: US-ASCII
       string: ''
@@ -729,21 +757,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:59 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":12,"series":[{"year":2012,"estpay":690},{"year":2013,"estpay":670}]}'
+      string: '{"soc":12,"series":[{"year":2012,"estpay":690},{"year":2013,"estpay":670},{"year":2015,"estpay":680}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:59 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/2426
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/2426
     body:
       encoding: US-ASCII
       string: ''
@@ -762,13 +792,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:59 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":2426,"tasks":" liaises with production team to generate and
@@ -805,10 +837,10 @@ http_interactions:
         research (fuel)","Worker, research (photographic)","Worker, research (plastics)","Worker,
         research (textile)","Worker, research"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:59 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=2426
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=2426
     body:
       encoding: US-ASCII
       string: ''
@@ -827,21 +859,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:30:59 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":24,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38}]}'
+      string: '{"soc":24,"series":[{"year":2012,"hours":38},{"year":2013,"hours":38},{"year":2015,"hours":38}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:59 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=2426
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=2426
     body:
       encoding: US-ASCII
       string: ''
@@ -860,21 +894,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:00 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":24,"series":[{"year":2012,"estpay":840},{"year":2013,"estpay":850}]}'
+      string: '{"soc":24,"series":[{"year":2012,"estpay":840},{"year":2013,"estpay":850},{"year":2015,"estpay":870}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:00 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/8211
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/8211
     body:
       encoding: US-ASCII
       string: ''
@@ -893,13 +929,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:00 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":8211,"tasks":" checks tyres, brakes, lights, oil, water and
@@ -938,10 +976,10 @@ http_interactions:
         cattle","Roundsman (coal delivery)","Rullyman","Shunter, HGV","Transporter,
         cattle","Transporter, livestock","Truckman (road transport)"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:00 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=8211
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=8211
     body:
       encoding: US-ASCII
       string: ''
@@ -960,21 +998,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:01 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":82,"series":[{"year":2012,"hours":47},{"year":2013,"hours":47}]}'
+      string: '{"soc":82,"series":[{"year":2012,"hours":47},{"year":2013,"hours":47},{"year":2015,"hours":47}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:01 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=8211
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=8211
     body:
       encoding: US-ASCII
       string: ''
@@ -993,21 +1033,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:02 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":82,"series":[{"year":2012,"estpay":510},{"year":2013,"estpay":520}]}'
+      string: '{"soc":82,"series":[{"year":2012,"estpay":510},{"year":2013,"estpay":520},{"year":2015,"estpay":550}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:02 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/code/9233
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/9233
     body:
       encoding: US-ASCII
       string: ''
@@ -1026,13 +1068,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:02 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '{"soc":9233,"tasks":" scrubs, washes, sweeps and polishes floors, corridors
@@ -1067,10 +1111,10 @@ http_interactions:
         (telephone sterilising service)","Steward, house","Sweeper, tube","Sweeper","Sweeper-up","Technician,
         cleaning","Worker, domestic","Worker, house (domestic service)"]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:02 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=9233
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=9233
     body:
       encoding: US-ASCII
       string: ''
@@ -1089,21 +1133,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:25 GMT
+      - Thu, 16 Jun 2016 10:31:03 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '96'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":92,"series":[{"year":2012,"hours":42},{"year":2013,"hours":42}]}'
+      string: '{"soc":92,"series":[{"year":2012,"hours":42},{"year":2013,"hours":42},{"year":2015,"hours":42}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:25 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:03 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=9233
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=9233
     body:
       encoding: US-ASCII
       string: ''
@@ -1122,16 +1168,18 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Tue, 05 Apr 2016 16:06:26 GMT
+      - Thu, 16 Jun 2016 10:31:03 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '102'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
-      string: '{"soc":92,"series":[{"year":2012,"estpay":350},{"year":2013,"estpay":360}]}'
+      string: '{"soc":92,"series":[{"year":2012,"estpay":350},{"year":2013,"estpay":360},{"year":2015,"estpay":380}]}'
     http_version: 
-  recorded_at: Tue, 05 Apr 2016 16:06:26 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:03 GMT
 recorded_with: VCR 3.0.1
