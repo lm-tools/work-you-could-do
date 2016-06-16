@@ -2,7 +2,7 @@
 
 <% content_for :breadcrumbs do %>
 <ol>
-  <li><a href="<%= current_scrapbook.present? ? new_scrapbook_search_path(current_scrapbook) : root_path %>">Search</a></li>
+  <li><a href="<%= current_scrapbook.present? ? scrapbook_introduction_path(current_scrapbook) : root_path %>">Introduction</a></li>
   <li>Cookies</li>
 </ol>
 <% end %>

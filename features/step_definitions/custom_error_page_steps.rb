@@ -13,8 +13,8 @@ Then(/^I should see a friendly 404 page(, within my scrapbook)?$/) do |within_sc
 
   if within_scrapbook
     expect(page).to have_link("scrapbook", href: scrapbook_path(id: scrapbook_id))
-    expect(page).to have_link("Search", href: new_scrapbook_search_path(scrapbook_id: scrapbook_id))
+    expect(page).to have_link("Introduction", href: scrapbook_introduction_path(scrapbook_id: scrapbook_id))
   else
-    expect(page).to have_link("Search", href: root_path)
+    expect(page).to have_link("Introduction", href: root_path)
   end
 end
