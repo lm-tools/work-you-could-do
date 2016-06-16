@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=library
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=library
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Wed, 17 Feb 2016 16:07:06 GMT
+      - Thu, 16 Jun 2016 10:31:45 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
@@ -142,5 +144,5 @@ http_interactions:
         cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
         ashtrays, waste bins and removes rubbish."}]'
     http_version: 
-  recorded_at: Wed, 17 Feb 2016 16:07:06 GMT
+  recorded_at: Thu, 16 Jun 2016 10:31:45 GMT
 recorded_with: VCR 3.0.1

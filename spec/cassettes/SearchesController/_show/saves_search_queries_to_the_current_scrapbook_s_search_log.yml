@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=library
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=library
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 12:12:41 GMT
+      - Thu, 16 Jun 2016 10:30:43 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
@@ -142,10 +144,10 @@ http_interactions:
         cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
         ashtrays, waste bins and removes rubbish."}]'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 12:12:41 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=plumber
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=plumber
     body:
       encoding: US-ASCII
       string: ''
@@ -164,13 +166,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 12:12:41 GMT
+      - Thu, 16 Jun 2016 10:30:43 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":5314,"title":"Plumbers and heating and ventilating engineers","description":"Jobholders
@@ -231,10 +235,10 @@ http_interactions:
         and repairs faults to lines and ancillary equipment;\n erects and maintains
         mobile telecommunications infrastructure."}]'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 12:12:41 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
     body:
       encoding: US-ASCII
       string: ''
@@ -253,21 +257,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 12:12:41 GMT
+      - Thu, 16 Jun 2016 10:30:43 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '2'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 12:12:41 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
     body:
       encoding: US-ASCII
       string: ''
@@ -286,21 +292,23 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 12:12:41 GMT
+      - Thu, 16 Jun 2016 10:30:44 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '2'
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 12:12:41 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:44 GMT
 - request:
     method: get
-    uri: http://api.lmiforall.org.uk/api/v1/soc/search?q=driving
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=driving
     body:
       encoding: US-ASCII
       string: ''
@@ -319,13 +327,15 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Fri, 11 Mar 2016 12:12:41 GMT
+      - Thu, 16 Jun 2016 10:30:44 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      X-Auth-Type:
+      - No Key
     body:
       encoding: UTF-8
       string: '[{"soc":8215,"title":"Driving instructors","description":"Driving instructors
@@ -718,5 +728,5 @@ http_interactions:
         sites;\n guides horses or ponies and drives horse drawn vehicles to transport
         goods and passengers."}]'
     http_version: 
-  recorded_at: Fri, 11 Mar 2016 12:12:41 GMT
+  recorded_at: Thu, 16 Jun 2016 10:30:44 GMT
 recorded_with: VCR 3.0.1
