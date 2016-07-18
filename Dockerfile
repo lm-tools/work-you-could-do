@@ -19,7 +19,7 @@ RUN for f in $(grep -rl /assets/ public/assets/*.css); \
 
 EXPOSE 3000
 
-CMD ["bin/unicorn", "-p", "3000", "-c", "config/unicorn.rb"]
+CMD ["bin/puma", "-C", "config/puma.rb"]
 
 ARG version
 RUN echo $version > /srv/app/public/version

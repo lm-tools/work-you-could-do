@@ -3,7 +3,7 @@ ruby "2.3.0"
 
 gem "rails", "~> 4.2"
 gem "pg"
-gem "unicorn"
+gem "puma"
 
 gem "health_check"
 gem "httparty"
