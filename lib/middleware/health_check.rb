@@ -6,7 +6,11 @@ class HealthCheck
   def call(env)
     return @app.call(env) unless env["PATH_INFO"] == "/health_check"
 
-    database_up? ? success_response : failure_response
+    if database_up?
+      response(200, {status: "ok", database: "up"})
+    else
+      response(500, {status: "failure", database: "down"})
+    end
   end
 
   private
@@ -19,19 +23,11 @@ class HealthCheck
     true
   end
 
-  def success_response
+  def response(code, json_body)
     [
-      200,
+      code,
       { "Content-Type" => "application/json" },
-      ['{status: "ok", database: "up"}'],
-    ]
-  end
-
-  def failure_response
-    [
-      500,
-      { "Content-Type" => "application/json" },
-      ['{status: "failure", database: "down"}'],
+      [json_body.to_json],
     ]
   end
 end
