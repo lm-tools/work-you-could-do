@@ -7,9 +7,9 @@ class HealthCheck
     return @app.call(env) unless env["PATH_INFO"] == "/health_check"
 
     if database_up?
-      response(200, {status: "ok", database: "up"})
+      response(200, { status: "ok", database: "up" })
     else
-      response(500, {status: "failure", database: "down"})
+      response(500, { status: "failure", database: "down" })
     end
   end
 
