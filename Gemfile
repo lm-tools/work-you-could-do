@@ -5,7 +5,6 @@ gem "rails", "~> 4.2"
 gem "pg"
 gem "puma"
 
-gem "health_check"
 gem "httparty"
 gem "jbuilder", "~> 2.0"
 gem "mail"
