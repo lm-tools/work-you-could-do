@@ -38,5 +38,7 @@ end
 
 Then(/^I should see access instructions, outside of a scrapbook$/) do
   expect(current_path).not_to match(Scrapbook::VALID_ID)
-  pending
+  expect(page).to have_content(
+    "Please access this tool through your Universal Credit account."
+  )
 end
