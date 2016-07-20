@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "scrapbooks#create"
+  root to: "entrypoints#show"
   resources :scrapbooks,
             path: "/",
             only: [:show],

@@ -16,4 +16,4 @@ Scenario: Access an existing scrapbook
 
 Scenario: Access the tool without a scrapbook identifier
   When I access the tool without a scrapbook identifier
-  Then I should see the introduction page, within a new scrapbook
+  Then I should see access instructions, outside of a scrapbook
