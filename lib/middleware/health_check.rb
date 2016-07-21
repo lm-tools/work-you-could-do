@@ -16,8 +16,11 @@ class HealthCheck
   private
 
   def database_up?
-    ActiveRecord::Base.connection.execute("SELECT 1+1 AS result")
-  rescue ActiveRecord::ActiveRecordError, PG::Error
+    ActiveRecord::Base.logger.silence do
+      ActiveRecord::Base.connection.exec_query("SELECT 1+1 AS result")
+    end
+  rescue ActiveRecord::ActiveRecordError, PG::Error => e
+    Rails.logger.error("Health check error: #{e.inspect}")
     false
   else
     true
