@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   timeout: 5000
-  pool: <%= Integer(ENV['RAILS_MAX_THREADS'] || 5) %>
+  pool: <%= Integer(ENV['RAILS_MAX_THREADS'] || 2) %>
 
 development: &development
   <<: *default
