@@ -19,7 +19,7 @@ RUN for f in $(grep -rl /assets/ public/assets/*.css); \
 
 EXPOSE 3000
 
-CMD ["bin/puma", "-C", "config/puma.rb"]
+CMD ["bin/passenger", "start", "-p", "3000", "--max-pool-size", "3"]
 
 ARG version
 RUN echo $version > /srv/app/public/version
