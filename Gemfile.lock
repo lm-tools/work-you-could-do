@@ -114,6 +114,9 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     parser (2.3.0.6)
       ast (~> 2.2)
+    passenger (5.0.29)
+      rack
+      rake (>= 0.8.1)
     pg (0.18.4)
     poltergeist (1.9.0)
       capybara (~> 2.1)
@@ -130,7 +133,6 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -254,11 +256,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mail
+  passenger
   pg
   poltergeist
   pry-byebug
   pry-rails
-  puma
   rails (~> 4.2)
   rails_12factor
   rspec-rails

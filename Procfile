@@ -1,1 +1,1 @@
-web: bin/puma -C config/puma.rb
+web: bin/passenger start -p $PORT --max-pool-size 3
