@@ -16,6 +16,10 @@
   <input type="hidden" name="soc_code" value="<%= @occupation.soc_code %>">
   <input type="hidden" name="from_query" value="<%= @from_query %>">
   <input type="submit" id="save-occupation"  class="button" value="Save">
+  <a href="<%= scrapbooks/link_to_current_scrapbook %>" class="button-secondary">How do I use this?</a>
 <% end %>
+
+
+
 
 <p><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>" id="back-to-search-results" class="link-back">Search results</a></p>
