@@ -34,7 +34,7 @@ Start app locally
 
 Execute the tests
 
-    $ BASE_URL=http://localhost:3000 sbt gatling:test
+    $ BASE_URL=http://localhost:3000/work-you-could-do sbt gatling:test
 
 Report should be generated in `target/gatling` directory
 
