@@ -9,6 +9,8 @@ class EwycdSimulation extends Simulation {
   val splitPosition = sys.env("BASE_URL").lastIndexOf("/")
   val baseUrl = sys.env("BASE_URL").substring(0, splitPosition)
   val appPath = sys.env("BASE_URL").substring(splitPosition)
+  val users = sys.env("USERS").toInt
+  val time = sys.env("RAMP_UP_TIME").toInt
 
   val httpProtocol = http
     .baseURL(baseUrl)
@@ -18,44 +20,49 @@ class EwycdSimulation extends Simulation {
     .acceptLanguageHeader("en-GB,en;q=0.5")
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:43.0) Gecko/20100101 Firefox/43.0")
 
-  val headers_4 = Map(
+  val postHeaders = Map(
     "Accept" -> "*/*;q=0.5, text/javascript, application/javascript, application/ecmascript, application/x-ecmascript",
     "Content-Type" -> "application/x-www-form-urlencoded; charset=UTF-8",
     "X-Requested-With" -> "XMLHttpRequest")
 
+  val refIdFeeder = Iterator.continually(Map("refId" -> java.util.UUID.randomUUID.toString))
+  val searchTerm = "Retail"
+  val searchCode = "1254"
+
   val scn = scenario("EwycdSimulation")
+    .feed(refIdFeeder)
     .exec(http("introduction")
-      .get(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/introduction"))
-    .pause(1)
+      .get(s"$appPath/$${refId}/introduction"))
+    .pause(2)
     .exec(http("search")
-      .get(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/search/new"))
-    .pause(1)
-    .exec(http("search_with_Retail")
-      .get(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/search?query=Retail"))
-    .pause(1)
+      .get(s"$appPath/$${refId}/search/new"))
+    .pause(2)
+    .exec(http("search_with_query")
+      .get(s"$appPath/$${refId}/search?query=${searchTerm}"))
+    .pause(2)
     .exec(http("role_details")
-      .get(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/occupations/1254?from_query=Retail")
+      .get(s"$appPath/$${refId}/occupations/${searchCode}?from_query=${searchTerm}")
       .check(css("""input[name="authenticity_token"]""", "value").saveAs("authenticity_token")))
-    .pause(1)
+    .pause(2)
     .exec(http("role_details_save")
-      .post(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/saved_occupations")
-      .headers(headers_4)
+      .post(s"$appPath/$${refId}/saved_occupations")
+      .headers(postHeaders)
       .formParam("utf8", "✓")
       .formParam("authenticity_token", "${authenticity_token}")
-      .formParam("soc_code", "1254")
-      .formParam("from_query", "Retail"))
-    .pause(1)
+      .formParam("soc_code", searchCode)
+      .formParam("from_query", searchTerm))
+    .pause(2)
     .exec(http("role_details")
-      .get(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/occupations/1254?from_query=Retail")
+      .get(s"$appPath/$${refId}/occupations/${searchCode}?from_query=${searchTerm}")
       .check(css("""input[name="authenticity_token"]""", "value").saveAs("authenticity_token")))
-    .pause(1)
+    .pause(2)
     .exec(http("delete_role")
-      .post(s"$appPath/deaa1098-46bf-42af-b85d-03909158bc3e/saved_occupations/1254")
-      .headers(headers_4)
+      .post(s"$appPath/$${refId}/saved_occupations/${searchCode}")
+      .headers(postHeaders)
       .formParam("utf8", "✓")
       .formParam("_method", "DELETE")
       .formParam("authenticity_token", "${authenticity_token}"))
 
 
-  setUp(scn.inject(rampUsers(10) over (2 seconds))).protocols(httpProtocol)
+  setUp(scn.inject(rampUsers(users) over (time seconds))).protocols(httpProtocol)
 }

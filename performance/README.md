@@ -32,9 +32,9 @@ Start app locally
 
     $ RAILS_RELATIVE_URL_ROOT=/work-you-could-do bin/rails server
 
-Execute the tests
+Execute the tests for 100 users that will be ramped up in 60 seconds
 
-    $ BASE_URL=http://localhost:3000/work-you-could-do sbt gatling:test
+    $ USERS=100 RAMP_UP_TIME=60 BASE_URL=http://localhost:3000/work-you-could-do sbt gatling:test
 
 Report should be generated in `target/gatling` directory
 
