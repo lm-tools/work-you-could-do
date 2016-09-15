@@ -112,9 +112,13 @@ For example, to run all tests and linting:
 $ docker-compose run app bin/test
 ```
 
+## Performance tests
+
+For more information go to [performance/README.md][performance/README.md]
 
 [Bundler]: http://bundler.io/
 [Ruby]: https://www.ruby-lang.org/
+[performance/README.md]: performance/README.md
 [PostgreSQL]: http://www.postgresql.org/
 [PostgreSQL connection string]: http://www.postgresql.org/docs/9.4/static/libpq-connect.html#AEN41221
 [RSpec]: http://rspec.info/
