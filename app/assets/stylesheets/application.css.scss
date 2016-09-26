@@ -7,6 +7,7 @@
 @import "elements";
 
 @import "link-button";
+@import "secondary-button";
 
 .multi-entry-text-input {
   li {
@@ -29,6 +30,13 @@
 .information-box {
   @extend .error-summary;
   border: 5px solid #005ea5;
+}
+
+.example-box {
+  border: 1px solid #bfc1c3;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .button-warning{

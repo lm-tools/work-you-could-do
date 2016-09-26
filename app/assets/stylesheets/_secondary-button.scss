@@ -1,0 +1,84 @@
+.button-secondary, .button-back {
+  background-color: #6f777b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #4b5053;
+  -moz-box-shadow: 0 2px 0 #4b5053;
+  box-shadow: 0 2px 0 #4b5053;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 15px 15px 0;
+  padding: 0.52632em 0.78947em 0.26316em 0.78947em;
+  vertical-align: top;
+}
+
+.button-secondary:visited, .button-back:visited {
+  background-color: #6f777b;
+}
+
+.button-secondary:hover, .button-secondary:focus, .button-back:hover, .button-back:focus {
+  background-color: #636a6e;
+}
+
+.button-secondary:active, .button-back:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 #6f777b;
+  -moz-box-shadow: 0 0 0 #6f777b;
+  box-shadow: 0 0 0 #6f777b;
+}
+
+.button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled], .button-back.disabled, .button-back[disabled="disabled"], .button-back[disabled] {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover, .button-back.disabled:hover, .button-back[disabled="disabled"]:hover, .button-back[disabled]:hover {
+  cursor: default;
+  background-color: #6f777b;
+}
+
+.button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active, .button-back.disabled:active, .button-back[disabled="disabled"]:active, .button-back[disabled]:active {
+  top: 0;
+  -webkit-box-shadow: 0 2px 0 #4b5053;
+  -moz-box-shadow: 0 2px 0 #4b5053;
+  box-shadow: 0 2px 0 #4b5053;
+}
+
+.button-secondary:link, .button-secondary:hover, .button-secondary:focus, .button-secondary:visited, .button-back:link, .button-back:hover, .button-back:focus, .button-back:visited {
+  color: #fff;
+}
+
+.button-secondary:before, .button-back:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-secondary:active:before, .button-back:active:before {
+  top: -10%;
+  height: 120%;
+}
+
+.button-secondary[rel="external"]:after, .button-back[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
