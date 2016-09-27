@@ -35,3 +35,10 @@ Then(/^I should see the introduction page, within my scrapbook$/) do
     scrapbook_introduction_path(scrapbook_id: scrapbook_id)
   )
 end
+
+Then(/^I should see access instructions, outside of a scrapbook$/) do
+  expect(current_path).not_to match(Scrapbook::VALID_ID)
+  expect(page).to have_content(
+    "Please access this tool through your Universal Credit account."
+  )
+end
