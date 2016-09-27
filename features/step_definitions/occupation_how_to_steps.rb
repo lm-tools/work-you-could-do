@@ -4,7 +4,7 @@ end
 
 Then(/^I should see how to use the occupation$/) do
   view_occupation_how_to_path = \
-    scrapbook_how_to_path(
+    scrapbook_occupation_how_to_path(
       scrapbook_id: scrapbook_id,
       soc_code: specific_search_result.fetch(:soc)
     )
@@ -13,7 +13,7 @@ end
 
 Then(/^I should see on the How To page that the occupation is saved$/) do
   view_occupation_how_to_path = \
-    scrapbook_how_to_path(
+    scrapbook_occupation_how_to_path(
       scrapbook_id: scrapbook_id,
       soc_code: specific_search_result.fetch(:soc)
     )

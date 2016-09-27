@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe HowToController, type: :controller do
+RSpec.describe OccupationHowToController, type: :controller do
   describe "GET #index" do
     it "returns http success" do
       get :index, scrapbook_id: Scrapbook.new_id

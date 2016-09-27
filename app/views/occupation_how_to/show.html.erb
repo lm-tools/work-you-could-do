@@ -10,7 +10,7 @@
   </ol>
 <% end %>
 
-<%= render "how_to/details", occupation: @occupation %>
+<%= render "occupation_how_to/details", occupation: @occupation %>
 
 <%= form_tag(scrapbook_saved_occupations_path(current_scrapbook), remote: true, method: "POST",
              id: "save-occupation-form", class: "save-occupation-form") do |f| %>
