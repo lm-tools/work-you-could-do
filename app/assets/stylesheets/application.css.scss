@@ -8,8 +8,6 @@
 
 @import "link-button";
 
-$secondary-text-color:#6f777b;
-
 .multi-entry-text-input {
   li {
     margin-bottom: 0.5em;
@@ -30,11 +28,11 @@ $secondary-text-color:#6f777b;
 
 .information-box {
   @extend .error-summary;
-  border: 5px solid #005ea5;
+  border: 5px solid $govuk-blue;
 }
 
 .example-box {
-  border: 1px solid #bfc1c3;
+  border: 1px solid $grey-2;
   margin-top: 15px;
   margin-bottom: 15px;
   padding-bottom: 20px;
@@ -133,7 +131,7 @@ a.search-result {
 
 .button-secondary,
 .button-back {
-  @include button ($secondary-text-color);
+  @include button ($grey-1);
   margin: 0 $gutter-half $gutter-half 0;
   padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
