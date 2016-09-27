@@ -16,7 +16,7 @@
              id: "save-occupation-form", class: "save-occupation-form") do |f| %>
   <input type="hidden" name="soc_code" value="<%= @occupation.soc_code %>">
   <input type="hidden" name="from_query" value="<%= @from_query %>">
-  <input type="submit" id="save-occupation"  class="button" value="Save and view saved roles">
+  <input type="submit" id="save-occupation"  class="button" value="Save">
 <% end %>
 
-<p><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @from_query) %>" id="back-to-role" class="link-back">Role</a></p>
+<p><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, from_query: @from_query) %>" id="back-to-role" class="link-back">Role</a></p>
