@@ -16,7 +16,7 @@ Then(/^I should see a confirmation that the occupation is saved$/) do
   expect(page).to have_content(confirmation_message)
 end
 
-Then(/^I should see an in\-situ confirmation that the occupation is saved$/) do
+Then(/^I should see that the occupation is saved$/) do
   view_occupation_details_path = \
     scrapbook_occupation_path(scrapbook_id: scrapbook_id,
                               soc_code: specific_search_result.fetch(:soc))

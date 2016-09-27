@@ -1,22 +1,22 @@
-<% content_for(:page_title_prefix, @occupation.title) %>
+<% content_for(:page_title_prefix, "How to use this information") %>
 
 <% content_for :breadcrumbs do %>
   <ol>
     <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
     <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
     <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>">Results</a></li>
-    <li><%= @occupation.title %></li>
+    <li><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @from_query) %>"><%= @occupation.title %></a></li>
+    <li>How-to</li>
   </ol>
 <% end %>
 
-<%= render "occupations/details", occupation: @occupation %>
+<%= render "occupation_how_to/details", occupation: @occupation %>
 
 <%= form_tag(scrapbook_saved_occupations_path(current_scrapbook), remote: true, method: "POST",
              id: "save-occupation-form", class: "save-occupation-form") do |f| %>
   <input type="hidden" name="soc_code" value="<%= @occupation.soc_code %>">
   <input type="hidden" name="from_query" value="<%= @from_query %>">
   <input type="submit" id="save-occupation"  class="button" value="Save">
-  <a class="button-secondary" href="<%= scrapbook_occupation_how_to_path(current_scrapbook, soc_code: @occupation.soc_code, from_query: @from_query) %>" id="occupation-how-to">How do I use this?</a>
 <% end %>
 
-<p><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>" id="back-to-search-results" class="link-back">Search results</a></p>
+<p><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, from_query: @from_query) %>" id="back-to-role" class="link-back">Role</a></p>
