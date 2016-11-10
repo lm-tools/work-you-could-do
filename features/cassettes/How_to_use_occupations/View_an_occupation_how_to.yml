@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.lmiforall.org.uk/api/v1/soc/code/4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Wed, 09 Nov 2016 12:39:53 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1349'
+      Connection:
+      - keep-alive
+      X-Auth-Type:
+      - No Key
+    body:
+      encoding: UTF-8
+      string: '{"soc":4135,"tasks":" sorts, catalogues and maintains library records;\n
+        locates and retrieves material on request for borrowers;\n issues library
+        material and records date of issue/ due date for return;\n classifies, labels
+        and indexes new books;\n performs simple repairs on old books.","description":"Library
+        clerks and assistants classify, sort and file publications, documents, audio-visual
+        and computerised material in libraries and offices.","title":"Library clerks
+        and assistants","qualifications":"There are no minimum academic requirements,
+        although entrants usually possess GCSEs/S grades or A-Levels/H grades. Training
+        is usually provided on-the-job. NVQs/ SVQs in Information and Library Services
+        are available at Levels 2 and 3.","add_titles":["Abstractor (press cuttings)","Agent,
+        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
+        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
+        information (educational establishments)","Assistant, information (library)","Assistant,
+        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
+        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
+        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
+        (press cutting agency)","Supervisor, library"]}'
+    http_version: 
+  recorded_at: Wed, 09 Nov 2016 12:39:53 GMT
+- request:
+    method: get
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Wed, 09 Nov 2016 12:39:53 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Auth-Type:
+      - No Key
+    body:
+      encoding: UTF-8
+      string: '{"soc":41,"series":[{"year":2015,"hours":39}]}'
+    http_version: 
+  recorded_at: Wed, 09 Nov 2016 12:39:53 GMT
+- request:
+    method: get
+    uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.7
+      Date:
+      - Wed, 09 Nov 2016 12:39:54 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '75'
+      Connection:
+      - keep-alive
+      X-Auth-Type:
+      - No Key
+    body:
+      encoding: UTF-8
+      string: '{"soc":41,"series":[{"year":2013,"estpay":710},{"year":2015,"estpay":490}]}'
+    http_version: 
+  recorded_at: Wed, 09 Nov 2016 12:39:54 GMT
+recorded_with: VCR 3.0.1
