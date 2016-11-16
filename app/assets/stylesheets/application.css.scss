@@ -129,11 +129,15 @@ a.search-result {
   }
 }
 
-.button-secondary,
-.button-back {
+.button-secondary {
   @include button ($grey-1);
-  margin: 0 $gutter-half $gutter-half 0;
+  @include box-sizing (border-box);
   padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
+  @include media (mobile) {
+    width: 100%;
+    text-align: center;
+    margin-top: $gutter-half;
+  }
 }
 
