@@ -7,3 +7,5 @@ before_script:
   - bin/setup RAILS_ENV=test
 script:
   - bin/test
+services:
+  - postgresql

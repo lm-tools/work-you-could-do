@@ -24,3 +24,13 @@ Style/StringLiterals:
 
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
+
+# Decision based on the following
+#https://github.com/bbatsov/rubocop/issues/3284
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Decision based on the following
+# https://github.com/bbatsov/rubocop/issues/3629
+Rails/HttpPositionalArguments:
+  Enabled: false
