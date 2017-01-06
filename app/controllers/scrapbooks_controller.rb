@@ -9,8 +9,7 @@ class ScrapbooksController < ApplicationController
     redirect_to entrypoint_path
   end
 
-  def show
-  end
+  def show; end
 
   private
 
