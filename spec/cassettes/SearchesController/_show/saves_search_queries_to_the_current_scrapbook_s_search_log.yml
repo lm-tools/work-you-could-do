@@ -7,12 +7,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      Date:
+      - Mon, 20 Feb 2017 14:20:06 GMT
   response:
     status:
       code: 200
@@ -21,7 +19,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 11:19:17 GMT
+      - Mon, 20 Feb 2017 14:20:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -29,7 +27,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Auth-Type:
-      - No Key
+      - HMAC
       Access-Control-Allow-Origin:
       - "*"
     body:
@@ -380,7 +378,7 @@ http_interactions:
         research (fuel)","Worker, research (photographic)","Worker, research (plastics)","Worker,
         research (textile)","Worker, research"]}]'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
+  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=plumber
@@ -388,12 +386,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      Date:
+      - Mon, 20 Feb 2017 14:20:06 GMT
   response:
     status:
       code: 200
@@ -402,7 +398,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 11:19:17 GMT
+      - Mon, 20 Feb 2017 14:20:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -410,7 +406,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Auth-Type:
-      - No Key
+      - HMAC
       Access-Control-Allow-Origin:
       - "*"
     body:
@@ -604,7 +600,7 @@ http_interactions:
         overhead","Wireman, telephone","Wireman (railways)","Wireman (telecommunications)","Wirer
         (metal trades: telephone mfr)","Workman, skilled (telecommunications)"]}]'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
+  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
@@ -612,12 +608,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      Date:
+      - Mon, 20 Feb 2017 14:20:06 GMT
   response:
     status:
       code: 400
@@ -626,7 +620,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 11:19:17 GMT
+      - Mon, 20 Feb 2017 14:20:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -634,12 +628,12 @@ http_interactions:
       Connection:
       - keep-alive
       X-Auth-Type:
-      - No Key
+      - HMAC
     body:
       encoding: UTF-8
       string: '{"error":"Please give a string to search for."}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
+  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
@@ -647,12 +641,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      Date:
+      - Mon, 20 Feb 2017 14:20:06 GMT
   response:
     status:
       code: 400
@@ -661,7 +653,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 11:19:18 GMT
+      - Mon, 20 Feb 2017 14:20:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -669,12 +661,12 @@ http_interactions:
       Connection:
       - keep-alive
       X-Auth-Type:
-      - No Key
+      - HMAC
     body:
       encoding: UTF-8
       string: '{"error":"Please give a string to search for."}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 11:19:18 GMT
+  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=driving
@@ -682,12 +674,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Authorization:
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      Date:
+      - Mon, 20 Feb 2017 14:20:06 GMT
   response:
     status:
       code: 200
@@ -696,7 +686,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 11:19:18 GMT
+      - Mon, 20 Feb 2017 14:20:06 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -704,7 +694,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Auth-Type:
-      - No Key
+      - HMAC
       Access-Control-Allow-Origin:
       - "*"
     body:
@@ -1115,5 +1105,5 @@ http_interactions:
         IT","Trainer, software","Trainer, staff","Trainer, technical","Trainer, technology,
         information","Trainer","Trainer-assessor"]}]'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 11:19:18 GMT
+  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
 recorded_with: VCR 3.0.3
