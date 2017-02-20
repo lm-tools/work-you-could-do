@@ -55,6 +55,11 @@ To run [Cucumber] tests only:
 $ bin/cucumber
 ```
 
+To run tests without VCR (hitting real LMI endpoint):
+```
+$ VCR_OFF=true bin/test
+```
+
 ### Database issues during test runs
 
 If you get a `FATAL:  database "work-you-could-do_test" does not exist` error
