@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Wed, 09 Nov 2016 12:39:55 GMT
+      - Mon, 20 Feb 2017 11:19:32 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -30,18 +30,20 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
-      string: '{"soc":4135,"tasks":" sorts, catalogues and maintains library records;\n
-        locates and retrieves material on request for borrowers;\n issues library
-        material and records date of issue/ due date for return;\n classifies, labels
-        and indexes new books;\n performs simple repairs on old books.","description":"Library
+      string: '{"soc":4135,"title":"Library clerks and assistants","description":"Library
         clerks and assistants classify, sort and file publications, documents, audio-visual
-        and computerised material in libraries and offices.","title":"Library clerks
-        and assistants","qualifications":"There are no minimum academic requirements,
-        although entrants usually possess GCSEs/S grades or A-Levels/H grades. Training
-        is usually provided on-the-job. NVQs/ SVQs in Information and Library Services
-        are available at Levels 2 and 3.","add_titles":["Abstractor (press cuttings)","Agent,
+        and computerised material in libraries and offices.","qualifications":"There
+        are no minimum academic requirements, although entrants usually possess GCSEs/S
+        grades or A-Levels/H grades. Training is usually provided on-the-job. NVQs/
+        SVQs in Information and Library Services are available at Levels 2 and 3.","tasks":"
+        sorts, catalogues and maintains library records;\n locates and retrieves material
+        on request for borrowers;\n issues library material and records date of issue/
+        due date for return;\n classifies, labels and indexes new books;\n performs
+        simple repairs on old books.","add_titles":["Abstractor (press cuttings)","Agent,
         cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
         chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
         information (educational establishments)","Assistant, information (library)","Assistant,
@@ -50,7 +52,7 @@ http_interactions:
         (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
         (press cutting agency)","Supervisor, library"]}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 12:39:55 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:32 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
@@ -72,7 +74,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Wed, 09 Nov 2016 12:39:57 GMT
+      - Mon, 20 Feb 2017 11:19:33 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -81,11 +83,13 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
       string: '{"soc":41,"series":[{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 12:39:57 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:33 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
@@ -107,7 +111,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Wed, 09 Nov 2016 12:39:57 GMT
+      - Mon, 20 Feb 2017 11:19:33 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -116,9 +120,11 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
       string: '{"soc":41,"series":[{"year":2013,"estpay":710},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 12:39:57 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Mon, 20 Feb 2017 11:19:33 GMT
+recorded_with: VCR 3.0.3
