@@ -3,7 +3,8 @@ class LmiClient
   base_uri "https://api.lmiforall.org.uk/api/v1"
 
   def soc_search(keyword)
-    self.class.get("/soc/search", query: { q: keyword })
+    response = self.class.get("/soc/search", query: { q: keyword })
+    response.success? ? response : []
   end
 
   def hours_lookup(soc_code)

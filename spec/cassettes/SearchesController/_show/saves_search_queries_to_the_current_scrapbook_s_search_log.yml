@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Thu, 16 Jun 2016 10:30:43 GMT
+      - Mon, 20 Feb 2017 11:19:17 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -30,6 +30,8 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
       string: '[{"soc":4135,"title":"Library clerks and assistants","description":"Library
@@ -41,7 +43,14 @@ http_interactions:
         sorts, catalogues and maintains library records;\n locates and retrieves material
         on request for borrowers;\n issues library material and records date of issue/
         due date for return;\n classifies, labels and indexes new books;\n performs
-        simple repairs on old books."},{"soc":2451,"title":"Librarians","description":"Librarians
+        simple repairs on old books.","add_titles":["Abstractor (press cuttings)","Agent,
+        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
+        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
+        information (educational establishments)","Assistant, information (library)","Assistant,
+        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
+        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
+        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
+        (press cutting agency)","Supervisor, library"]},{"soc":2451,"title":"Librarians","description":"Librarians
         appraise, obtain, index, collate and make available library acquisitions and
         organise and control other library services.","qualifications":"Entry will
         normally require an accredited degree or postgraduate qualification. Most
@@ -56,40 +65,15 @@ http_interactions:
         up to date records;\n manages library borrowing and inter-library loan facilities;\n
         promotes library services through displays and talks\n provides learning and
         cultural experiences through events such as author talks, reading groups,
-        formal and informal teaching."},{"soc":4113,"title":"Local government administrative
-        occupations","description":"Job holders in this unit group undertake a variety
-        of administrative and clerical duties in local government offices and departments.","qualifications":"Entry
-        is most common with GCSEs/S grades. Evidence of keyboard skills may also be
-        required in some posts. Off- and on-the-job training is provided. NVQs/SVQs
-        in Administration are available at Levels 2 and 3.","tasks":" computes cost
-        of product/services and maintains and balances records of financial transactions;\n
-        prepares and checks invoices and verifies accuracy of records;\n receives
-        and pays out cash and cheques and performs closely related clerical duties;\n
-        updates and maintains data, correspondence and other records for storage or
-        despatch;\n arranges, classifies and indexes publications, correspondence
-        and other material in libraries and offices;\n performs other clerical duties
-        not elsewhere classified including preparing financial information for management,
-        proof reading printed material and drafting letters in reply to correspondence
-        or telephone enquiries."},{"soc":4112,"title":"National government administrative
-        occupations","description":"Job holders in this unit group undertake a variety
-        of administrative and clerical duties in national government departments,
-        and in local offices of national government departments.","qualifications":"Entry
-        is possible to junior grades within this group with GCSEs/S grades, and/or
-        relevant practical experience; higher grades require A levels/H grades or
-        equivalent, although many entrants are graduates. NVQs/SVQs, apprenticeships
-        and professional qualifications are available for certain areas of work.","tasks":"
-        assists senior government officers with policy work, external liaison or general
-        administrative work;\n undertakes administrative duties specific to the operation
-        of HM Revenue and Customs offices, Job Centres, Benefits Agency offices and
-        other local offices of national government;\n maintains and updates correspondence,
-        documents, data and other records for storage in files or on computer;\n classifies,
-        sorts and files publications, correspondence etc. in offices and libraries;\n
-        responds to telephone enquiries and other forms of correspondence;\n performs
-        miscellaneous clerical tasks such as proof reading printed material, drafting
-        letters, taking minutes etc."},{"soc":1259,"title":"Managers and proprietors
-        in other services n.e.c.","description":"Job holders in this unit group perform
-        a variety of managerial tasks in other service industries not elsewhere classified
-        in MINOR GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
+        formal and informal teaching.","add_titles":["Librarian, branch","Librarian,
+        chartered","Librarian, film","Librarian, hospital","Librarian, magazine","Librarian,
+        media","Librarian, newspaper","Librarian, picture","Librarian, tape, computer","Librarian,
+        tape, magnetic","Librarian, technical","Librarian, university","Librarian,
+        visual, audio","Librarian","Manager, resource, learning","Scientist, information","Superintendent
+        (library)"]},{"soc":1259,"title":"Managers and proprietors in other services
+        n.e.c.","description":"Job holders in this unit group perform a variety of
+        managerial tasks in other service industries not elsewhere classified in MINOR
+        GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
         requirements vary according to the particular company and/or service. Some
         companies do not require candidates to have academic qualifications but others
         require a degree or equivalent qualification. Off- and on-the-job training
@@ -100,26 +84,98 @@ http_interactions:
         quality of merchandise and ensures that effective use is made of advertising
         and display facilities;\n manages agencies to provide services out-sourced
         by other organisations and businesses;\n ensures maintenance of appropriate
-        service levels to meet the objectives of the business."},{"soc":2426,"title":"Business
-        and related research professionals","description":"Business and related research
-        professionals carry out a variety of research activities for the broadcast
-        and print media, for the police and armed forces intelligence services, for
-        national security agencies and in other non-scientific areas.","qualifications":"Entrants
-        usually possess a degree or equivalent qualification. Training is usually
-        provided on-the-job, or support may be given for postgraduate study. Professional
-        qualifications are available in some areas.","tasks":" liaises with production
-        team to generate and develop ideas for film, television and radio programmes;\n
-        research sources for accurate factual material, finds suitable contributors
-        to programmes or print features and deals with any copyright issues;\n briefs
-        presenters, scriptwriters or journalists as required via verbal or written
-        reports;\n provides administrative support for programme development such
-        as booking facilities;\n provides support to criminal intelligence or to military
-        or other security operations by gathering and verifying intelligence data
-        and sources;\n presents findings in the required format, via written reports
-        or presentations;\n researches images for clients in a wide range of media
-        using specialist picture libraries and archives, museums, galleries etc.,
-        or commissions new images;\n liaises with client on the appropriate image/s
-        to be used;\n deals with copyright issues and negotiates fees."},{"soc":8211,"title":"Large
+        service levels to meet the objectives of the business.","add_titles":["Director,
+        health and safety","Director, publishing","Director (children''s nursery)","Director
+        (commission agents)","Director (educational establishments)","Director (employment
+        agency: private)","Director (environmental consultancy)","Director (management
+        consultancy)","Director (private detective agency)","Director (security services)","Keeper,
+        laundry","Manager, architect","Manager, architecture","Manager, bookmaker''s","Manager,
+        branch (radio, television and video hire)","Manager, branch (car hire)","Manager,
+        branch (library)","Manager, cemeteries","Manager, cemetery","Manager, centre,
+        assessment","Manager, centre, hire","Manager, centre, skills","Manager, centre,
+        training","Manager, crematorium","Manager, design, graphic","Manager, experience,
+        customer","Manager, furnishing","Manager, general (theatrical productions)","Manager,
+        health and safety","Manager, hire, equipment","Manager, hire, plant","Manager,
+        hire, skip","Manager, hire, television and video, radio","Manager, hire, tool","Manager,
+        hygiene","Manager, launderette","Manager, laundry","Manager, library","Manager,
+        office, betting","Manager, office (bookmakers, turf accountants)","Manager,
+        operations (cleaning services)","Manager, operations (plant hire)","Manager,
+        operations (recruitment agency)","Manager, park, car","Manager, parking","Manager,
+        plant (hire service)","Manager, production, theatrical","Manager, production,
+        video","Manager, production (entertainment)","Manager, production (broadcasting)","Manager,
+        production (film, television production)","Manager, publisher''s","Manager,
+        radio, television and video","Manager, rental, vehicle","Manager, retail (betting
+        shop)","Manager, rig","Manager, safety, community","Manager, safety","Manager,
+        safety and hygiene","Manager, service, advice","Manager, service, crane","Manager,
+        service, rental","Manager, service, valet, car","Manager, service (motoring
+        organisation)","Manager, services, parking","Manager, services, student","Manager,
+        shift (recruitment agency)","Manager, shop, betting","Manager, shop, hire","Manager,
+        shop, video","Manager, shop (bookmakers, turf accountants)","Manager, shop
+        (dyeing and cleaning)","Manager, shop (laundry receiving shop)","Manager,
+        shop (radio, television, video hire)","Manager, site (cleaning services)","Manager,
+        studio, design","Manager, studio (printing)","Manager, tour (entertainment)","Manager,
+        touring (entertainment)","Manager, tourism","Manager (radio, television and
+        video hire)","Manager (architectural service)","Manager (betting and gambling)","Manager
+        (bookmakers, turf accountants)","Manager (car hire)","Manager (car park)","Manager
+        (car wash, valeting)","Manager (Citizens Advice Bureau)","Manager (dating
+        agency)","Manager (driving school)","Manager (flying school)","Manager (funeral
+        directors)","Manager (hire shop)","Manager (laundry, launderette, dry cleaning)","Manager
+        (library)","Manager (machinery hire)","Manager (photographic studios)","Manager
+        (plant hire)","Manager (recruitment agency)","Manager (repairing: consumer
+        goods)","Manager (retail trade: video shop)","Manager (safe deposit)","Manager
+        (television: transmission station)","Manager (theatrical agency)","Manager
+        (ticket agency)","Manager (typewriting agency)","Manager (video shop)","Manager
+        and Registrar (cemetery)","Manager and Registrar (crematorium)","Owner, agency,
+        employment","Owner, agency, ticket","Owner, company, taxi","Owner, gallery,
+        art","Owner, hire, plant","Owner, launderette","Owner, school, driving","Owner,
+        service, cab","Owner, service, taxi","Owner, shop, betting","Owner, shop,
+        video","Owner, studio, photographic","Owner (alarm, security installation)","Owner
+        (art gallery)","Owner (boat: pleasure cruise)","Owner (boat: pleasure hire)","Owner
+        (cab hire service)","Owner (car hire service)","Owner (caravan hire service)","Owner
+        (chiropody practice)","Owner (cleaning services)","Owner (contract cleaning
+        services)","Owner (dating agency)","Owner (design consultancy)","Owner (domestic
+        appliances repairing)","Owner (dry cleaning service)","Owner (employment agency)","Owner
+        (fairground stall)","Owner (funeral directors)","Owner (garden machinery repairing)","Owner
+        (home care service)","Owner (launderette)","Owner (laundry)","Owner (management
+        consultancy)","Owner (marquee hire service)","Owner (newspaper)","Owner (pet
+        crematorium)","Owner (photographic agency)","Owner (plant machinery repairing)","Owner
+        (printers)","Owner (radio, television, video servicing)","Owner (recording
+        studio)","Owner (recruitment agency)","Owner (school: driving)","Owner (school:
+        flying)","Owner (shoe repairing)","Owner (soft furnishings mfr)","Owner (taxi
+        service)","Owner (theatrical agency)","Owner (ticket agents)","Owner (vehicle
+        hire service)","Owner (video shop)","Owner-publisher","Publisher","Retailer
+        (video shop)","Shopkeeper (laundry, launderette, dry cleaning)","Shopkeeper
+        (video shop)","Superintendent, market"]},{"soc":9233,"title":"Cleaners and
+        domestics","description":"Cleaners and domestics clean interiors of private
+        houses, shops, hotels, schools, offices and other buildings.","qualifications":"No
+        academic qualifications are required. On-the-job training may be provided.
+        NVQs/SVQs in Cleaning: Building Interiors are available at Levels 1 and 2.","tasks":"
+        scrubs, washes, sweeps and polishes floors, corridors and stairs;\n dusts
+        and polishes furniture and fittings;\n cleans toilets and bathrooms;\n washes
+        down walls and ceilings;\n empties ashtrays, waste bins and removes rubbish.","add_titles":["Assistant,
+        bedroom (hotel)","Assistant, chalet","Assistant, domestic","Assistant, general
+        (cleaning)","Assistant, house, boarding","Assistant, household","Assistant,
+        housekeeping","Assistant, hygiene","Assistant, matron''s","Assistant, room
+        (hotel)","Assistant, services, hotel","Attendant, cleaning","Attendant, room,
+        hotel","Attendant, room (hotel)","Bedder (college)","Carer, domestic","Chambermaid","Chambermaid-housekeeper","Charlady","Charwoman","Cleaner,
+        bank","Cleaner, bar (catering)","Cleaner, berth","Cleaner, canteen","Cleaner,
+        church","Cleaner, closet","Cleaner, domestic","Cleaner, floor","Cleaner, general","Cleaner,
+        hospital","Cleaner, house","Cleaner, kiosk, telephone","Cleaner, kitchen","Cleaner,
+        library","Cleaner, night","Cleaner, office","Cleaner, room, mess","Cleaner,
+        room, show","Cleaner, school","Cleaner, shop","Cleaner, station (railways)","Cleaner,
+        telephone","Cleaner, warehouse","Cleaner, workshop","Cleaner, yard","Cleaner","Cleaner-doorman","Closer,
+        night (fast food outlet)","Contractor, cleaning","Controller, hygiene","Domestic","Engineer,
+        domestic","Hand, general (hotel)","Help, daily","Help, domestic","Help, home","Help
+        (domestic service)","Helper, domestic","Housemaid","Houseman, school","Houseman
+        (domestic service)","Houseman (hotel)","Lady, cleaning","Maid, chalet","Maid,
+        chamber","Maid, house","Maid, room","Maid, ward","Maid","Maidservant","Maker,
+        bed (hospital service)","Maker, bed (residential home)","Maker, bed (school,
+        university)","Man, cabin (mine: not coal)","Operative, domestic","Operator,
+        service (cleaning)","Operator, sterilizer, telephone","Orderly, domestic (hospital
+        service)","Parlourmaid","Parlourman","Polisher, floor","Porter-cleaner","Scout
+        (college)","Servant, college","Servant, daily","Servant, domestic","Servant","Steriliser
+        (telephone sterilising service)","Steward, house","Sweeper, tube","Sweeper","Sweeper-up","Technician,
+        cleaning","Worker, domestic","Worker, house (domestic service)"]},{"soc":8211,"title":"Large
         goods vehicle drivers","description":"Large Goods Vehicle (LGV) drivers (formerly
         HGV drivers), collect, transport and deliver goods in rigid vehicles over
         7.5 tonnes, articulated lorries and lorries pulling trailers.","qualifications":"No
@@ -135,16 +191,196 @@ http_interactions:
         ensures that load is evenly distributed and safely secured;\n drives vehicle
         to destination in accordance with schedule;\n maintains records of journey
         times, mileage and hours worked;\n undertakes minor repairs and notifies supervisor
-        of any mechanical faults."},{"soc":9233,"title":"Cleaners and domestics","description":"Cleaners
-        and domestics clean interiors of private houses, shops, hotels, schools, offices
-        and other buildings.","qualifications":"No academic qualifications are required.
-        On-the-job training may be provided. NVQs/SVQs in Cleaning: Building Interiors
-        are available at Levels 1 and 2.","tasks":" scrubs, washes, sweeps and polishes
-        floors, corridors and stairs;\n dusts and polishes furniture and fittings;\n
-        cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
-        ashtrays, waste bins and removes rubbish."}]'
+        of any mechanical faults.","add_titles":["Carman (coal merchants)","Carrier,
+        coal","Carrier, general","Carrier, nos","Carrier, railway","Carrier (mine:
+        not coal)","Carrier (transport)","Carter, coal","Coalman (delivery)","Collector,
+        milk","Collector-driver, refuse","Contractor, cartage","Contractor, disposal,
+        waste","Contractor, haulage","Contractor, transport (road)","Contractor (transport)","Deliverer,
+        coal","Deliveryman, coal","Drayman","Driver, delivery, HGV","Driver, drop,
+        multi, hgv","Driver, dustcart","Driver, goods","Driver, haulage, motor","Driver,
+        haulage (road transport)","Driver, HGV","Driver, LGV","Driver, library, mobile","Driver,
+        loader","Driver, lorry","Driver, multi-drop, hgv","Driver, pump, concrete","Driver,
+        refuse","Driver, removal","Driver, rolley","Driver, rolly","Driver, scammell","Driver,
+        tanker","Driver, tipper","Driver, tractor (road transport)","Driver, transport","Driver,
+        transporter","Driver, truck (road transport)","Driver, vehicle, articulated","Driver,
+        vehicle, goods, large","Driver, vehicle, motor","Driver, wagon","Driver (articulated
+        lorry)","Driver (vehicles, goods transport)","Driver (local government: cleansing
+        dept)","Driver-fitter","Driver-mechanic","Hand, haulage (haulage contractor)","Hauler,
+        coal (retail trade)","Hauler, timber","Haulier, general","Haulier, timber","Haulier","Man,
+        coal (coal merchants)","Operator, transport","Owner (heavy goods vehicles
+        (HGV))","Owner-driver (haulage service)","Remover, cattle","Roundsman (coal
+        delivery)","Rullyman","Shunter, HGV","Transporter, cattle","Transporter, livestock","Truckman
+        (road transport)"]},{"soc":4113,"title":"Local government administrative occupations","description":"Job
+        holders in this unit group undertake a variety of administrative and clerical
+        duties in local government offices and departments.","qualifications":"Entry
+        is most common with GCSEs/S grades. Evidence of keyboard skills may also be
+        required in some posts. Off- and on-the-job training is provided. NVQs/SVQs
+        in Administration are available at Levels 2 and 3.","tasks":" computes cost
+        of product/services and maintains and balances records of financial transactions;\n
+        prepares and checks invoices and verifies accuracy of records;\n receives
+        and pays out cash and cheques and performs closely related clerical duties;\n
+        updates and maintains data, correspondence and other records for storage or
+        despatch;\n arranges, classifies and indexes publications, correspondence
+        and other material in libraries and offices;\n performs other clerical duties
+        not elsewhere classified including preparing financial information for management,
+        proof reading printed material and drafting letters in reply to correspondence
+        or telephone enquiries.","add_titles":["AP(T) (local government: grade 1,2,3)","Administrator,
+        electoral","Administrator (local government)","Administrator (police service)","Adviser,
+        benefit (local government)","Adviser, benefits (local government)","Assessor,
+        benefit, housing","Assessor, benefits (local government)","Assistant, administration
+        (local government)","Assistant, administration (police service)","Assistant,
+        administrative (local government)","Assistant, administrative (police service)","Assistant,
+        benefit (local government)","Assistant, benefits (local government)","Assistant,
+        chief (local government)","Assistant, civic","Assistant, clerical (local government)","Assistant,
+        clerical (police service)","Assistant, collector''s, rate","Assistant, fixing,
+        rate","Assistant, housing","Assistant, inspector''s (local government)","Assistant,
+        lettings (local government)","Assistant, principal (local government)","Assistant,
+        rating","Assistant, recovery (local government)","Assistant, senior (CSSD)","Assistant,
+        senior (local government)","Assistant, standards, trading","Assistant, survey
+        (local government)","Assistant, tax (local government)","Assistant, taxation
+        (local government)","Attendant, health (local government)","Clerk, charge,
+        community","Clerk, control (local government)","Clerk, council, parish","Clerk,
+        property","Clerk, rating","Clerk, senior (local government)","Clerk, tax,
+        poll","Clerk (health authority)","Clerk (local government)","Clerk (police
+        service)","Clerk-typist (health authority)","Clerk-typist (local government)","Clerk-typist
+        (police service)","Collector, rate","Collector, senior (local government)","Collector
+        (local government)","Collector-driver (local government)","Controller, watch,
+        neighbourhood","Inspector, employment","Inspector, fraud (local government)","Inspector
+        of rates and rentals","Officer, administration (local government)","Officer,
+        administration (police service)","Officer, administrative (local government)","Officer,
+        administrative (police service)","Officer, amenity, area","Officer, arrears
+        (local government)","Officer, assessment (local government)","Officer, authorised
+        (local government)","Officer, benefit, housing","Officer, benefit, senior
+        (local government)","Officer, benefit (local government)","Officer, benefits,
+        housing","Officer, benefits, senior (local government)","Officer, benefits
+        (local government)","Officer, billing (local government)","Officer, charges,
+        land","Officer, clerical, higher (local government)","Officer, clerical (health
+        authority)","Officer, clerical (local government)","Officer, clerical (police
+        service)","Officer, collection (local government)","Officer, communications
+        (local government)","Officer, elections","Officer, executive (local government)","Officer,
+        fraud (local government)","Officer, government, local, nos","Officer, investigation,
+        fraud (local government)","Officer, lettings (local government: housing dept)","Officer,
+        memorials","Officer, monitoring (local government)","Officer, rates","Officer,
+        rebate (local government)","Officer, revenue (local government)","Officer,
+        revenues (local government)","Officer, rights of way","Officer, services,
+        electoral","Officer, support (local government)","Officer, tax, council","Official,
+        government, local","Operator, bureau, reporting, crime","Planner, duties (police
+        service)","Worker, case (police service)","Worker, clerical (local government)"]},{"soc":4112,"title":"National
+        government administrative occupations","description":"Job holders in this
+        unit group undertake a variety of administrative and clerical duties in national
+        government departments, and in local offices of national government departments.","qualifications":"Entry
+        is possible to junior grades within this group with GCSEs/S grades, and/or
+        relevant practical experience; higher grades require A levels/H grades or
+        equivalent, although many entrants are graduates. NVQs/SVQs, apprenticeships
+        and professional qualifications are available for certain areas of work.","tasks":"
+        assists senior government officers with policy work, external liaison or general
+        administrative work;\n undertakes administrative duties specific to the operation
+        of HM Revenue and Customs offices, Job Centres, Benefits Agency offices and
+        other local offices of national government;\n maintains and updates correspondence,
+        documents, data and other records for storage in files or on computer;\n classifies,
+        sorts and files publications, correspondence etc. in offices and libraries;\n
+        responds to telephone enquiries and other forms of correspondence;\n performs
+        miscellaneous clerical tasks such as proof reading printed material, drafting
+        letters, taking minutes etc.","add_titles":["A1 (Jobcentre Plus)","A1 (Office
+        for National Statistics)","A2 (Jobcentre Plus)","A2 (Office for National Statistics)","A3
+        (Jobcentre Plus)","A3 (Office for National Statistics)","A3 (Scottish Government)","A4
+        (Jobcentre Plus)","A4 (Scottish Government)","A5 (Jobcentre Plus)","A6 (Jobcentre
+        Plus)","A7 (Jobcentre Plus)","AA (government)","AO (government)","Administrator
+        (armed forces)","Administrator (government)","Adviser, benefits (government)","Adviser,
+        claimant","Adviser, claims (government)","Adviser, deal, new","Adviser, employment
+        (government)","Adviser, personal, deal, new","Adviser, security, social","Adviser
+        (Jobcentre Plus)","Assessor, benefits (government)","Assessor, claims (Jobcentre
+        Plus)","Assistant, administration (armed forces)","Assistant, administration
+        (government)","Assistant, administrative (armed forces)","Assistant, administrative
+        (courts of justice)","Assistant, administrative (government)","Assistant,
+        benefit (government)","Assistant, benefits (government)","Assistant, clerical
+        (government)","Assistant, court","Assistant, registration (Land Registry)","Assistant,
+        Revenue, Inland","Assistant, revenue (government)","Assistant, tax (government)","Assistant,
+        taxation (government)","B1 (Cabinet Office)","B1 (Jobcentre Plus)","B1 (Office
+        for National Statistics)","B1 (Scottish Government)","B2 (Dept for International
+        Development)","B2 (Jobcentre Plus)","B2 (Office for National Statistics)","B3
+        (Jobcentre Plus)","B4 (Jobcentre Plus)","B5 (Jobcentre Plus)","Band 3D (Meteorological
+        Office)","Band 4A (Meteorological Office)","Band 4B (Meteorological Office)","Band
+        4C (Meteorological Office)","Band 5 (Health and Safety Executive)","Band 6
+        (Health and Safety Executive)","Band A (Ministry of Justice)","Band B (Ministry
+        of Justice)","Band C (Ministry of Justice)","Band C (National Assembly for
+        Wales)","Broker, job (Jobcentre Plus)","C (Northern Ireland Office)","C1 (Cabinet
+        Office)","C1 (Dept for International Development)","C2 (Cabinet Office)","C2
+        (Dept for International Development)","Caseworker (government)","Clerk, court","Clerk,
+        valuation, grade, higher (HM Revenue and Customs)","Clerk (government)","Clerk
+        (law courts)","Clerk (prison service)","Clerk-typist (government)","Collector,
+        assistant (HM Revenue and Customs)","Collector, tax, assistant","Collector,
+        tax","Collector of taxes, assistant","Collector of taxes","Coordinator, deal,
+        new","D1 (Northern Ireland Office)","D2 (Northern Ireland Office)","EO (government)","Examiner,
+        assistant (government)","Executive, registration (Land Registry)","Executive,
+        Revenue, Inland","Executive, revenue (government)","Grade 11 (Foreign and
+        Commonwealth Office)","Grade 12 (Foreign and Commonwealth Office)","Grade
+        13 (Foreign and Commonwealth Office)","Grade C (DCMS)","Grade D (DCMS)","Inspector,
+        assistant (government)","Inspector, fraud (government)","Inspector, fund,
+        social (government)","Investigator, fraud, benefit","Investigator, fraud (government)","Investigator
+        (Jobcentre Plus)","LOII (Jobcentre Plus)","Maker, decision, sector","Maker,
+        decision (Jobcentre Plus)","Officer, adjudication (government)","Officer,
+        administration (armed forces)","Officer, administration (government)","Officer,
+        administrative, court","Officer, administrative (armed forces)","Officer,
+        administrative (government)","Officer, appeals (government)","Officer, assessment","Officer,
+        benefit (government)","Officer, benefits (government)","Officer, care, witness","Officer,
+        clerical (government)","Officer, clerical (prison service)","Officer, cypher
+        (Foreign and Commonwealth Office)","Officer, determining (court service)","Officer,
+        disposals (government)","Officer, executive (government)","Officer, fraud
+        (government)","Officer, fund, social","Officer, government, nos","Officer,
+        group (MOD)","Officer, investigating, fraud (government)","Officer, investigating
+        (government)","Officer, investigation, fraud (government)","Officer, investigation
+        (government)","Officer, liaison (government)","Officer, local II (Jobcentre
+        Plus)","Officer, presenting, appeals (government)","Officer, processing, benefits
+        (government)","Officer, registration (Land Registry)","Officer, Revenue, Inland","Officer,
+        revenue (government)","Officer, security, social (Jobcentre Plus)","Officer,
+        service, foreign (grade B5)","Officer, service, foreign","Officer, statistical,
+        grade D (MOD)","Officer, substitution (MOD)","Officer, supply, assistant (MOD)","Officer,
+        supply, chart (MOD)","Officer, support, income (government)","Officer, tax,
+        grade, higher (HM Revenue and Customs)","Officer, tax (HM Revenue and Customs)","Officer,
+        taxation, grade, higher (HM Revenue and Customs)","Officer, taxation (HM Revenue
+        and Customs)","Officer, visiting (Jobcentre Plus)","Official, government","Official,
+        tax (HM Revenue and Customs)","Payband 1 (Dept of Health)","Payband 2 (Dept
+        of Health)","Processor, claims (Jobcentre Plus)","RA1 (Land Registry)","RA2
+        (Land Registry)","RE2 (Land Registry)","RO (Land Registry)","SGB (DEFRA)","Servant,
+        civil, nos","Servant, civil (AA)","Servant, civil (AO)","Servant, civil (EO)","Servant,
+        civil (museum service)","Stamper (HM Revenue and Customs)","Transcriber, communications
+        (government)","Watcher, customs","Watcher (HM Revenue and Customs)","Worker,
+        case (government)","Worker, office (government)","Writer (armed forces)","Writer
+        (MOD)"]},{"soc":2426,"title":"Business and related research professionals","description":"Business
+        and related research professionals carry out a variety of research activities
+        for the broadcast and print media, for the police and armed forces intelligence
+        services, for national security agencies and in other non-scientific areas.","qualifications":"Entrants
+        usually possess a degree or equivalent qualification. Training is usually
+        provided on-the-job, or support may be given for postgraduate study. Professional
+        qualifications are available in some areas.","tasks":" liaises with production
+        team to generate and develop ideas for film, television and radio programmes;\n
+        research sources for accurate factual material, finds suitable contributors
+        to programmes or print features and deals with any copyright issues;\n briefs
+        presenters, scriptwriters or journalists as required via verbal or written
+        reports;\n provides administrative support for programme development such
+        as booking facilities;\n provides support to criminal intelligence or to military
+        or other security operations by gathering and verifying intelligence data
+        and sources;\n presents findings in the required format, via written reports
+        or presentations;\n researches images for clients in a wide range of media
+        using specialist picture libraries and archives, museums, galleries etc.,
+        or commissions new images;\n liaises with client on the appropriate image/s
+        to be used;\n deals with copyright issues and negotiates fees.","add_titles":["Analyst,
+        computer, forensic","Analyst, crime (police force)","Analyst, information","Analyst,
+        intelligence, criminal","Assistant, research (broadcasting)","Assistant, research
+        (journalism)","Assistant, research (printing and publishing)","Assistant,
+        research","Associate, research (broadcasting)","Associate, research (journalism)","Associate,
+        research (printing and publishing)","Associate, research","Consultant, research","Fellow
+        (research)","Inventor","Officer, intelligence, grade II (MOD)","Officer, intelligence
+        (government)","Officer, research (broadcasting)","Officer, research (journalism)","Officer,
+        research (printing and publishing)","Officer, research","Researcher, games
+        (entertainment)","Researcher, games (broadcasting)","Researcher, picture","Researcher
+        (broadcasting)","Researcher (journalism)","Researcher (printing and publishing)","Researcher","Technician,
+        research","Technician, research and development","Worker, research (fire protection)","Worker,
+        research (fuel)","Worker, research (photographic)","Worker, research (plastics)","Worker,
+        research (textile)","Worker, research"]}]'
     http_version: 
-  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=plumber
@@ -166,7 +402,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Thu, 16 Jun 2016 10:30:43 GMT
+      - Mon, 20 Feb 2017 11:19:17 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -175,6 +411,8 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
       string: '[{"soc":5314,"title":"Plumbers and heating and ventilating engineers","description":"Jobholders
@@ -192,50 +430,181 @@ http_interactions:
         makes any necessary adjustments;\n attaches fittings and joins piping by welding,
         soldering, cementing, fusing, screwing or other methods;\n repairs burst pipes
         and mechanical and combustion faults and replaces faulty taps, washers, valves,
-        etc."},{"soc":9120,"title":"Elementary construction occupations","description":"Job
-        holders in this unit group perform a variety of general labouring and construction
-        duties to assist building, civil engineering and related trades workers in
-        the performance of their tasks.","qualifications":"No academic qualifications
-        are required. Training is typically provided on-the-job. NVQs/SVQs in a variety
-        of construction and craft occupations are available at Levels 1, 2 and 3.","tasks":"
-        conveys blocks, bricks, stone, mortar, roofing, felt, slates, wood and other
-        building materials to the work area;\n assists with the erection of ladders,
-        scaffolding and work platforms, the rigging of cradles of hoisting equipment
-        and the attaching of slings, hooks and guide ropes;\n mixes mortar, grouting
-        material, cement screed, and plaster, prepares adhesive, primer and paints
-        and similar construction material, and undertakes basic decorating, painting,
-        plumbing and other maintenance and repair tasks;\n cleans equipment and tools,
-        clears work area and otherwise assists building and woodworking trades workers
-        as directed;\n performs general labouring tasks such as digging trenches and
-        foundations, removing wall coverings, and preparing surfaces by cleaning,
-        sanding, filling, etc.;\n covers ceilings, floors, walls and exposed surfaces
-        of boilers, pipes and plant with insulating material;\n heats and breaks up
-        blocks of asphalt, bitumen or tar, stirs melting mixture, adds aggregate if
-        required, pours mixture into buckets;\n measures and fixes timber and other
-        structures to support excavations, cables or other rail, signal and telecommunications
-        equipment;\n excavates, constructs and maintains land drainage systems and
-        prepares graves for burial;\n operates, cleans and lubricates valves and sluices,
-        removes weeds, dead animals and other debris from waterways and carries out
-        minor repairs to banks and footbridges;\n helps diver into and out of diving
-        suit, maintains communication with submerged diver and checks equipment and
-        time spent under water."},{"soc":5242,"title":"Telecommunications engineers","description":"Telecommunications
-        engineers install, maintain and repair public and private telephone systems
-        and maintain, test and repair telecommunications cables.","qualifications":"There
-        are no formal academic requirements, although entrants typically possess GCSEs/S
-        grades or an equivalent qualification. Apprenticeships and traineeships combining
-        work experience and practical training are available at NVQ/SVQ Levels 2 and
-        3.","tasks":" installs internal cabling and wiring for telephone systems and
-        fits and wires junction and distribution boxes;\n fixes connecting wires from
-        underground and aerial lines to premises and connects cable terminals to inside
-        wiring;\n installs telephones, switchboards and coin operated phone boxes;\n
-        uses testing equipment to locate defective components of circuitry and makes
-        any necessary repairs;\n tests installation and makes any further necessary
-        adjustments;\n assists with the erection of wooden poles or steel towers to
-        carry overhead lines;\n connects cables and tests for any defects;\n locates
-        and repairs faults to lines and ancillary equipment;\n erects and maintains
-        mobile telecommunications infrastructure."}]'
+        etc.","add_titles":["Adviser, heating","Connector, coupling","Consultant,
+        heating","Contractor, plumbing","Converter (gas supplier)","Craftsman, distribution
+        (gas supplier)","Craftsman, governor (gas supplier)","Craftsman, transmission
+        (gas supplier)","Craftsman (gas supplier)","Engineer, domestic (plumbing)","Engineer,
+        field (heating and ventilating)","Engineer, gas","Engineer, gas and water","Engineer,
+        heat and domestic","Engineer, heating, central","Engineer, heating","Engineer,
+        heating and lighting","Engineer, heating and plumbing","Engineer, heating
+        and ventilating","Engineer, installation (heating and ventilating)","Engineer,
+        mains (gas supplier)","Engineer, maintenance (heating and ventilating)","Engineer,
+        plumbing","Engineer, plumbing and heating","Engineer, sanitary","Engineer,
+        service, gas","Engineer, service (gas)","Engineer, service (heating and ventilating)","Engineer,
+        service (heating engineering)","Engineer, thermal","Engineer, thermal and
+        acoustic","Engineer, ventilating","Engineer, ventilation (coal mine)","Engineer,
+        ventilation","Engineer, water, hot","Erector, mains, gas","Fitter, bathroom","Fitter,
+        burner (gas works)","Fitter, district (gas supplier)","Fitter, engineer''s,
+        heating","Fitter, engineer''s, sanitary","Fitter, fire, gas","Fitter, gas","Fitter,
+        governor (gas supplier)","Fitter, heating","Fitter, heating and ventilation","Fitter,
+        maintenance (gas supplier: gas works)","Fitter, maintenance (gas supplier)","Fitter,
+        maintenance (heating, ventilating)","Fitter, sanitary","Fitter, sprinkler","Fitter,
+        steam","Fitter, steam and hot water","Fitter, stove (building construction)","Fitter,
+        ventilation","Fitter, water","Fitter (domestic appliances, gas appliances)","Fitter
+        (gas supplier: gas works)","Fitter (gas supplier)","Fitter (heating contracting)","Fitter-welder
+        (heating and ventilating)","Fixer, appliances (gas supplier)","Fixer, meter
+        (gas)","Fixer, meter (water)","Fixer, ventilator","Inserter, ferrule (water
+        works)","Installer, bathroom","Installer, heating","Installer, meter (gas)","Installer,
+        meter (water)","Installer (heating contracting)","Jointer, pipe, sprinkler","Linesman,
+        gas","Man, maintenance (gas supplier)","Man, service, sales (domestic appliances,
+        gas appliances)","Man, service (domestic appliances, gas appliances)","Mender
+        (domestic appliances, gas appliance)","Pewterer (brewery)","Plumber","Plumber
+        and decorator","Plumber and gasfitter","Plumber-welder","Repairer, stove (gas
+        stoves)","Repairer (domestic appliances, gas appliances)","Technician, gas","Technician,
+        network (gas supplier)","Technician, network (water company)","Technician,
+        plumbing","Technician, service (gas supplier)","Worker, gas, maintenance"]},{"soc":9120,"title":"Elementary
+        construction occupations","description":"Job holders in this unit group perform
+        a variety of general labouring and construction duties to assist building,
+        civil engineering and related trades workers in the performance of their tasks.","qualifications":"No
+        academic qualifications are required. Training is typically provided on-the-job.
+        NVQs/SVQs in a variety of construction and craft occupations are available
+        at Levels 1, 2 and 3.","tasks":" conveys blocks, bricks, stone, mortar, roofing,
+        felt, slates, wood and other building materials to the work area;\n assists
+        with the erection of ladders, scaffolding and work platforms, the rigging
+        of cradles of hoisting equipment and the attaching of slings, hooks and guide
+        ropes;\n mixes mortar, grouting material, cement screed, and plaster, prepares
+        adhesive, primer and paints and similar construction material, and undertakes
+        basic decorating, painting, plumbing and other maintenance and repair tasks;\n
+        cleans equipment and tools, clears work area and otherwise assists building
+        and woodworking trades workers as directed;\n performs general labouring tasks
+        such as digging trenches and foundations, removing wall coverings, and preparing
+        surfaces by cleaning, sanding, filling, etc.;\n covers ceilings, floors, walls
+        and exposed surfaces of boilers, pipes and plant with insulating material;\n
+        heats and breaks up blocks of asphalt, bitumen or tar, stirs melting mixture,
+        adds aggregate if required, pours mixture into buckets;\n measures and fixes
+        timber and other structures to support excavations, cables or other rail,
+        signal and telecommunications equipment;\n excavates, constructs and maintains
+        land drainage systems and prepares graves for burial;\n operates, cleans and
+        lubricates valves and sluices, removes weeds, dead animals and other debris
+        from waterways and carries out minor repairs to banks and footbridges;\n helps
+        diver into and out of diving suit, maintains communication with submerged
+        diver and checks equipment and time spent under water.","add_titles":["Applicator,
+        mastic","Assistant, bricklayer''s","Assistant, builders''","Assistant, carpenter''s","Assistant,
+        diver''s, sea","Assistant, electrician''s (building construction)","Assistant,
+        general (building maintenance)","Assistant, general (building construction)","Assistant,
+        glazier''s","Assistant, joiner''s","Assistant, mason''s","Assistant, plasterer''s","Assistant,
+        plumber''s","Assistant, regulator''s, gas","Assistant, sawyer''s","Assistant,
+        survey (government)","Assistant, surveying","Assistant, surveyor''s","Attendant,
+        diver''s","Attendant, reservoir","Attendant, river","Backer-up (sawmilling)","Bailiff,
+        reservoir","Bailiff (level, sewer commissioners)","Banksman (canal contractors)","Boiler,
+        tar (building construction)","Boy, chain","Breaker, rock (construction)","Canalman","Caretaker
+        (reservoir)","Carrier, hod","Chainman","Cleaner, river","Clothier, boiler","Contractor,
+        drainage","Contractor, penning","Contractor (coal mine)","Coverer, boiler","Coverer,
+        pipe","Digger, grave","Digger, trench","Dismantler, furnace","Ditcher","Drainer","Erector,
+        light, street","Erector, marquee","Erector, tent","Examiner, trench","Fitter,
+        builder''s","Fitter, insulating","Fixer, insulation","Fixer, lath, metal","Foreman,
+        length (river, water authority)","Foreman, surface (coal mine)","Foreman,
+        yard (coal mine)","Foreman (river, water authority)","Foreman (waterways)","Ganger
+        (canals)","Hand, insulation","Hand, maintenance, estate","Hand, maintenance
+        (canals)","Handyman, builder''s","Handyman, carpenter''s","Handyman, electrician''s
+        (building construction)","Handyman, fitter''s (pipe)","Handyman-labourer","Help,
+        electrician''s (building construction)","Helper, bricklayer''s","Helper, carpenter''s","Helper,
+        electrician''s (building construction)","Helper, mason''s","Inspector, canal","Inspector,
+        navigation (river, water authority)","Inspector, river","Inspector, section
+        (waterways)","Inspector, waterways","Insulator, loft","Insulator, pipe","Insulator,
+        refrigerator","Jobber, agent''s, estate","Jobber, builder''s","Jobber, property","Jobber
+        (building construction)","Keeper, reservoir","Keeper, wharf, canal","Labourer,
+        bricklayer''s","Labourer, bricksetter''s","Labourer, builder''s, boat","Labourer,
+        builder''s","Labourer, building","Labourer, carpenter''s","Labourer, construction","Labourer,
+        contractor''s","Labourer, cooper''s","Labourer, electrician''s (building construction)","Labourer,
+        engineer''s, civil","Labourer, engineering, civil","Labourer, fitter''s, shop","Labourer,
+        fixer''s, felt","Labourer, fixer''s, sheet","Labourer, joiner''s","Labourer,
+        layer''s, granolithic","Labourer, layer''s, terrazzo","Labourer, maker''s,
+        cabinet","Labourer, mason''s, fixer","Labourer, mason''s, stone","Labourer,
+        plasterer''s","Labourer, platelayer''s","Labourer, plumber''s","Labourer,
+        roofer''s","Labourer, roofing","Labourer, site","Labourer, slater''s","Labourer,
+        steeplejack''s","Labourer, track, electric","Labourer (building construction)","Lagger,
+        asbestos","Lagger, boiler","Lagger, pipe","Lagger","Lather, metal","Lengthman
+        (canals)","Liner, pipe (building construction)","Liner, pipe","Linesman, diver''s","Linesman,
+        surveyor''s","Linesman (water works)","Maker, composition (boiler covering)","Man,
+        job, odd","Man, maintenance (water works)","Man, marsh","Man, mixer, asphalt
+        (building construction)","Man, timber (building construction)","Man, timber
+        (coal mine: above ground)","Man, timber (electricity supplier)","Man, timber
+        (local government)","Man, timber (railways)","Man, timber (water company)","Mate,
+        asphalter''s","Mate, builder''s","Mate, carpenter''s","Mate, carpenter''s
+        and joiner''s","Mate, coverer''s, boiler","Mate, craftsman''s","Mate, electrician''s
+        (building construction)","Mate, fixer''s","Mate, flagger''s","Mate, glazier''s","Mate,
+        joiner''s","Mate, jointer''s, pipe","Mate, lagger''s","Mate, layer''s, brick","Mate,
+        layer''s, granolithic","Mate, layer''s, main","Mate, layer''s, plate","Mate,
+        layer''s, service","Mate, layer''s, terrazzo","Mate, machinist''s, wood","Mate,
+        mason''s","Mate, painter''s","Mate, pavior''s","Mate, plasterer''s","Mate,
+        plumber and jointer''s","Mate, plumber''s","Mate, roofer''s","Mate, sawyer''s","Mate,
+        scaffolder''s","Mate, sheeter''s","Mate, slater''s","Mate, steeplejack''s","Mate,
+        tiler''s","Mate, timberman''s","Mate, wheelwright''s","Mixer, asphalt (building
+        construction)","Mixer, tar (building construction)","Navvy, pond, slurry","Navvy","Operative,
+        defence, flood","Operative, rivers","Operator, gun, cement","Operator, tank,
+        asphalt","Packer, asbestos","Pipeliner","Porter-handyman","Potman, asphalt","Potman
+        (building construction)","Proofer, damp","Proofer, water (building construction)","Propman
+        (coal mine: above ground)","Propper (coal mine: above ground)","Puller-off
+        (sawmilling)","Rammerman","Repairer, bank (canal)","Riverman","Signalman,
+        diver''s","Spreader (building construction)","Superintendent, reservoir","Tacker,
+        board","Taker, care (reservoir)","Tender, diver''s","Tenter, diver''s","Tester,
+        drain","Tester, pipe (main laying)","Trenchman","Tupper (building construction)","Worker,
+        building","Worker, canal","Worker, construction","Worker, drainage","Worker,
+        ground (building construction)","Worker, river"]},{"soc":5242,"title":"Telecommunications
+        engineers","description":"Telecommunications engineers install, maintain and
+        repair public and private telephone systems and maintain, test and repair
+        telecommunications cables.","qualifications":"There are no formal academic
+        requirements, although entrants typically possess GCSEs/S grades or an equivalent
+        qualification. Apprenticeships and traineeships combining work experience
+        and practical training are available at NVQ/SVQ Levels 2 and 3.","tasks":"
+        installs internal cabling and wiring for telephone systems and fits and wires
+        junction and distribution boxes;\n fixes connecting wires from underground
+        and aerial lines to premises and connects cable terminals to inside wiring;\n
+        installs telephones, switchboards and coin operated phone boxes;\n uses testing
+        equipment to locate defective components of circuitry and makes any necessary
+        repairs;\n tests installation and makes any further necessary adjustments;\n
+        assists with the erection of wooden poles or steel towers to carry overhead
+        lines;\n connects cables and tests for any defects;\n locates and repairs
+        faults to lines and ancillary equipment;\n erects and maintains mobile telecommunications
+        infrastructure.","add_titles":["Connector, cable","Controller, network (telecommunications)","Engineer,
+        BSC (telecommunications)","Engineer, BSS (telecommunications)","Engineer,
+        cable","Engineer, data","Engineer, exchange, telephone","Engineer, field  (telecommunications)","Engineer,
+        IN","Engineer, installation, cable","Engineer, installation (telephones)","Engineer,
+        installation (telecommunications)","Engineer, line (telecommunications)","Engineer,
+        maintenance (telecommunications)","Engineer, network, core","Engineer, NOC
+        (telecommunications)","Engineer, nos (telecommunications)","Engineer, NSS
+        (telecommunications)","Engineer, optic, fibre","Engineer, provisioning (telecommunications)","Engineer,
+        service, customer (telecommunications)","Engineer, service (telephone)","Engineer,
+        support (telecommunications)","Engineer, switch (telecommunications)","Engineer,
+        technical (telecommunications)","Engineer, telecom","Engineer, telecommunications","Engineer,
+        telegraph","Engineer, telephone","Engineer, telephony and IT communications","Engineer,
+        transmission (telecommunications)","Engineer, VAS","Faultsman (telecommunications)","Fitter,
+        cable","Fitter, installation (telecommunications)","Fitter, maintenance (telecommunications)","Fitter,
+        telephone","Hand, maintenance (telecommunications)","Inspector, flight (airport,
+        radio)","Installer, cable","Installer, telecommunications","Installer, telephone","Installer
+        (telephone service)","Jointer, cable","Jointer, conduit, electric","Jointer,
+        electric","Jointer, electrical","Jointer, wire","Jointer (cable laying)","Jointer
+        (electricity supplier)","Jointer (telecommunications)","Lineman, traction","Linesman,
+        telegraph","Linesman, telephone","Linesman (radio relay service)","Linesman
+        (telecommunications)","Mechanic, telecommunications","Mechanic, telephone","Mechanic
+        (telephone, telegraph apparatus)","Officer, engineering (PO)","Officer, maintenance
+        (telecommunications)","Officer, network (telecommunications)","Officer, repeater
+        (telecommunications)","Officer, survey (telecommunications)","Officer, technical,
+        telecommunication (Civil Aviation Authority)","Officer, technical (telecommunications)","Officer,
+        testing, diagnostic","Planner, band, wide (telecommunications)","Planner,
+        transmission (telecommunications)","Plumber and jointer","Probationer (railways)","Puller,
+        cable","Repairer, cable (electric)","Repairer, cord (telephones)","Repairer,
+        wire","Repairer (telephone apparatus)","T1 (telecommunications)","T2A (telecommunications)","T2B
+        (telecommunications)","Technician, 1 (telecommunications)","Technician, 2A
+        (telecommunications)","Technician, 2B (telecommunications)","Technician, electrical
+        (telecommunications)","Technician, factory (telecommunications)","Technician,
+        telecommunications","Technician, telephone","Technician (telegraph, telephone
+        equipment)","Technician (telecommunications: 2B)","Technician (telecommunications)","Wireman,
+        overhead","Wireman, telephone","Wireman (railways)","Wireman (telecommunications)","Wirer
+        (metal trades: telephone mfr)","Workman, skilled (telecommunications)"]}]'
     http_version: 
-  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
@@ -251,26 +620,26 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - nginx/1.2.7
       Date:
-      - Thu, 16 Jun 2016 10:30:43 GMT
+      - Mon, 20 Feb 2017 11:19:17 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '2'
+      - '47'
       Connection:
       - keep-alive
       X-Auth-Type:
       - No Key
     body:
       encoding: UTF-8
-      string: "[]"
+      string: '{"error":"Please give a string to search for."}'
     http_version: 
-  recorded_at: Thu, 16 Jun 2016 10:30:43 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:17 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
@@ -286,26 +655,26 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - nginx/1.2.7
       Date:
-      - Thu, 16 Jun 2016 10:30:44 GMT
+      - Mon, 20 Feb 2017 11:19:18 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '2'
+      - '47'
       Connection:
       - keep-alive
       X-Auth-Type:
       - No Key
     body:
       encoding: UTF-8
-      string: "[]"
+      string: '{"error":"Please give a string to search for."}'
     http_version: 
-  recorded_at: Thu, 16 Jun 2016 10:30:44 GMT
+  recorded_at: Mon, 20 Feb 2017 11:19:18 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=driving
@@ -327,7 +696,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Thu, 16 Jun 2016 10:30:44 GMT
+      - Mon, 20 Feb 2017 11:19:18 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -336,6 +705,8 @@ http_interactions:
       - keep-alive
       X-Auth-Type:
       - No Key
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
       string: '[{"soc":8215,"title":"Driving instructors","description":"Driving instructors
@@ -353,7 +724,58 @@ http_interactions:
         individual pupils;\n explains driving techniques and assists pupil with difficulties;\n
         familiarises pupil with the Highway Code and different road and traffic conditions;\n
         advises pupil when to apply for theoretical and practical driving tests and
-        familiarises them with test procedures and standards."},{"soc":8214,"title":"Taxi
+        familiarises them with test procedures and standards.","add_titles":["Driver-instructor","Instructor,
+        cycle, motor","Instructor, driving","Instructor, HGV","Instructor, motorcycle","Instructor
+        (driving school)"]},{"soc":8229,"title":"Mobile machine drivers and operatives
+        n.e.c.","description":"Job holders in this unit group supervise and undertake
+        the operation of machines to transport, excavate, grade, level, and compact
+        sand, earth, gravel and similar materials, drive piles into the ground and
+        lay surfaces of asphalt, concrete and chippings, and operate other mobile
+        machines not elsewhere classified in MINOR GROUP 822: Mobile Machine Drivers
+        and Operatives.","qualifications":"No academic qualifications are required.
+        On-the-job training is provided. The appropriate current driving licence will
+        be required for driving on public highways.","tasks":" fixes any necessary
+        extensions onto machine and loads machine with asphalt, concrete, bitumen,
+        tar, stone chippings or any other required materials;\n manipulates levers,
+        pedals and switches to manoeuvre vehicle, regulate angle and height of blades,
+        buckets and hammers and starts conveyor, suction or water spraying system;\n
+        watches operation and removes any likely obstacle or obstructions;\n directs
+        refilling of machine hopper and repeats operations as necessary;\n cleans,
+        oils and greases machine and carries out minor repairs.","add_titles":["Carman
+        (coke ovens)","Chargeman (copper, zinc refining)","Charger, coal","Charger,
+        ore","Charger, oven","Charger, retort (gas works)","Charger (coke ovens)","Charger
+        (gas works)","Charger (mine: not coal)","Chargerman","Dredgeman","Dredger","Dredgerman","Dredgermaster","Driver,
+        bobcat","Driver, bogie","Driver, bowser, water","Driver, bulldozer","Driver,
+        car, charger","Driver, car, coke (gas ovens)","Driver, charge","Driver, charger","Driver,
+        crawler","Driver, digger","Driver, dozer, angle","Driver, dredger","Driver,
+        drott","Driver, dumper","Driver, euclid","Driver, excavator","Driver, gearhead
+        (coal mine)","Driver, grader","Driver, JCB","Driver, loader (building construction)","Driver,
+        machine, spreading (asphalt, concrete)","Driver, machine, stoking","Driver,
+        machine (civil engineering)","Driver, machine (gas works)","Driver, motor,
+        dumpy","Driver, navvy","Driver, pile","Driver, plant (building construction)","Driver,
+        roller","Driver, scoop","Driver, scraper","Driver, sentinel","Driver, shovel","Driver,
+        steamroller","Driver, sweeper, road, mechanical","Driver, sweeper","Driver,
+        tool, mechanical","Driver, tractor (building construction)","Driver, tractor
+        (coal mine: opencast)","Driver, tractor (manufacturing)","Driver, tractor
+        (mining)","Driver, trolley","Driver, truck, bogie","Driver, truck, dumper","Driver,
+        truck, ransom","Driver (building construction)","Driver (mine: not coal: above
+        ground)","Driver (plant hire)","Dumper (mine: not coal)","Excavator (building
+        construction)","Excavator (steelworks)","Filler (coke ovens)","Foreman, dredging","Foreman,
+        piling (civil engineering)","Foreman, plant (building construction)","Hammerman
+        (pile driving)","Handler, telescopic","Leveller (asphalt spreading machine)","Machinist,
+        chipping","Machinist, gully","Machinist, levelling, rail","Machinist, paving,
+        concrete","Machinist, tamping","Machinist, tracklaying","Machinist (building
+        construction)","Machinist (coal mine: opencast)","Machinist (railways: civil
+        engineer''s dept)","Man, digger","Man, navvy","Man, plate (asphalt spreading)","Master,
+        dredger","Master, dredging","Mate, driver''s, excavator","Officer, deck (dredging
+        contractors)","Operative, piling","Operator, bulldozer","Operator, caterpillar","Operator,
+        charger (rolling mill)","Operator, dredger","Operator, drill, pneumatic","Operator,
+        drott","Operator, excavator","Operator, hire, plant","Operator, JCB","Operator,
+        line, drag","Operator, plant, builder''s","Operator, plant, constructional","Operator,
+        plant, heavy","Operator, plant (building construction)","Operator, plant (opencast
+        mining)","Operator, plant","Operator, pump, concrete","Operator, rig","Operator
+        (construction machinery)","Owner-driver (plant hire)","Screwman (asphalt spreading)","Sprayer,
+        tar","Sweeper, road, mechanical","Topman (pile driving)","Trucker"]},{"soc":8214,"title":"Taxi
         and cab drivers and chauffeurs","description":"Taxi and cab drivers and chauffeurs
         drive motor cars for private individuals, government departments and industrial
         and commercial organisations, drive taxis for public hire, drive new cars
@@ -367,31 +789,34 @@ http_interactions:
         and traffic regulations;\n collects passengers when hailed or in response
         to telephone/radio message and helps them to secure their luggage;\n conveys
         passenger to destination and helps unload luggage;\n cleans, services and
-        maintains vehicle or motorcycle."},{"soc":8212,"title":"Van drivers","description":"Van
-        drivers collect, transport and deliver goods in vehicles up to 7.5 tonnes
-        in weight.","qualifications":"There are no formal academic entry requirements.
-        Entrants must possess a clean car driving licence. In order to drive vehicles
-        between 3.5 and 7.5 tonnes, entrants must pass an additional test for a category
-        C1 licence. Minimum age restrictions apply according to the weight of vehicle
-        and whether the driver holds a Driver CPC (Certificate of Professional Competence).
-        NVQs/SVQs in relevant areas and at various levels are available.","tasks":"
-        checks tyres, brakes, lights, oil, water and fuel levels and general condition
-        of the vehicle;\n drives vehicle from depot to loading/unloading point;\n
-        assists with loading/unloading and obtains receipts from customers for goods
-        collected/delivered;\n drives vehicle to destination in accordance with schedule;\n
-        maintains records of journey times, mileage and hours worked;\n undertakes
-        minor repairs and notifies supervisor of any mechanical faults."},{"soc":8223,"title":"Agricultural
-        machinery drivers","description":"Job holders in this unit group operate and
-        drive tractors, combine harvesters or other farm vehicles to clear and cultivate
-        land and to sow and harvest plants and crops.","qualifications":"No academic
-        qualifications are required. Candidates will require the relevant driving
-        licence to operate vehicles on public roads. A variety of NVQs/SVQs in Agriculture
-        is available that incorporates the operation of agricultural machinery. Apprenticeships
-        may be available in some areas.","tasks":" attaches plough, cultivator, distributor,
-        mower, baler or other implement to tractor;\n adjusts depth, speed and height
-        of attached implement according to requirements;\n drives and operates machinery
+        maintains vehicle or motorcycle.","add_titles":["Cabbie","Chauffeur","Chauffeur-gardener","Chauffeur-handyman","Chauffeur-mechanic","Chauffeur-valet","Collector,
+        car","Deliverer, car","Driver, cab, mini","Driver, cab","Driver, car, motor","Driver,
+        carriage","Driver, delivery, car","Driver, delivery (car delivery service)","Driver,
+        hearse","Driver, hire, private","Driver, minicab","Driver, motor (funeral
+        directors)","Driver, police, civilian","Driver, taxi","Driver, taxicab","Driver
+        (vehicles, passenger transport)","Driver (car delivery service)","Driver and
+        collector (car delivery service)","Driver and collector (coal mine)","Driver-handyman","Driver-mechanic
+        (passenger transport vehicles)","Gardener-chauffeur","Handyman-driver","Operator,
+        taxi","Owner, carriages, hackney","Owner, taxi","Owner-driver, taxi","Shunter,
+        car"]},{"soc":8223,"title":"Agricultural machinery drivers","description":"Job
+        holders in this unit group operate and drive tractors, combine harvesters
+        or other farm vehicles to clear and cultivate land and to sow and harvest
+        plants and crops.","qualifications":"No academic qualifications are required.
+        Candidates will require the relevant driving licence to operate vehicles on
+        public roads. A variety of NVQs/SVQs in Agriculture is available that incorporates
+        the operation of agricultural machinery. Apprenticeships may be available
+        in some areas.","tasks":" attaches plough, cultivator, distributor, mower,
+        baler or other implement to tractor;\n adjusts depth, speed and height of
+        attached implement according to requirements;\n drives and operates machinery
         to plough, fertilise, plant, cultivate or harvest crops;\n services and maintains
-        equipment and carries out any minor repairs."},{"soc":3442,"title":"Sports
+        equipment and carries out any minor repairs.","add_titles":["Attendant (agricultural
+        machinery)","Baler, hay","Binder, straw","Contractor, spraying, crop","Driver,
+        engine (agriculture)","Driver, machine (agriculture)","Driver, tractor (agriculture)","Driver,
+        tractor (local government)","Driver (agricultural machinery)","Driver-mechanic
+        (agricultural machinery)","Feeder, drum (agricultural machinery)","Foreman
+        (agricultural contracting)","Machinist, agricultural","Man, plough","Operator
+        (agricultural machinery)","Sprayer, agricultural","Sprayer (agricultural contracting)","Tractorman
+        (agriculture)","Worker, agricultural (agricultural contracting)"]},{"soc":3442,"title":"Sports
         coaches, instructors and officials","description":"Sports coaches, instructors
         and officials work with amateur and professional sportsmen and women to enhance
         performance, encourage greater participation in sport, supervise recreational
@@ -415,103 +840,146 @@ http_interactions:
         and ensures any statutory requirements are met;\n inspects and maintains specialised
         clothing and equipment;\n manages the playing areas and competitors, starts
         race, competition or match and controls its progress according to established
-        rules."},{"soc":8211,"title":"Large goods vehicle drivers","description":"Large
-        Goods Vehicle (LGV) drivers (formerly HGV drivers), collect, transport and
-        deliver goods in rigid vehicles over 7.5 tonnes, articulated lorries and lorries
-        pulling trailers.","qualifications":"No formal academic entry qualifications
-        are required. The LGV test incorporates a medical examination, theory test
-        and assessed road driving. LGV drivers of vehicles of 3.5 tonnes and over
-        require a Driver CPC (Certificate of Professional Competence). The minimum
-        age for LGV driving after obtaining the qualification is 18 years. NVQs/SVQs,
-        other vocational courses and apprenticeships relevant to this occupation are
-        available at various levels.","tasks":" checks tyres, brakes, lights, oil,
-        water and fuel levels and general condition of the vehicle;\n drives vehicle
-        from depot to loading/unloading point;\n agrees delivery schedule and route
-        with transport management;\n assists with loading/unloading and ensures that
-        load is evenly distributed and safely secured;\n drives vehicle to destination
-        in accordance with schedule;\n maintains records of journey times, mileage
-        and hours worked;\n undertakes minor repairs and notifies supervisor of any
-        mechanical faults."},{"soc":9275,"title":"Leisure and theme park attendants","description":"Leisure
-        and theme park attendants monitor the operation of amusement arcades, check
-        tickets of entry to theatres and cinemas and show people to their seats, operate
-        rides at funfairs and theme parks, and entertain and look after guests at
-        holiday camps.","qualifications":"There are no formal academic entry requirements.
-        Training is typically received on-the-job.","tasks":" checks tickets of people
-        entering cinemas and theatres, and directs people to their seats;\n operates
-        rides and supervises stalls at fairgrounds and amusement parks;\n issues change
-        at amusement arcades, monitors the operation of arcade machines and empties
-        coins from machines;\n welcomes holidaymakers, provides information about
-        holiday camp, organises and participates in entertainment and activities for
-        guests."},{"soc":8229,"title":"Mobile machine drivers and operatives n.e.c.","description":"Job
-        holders in this unit group supervise and undertake the operation of machines
-        to transport, excavate, grade, level, and compact sand, earth, gravel and
-        similar materials, drive piles into the ground and lay surfaces of asphalt,
-        concrete and chippings, and operate other mobile machines not elsewhere classified
-        in MINOR GROUP 822: Mobile Machine Drivers and Operatives.","qualifications":"No
-        academic qualifications are required. On-the-job training is provided. The
-        appropriate current driving licence will be required for driving on public
-        highways.","tasks":" fixes any necessary extensions onto machine and loads
-        machine with asphalt, concrete, bitumen, tar, stone chippings or any other
-        required materials;\n manipulates levers, pedals and switches to manoeuvre
-        vehicle, regulate angle and height of blades, buckets and hammers and starts
-        conveyor, suction or water spraying system;\n watches operation and removes
-        any likely obstacle or obstructions;\n directs refilling of machine hopper
-        and repeats operations as necessary;\n cleans, oils and greases machine and
-        carries out minor repairs."},{"soc":8213,"title":"Bus and coach drivers","description":"Bus
-        and coach drivers drive road passenger-carrying vehicles such as buses, coaches
-        and mini-buses.","qualifications":"There are no formal academic entry requirements,
-        though candidates must be in possession of a full car driving licence. All
-        bus and coach drivers must pass the Passenger Carrying Vehicle (PCV) test.
-        This incorporates a theoretical examination and assessed driving. Entrants
-        to the PCV test must be at least 18 years old. NVQs/SVQs in Transporting Passengers
-        by Road are available at Levels 2 and 3.","tasks":" checks tyres, brakes,
-        lights, oil, water and fuel levels and general condition of the vehicle before
-        start of journey;\n drives single- and double-decked vehicle over pre-determined
-        route, complying with traffic regulations and keeping to time schedule;\n
-        stops and opens and closes doors at pre-arranged places to allow passengers
-        to board and alight, observing regulations concerning the number of passengers
-        carried;\n may collect fares from passengers and issue tickets or ensure that
-        they use a ticket machine;\n may plan routes in conjunction with private hirer
-        and assist with loading and unloading of luggage;\n balances cash taken with
-        tickets sold and may be responsible for cleanliness of vehicle;\n maintains
-        records of journey times, mileage and hours worked."},{"soc":6142,"title":"Ambulance
-        staff (excluding paramedics)","description":"Ambulance staff transport sick,
-        injured and convalescent persons and give first aid treatment in emergencies.","qualifications":"Academic
-        qualifications are not normally required. Entry requirements vary between
-        ambulance services. Entrants must normally have possessed a full clean driving
-        licence for one to two years and have health clearance. Entrants undertake
-        a minimum of 2 weeks training in first aid and patient care. Successful trainees
-        are then attached to an ambulance station where they work under the guidance
-        of a trained supervisor for a probationary period before working unsupervised.","tasks":"
-        helps patients into and out of ambulance;\n drives ambulance or accompanies
-        driver to transport patients to hospitals or other treatment centres and homes;\n
-        ascertains nature of injuries and provides first aid treatment;\n cleans and
-        disinfects ambulance after use and carries out routine care of ambulance equipment;\n
-        replenishes medical supplies in ambulance as necessary."},{"soc":8222,"title":"Fork-lift
-        truck drivers","description":"Fork-lift truck drivers operate fork-lift trucks
-        in factories, warehouses, storerooms and other areas to transfer goods and
-        materials.","qualifications":"There are no formal academic entry requirements.
-        Training is through accredited training schemes provided in-house or by manufacturers.
-        NVQs/SVQs in Lift Truck Operations are available at Level 2.","tasks":" operates
-        controls to pick up load on forks;\n drives truck to unloading point and lowers
-        forks to correct position on stack or ground;\n ensures that truck is connected
-        to charger or is correctly refuelled for use;\n keeps records of work undertaken;\n
-        cleans, oils and greases machine."},{"soc":1259,"title":"Managers and proprietors
-        in other services n.e.c.","description":"Job holders in this unit group perform
-        a variety of managerial tasks in other service industries not elsewhere classified
-        in MINOR GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
-        requirements vary according to the particular company and/or service. Some
-        companies do not require candidates to have academic qualifications but others
-        require a degree or equivalent qualification. Off- and on-the-job training
-        may be provided.","tasks":" determines staffing, financial, material and other
-        short- and long-term requirements;\n ensures that adequate reserves of merchandise
-        are held and that stock keeping is carried out efficiently;\n authorises payment
-        for supplies received and decides on vending price and credit terms;\n examines
-        quality of merchandise and ensures that effective use is made of advertising
-        and display facilities;\n manages agencies to provide services out-sourced
-        by other organisations and businesses;\n ensures maintenance of appropriate
-        service levels to meet the objectives of the business."},{"soc":3565,"title":"Inspectors
-        of standards and regulations","description":"Inspectors of standards and regulations
+        rules.","add_titles":["Agent, sports","Coach, sports","Coach (sports)","Coordinator,
+        sports","Handicapper","Instructor, activities, outdoor","Instructor, arts,
+        martial","Instructor, driving, carriage","Instructor, education, outdoor","Instructor,
+        gliding","Instructor, outdoor","Instructor, pursuits, outdoor","Instructor,
+        riding","Instructor, sailing","Instructor, scuba","Instructor, swimming","Instructor
+        (sports)","Instructor (outdoor pursuits)","Judge (sports)","Leader, pursuits,
+        outdoor","Manager, team (sports)","Manager (sports)","Master, riding","Officer,
+        development, sport","Officer, development, sports","Officer, development (sports)","Officer,
+        leisure","Officer, recreation","Official, racecourse","Official, sports","Pilot,
+        balloon","Referee","Scorer, cricket","Scout, football","Signalman (yacht club)","Steward
+        (horse racing)","Steward (race course)","Teacher, riding","Teacher, swimming","Teacher
+        (outdoor recreational activities)","Trainer, development, outdoors","Trainer
+        (sports)","Tutor, bound, outward","Umpire (sports)","Worker, education, outdoor"]},{"soc":8213,"title":"Bus
+        and coach drivers","description":"Bus and coach drivers drive road passenger-carrying
+        vehicles such as buses, coaches and mini-buses.","qualifications":"There are
+        no formal academic entry requirements, though candidates must be in possession
+        of a full car driving licence. All bus and coach drivers must pass the Passenger
+        Carrying Vehicle (PCV) test. This incorporates a theoretical examination and
+        assessed driving. Entrants to the PCV test must be at least 18 years old.
+        NVQs/SVQs in Transporting Passengers by Road are available at Levels 2 and
+        3.","tasks":" checks tyres, brakes, lights, oil, water and fuel levels and
+        general condition of the vehicle before start of journey;\n drives single-
+        and double-decked vehicle over pre-determined route, complying with traffic
+        regulations and keeping to time schedule;\n stops and opens and closes doors
+        at pre-arranged places to allow passengers to board and alight, observing
+        regulations concerning the number of passengers carried;\n may collect fares
+        from passengers and issue tickets or ensure that they use a ticket machine;\n
+        may plan routes in conjunction with private hirer and assist with loading
+        and unloading of luggage;\n balances cash taken with tickets sold and may
+        be responsible for cleanliness of vehicle;\n maintains records of journey
+        times, mileage and hours worked.","add_titles":["Busman","Driver, bus, mini","Driver,
+        bus","Driver, coach","Driver, minibus","Driver, PCV","Driver, PSV","Driver,
+        vehicle, carrying, passenger","Driver, vehicle, service, public","Driver (vehicles,
+        passenger transport, bus, coach)","Driver (bus service)","Driver-conductor","Driver-fitter
+        (public service vehicle)","Driver-mechanic (bus, coach)","Operator, coach","Operator,
+        person, one","Shunter (road transport)"]},{"soc":9275,"title":"Leisure and
+        theme park attendants","description":"Leisure and theme park attendants monitor
+        the operation of amusement arcades, check tickets of entry to theatres and
+        cinemas and show people to their seats, operate rides at funfairs and theme
+        parks, and entertain and look after guests at holiday camps.","qualifications":"There
+        are no formal academic entry requirements. Training is typically received
+        on-the-job.","tasks":" checks tickets of people entering cinemas and theatres,
+        and directs people to their seats;\n operates rides and supervises stalls
+        at fairgrounds and amusement parks;\n issues change at amusement arcades,
+        monitors the operation of arcade machines and empties coins from machines;\n
+        welcomes holidaymakers, provides information about holiday camp, organises
+        and participates in entertainment and activities for guests.","add_titles":["Assistant,
+        arcade","Assistant, cinema","Assistant, fairground","Assistant, front of house
+        (leisure services)","Assistant, funfair","Assistant, general (leisure services)","Attendant,
+        amusement","Attendant, arcade","Attendant, camp","Attendant, cinema","Attendant,
+        club","Attendant, field, playing","Attendant, funfair","Attendant, ground,
+        fair","Attendant, hall, billiard","Attendant, hall, dance","Attendant, hotel","Attendant,
+        lane","Attendant, park, amusement","Attendant, park, theme","Attendant, pier
+        (entertainment)","Attendant, rides","Attendant, room, ball","Attendant, stall
+        (amusements)","Attendant, theatre","Attendant (entertainment)","Attendant
+        (cinema)","Balloonist","Boy, call (entertainment)","Coat, blue (holiday camp)","Coat,
+        red (holiday camp)","Crew, balloon","Decorator, balloon","Decorator, party","Foreman
+        (entertainment)","Foreman (cinema)","Hand, circus","Hand, fairground","Holder,
+        stall (entertainment)","Marshall, lane","Operative, cinema","Operator, ride","Operator,
+        tow, ski","Painter, face","Roadie","Steward, concert","Steward, ground, sports","Steward
+        (sports ground)","Superintendent, range","Supervisor, arcade, amusement","Usher","Usherette","Worker,
+        camp, holiday","Worker, centre, holiday","Worker, centre, leisure","Worker,
+        cinema","Worker, fairground","Worker, park, theme","Worker, range, driving","Worker,
+        range, firing","Worker, range, shooting"]},{"soc":1259,"title":"Managers and
+        proprietors in other services n.e.c.","description":"Job holders in this unit
+        group perform a variety of managerial tasks in other service industries not
+        elsewhere classified in MINOR GROUP 125: Managers and Proprietors in Other
+        Services.","qualifications":"Entry requirements vary according to the particular
+        company and/or service. Some companies do not require candidates to have academic
+        qualifications but others require a degree or equivalent qualification. Off-
+        and on-the-job training may be provided.","tasks":" determines staffing, financial,
+        material and other short- and long-term requirements;\n ensures that adequate
+        reserves of merchandise are held and that stock keeping is carried out efficiently;\n
+        authorises payment for supplies received and decides on vending price and
+        credit terms;\n examines quality of merchandise and ensures that effective
+        use is made of advertising and display facilities;\n manages agencies to provide
+        services out-sourced by other organisations and businesses;\n ensures maintenance
+        of appropriate service levels to meet the objectives of the business.","add_titles":["Director,
+        health and safety","Director, publishing","Director (children''s nursery)","Director
+        (commission agents)","Director (educational establishments)","Director (employment
+        agency: private)","Director (environmental consultancy)","Director (management
+        consultancy)","Director (private detective agency)","Director (security services)","Keeper,
+        laundry","Manager, architect","Manager, architecture","Manager, bookmaker''s","Manager,
+        branch (radio, television and video hire)","Manager, branch (car hire)","Manager,
+        branch (library)","Manager, cemeteries","Manager, cemetery","Manager, centre,
+        assessment","Manager, centre, hire","Manager, centre, skills","Manager, centre,
+        training","Manager, crematorium","Manager, design, graphic","Manager, experience,
+        customer","Manager, furnishing","Manager, general (theatrical productions)","Manager,
+        health and safety","Manager, hire, equipment","Manager, hire, plant","Manager,
+        hire, skip","Manager, hire, television and video, radio","Manager, hire, tool","Manager,
+        hygiene","Manager, launderette","Manager, laundry","Manager, library","Manager,
+        office, betting","Manager, office (bookmakers, turf accountants)","Manager,
+        operations (cleaning services)","Manager, operations (plant hire)","Manager,
+        operations (recruitment agency)","Manager, park, car","Manager, parking","Manager,
+        plant (hire service)","Manager, production, theatrical","Manager, production,
+        video","Manager, production (entertainment)","Manager, production (broadcasting)","Manager,
+        production (film, television production)","Manager, publisher''s","Manager,
+        radio, television and video","Manager, rental, vehicle","Manager, retail (betting
+        shop)","Manager, rig","Manager, safety, community","Manager, safety","Manager,
+        safety and hygiene","Manager, service, advice","Manager, service, crane","Manager,
+        service, rental","Manager, service, valet, car","Manager, service (motoring
+        organisation)","Manager, services, parking","Manager, services, student","Manager,
+        shift (recruitment agency)","Manager, shop, betting","Manager, shop, hire","Manager,
+        shop, video","Manager, shop (bookmakers, turf accountants)","Manager, shop
+        (dyeing and cleaning)","Manager, shop (laundry receiving shop)","Manager,
+        shop (radio, television, video hire)","Manager, site (cleaning services)","Manager,
+        studio, design","Manager, studio (printing)","Manager, tour (entertainment)","Manager,
+        touring (entertainment)","Manager, tourism","Manager (radio, television and
+        video hire)","Manager (architectural service)","Manager (betting and gambling)","Manager
+        (bookmakers, turf accountants)","Manager (car hire)","Manager (car park)","Manager
+        (car wash, valeting)","Manager (Citizens Advice Bureau)","Manager (dating
+        agency)","Manager (driving school)","Manager (flying school)","Manager (funeral
+        directors)","Manager (hire shop)","Manager (laundry, launderette, dry cleaning)","Manager
+        (library)","Manager (machinery hire)","Manager (photographic studios)","Manager
+        (plant hire)","Manager (recruitment agency)","Manager (repairing: consumer
+        goods)","Manager (retail trade: video shop)","Manager (safe deposit)","Manager
+        (television: transmission station)","Manager (theatrical agency)","Manager
+        (ticket agency)","Manager (typewriting agency)","Manager (video shop)","Manager
+        and Registrar (cemetery)","Manager and Registrar (crematorium)","Owner, agency,
+        employment","Owner, agency, ticket","Owner, company, taxi","Owner, gallery,
+        art","Owner, hire, plant","Owner, launderette","Owner, school, driving","Owner,
+        service, cab","Owner, service, taxi","Owner, shop, betting","Owner, shop,
+        video","Owner, studio, photographic","Owner (alarm, security installation)","Owner
+        (art gallery)","Owner (boat: pleasure cruise)","Owner (boat: pleasure hire)","Owner
+        (cab hire service)","Owner (car hire service)","Owner (caravan hire service)","Owner
+        (chiropody practice)","Owner (cleaning services)","Owner (contract cleaning
+        services)","Owner (dating agency)","Owner (design consultancy)","Owner (domestic
+        appliances repairing)","Owner (dry cleaning service)","Owner (employment agency)","Owner
+        (fairground stall)","Owner (funeral directors)","Owner (garden machinery repairing)","Owner
+        (home care service)","Owner (launderette)","Owner (laundry)","Owner (management
+        consultancy)","Owner (marquee hire service)","Owner (newspaper)","Owner (pet
+        crematorium)","Owner (photographic agency)","Owner (plant machinery repairing)","Owner
+        (printers)","Owner (radio, television, video servicing)","Owner (recording
+        studio)","Owner (recruitment agency)","Owner (school: driving)","Owner (school:
+        flying)","Owner (shoe repairing)","Owner (soft furnishings mfr)","Owner (taxi
+        service)","Owner (theatrical agency)","Owner (ticket agents)","Owner (vehicle
+        hire service)","Owner (video shop)","Owner-publisher","Publisher","Retailer
+        (video shop)","Shopkeeper (laundry, launderette, dry cleaning)","Shopkeeper
+        (video shop)","Superintendent, market"]},{"soc":3565,"title":"Inspectors of
+        standards and regulations","description":"Inspectors of standards and regulations
         undertake investigations and inspections to verify and ensure compliance with
         acts, regulations and other requirements in respect of: buildings; weights,
         measures and trade descriptions; the installation and safety of electrical,
@@ -541,7 +1009,72 @@ http_interactions:
         illegal fishing;\n visits premises where animals are kept, advises on animal
         care and investigates complaints;\n undertakes other inspections including
         chemicals, drugs, flight operations, etc.;\n prepares reports and recommendations
-        on all inspections made and recommends legal action where necessary."},{"soc":3563,"title":"Vocational
+        on all inspections made and recommends legal action where necessary.","add_titles":["Adviser,
+        consumer (local government: trading standards)","Adviser, relations, race","Bailiff,
+        river","Bailiff, water","Controller, building (local government)","Examiner,
+        driving","Examiner, flight","Examiner, traffic (DETR)","Examiner, traffic
+        and driving (DETR)","Examiner, vehicle (DETR)","HMFI","Inspector, agricultural","Inspector,
+        alkali","Inspector, bank","Inspector, building","Inspector, chemical","Inspector,
+        chief (banking)","Inspector, chief (local government)","Inspector, chief (railways)","Inspector,
+        chief (water company)","Inspector, coal (coal mine: opencast)","Inspector,
+        control, building","Inspector, control, quality (river, water authority)","Inspector,
+        crane","Inspector, depot, chief (transport)","Inspector, district (gas supplier)","Inspector,
+        divisional (local government)","Inspector, divisional (transport)","Inspector,
+        drug","Inspector, effluent","Inspector, electrical (coal mine)","Inspector,
+        electrical (government)","Inspector, electrical and mechanical (coal mine)","Inspector,
+        explosives","Inspector, fire","Inspector, fisheries (DEFRA)","Inspector, fisheries
+        (Environment Agency)","Inspector, fishery","Inspector, fitting (gas supplier)","Inspector,
+        fitting (water company)","Inspector, fittings (gas supplier)","Inspector,
+        fittings (water company)","Inspector, fuel (local government)","Inspector,
+        gaming (gaming club)","Inspector, gas","Inspector, health, animal","Inspector,
+        health and safety","Inspector, hotel","Inspector, houses, public","Inspector,
+        housing","Inspector, housing and planning","Inspector, hygiene, meat","Inspector,
+        industrial (gas supplier)","Inspector, installation (electricity supplier)","Inspector,
+        installation (gas supplier)","Inspector, insurance, national","Inspector,
+        lift (DETR)","Inspector, lighting, public","Inspector, livestock, area","Inspector,
+        machine (docks: weighing machines)","Inspector, machine (railways, weighing
+        machines)","Inspector, maintenance (gas supplier)","Inspector, market (local
+        government)","Inspector, markets (local government)","Inspector, material","Inspector,
+        materials","Inspector, meat, authorised","Inspector, meat","Inspector, mines","Inspector,
+        NRSWA","Inspector, operations, flight","Inspector, planning","Inspector, plumbing","Inspector,
+        pollution (river, water authority)","Inspector, portal (DARD)","Inspector,
+        refuse","Inspector, reinstatement (gas supplier)","Inspector, river (river,
+        water authority)","Inspector, RSPCA","Inspector, safety (coal mine)","Inspector,
+        service (gas supplier)","Inspector, site (construction)","Inspector, SSPCA","Inspector,
+        standards, nuclear","Inspector, street (electricity supplier)","Inspector,
+        telecommunications","Inspector, traffic, chief (PO)","Inspector, traffic,
+        chief (telecommunications)","Inspector, value, best (local government)","Inspector,
+        vehicle (government)","Inspector, VOSA","Inspector, wages","Inspector, water,
+        chief","Inspector, water","Inspector, works, public (local government)","Inspector,
+        works, street","Inspector (banking)","Inspector (brewery)","Inspector (casino)","Inspector
+        (coal mine: opencast)","Inspector (Dept for Business Innovation and Skills)","Inspector
+        (electricity supplier)","Inspector (Environment Agency)","Inspector (gas supplier)","Inspector
+        (government: Accident Investigation Branch)","Inspector (government: DETR)","Inspector
+        (government: Maritime and Coastguard Agency)","Inspector (government: Planning
+        Inspectorate)","Inspector (government: Railway Inspectorate)","Inspector (local
+        government: works dept)","Inspector (local government)","Inspector (mine:
+        not coal)","Inspector (NHBRC)","Inspector (NSPCC)","Inspector (RSPCA)","Inspector
+        (water company)","Inspector of accidents (Board of Trade)","Inspector of factories
+        (government)","Inspector of fair trading","Inspector of health and safety","Inspector
+        of mines (Dept for Business Innovation and Skills)","Inspector of postal services","Inspector
+        of shipping","Inspector of special subjects","Inspector of trading standards","Inspector
+        of weights and measures","Inspector of works","Investigator, licence, television","Manager,
+        standards, trading","Officer, chief (local government: weights and measures
+        dept)","Officer, control, building","Officer, control, pollution","Officer,
+        district (river, water authority)","Officer, effluent (water company, sewage
+        works)","Officer, enforcement, standards, trading","Officer, enforcement (local
+        government: trading standards)","Officer, enforcement (local government: transport)","Officer,
+        field (DEFRA)","Officer, fisheries","Officer, fishery","Officer, health, animal","Officer,
+        improvements (local government)","Officer, inspecting (DETR)","Officer, investigating
+        (DETR)","Officer, investigation (DETR)","Officer, Licensing (local government)","Officer,
+        livestock","Officer, markets (DEFRA)","Officer, pollution (water company)","Officer,
+        protection, child, NSPCC","Officer, protection, consumer","Officer, quality,
+        water","Officer, regional (RSPCA)","Officer, relations, race","Officer, repairs
+        (local government)","Officer, RSPCA","Officer, service, carcass","Officer,
+        standards, driving","Officer, standards, trading","Officer, trading, fair","Superintendent
+        (RSPCA)","Supervisor, planning  (construction)","Surveyor, control, building","Surveyor,
+        Lloyd''s","Surveyor, ship","Technician, health, environmental","Tester, gear,
+        chain and suspension","Tester, vehicle (DETR)","Worker, advice, rights, consumer"]},{"soc":3563,"title":"Vocational
         and industrial trainers and instructors","description":"Vocational and industrial
         trainers provide instruction in manual, manipulative and other vocational
         skills and advise on, plan and organise vocational instruction within industrial,
@@ -557,176 +1090,30 @@ http_interactions:
         visits for trainees;\n plans curriculum and rota of staff duties and updates
         or amends them in light of developments;\n advises on training programmes
         and discusses progress or problems with staff and trainees;\n devises general
-        and specialised training courses in response to particular needs."},{"soc":3213,"title":"Paramedics","description":"Paramedics
-        provide first aid and life support treatment in emergency situations and transport
-        sick and injured people who require skilled treatment.","qualifications":"Entry
-        is via a student paramedic position with an ambulance service trust or completion
-        of an approved full-time university course in paramedical science. Qualification
-        requirements for entry to university courses vary (GCSEs, A levels or equivalent).
-        A full, manual driving licence (with appropriate classifications) is required.
-        Paramedics working in the NHS must be registered with the Health Professions
-        Council.","tasks":" drives ambulance or accompanies driver to respond to calls
-        for assistance at accidents, emergencies and other incidents;\n assesses the
-        nature of injuries, provides first aid treatment and ascertains appropriate
-        method of conveying patient;\n resuscitates and/or stabilises patient using
-        relevant techniques, equipment and drugs;\n transports and accompanies patients
-        who either require or potentially require skilled treatment whilst travelling;\n
-        briefs other medical staff when handing over the patient, and completes patient
-        report forms describing the patient\u2019s condition and any treatment provided."},{"soc":7123,"title":"Roundspersons
-        and van salespersons","description":"Roundspersons and van salespersons deliver
-        and sell food, drink and other goods by calling on householders or by selling
-        from a mobile shop or van and call on households to collect and receive payment
-        for laundered or similarly serviced articles.","qualifications":"No academic
-        qualifications are required but candidates should hold a clean driving licence.
-        Off- and on-the-job training is provided.","tasks":" loads vehicle with food,
-        drink, or articles that have been laundered, etc.;\n drives vehicle over established
-        route and parks at recognised stopping places or households;\n calls at customers\u2019
-        premises and delivers ordered goods;\n calls out, rings bell or otherwise
-        attracts attention to the items on sale;\n sells goods, records deliveries,
-        takes further orders or articles requiring servicing and collects cash or
-        prepares bill;\n returns to depot and hands in unsold goods and cash."},{"soc":3311,"title":"NCOs
-        and other ranks","description":"Those holding jobs in this unit group are
-        full-time members of the armed forces of the UK, the Commonwealth and other
-        foreign countries and perform military duties for which there is no civilian
-        equivalent.","qualifications":"For most positions entry does not depend upon
-        academic qualifications. Entrants generally have to pass a selection interview
-        and physical and medical examinations. Entry to certain trades requires GCSEs/S
-        grades or equivalent qualifications.","tasks":" receives and responds to commands
-        from senior officers;\n monitors, operates, services and repairs military
-        equipment;\n takes part in military operations in situations of conflict and
-        provides aid if required in emergency situations such as civil disorder, natural
-        disasters and major accidents;\n engages in peacekeeping operations and enforces
-        ceasefire agreements;\n stands watch and guards military establishments and
-        other buildings;\n trains and exercises using various military equipment and
-        tactics;\n undertakes specialist activities such as operating communications
-        equipment, driving military vehicles;\n patrols areas of possible military
-        activity;\n leads and trains new recruits and lower ranks, looks after their
-        discipline and welfare."},{"soc":5231,"title":"Vehicle technicians, mechanics
-        and electricians","description":"Vehicle technicians, mechanics and electricians
-        accept calls for help and repair and service the mechanical parts and electrical/electronic
-        circuitry and components of cars, lorries, buses, motorcycles and other motor
-        vehicles, and repair and service auto air-conditioning systems.","qualifications":"There
-        are no formal academic entry requirements, although some employers may require
-        GCSEs/S grades or an equivalent qualification. Training is undertaken off-
-        and on-the-job. NVQs/SVQs at Levels 2 and 3 are available. Apprenticeships
-        at NVQ/SVQ Levels 2 and 3 are available and take three to four years to complete.","tasks":"
-        visually checks, test drives or uses test equipment to diagnose engine and
-        mechanical faults;\n removes, dismantles, repairs and replaces defective parts
-        and prepares new parts using appropriate tools;\n reassembles, tests, adjusts
-        and tunes the appropriate parts, systems or entire engine;\n carries out routine
-        maintenance checks on oil and air filters, brakes and other vehicle parts/systems;\n
-        diagnoses faults in electrical/electronic circuitry, removes faulty components
-        and fits replacements;\n checks condition of electrical/electronic systems
-        and carries out servicing tasks;\n installs additional electrical amenities
-        such as radio/CD players, aerials;\n repairs and services air conditioning,
-        heating and engine-cooling systems."},{"soc":6215,"title":"Rail travel assistants","description":"Rail
-        travel assistants issue, collect and inspect travel tickets, provide information
-        and assistance to railway passengers, operate train doors, and perform a variety
-        of duties on station platforms in connection with the arrival and departure
-        of trains and the movement of goods and passengers, and on trains to ensure
-        the safety and comfort of passengers.","qualifications":"There are no formal
-        academic entry requirements, although entrants are required to take a medical
-        examination and have normal colour vision. Training is provided off- and on-the-job.
-        NVQs/SVQs in Rail Transport (Passenger) are available at Level 2.","tasks":"
-        examines and collects tickets at the ticket barrier of a railway station;\n
-        helps with passenger enquiries and makes announcements over a public address
-        system at stations;\n loads and unloads mail, goods and luggage, operates
-        lifts and hoists and drives small trucks;\n assists passengers with special
-        needs to board and leave trains;\n attends to the safety, welfare and comfort
-        of passengers on trains and manages train crew;\n checks control panel operation
-        before start of journey, operates train door controls and signals to driver
-        to start or stop train;\n inspects and issues tickets on trains, deals with
-        passenger enquiries, and takes charge of goods being transported on train."},{"soc":7115,"title":"Vehicle
-        and parts salespersons and advisers","description":"Vehicle and parts salespersons
-        and advisers sell new and used vehicles to the general public, and vehicle
-        accessories and parts to garages, vehicle dealerships and the general public.","qualifications":"There
-        are no formal academic requirements for entry but some employers may ask for
-        GCSEs and/or some previous relevant work experience. Apprenticeships may be
-        available in some areas. Vehicle salespersons generally require a full, clean
-        driving licence.","tasks":" discusses customer\u2019s requirements, advises
-        on most appropriate vehicle, explains its features and arranges test drive;\n
-        negotiates sale price including any \u2018trade-in\u2019 and extra accessories,
-        works out finance arrangements and completes sales paperwork;\n carries out
-        pre-delivery inspection and formal hand-over of vehicle to customer;\n updates
-        stock record, orders new vehicles from manufacturer, buys in used cars;\n
-        receives orders for parts by phone, email or in person and checks availability
-        on stock record;\n obtains parts from store or orders from suppliers;\n organises
-        delivery of parts and handles payment;\n orders new supplies, arranges storage
-        and updates stock records."},{"soc":8124,"title":"Energy plant operatives","description":"Job
-        holders in this unit group operate boilers to produce hot water or steam and
-        attend and operate compressors, turbines, electrical substations, switchboards
-        and auxiliary plant and machinery to fuel nuclear reactors, drive blowers
-        and pumps, electricity generators and other equipment.","qualifications":"There
-        are no formal academic entry requirements. Training is typically by apprenticeship,
-        incorporating technical training and practical experience. NVQs/ SVQs in Maintaining
-        Electricity Generating Systems are available at Levels 2 and 3.","tasks":"
-        determines job requirements from switchboard attendant or operating instructions;\n
-        opens valves and operates controls to regulate the flow of fuel to boiler
-        or generating equipment;\n operates remote control panel to load fuel and
-        remove discharged fuel elements from nuclear reactors;\n adjusts controls
-        to maintain correct running speed of turbine or generator and monitors temperature
-        and pressure controls on boilers;\n records instrument readings periodically
-        and shuts down turbine/generator or boiler as demand decreases;\n carries
-        out minor maintenance tasks and prescribed tests and reports any faults."},{"soc":8231,"title":"Train
-        and tram drivers","description":"Job holders in this unit group drive diesel,
-        diesel-electric, electric and steam locomotives that transport passengers
-        and goods on surface and underground railways, and transport passengers in
-        trams.","qualifications":"There are no formal academic requirements. Entrants
-        must pass a series of tests and a medical examination. Age restrictions apply
-        in some areas of work. Good hearing, good eyesight and normal colour vision
-        are required. Off- and on-the-job training is provided. NVQs/SVQs are available
-        at Level 2.","tasks":" checks controls, gauges, brakes and lights before start
-        of journey and studies route, timetable and track information;\n checks safety
-        equipment, regulates the heating of passenger compartments and records engine
-        defects or unusual incidents on the journey;\n starts train or tram when directed
-        and operates controls to regulate speed;\n watches for track hazards, observes
-        signals and temperature, pressure and other gauges;\n stops as directed to
-        allow passengers to embark/ disembark;\n makes scheduled stops for the loading
-        and unloading of freight and coupling/uncoupling of carriages and tubs;\n
-        maintains radio contact with control centre;\n may make passenger announcements
-        and controls automatic doors;\n may check travel passes, collect fares and
-        deal with passenger queries."},{"soc":8234,"title":"Rail transport operatives","description":"Rail
-        transport operatives assist drivers in the operation of passenger and goods
-        trains, drive locomotive engines in coal mines, guide wagons and coaches in
-        marshalling yards and sidings to make up trains, operate signals and points
-        to control the movement of rail traffic, and monitor the operation of surface
-        and underground railways.","qualifications":"There are no formal academic
-        entry requirements. Candidates may be required to have good hearing, eyesight,
-        and normal colour vision and pass a medical examination for entry to some
-        posts. Training is initially undertaken in training centres, followed by practical
-        experience on-the-job. NVQs/ SVQs in Rail Transport Operations are available
-        at Level 2.","tasks":" provides crews for breakdown trains, allocates relief
-        and replacement crews as necessary, keeps crews informed of any line repairs
-        or restrictions, and checks train running times for punctuality;\n examines
-        schedules and decides priority of movement of trains, monitors movement of
-        trains and issues instructions to drivers, signal operatives and level crossing
-        keepers;\n operates signals and opens and closes barriers at level crossings
-        as required;\n examines shunting instructions, uncouples wagons and coaches,
-        guides movement of carriages using manual points and wagon breaks, links-up
-        carriages, ensures security of couplings and reconnects brake and heating
-        systems;\n assists drivers in the operation of diesel, diesel-electric, electric
-        and steam locomotives;\n checks loading of tubs and carriages, and informs
-        driver of load distribution and any special features of route."},{"soc":8239,"title":"Other
-        drivers and transport operatives n.e.c.","description":"Jobholders in this
-        unit group monitor the activities of bus drivers, conductors and other road
-        transport depot drivers, undertake various tasks related to water transportation,
-        and perform other transportation tasks not elsewhere classified in MINOR GROUP
-        823: Other Drivers and Transport Operatives.","qualifications":"There are
-        no formal academic entry requirements. Training is provided both off- and
-        on-the-job. NVQs/SVQs in Organising Road Transport Operations and Marine Operations
-        are available at Level 2.","tasks":" checks that vehicles run as scheduled,
-        monitors number of passengers travelling particular routes and makes recommendations
-        for improvement of services;\n organises relief and replacement crews as necessary,
-        ensures compliance with regulations regarding the carrying of passengers and
-        luggage, and submits reports of any irregularities;\n checks that goods have
-        been correctly loaded into vehicle, monitors and records information from
-        tachograph, and arranges for servicing, refuelling, cleaning and repair of
-        depot vehicles;\n operates and maintains lighthouses and navigational lights
-        in harbours, and assists in mooring craft;\n operates and maintains locks,
-        opens and closes moving bridges across inland waterways and docks, and measures
-        depth of water in canals, rivers, etc. to determine possible dumping or dredging
-        sites;\n guides horses or ponies and drives horse drawn vehicles to transport
-        goods and passengers."}]'
+        and specialised training courses in response to particular needs.","add_titles":["Adviser,
+        development, employee","Adviser, development, training","Adviser, training","Agent,
+        training","Analyst, training","Assessor, competency","Assessor, driving","Assessor,
+        NVQ","Assessor, training","Associate, training","Coach, executive","Coach,
+        technical","Consultant, development, training","Consultant, scheme (training)","Consultant,
+        training","Coordinator, course, training","Coordinator, TEC","Coordinator,
+        training","Instructor, apprentice","Instructor, civilian (government)","Instructor,
+        computer","Instructor, craft","Instructor, craftsman, apprentice (coal mine)","Instructor,
+        cycling","Instructor, handicraft","Instructor, handicrafts","Instructor, manual","Instructor,
+        prison","Instructor, supervising","Instructor, technical","Instructor, trainee","Instructor,
+        training","Instructor (apprentice school)","Instructor (coal mine)","Instructor
+        (learning disabilities adult training)","Instructor (training establishment)","Instructor
+        (training provider)","Lecturer (industrial training)","Manager, NVQ","Manager,
+        training","Manager, training and development","Officer, development, staff","Officer,
+        development, training","Officer, development, youth","Officer, instructional","Officer,
+        safety and training (coal mine: above ground)","Officer, service, training","Officer,
+        support, web (further, higher education)","Officer, training, colliery","Officer,
+        training, sales","Officer, training","Officer, training and development","Officer,
+        training and education","Provider, training","Specialist, training","Superintendent
+        (apprenticeship)","Supervisor, apprenticeship","Supervisor, trainee (coal
+        mine)","Supervisor, training","Supervisor (training)","Supervisor-instructor
+        (government)","Teacher, sales","Trainer, computer","Trainer, industrial","Trainer,
+        IT","Trainer, software","Trainer, staff","Trainer, technical","Trainer, technology,
+        information","Trainer","Trainer-assessor"]}]'
     http_version: 
-  recorded_at: Thu, 16 Jun 2016 10:30:44 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Mon, 20 Feb 2017 11:19:18 GMT
+recorded_with: VCR 3.0.3
