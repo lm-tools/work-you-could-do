@@ -19,7 +19,7 @@ class LmiForAll
     lmi_occupation = @lmi_client.soc_code_lookup(soc_code)
     {
       soc_code: soc_code,
-      week_hours: @lmi_client.hours_lookup(soc_code),
+      week_hours: @lmi_client.hours_lookup(soc_code)["series"][0]["hours"],
       week_pay: @lmi_client.pay_lookup(soc_code),
     }.merge(formatted_lmi_occupation(lmi_occupation))
   end
