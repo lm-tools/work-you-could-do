@@ -8,6 +8,11 @@ describe LmiForAll do
   let(:lmi_for_all) { described_class.new(lmi_client) }
 
   describe "#lookup" do
+    let(:title) { "Occupation title" }
+    let(:description) { "Occupation description" }
+    let(:tasks) { "Occupation tasks" }
+    let(:qualifications) { "Occupation qualifications" }
+
     let(:soc_code_details) do
       {
         title: title,
@@ -18,11 +23,14 @@ describe LmiForAll do
       }
     end
     let(:hours_details) { double(:hours_details) }
+    let(:hours_details_response) do
+      { series: [{ hours: hours_details }] }
+    end
     let(:pay_details) { double(:pay_details) }
-    let(:title) { "Occupation title" }
-    let(:description) { "Occupation description" }
-    let(:tasks) { "Occupation tasks" }
-    let(:qualifications) { "Occupation qualifications" }
+    let(:pay_details_response) do
+      { series: [{ estpay: pay_details }] }
+    end
+
     let(:additional_titles) do
       [title_too_short] + [title_with_parenthesis] + [valid_title] * 30
     end
@@ -32,8 +40,10 @@ describe LmiForAll do
     let(:soc_code) { double(:soc_code) }
 
     before do
-      allow(lmi_client).to receive(:hours_lookup) { hours_details }
-      allow(lmi_client).to receive(:pay_lookup) { pay_details }
+      allow(lmi_client).to \
+        receive(:hours_lookup) { hours_details_response.deep_stringify_keys }
+      allow(lmi_client).to \
+        receive(:pay_lookup) { pay_details_response.deep_stringify_keys }
       allow(lmi_client).to \
         receive(:soc_code_lookup) { soc_code_details.deep_stringify_keys }
     end
