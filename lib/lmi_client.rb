@@ -16,7 +16,7 @@ class LmiClient
   def pay_lookup(soc_code)
     self.class.get(
       "/ashe/estimatePay?soc=#{soc_code}&coarse=true"
-    )["series"][0]["estpay"]
+    )
   end
 
   def soc_code_lookup(soc_code)

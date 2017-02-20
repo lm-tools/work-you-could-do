@@ -27,6 +27,9 @@ describe LmiForAll do
       {series:[{hours: hours_details}]}
     end
     let(:pay_details) { double(:pay_details) }
+    let(:pay_details_response) do
+      {series:[{estpay: pay_details}]}
+    end
 
     let(:additional_titles) do
       [title_too_short] + [title_with_parenthesis] + [valid_title] * 30
@@ -38,7 +41,7 @@ describe LmiForAll do
 
     before do
       allow(lmi_client).to receive(:hours_lookup) { hours_details_response.deep_stringify_keys }
-      allow(lmi_client).to receive(:pay_lookup) { pay_details }
+      allow(lmi_client).to receive(:pay_lookup) { pay_details_response.deep_stringify_keys }
       allow(lmi_client).to \
         receive(:soc_code_lookup) { soc_code_details.deep_stringify_keys }
     end
