@@ -80,6 +80,21 @@ $ RAILS_RELATIVE_URL_ROOT=/work-you-could-do bin/rails server
 **Note!** [Spring] does not reload the application when environment variables
 change, so use this in development with caution.
 
+
+## Run application on production
+
+Application requires this environment variables to be set:
+
+* `RAILS_RELATIVE_URL_ROOT`, i.e. /work-you-could-do
+* `DATABASE_URL`
+* `RAILS_ENV = production`
+* `RACK_ENV = production`
+* `RAILS_DB_POOL_SIZE`, i.e. `2`
+* `SECRET_KEY_BASE`
+* `GOOGLE_TAG_MANAGER_ID`
+* `LMI_SECRET_KEY`
+* `LMI_KEY_ID`
+
 ## Run locally in Docker containers
 
 Currently this is intended for validation of the Dockerfile only, developing
