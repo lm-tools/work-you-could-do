@@ -2,35 +2,37 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=
+    uri: https://api.lmiforall.org.uk/api/v1/soc/search?q=check_authentication
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="TecGh7WY3nK+awh3/KEW1b74yrg="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="WjCOb26fRYZzvhtlSh8fwJPLxHg="
       Date:
-      - Mon, 20 Feb 2017 14:20:06 GMT
+      - Mon, 20 Feb 2017 16:19:50 GMT
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 14:20:06 GMT
+      - Mon, 20 Feb 2017 16:19:50 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '47'
+      - '2'
       Connection:
       - keep-alive
       X-Auth-Type:
       - HMAC
+      Access-Control-Allow-Origin:
+      - "*"
     body:
       encoding: UTF-8
-      string: '{"error":"Please give a string to search for."}'
+      string: "[]"
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 14:20:06 GMT
+  recorded_at: Mon, 20 Feb 2017 16:19:50 GMT
 recorded_with: VCR 3.0.3
