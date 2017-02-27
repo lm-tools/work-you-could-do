@@ -3,6 +3,7 @@ cache:
   - bundler
 env:
   - DATABASE_URL=postgres://postgres@localhost
+  - VCR_OFF=true DATABASE_URL=postgres://postgres@localhost
 before_script:
   - bin/setup RAILS_ENV=test
 script:
