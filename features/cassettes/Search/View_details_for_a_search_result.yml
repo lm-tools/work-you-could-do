@@ -8,9 +8,9 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="9+b7sbeNweJme5KkvZDdZrzW/yA="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="YgTLoGvPihEEyrytJKl95uLZZRE="
       Date:
-      - Mon, 20 Feb 2017 14:23:34 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
   response:
     status:
       code: 200
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 14:23:34 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -41,14 +41,14 @@ http_interactions:
         sorts, catalogues and maintains library records;\n locates and retrieves material
         on request for borrowers;\n issues library material and records date of issue/
         due date for return;\n classifies, labels and indexes new books;\n performs
-        simple repairs on old books.","add_titles":["Abstractor (press cuttings)","Agent,
-        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
-        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
-        information (educational establishments)","Assistant, information (library)","Assistant,
-        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
-        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
-        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
-        (press cutting agency)","Supervisor, library"]},{"soc":2451,"title":"Librarians","description":"Librarians
+        simple repairs on old books.","add_titles":["Assistant (library)","Assistant,
+        library","Assistant, clerical (library)","Assistant, services, bibliographic","Supervisor,
+        library","Looker-out, book","Assistant, chief (library)","Assistant, information
+        (educational establishments)","Abstractor","Clerk, library","Reader (press
+        cutting agency)","Clerk (library)","Assistant, bibliographic","Assistant,
+        counter (library)","Agent, cutting, press","Clerk, cuttings, press","Assistant,
+        resource, learning","Assistant, archives","Attendant, library","Assistant,
+        information (library)","Clipper, press (press cutting agency)"]},{"soc":2451,"title":"Librarians","description":"Librarians
         appraise, obtain, index, collate and make available library acquisitions and
         organise and control other library services.","qualifications":"Entry will
         normally require an accredited degree or postgraduate qualification. Most
@@ -63,15 +63,15 @@ http_interactions:
         up to date records;\n manages library borrowing and inter-library loan facilities;\n
         promotes library services through displays and talks\n provides learning and
         cultural experiences through events such as author talks, reading groups,
-        formal and informal teaching.","add_titles":["Librarian, branch","Librarian,
-        chartered","Librarian, film","Librarian, hospital","Librarian, magazine","Librarian,
-        media","Librarian, newspaper","Librarian, picture","Librarian, tape, computer","Librarian,
-        tape, magnetic","Librarian, technical","Librarian, university","Librarian,
-        visual, audio","Librarian","Manager, resource, learning","Scientist, information","Superintendent
-        (library)"]},{"soc":1259,"title":"Managers and proprietors in other services
-        n.e.c.","description":"Job holders in this unit group perform a variety of
-        managerial tasks in other service industries not elsewhere classified in MINOR
-        GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
+        formal and informal teaching.","add_titles":["Librarian, film","Librarian,
+        tape, magnetic","Librarian, visual, audio","Librarian, magazine","Librarian,
+        branch","Librarian, media","Librarian, tape, computer","Librarian, university","Manager,
+        resource, learning","Superintendent (library)","Librarian, technical","Librarian,
+        picture","Librarian, newspaper","Librarian","Librarian, hospital","Librarian,
+        chartered","Scientist, information"]},{"soc":1259,"title":"Managers and proprietors
+        in other services n.e.c.","description":"Job holders in this unit group perform
+        a variety of managerial tasks in other service industries not elsewhere classified
+        in MINOR GROUP 125: Managers and Proprietors in Other Services.","qualifications":"Entry
         requirements vary according to the particular company and/or service. Some
         companies do not require candidates to have academic qualifications but others
         require a degree or equivalent qualification. Off- and on-the-job training
@@ -82,98 +82,102 @@ http_interactions:
         quality of merchandise and ensures that effective use is made of advertising
         and display facilities;\n manages agencies to provide services out-sourced
         by other organisations and businesses;\n ensures maintenance of appropriate
-        service levels to meet the objectives of the business.","add_titles":["Director,
-        health and safety","Director, publishing","Director (children''s nursery)","Director
-        (commission agents)","Director (educational establishments)","Director (employment
-        agency: private)","Director (environmental consultancy)","Director (management
-        consultancy)","Director (private detective agency)","Director (security services)","Keeper,
-        laundry","Manager, architect","Manager, architecture","Manager, bookmaker''s","Manager,
-        branch (radio, television and video hire)","Manager, branch (car hire)","Manager,
-        branch (library)","Manager, cemeteries","Manager, cemetery","Manager, centre,
-        assessment","Manager, centre, hire","Manager, centre, skills","Manager, centre,
-        training","Manager, crematorium","Manager, design, graphic","Manager, experience,
-        customer","Manager, furnishing","Manager, general (theatrical productions)","Manager,
-        health and safety","Manager, hire, equipment","Manager, hire, plant","Manager,
-        hire, skip","Manager, hire, television and video, radio","Manager, hire, tool","Manager,
-        hygiene","Manager, launderette","Manager, laundry","Manager, library","Manager,
-        office, betting","Manager, office (bookmakers, turf accountants)","Manager,
-        operations (cleaning services)","Manager, operations (plant hire)","Manager,
-        operations (recruitment agency)","Manager, park, car","Manager, parking","Manager,
-        plant (hire service)","Manager, production, theatrical","Manager, production,
-        video","Manager, production (entertainment)","Manager, production (broadcasting)","Manager,
-        production (film, television production)","Manager, publisher''s","Manager,
-        radio, television and video","Manager, rental, vehicle","Manager, retail (betting
-        shop)","Manager, rig","Manager, safety, community","Manager, safety","Manager,
-        safety and hygiene","Manager, service, advice","Manager, service, crane","Manager,
-        service, rental","Manager, service, valet, car","Manager, service (motoring
-        organisation)","Manager, services, parking","Manager, services, student","Manager,
-        shift (recruitment agency)","Manager, shop, betting","Manager, shop, hire","Manager,
-        shop, video","Manager, shop (bookmakers, turf accountants)","Manager, shop
-        (dyeing and cleaning)","Manager, shop (laundry receiving shop)","Manager,
-        shop (radio, television, video hire)","Manager, site (cleaning services)","Manager,
-        studio, design","Manager, studio (printing)","Manager, tour (entertainment)","Manager,
-        touring (entertainment)","Manager, tourism","Manager (radio, television and
-        video hire)","Manager (architectural service)","Manager (betting and gambling)","Manager
-        (bookmakers, turf accountants)","Manager (car hire)","Manager (car park)","Manager
-        (car wash, valeting)","Manager (Citizens Advice Bureau)","Manager (dating
-        agency)","Manager (driving school)","Manager (flying school)","Manager (funeral
-        directors)","Manager (hire shop)","Manager (laundry, launderette, dry cleaning)","Manager
-        (library)","Manager (machinery hire)","Manager (photographic studios)","Manager
-        (plant hire)","Manager (recruitment agency)","Manager (repairing: consumer
-        goods)","Manager (retail trade: video shop)","Manager (safe deposit)","Manager
-        (television: transmission station)","Manager (theatrical agency)","Manager
-        (ticket agency)","Manager (typewriting agency)","Manager (video shop)","Manager
-        and Registrar (cemetery)","Manager and Registrar (crematorium)","Owner, agency,
-        employment","Owner, agency, ticket","Owner, company, taxi","Owner, gallery,
-        art","Owner, hire, plant","Owner, launderette","Owner, school, driving","Owner,
-        service, cab","Owner, service, taxi","Owner, shop, betting","Owner, shop,
-        video","Owner, studio, photographic","Owner (alarm, security installation)","Owner
-        (art gallery)","Owner (boat: pleasure cruise)","Owner (boat: pleasure hire)","Owner
-        (cab hire service)","Owner (car hire service)","Owner (caravan hire service)","Owner
-        (chiropody practice)","Owner (cleaning services)","Owner (contract cleaning
-        services)","Owner (dating agency)","Owner (design consultancy)","Owner (domestic
-        appliances repairing)","Owner (dry cleaning service)","Owner (employment agency)","Owner
-        (fairground stall)","Owner (funeral directors)","Owner (garden machinery repairing)","Owner
-        (home care service)","Owner (launderette)","Owner (laundry)","Owner (management
-        consultancy)","Owner (marquee hire service)","Owner (newspaper)","Owner (pet
-        crematorium)","Owner (photographic agency)","Owner (plant machinery repairing)","Owner
-        (printers)","Owner (radio, television, video servicing)","Owner (recording
-        studio)","Owner (recruitment agency)","Owner (school: driving)","Owner (school:
-        flying)","Owner (shoe repairing)","Owner (soft furnishings mfr)","Owner (taxi
-        service)","Owner (theatrical agency)","Owner (ticket agents)","Owner (vehicle
-        hire service)","Owner (video shop)","Owner-publisher","Publisher","Retailer
-        (video shop)","Shopkeeper (laundry, launderette, dry cleaning)","Shopkeeper
-        (video shop)","Superintendent, market"]},{"soc":9233,"title":"Cleaners and
-        domestics","description":"Cleaners and domestics clean interiors of private
-        houses, shops, hotels, schools, offices and other buildings.","qualifications":"No
-        academic qualifications are required. On-the-job training may be provided.
-        NVQs/SVQs in Cleaning: Building Interiors are available at Levels 1 and 2.","tasks":"
-        scrubs, washes, sweeps and polishes floors, corridors and stairs;\n dusts
-        and polishes furniture and fittings;\n cleans toilets and bathrooms;\n washes
-        down walls and ceilings;\n empties ashtrays, waste bins and removes rubbish.","add_titles":["Assistant,
-        bedroom (hotel)","Assistant, chalet","Assistant, domestic","Assistant, general
-        (cleaning)","Assistant, house, boarding","Assistant, household","Assistant,
-        housekeeping","Assistant, hygiene","Assistant, matron''s","Assistant, room
-        (hotel)","Assistant, services, hotel","Attendant, cleaning","Attendant, room,
-        hotel","Attendant, room (hotel)","Bedder (college)","Carer, domestic","Chambermaid","Chambermaid-housekeeper","Charlady","Charwoman","Cleaner,
-        bank","Cleaner, bar (catering)","Cleaner, berth","Cleaner, canteen","Cleaner,
-        church","Cleaner, closet","Cleaner, domestic","Cleaner, floor","Cleaner, general","Cleaner,
-        hospital","Cleaner, house","Cleaner, kiosk, telephone","Cleaner, kitchen","Cleaner,
-        library","Cleaner, night","Cleaner, office","Cleaner, room, mess","Cleaner,
-        room, show","Cleaner, school","Cleaner, shop","Cleaner, station (railways)","Cleaner,
-        telephone","Cleaner, warehouse","Cleaner, workshop","Cleaner, yard","Cleaner","Cleaner-doorman","Closer,
-        night (fast food outlet)","Contractor, cleaning","Controller, hygiene","Domestic","Engineer,
-        domestic","Hand, general (hotel)","Help, daily","Help, domestic","Help, home","Help
-        (domestic service)","Helper, domestic","Housemaid","Houseman, school","Houseman
-        (domestic service)","Houseman (hotel)","Lady, cleaning","Maid, chalet","Maid,
-        chamber","Maid, house","Maid, room","Maid, ward","Maid","Maidservant","Maker,
-        bed (hospital service)","Maker, bed (residential home)","Maker, bed (school,
-        university)","Man, cabin (mine: not coal)","Operative, domestic","Operator,
-        service (cleaning)","Operator, sterilizer, telephone","Orderly, domestic (hospital
-        service)","Parlourmaid","Parlourman","Polisher, floor","Porter-cleaner","Scout
-        (college)","Servant, college","Servant, daily","Servant, domestic","Servant","Steriliser
-        (telephone sterilising service)","Steward, house","Sweeper, tube","Sweeper","Sweeper-up","Technician,
-        cleaning","Worker, domestic","Worker, house (domestic service)"]},{"soc":8211,"title":"Large
+        service levels to meet the objectives of the business.","add_titles":["Manager,
+        service (library)","Owner (laundry)","Manager, centre, skills","Owner (soft
+        furnishings mfr)","Manager, production (publishing)","Owner (pet crematorium)","Director
+        (children''s nursery)","Manager, tour","Manager, safety and hygiene","Manager,
+        DVS","Manager (plant hire)","Owner (funeral directors)","Manager (architectural
+        service)","Manager, service, rental","Manager, retail (betting shop)","Manager
+        (laundry, launderette, dry cleaning)","Owner (chiropody practice)","Manager,
+        shop, hire","Manager, shift (recruitment agency)","Owner (recruitment agency)","Manager
+        (driving school)","Manager, touring","Manager, architect","Owner (garden machinery
+        repairing)","Owner (employment agency)","Manager, services, violence, domestic","Manager
+        (television: transmission station)","Manager (typewriting agency)","Manager,
+        service (cleaning services)","Manager (car park)","Manager (betting and gambling)","Manager,
+        bookmaker''s","Manager (video shop)","Director (management consultancy)","Manager,
+        plant (hire service)","Manager, studio (printing)","Manager, hire, equipment","Manager,
+        production (broadcasting)","Manager, services, parking","Manager, shop (bookmakers,
+        turf accountants)","Manager, architecture","Manager, cemetery","Shopkeeper
+        (video shop)","Owner, service, taxi","Owner (newspaper)","Manager, radio,
+        television and video","Manager, service (Citizens Advice Bureau)","Manager
+        (retail trade: video shop)","Owner (ticket agents)","Owner (theatrical agency)","Owner
+        (school: driving)","Director (educational establishments)","Owner (management
+        consultancy)","Manager (car wash, valeting)","Manager, shop, video","Owner,
+        company, taxi","Owner, launderette","Keeper, laundry","Manager (car hire)","Manager,
+        service, advice","Manager","Manager, design, graphic","Manager, furnishing","Manager,
+        production, theatrical","Manager, centre, training","Manager, services, student","Manager,
+        branch (library)","Owner (car hire service)","Director, publishing","Owner
+        (cleaning services)","Manager, crematorium","Manager (ticket agency)","Owner
+        (art gallery)","Director (security services)","Manager, operations (plant
+        hire)","Owner (vehicle hire service)","Manager, hire, plant","Superintendent,
+        market","Manager, shop (radio, television, video hire)","Owner (taxi service)","Manager,
+        cemeteries","Manager, operations (cleaning services)","Manager, club, out
+        of school","Manager (safe deposit)","Owner (marquee hire service)","Manager,
+        publisher''s","Director, health and safety","Manager, safety","Manager (funeral
+        directors)","Owner, shop, video","Owner, studio, photographic","Manager, shop
+        (laundry receiving shop)","Manager, library","Manager, office, betting","Owner
+        (boat: pleasure cruise)","Director (environmental consultancy)","Manager,
+        service (rental services)","Owner (caravan hire service)","Owner (contract
+        cleaning services)","Manager, branch","Owner, school, driving","Manager, park,
+        car","Manager, launderette","Manager, shop, betting","Owner, hire, plant","Owner,
+        gallery, art","Manager, tourism","Manager, service, crane","Manager, service,
+        valet, car","Manager, shop (dyeing and cleaning)","Manager, hygiene","Manager
+        (theatrical agency)","Owner (cab hire service)","Owner, agency, employment","Director,
+        technical","Manager, general (theatrical productions)","Manager, site (cleaning
+        services)","Manager (bookmakers, turf accountants)","Manager, parking","Manager,
+        office (bookmakers, turf accountants)","Shopkeeper (laundry, launderette,
+        dry cleaning)","Owner (photographic agency)","Manager, safety, community","Manager,
+        branch (car hire)","Owner (design consultancy)","Retailer (video shop)","Manager,
+        rig","Owner (dry cleaning service)","Manager (hire shop)","Owner (plant machinery
+        repairing)","Manager, production","Director (commission agents)","Manager
+        (flying school)","Owner (printers)","Owner, shop, betting","Manager, production,
+        video","Manager, studio, design","Manager, centre, assessment","Owner (radio,
+        television, video servicing)","Manager, health and safety","Owner (domestic
+        appliances repairing)","Manager, production (film, television production)","Manager
+        (recruitment agency)","Director (employment agency: private)","Manager, hire,
+        television and video, radio","Owner (school: flying)","Director (private detective
+        agency)","Manager (photographic studios)","Director, technical (design consultancy)","Owner
+        (fairground stall)","Owner (dating agency)","Owner (home care service)","Manager
+        and Registrar","Manager, hire, tool","Owner (recording studio)","Owner, agency,
+        ticket","Manager (Citizens Advice Bureau)","Manager (machinery hire)","Manager,
+        experience, customer","Owner (alarm, security installation)","Manager (repairing:
+        consumer goods)","Owner (shoe repairing)","Manager, operations (recruitment
+        agency)","Owner (boat: pleasure hire)","Manager, service (motoring organisation)","Owner
+        (video shop)","Manager, laundry","Manager, rental, vehicle","Manager, store
+        (loan company)","Manager (library)","Owner, service, cab","Manager, centre,
+        hire","Owner-publisher","Owner (launderette)","Manager, hire, skip","Manager
+        (dating agency)","Publisher"]},{"soc":9233,"title":"Cleaners and domestics","description":"Cleaners
+        and domestics clean interiors of private houses, shops, hotels, schools, offices
+        and other buildings.","qualifications":"No academic qualifications are required.
+        On-the-job training may be provided. NVQs/SVQs in Cleaning: Building Interiors
+        are available at Levels 1 and 2.","tasks":" scrubs, washes, sweeps and polishes
+        floors, corridors and stairs;\n dusts and polishes furniture and fittings;\n
+        cleans toilets and bathrooms;\n washes down walls and ceilings;\n empties
+        ashtrays, waste bins and removes rubbish.","add_titles":["Bedder (college)","Maker,
+        bed (school, university)","Domestic","Help, home","Technician, cleaning","Scout
+        (college)","Cleaner, house","Housemaid","Cleaner, night","Sweeper, tube","Maid,
+        house","Servant","Cleaner, school","Cleaner, domestic","Closer, night (fast
+        food outlet)","Maid, room","Chambermaid","Cleaner, canteen","Operator, service
+        (cleaning)","Cleaner, room, show","Polisher, floor","Cleaner, yard","Cleaner,
+        telephone","Charlady","Assistant, services, hotel","Maid, chalet","Servant,
+        college","Cleaner, station (railways)","Assistant, general (cleaning)","Assistant,
+        housekeeping","Contractor, cleaning","Assistant, house, boarding","Cleaner","Maid,
+        ward","Cleaner, closet","Cleaner-doorman","Worker, house (domestic service)","Cleaner,
+        room, mess","Attendant, room (hotel)","Maker, bed (residential home)","Houseman
+        (domestic service)","Cleaner, kiosk, telephone","Helper, domestic","Porter-cleaner","Cleaner,
+        general","Assistant, bedroom (hotel)","Charwoman","Cleaner, workshop","Attendant,
+        room, hotel","Houseman (hotel)","Servant, domestic","Sweeper","Assistant,
+        matron''s","Operator, sterilizer, telephone","Maidservant","Operative, domestic","Worker,
+        domestic","Servant, daily","Maker, bed (hospital service)","Help (domestic
+        service)","Assistant, domestic","Chambermaid-housekeeper","Cleaner, office","Cleaner,
+        warehouse","Help, daily","Carer, domestic","Orderly, domestic (hospital service)","Assistant,
+        household","Sweeper-up","Hand, general (hotel)","Cleaner, bar (catering)","Cleaner,
+        floor","Parlourmaid","Help, domestic","Cleaner, church","Houseman, school","Cleaner,
+        berth","Controller, hygiene","Assistant, room (hotel)","Cleaner, kitchen","Cleaner,
+        hospital","Maid, chamber","Cleaner, library","Assistant, hygiene","Officer,
+        service, ward","Attendant, cleaning","Steward, house","Steriliser (telephone
+        sterilising service)","Man, cabin (mine: not coal)","Cleaner, shop","Lady,
+        cleaning","Engineer, domestic","Cleaner, bank","Parlourman","Assistant, chalet","Maid"]},{"soc":8211,"title":"Large
         goods vehicle drivers","description":"Large Goods Vehicle (LGV) drivers (formerly
         HGV drivers), collect, transport and deliver goods in rigid vehicles over
         7.5 tonnes, articulated lorries and lorries pulling trailers.","qualifications":"No
@@ -189,28 +193,27 @@ http_interactions:
         ensures that load is evenly distributed and safely secured;\n drives vehicle
         to destination in accordance with schedule;\n maintains records of journey
         times, mileage and hours worked;\n undertakes minor repairs and notifies supervisor
-        of any mechanical faults.","add_titles":["Carman (coal merchants)","Carrier,
-        coal","Carrier, general","Carrier, nos","Carrier, railway","Carrier (mine:
-        not coal)","Carrier (transport)","Carter, coal","Coalman (delivery)","Collector,
-        milk","Collector-driver, refuse","Contractor, cartage","Contractor, disposal,
-        waste","Contractor, haulage","Contractor, transport (road)","Contractor (transport)","Deliverer,
-        coal","Deliveryman, coal","Drayman","Driver, delivery, HGV","Driver, drop,
-        multi, hgv","Driver, dustcart","Driver, goods","Driver, haulage, motor","Driver,
-        haulage (road transport)","Driver, HGV","Driver, LGV","Driver, library, mobile","Driver,
-        loader","Driver, lorry","Driver, multi-drop, hgv","Driver, pump, concrete","Driver,
-        refuse","Driver, removal","Driver, rolley","Driver, rolly","Driver, scammell","Driver,
-        tanker","Driver, tipper","Driver, tractor (road transport)","Driver, transport","Driver,
-        transporter","Driver, truck (road transport)","Driver, vehicle, articulated","Driver,
-        vehicle, goods, large","Driver, vehicle, motor","Driver, wagon","Driver (articulated
-        lorry)","Driver (vehicles, goods transport)","Driver (local government: cleansing
-        dept)","Driver-fitter","Driver-mechanic","Hand, haulage (haulage contractor)","Hauler,
-        coal (retail trade)","Hauler, timber","Haulier, general","Haulier, timber","Haulier","Man,
-        coal (coal merchants)","Operator, transport","Owner (heavy goods vehicles
-        (HGV))","Owner-driver (haulage service)","Remover, cattle","Roundsman (coal
-        delivery)","Rullyman","Shunter, HGV","Transporter, cattle","Transporter, livestock","Truckman
-        (road transport)"]},{"soc":4113,"title":"Local government administrative occupations","description":"Job
-        holders in this unit group undertake a variety of administrative and clerical
-        duties in local government offices and departments.","qualifications":"Entry
+        of any mechanical faults.","add_titles":["Deliverer, coal","Hauler, timber","Deliveryman,
+        coal","Carrier, general","Driver, multi-drop, hgv","Driver, transport","Driver,
+        truck (road transport)","Contractor, haulage","Driver, loader","Driver, haulage,
+        motor","Driver, tractor (road transport)","Driver, HGV","Hand, haulage (haulage
+        contractor)","Transporter, cattle","Haulier, general","Drayman","Haulier,
+        timber","Driver, vehicle, motor","Carrier, nos","Driver, haulage (road transport)","Collector,
+        milk","Carrier (mine: not coal)","Driver, tanker","Coalman","Driver, library,
+        mobile","Driver, rolley","Operator, transport","Carman (coal merchants)","Owner","Contractor
+        (transport)","Driver (local government: cleansing dept)","Shunter, HGV","Transporter,
+        livestock","Driver, rolly","Driver","Driver, low-loader","Driver, tipper","Driver,
+        wagon","Truckman (road transport)","Driver, loader, low","Rullyman","Driver,
+        dustcart","Driver, vehicle, articulated","Carrier, coal","Driver, drop, multi,
+        hgv","Driver, scammell","Driver, refuse","Driver, vehicle, goods, large","Haulier","Driver,
+        delivery, HGV","Roundsman (coal delivery)","Driver, transporter","Man, coal
+        (coal merchants)","Owner-driver (haulage service)","Collector-driver, refuse","Remover,
+        cattle","Carrier, railway","Driver, pump, concrete","Contractor, cartage","Driver,
+        lorry","Driver, removal","Hauler, coal (retail trade)","Driver, LGV","Contractor,
+        disposal, waste","Carrier (transport)","Driver-fitter","Carter, coal","Driver-mechanic","Loader-driver","Driver,
+        goods","Contractor, transport"]},{"soc":4113,"title":"Local government administrative
+        occupations","description":"Job holders in this unit group undertake a variety
+        of administrative and clerical duties in local government offices and departments.","qualifications":"Entry
         is most common with GCSEs/S grades. Evidence of keyboard skills may also be
         required in some posts. Off- and on-the-job training is provided. NVQs/SVQs
         in Administration are available at Levels 2 and 3.","tasks":" computes cost
@@ -222,48 +225,52 @@ http_interactions:
         and other material in libraries and offices;\n performs other clerical duties
         not elsewhere classified including preparing financial information for management,
         proof reading printed material and drafting letters in reply to correspondence
-        or telephone enquiries.","add_titles":["AP(T) (local government: grade 1,2,3)","Administrator,
-        electoral","Administrator (local government)","Administrator (police service)","Adviser,
-        benefit (local government)","Adviser, benefits (local government)","Assessor,
-        benefit, housing","Assessor, benefits (local government)","Assistant, administration
+        or telephone enquiries.","add_titles":["Officer, billing (local government)","Officer,
+        administration (police service)","Administrator, electoral","Officer, rights
+        of way","Assistant, chief (local government)","Inspector, employment","Adviser,
+        benefits (local government)","Clerk (health authority)","Officer, rebate (local
+        government)","Assistant, administrative (local government)","Assistant, recovery
+        (local government)","Administrator (local government)","Clerk, senior (local
+        government)","Collector (local government)","Assistant, clerical (local government)","Officer,
+        benefits, senior (local government)","Assessor, benefit, housing","Controller,
+        watch, neighbourhood","Officer, charges, land","Assistant, civic","Officer,
+        benefits, housing","Assistant, principal (local government)","Officer, clerical,
+        higher (local government)","Assessor, benefits (local government)","Attendant,
+        health (local government)","Officer, services, electoral","Officer, clerical
+        (police service)","Assistant, tax (local government)","Assistant, benefits
+        (local government)","Assistant, fixing, rate","Assistant, inspector''s (local
+        government)","Officer, administrative (local government)","Officer, support
+        (local government)","Assistant, taxation (local government)","Assistant, senior
+        (local government)","Assistant, admin (police service)","Officer, benefits
+        (local government)","Clerk-typist (local government)","Officer, administrative
+        (police service)","Officer, revenue (local government)","Inspector, fraud
         (local government)","Assistant, administration (police service)","Assistant,
-        administrative (local government)","Assistant, administrative (police service)","Assistant,
-        benefit (local government)","Assistant, benefits (local government)","Assistant,
-        chief (local government)","Assistant, civic","Assistant, clerical (local government)","Assistant,
-        clerical (police service)","Assistant, collector''s, rate","Assistant, fixing,
-        rate","Assistant, housing","Assistant, inspector''s (local government)","Assistant,
-        lettings (local government)","Assistant, principal (local government)","Assistant,
-        rating","Assistant, recovery (local government)","Assistant, senior (CSSD)","Assistant,
-        senior (local government)","Assistant, standards, trading","Assistant, survey
-        (local government)","Assistant, tax (local government)","Assistant, taxation
-        (local government)","Attendant, health (local government)","Clerk, charge,
-        community","Clerk, control (local government)","Clerk, council, parish","Clerk,
-        property","Clerk, rating","Clerk, senior (local government)","Clerk, tax,
-        poll","Clerk (health authority)","Clerk (local government)","Clerk (police
-        service)","Clerk-typist (health authority)","Clerk-typist (local government)","Clerk-typist
-        (police service)","Collector, rate","Collector, senior (local government)","Collector
-        (local government)","Collector-driver (local government)","Controller, watch,
-        neighbourhood","Inspector, employment","Inspector, fraud (local government)","Inspector
-        of rates and rentals","Officer, administration (local government)","Officer,
-        administration (police service)","Officer, administrative (local government)","Officer,
-        administrative (police service)","Officer, amenity, area","Officer, arrears
-        (local government)","Officer, assessment (local government)","Officer, authorised
-        (local government)","Officer, benefit, housing","Officer, benefit, senior
-        (local government)","Officer, benefit (local government)","Officer, benefits,
-        housing","Officer, benefits, senior (local government)","Officer, benefits
-        (local government)","Officer, billing (local government)","Officer, charges,
-        land","Officer, clerical, higher (local government)","Officer, clerical (health
-        authority)","Officer, clerical (local government)","Officer, clerical (police
-        service)","Officer, collection (local government)","Officer, communications
-        (local government)","Officer, elections","Officer, executive (local government)","Officer,
-        fraud (local government)","Officer, government, local, nos","Officer, investigation,
-        fraud (local government)","Officer, lettings (local government: housing dept)","Officer,
-        memorials","Officer, monitoring (local government)","Officer, rates","Officer,
-        rebate (local government)","Officer, revenue (local government)","Officer,
-        revenues (local government)","Officer, rights of way","Officer, services,
-        electoral","Officer, support (local government)","Officer, tax, council","Official,
-        government, local","Operator, bureau, reporting, crime","Planner, duties (police
-        service)","Worker, case (police service)","Worker, clerical (local government)"]},{"soc":4112,"title":"National
+        standards, trading","Administrator (police service)","Officer, benefit (local
+        government)","Officer, amenity, area","Officer, fraud (local government)","Officer,
+        elections","Clerk, parish","Adviser, benefit (local government)","Assistant,
+        collector''s, rate","Leader, team, services, data (local government)","Officer,
+        benefit, senior (local government)","Worker, clerical (local government)","Officer,
+        government, local, nos","Planner, duties (police service)","Collector, rate","Officer,
+        executive (local government)","Clerk-typist (health authority)","Officer,
+        revenues (local government)","Officer, assessment (local government)","Officer,
+        tax, council","Officer, investigation, fraud (local government)","Clerk, rating","Assistant,
+        rating","Assistant, admin (local government)","Clerk-typist (police service)","Assistant,
+        administration (local government)","Officer, arrears (local government)","Assistant,
+        administrative (police service)","Officer, administration (local government)","Officer,
+        authorised (local government)","Clerk, charge, community","Clerk (local government)","Officer,
+        collection (local government)","Collector, senior (local government)","Inspector
+        of rates and rentals","Officer, admin (local government)","Officer, communications
+        (local government)","Assistant, senior","Clerk, property","Clerk, tax, poll","Officer,
+        technical (local government)","Assistant, benefit (local government)","Officer,
+        clerical (health authority)","Officer, memorials","Officer, monitoring (local
+        government)","Officer, lettings (local government: housing dept)","Officer,
+        rates","Worker, case (police service)","Officer, admin (police service)","AP(T)
+        (local government:","Assistant, lettings (local government)","Officer, benefit,
+        housing","Collector-driver (local government)","Assistant, survey (local government)","Official,
+        government, local","Officer, clerical (local government)","Clerk, control
+        (local government)","Operator, bureau, reporting, crime","Assistant, support,
+        business (local government)","Assistant, housing","Clerk, council, parish","Assistant,
+        clerical (police service)","Clerk (police service)"]},{"soc":4112,"title":"National
         government administrative occupations","description":"Job holders in this
         unit group undertake a variety of administrative and clerical duties in national
         government departments, and in local offices of national government departments.","qualifications":"Entry
@@ -279,72 +286,75 @@ http_interactions:
         sorts and files publications, correspondence etc. in offices and libraries;\n
         responds to telephone enquiries and other forms of correspondence;\n performs
         miscellaneous clerical tasks such as proof reading printed material, drafting
-        letters, taking minutes etc.","add_titles":["A1 (Jobcentre Plus)","A1 (Office
-        for National Statistics)","A2 (Jobcentre Plus)","A2 (Office for National Statistics)","A3
-        (Jobcentre Plus)","A3 (Office for National Statistics)","A3 (Scottish Government)","A4
-        (Jobcentre Plus)","A4 (Scottish Government)","A5 (Jobcentre Plus)","A6 (Jobcentre
-        Plus)","A7 (Jobcentre Plus)","AA (government)","AO (government)","Administrator
-        (armed forces)","Administrator (government)","Adviser, benefits (government)","Adviser,
-        claimant","Adviser, claims (government)","Adviser, deal, new","Adviser, employment
-        (government)","Adviser, personal, deal, new","Adviser, security, social","Adviser
-        (Jobcentre Plus)","Assessor, benefits (government)","Assessor, claims (Jobcentre
-        Plus)","Assistant, administration (armed forces)","Assistant, administration
-        (government)","Assistant, administrative (armed forces)","Assistant, administrative
-        (courts of justice)","Assistant, administrative (government)","Assistant,
-        benefit (government)","Assistant, benefits (government)","Assistant, clerical
-        (government)","Assistant, court","Assistant, registration (Land Registry)","Assistant,
-        Revenue, Inland","Assistant, revenue (government)","Assistant, tax (government)","Assistant,
-        taxation (government)","B1 (Cabinet Office)","B1 (Jobcentre Plus)","B1 (Office
-        for National Statistics)","B1 (Scottish Government)","B2 (Dept for International
-        Development)","B2 (Jobcentre Plus)","B2 (Office for National Statistics)","B3
-        (Jobcentre Plus)","B4 (Jobcentre Plus)","B5 (Jobcentre Plus)","Band 3D (Meteorological
-        Office)","Band 4A (Meteorological Office)","Band 4B (Meteorological Office)","Band
-        4C (Meteorological Office)","Band 5 (Health and Safety Executive)","Band 6
-        (Health and Safety Executive)","Band A (Ministry of Justice)","Band B (Ministry
-        of Justice)","Band C (Ministry of Justice)","Band C (National Assembly for
-        Wales)","Broker, job (Jobcentre Plus)","C (Northern Ireland Office)","C1 (Cabinet
-        Office)","C1 (Dept for International Development)","C2 (Cabinet Office)","C2
-        (Dept for International Development)","Caseworker (government)","Clerk, court","Clerk,
-        valuation, grade, higher (HM Revenue and Customs)","Clerk (government)","Clerk
-        (law courts)","Clerk (prison service)","Clerk-typist (government)","Collector,
-        assistant (HM Revenue and Customs)","Collector, tax, assistant","Collector,
-        tax","Collector of taxes, assistant","Collector of taxes","Coordinator, deal,
-        new","D1 (Northern Ireland Office)","D2 (Northern Ireland Office)","EO (government)","Examiner,
-        assistant (government)","Executive, registration (Land Registry)","Executive,
-        Revenue, Inland","Executive, revenue (government)","Grade 11 (Foreign and
-        Commonwealth Office)","Grade 12 (Foreign and Commonwealth Office)","Grade
-        13 (Foreign and Commonwealth Office)","Grade C (DCMS)","Grade D (DCMS)","Inspector,
-        assistant (government)","Inspector, fraud (government)","Inspector, fund,
-        social (government)","Investigator, fraud, benefit","Investigator, fraud (government)","Investigator
-        (Jobcentre Plus)","LOII (Jobcentre Plus)","Maker, decision, sector","Maker,
-        decision (Jobcentre Plus)","Officer, adjudication (government)","Officer,
-        administration (armed forces)","Officer, administration (government)","Officer,
-        administrative, court","Officer, administrative (armed forces)","Officer,
-        administrative (government)","Officer, appeals (government)","Officer, assessment","Officer,
-        benefit (government)","Officer, benefits (government)","Officer, care, witness","Officer,
-        clerical (government)","Officer, clerical (prison service)","Officer, cypher
-        (Foreign and Commonwealth Office)","Officer, determining (court service)","Officer,
-        disposals (government)","Officer, executive (government)","Officer, fraud
-        (government)","Officer, fund, social","Officer, government, nos","Officer,
-        group (MOD)","Officer, investigating, fraud (government)","Officer, investigating
-        (government)","Officer, investigation, fraud (government)","Officer, investigation
-        (government)","Officer, liaison (government)","Officer, local II (Jobcentre
-        Plus)","Officer, presenting, appeals (government)","Officer, processing, benefits
-        (government)","Officer, registration (Land Registry)","Officer, Revenue, Inland","Officer,
-        revenue (government)","Officer, security, social (Jobcentre Plus)","Officer,
-        service, foreign (grade B5)","Officer, service, foreign","Officer, statistical,
-        grade D (MOD)","Officer, substitution (MOD)","Officer, supply, assistant (MOD)","Officer,
-        supply, chart (MOD)","Officer, support, income (government)","Officer, tax,
-        grade, higher (HM Revenue and Customs)","Officer, tax (HM Revenue and Customs)","Officer,
-        taxation, grade, higher (HM Revenue and Customs)","Officer, taxation (HM Revenue
-        and Customs)","Officer, visiting (Jobcentre Plus)","Official, government","Official,
-        tax (HM Revenue and Customs)","Payband 1 (Dept of Health)","Payband 2 (Dept
-        of Health)","Processor, claims (Jobcentre Plus)","RA1 (Land Registry)","RA2
-        (Land Registry)","RE2 (Land Registry)","RO (Land Registry)","SGB (DEFRA)","Servant,
-        civil, nos","Servant, civil (AA)","Servant, civil (AO)","Servant, civil (EO)","Servant,
-        civil (museum service)","Stamper (HM Revenue and Customs)","Transcriber, communications
-        (government)","Watcher, customs","Watcher (HM Revenue and Customs)","Worker,
-        case (government)","Worker, office (government)","Writer (armed forces)","Writer
+        letters, taking minutes etc.","add_titles":["Administrator (government)","Band
+        B (Ministry of Justice)","Assistant, taxation (government)","Clerk (prison
+        service)","B2 (Dept for International Development)","Investigator, fraud (government)","EO
+        (government)","Officer, government, nos","Officer, substitution (MOD)","Processor,
+        claims (Jobcentre Plus)","Worker, office (government)","Officer, processing,
+        benefits (government)","Officer, Revenue, Inland","Servant, civil","Writer
+        (armed forces)","Officer, administration (armed forces)","Assistant, admin
+        (courts of justice)","Band C (Ministry of Justice)","Official, tax (HM Revenue
+        and Customs)","Inspector, assistant (government)","Officer, executive (government)","Maker,
+        decision (Jobcentre Plus)","Officer, benefit (government)","Grade 13 (Foreign
+        and Commonwealth Office)","Officer, taxation (HM Revenue and Customs)","Clerk
+        (law courts)","Officer, fraud (government)","Officer, statistical, grade D
+        (MOD)","A2 (Jobcentre Plus)","Band 4C (Meteorological Office)","Broker, job
+        (Jobcentre Plus)","A5 (Jobcentre Plus)","Adviser, claims (government)","Watcher,
+        customs","Inspector, fund, social (government)","Adviser, benefits (government)","Coordinator,
+        deal, new","Watcher (HM Revenue and Customs)","Grade C (DCMS)","Officer, appeals
+        (government)","Officer, liaison (government)","B1 (Office for National Statistics)","Payband
+        1 (Dept of Health)","Inspector, fraud (government)","Grade 11 (Foreign and
+        Commonwealth Office)","Assistant, benefits (government)","Officer, care, witness","Assistant,
+        admin (armed forces)","Officer, revenue (government)","Officer, clerical (government)","Adviser,
+        claimant","Assistant, administrative (government)","Assistant, clerical (government)","Officer,
+        local II (Jobcentre Plus)","A1 (Office for National Statistics)","Official,
+        government","Executive, revenue (government)","Assessor, benefits (government)","A4
+        (Scottish Government)","AO (government)","Grade D (DCMS)","Worker, case (government)","RA2
+        (Land Registry)","LOII (Jobcentre Plus)","Officer, clerical (prison service)","Investigator
+        (Jobcentre Plus)","C2 (Cabinet Office)","Officer, taxation, grade, higher
+        (HM Revenue and Customs)","A3 (Office for National Statistics)","Adviser,
+        security, social","Writer (MOD)","Officer, admin (armed forces)","Adviser,
+        personal, deal, new","Officer, administrative (courts of justice)","A3 (Scottish
+        Government)","Assistant, benefit (government)","Administrator (armed forces)","Band
+        5 (Health and Safety Executive)","Clerk (government)","Officer, support, income
+        (government)","Assistant, administration (armed forces)","Payband 2 (Dept
+        of Health)","Grade 12 (Foreign and Commonwealth Office)","Assistant, revenue
+        (government)","Caseworker (government)","A6 (Jobcentre Plus)","Adviser, employment
+        (government)","Officer, investigating (government)","RO (Land Registry)","Officer,
+        administrative, court","Assessor, claims (Jobcentre Plus)","Officer, administration
+        (courts of justice)","Stamper (HM Revenue and Customs)","Officer, investigating,
+        fraud (government)","Assistant, Revenue, Inland","Band A (Ministry of Justice)","SGB
+        (DEFRA)","Assistant, court","C1 (Dept for International Development)","Assistant,
+        administrative (courts of justice)","Assistant, administration (government)","Examiner,
+        assistant (government)","Clerk, court","Officer, supply, chart (MOD)","Band
+        6 (Health and Safety Executive)","B1 (Scottish Government)","Assistant, tax
+        (government)","D2 (Northern Ireland Office)","C2 (Dept for International Development)","B5
+        (Jobcentre Plus)","Assistant, administration (courts of justice)","B2 (Office
+        for National Statistics)","Officer, admin (government)","Officer, service,
+        foreign","RA1 (Land Registry)","Collector, tax, assistant","Assistant, admin
+        (government)","Officer, investigation, fraud (government)","B1 (Cabinet Office)","Collector,
+        tax","Band C (National Assembly for Wales)","Band 4B (Meteorological Office)","Officer,
+        visiting (Jobcentre Plus)","Band 3D (Meteorological Office)","Officer, administration
+        (government)","Adviser, deal, new","D1 (Northern Ireland Office)","B2 (Jobcentre
+        Plus)","Executive, registration (Land Registry)","Maker, decision, sector","C1
+        (Cabinet Office)","Investigator, fraud, benefit","Officer, assessment","C
+        (Northern Ireland Office)","A1 (Jobcentre Plus)","Assistant, administrative
+        (armed forces)","A3 (Jobcentre Plus)","Adviser (Jobcentre Plus)","Collector
+        of taxes, assistant","Officer, presenting, appeals (government)","A7 (Jobcentre
+        Plus)","Officer, administrative (government)","Transcriber, communications
+        (government)","Executive, Revenue, Inland","Assistant, registration (Land
+        Registry)","Officer, security, social (Jobcentre Plus)","Collector of taxes","Officer,
+        cypher (Foreign and Commonwealth Office)","Clerk, valuation, grade, higher
+        (HM Revenue and Customs)","Officer, investigation (government)","B3 (Jobcentre
+        Plus)","Officer, fund, social","Clerk-typist (government)","Band 4A (Meteorological
+        Office)","Officer, administrative (armed forces)","RE2 (Land Registry)","Servant,
+        civil, nos","Officer, determining (court service)","Officer, adjudication
+        (government)","Officer, disposals (government)","Officer, tax (HM Revenue
+        and Customs)","Officer, tax, grade, higher (HM Revenue and Customs)","Officer,
+        admin (courts of justice)","AA (government)","Collector, assistant (HM Revenue
+        and Customs)","Officer, supply, assistant (MOD)","A4 (Jobcentre Plus)","B4
+        (Jobcentre Plus)","B1 (Jobcentre Plus)","Officer, registration (Land Registry)","Officer,
+        benefits (government)","A2 (Office for National Statistics)","Officer, group
         (MOD)"]},{"soc":2426,"title":"Business and related research professionals","description":"Business
         and related research professionals carry out a variety of research activities
         for the broadcast and print media, for the police and armed forces intelligence
@@ -363,22 +373,20 @@ http_interactions:
         or presentations;\n researches images for clients in a wide range of media
         using specialist picture libraries and archives, museums, galleries etc.,
         or commissions new images;\n liaises with client on the appropriate image/s
-        to be used;\n deals with copyright issues and negotiates fees.","add_titles":["Analyst,
-        computer, forensic","Analyst, crime (police force)","Analyst, information","Analyst,
-        intelligence, criminal","Assistant, research (broadcasting)","Assistant, research
-        (journalism)","Assistant, research (printing and publishing)","Assistant,
-        research","Associate, research (broadcasting)","Associate, research (journalism)","Associate,
-        research (printing and publishing)","Associate, research","Consultant, research","Fellow
-        (research)","Inventor","Officer, intelligence, grade II (MOD)","Officer, intelligence
-        (government)","Officer, research (broadcasting)","Officer, research (journalism)","Officer,
-        research (printing and publishing)","Officer, research","Researcher, games
-        (entertainment)","Researcher, games (broadcasting)","Researcher, picture","Researcher
-        (broadcasting)","Researcher (journalism)","Researcher (printing and publishing)","Researcher","Technician,
-        research","Technician, research and development","Worker, research (fire protection)","Worker,
-        research (fuel)","Worker, research (photographic)","Worker, research (plastics)","Worker,
-        research (textile)","Worker, research"]}]'
+        to be used;\n deals with copyright issues and negotiates fees.","add_titles":["Researcher,
+        games (broadcasting)","Officer, intelligence (government)","Officer, research","Practitioner,
+        forensic (police force)","Associate, research (journalism)","Worker, research","Assistant,
+        research (printing and publishing)","Fellow","Analyst, sports","Officer, intelligence,
+        grade II (MOD)","Analyst, intelligence, criminal","Consultant, research","Researcher","Researcher
+        (journalism)","Assistant, research (journalism)","Analyst, information","Technician,
+        research and development","Researcher, games","Analyst, crime (police force)","Assistant,
+        research","Officer, research (printing and publishing)","Analyst, computer,
+        forensic","Associate, research (printing and publishing)","Assistant, research
+        (broadcasting)","Officer, research (broadcasting)","Researcher (printing and
+        publishing)","Technician, research","Researcher, picture","Researcher (broadcasting)","Associate,
+        research","Officer, research (journalism)","Associate, research (broadcasting)","Inventor"]}]'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 14:23:34 GMT
+  recorded_at: Mon, 27 Feb 2017 15:10:19 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/soc/code/4135
@@ -387,9 +395,9 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="9+b7sbeNweJme5KkvZDdZrzW/yA="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="YgTLoGvPihEEyrytJKl95uLZZRE="
       Date:
-      - Mon, 20 Feb 2017 14:23:34 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
   response:
     status:
       code: 200
@@ -398,11 +406,11 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 14:23:34 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1349'
+      - '1332'
       Connection:
       - keep-alive
       X-Auth-Type:
@@ -420,16 +428,16 @@ http_interactions:
         sorts, catalogues and maintains library records;\n locates and retrieves material
         on request for borrowers;\n issues library material and records date of issue/
         due date for return;\n classifies, labels and indexes new books;\n performs
-        simple repairs on old books.","add_titles":["Abstractor (press cuttings)","Agent,
-        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
-        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
-        information (educational establishments)","Assistant, information (library)","Assistant,
-        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
-        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
-        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
-        (press cutting agency)","Supervisor, library"]}'
+        simple repairs on old books.","add_titles":["Assistant (library)","Assistant,
+        library","Assistant, clerical (library)","Assistant, services, bibliographic","Supervisor,
+        library","Looker-out, book","Assistant, chief (library)","Assistant, information
+        (educational establishments)","Abstractor","Clerk, library","Reader (press
+        cutting agency)","Clerk (library)","Assistant, bibliographic","Assistant,
+        counter (library)","Agent, cutting, press","Clerk, cuttings, press","Assistant,
+        resource, learning","Assistant, archives","Attendant, library","Assistant,
+        information (library)","Clipper, press (press cutting agency)"]}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 14:23:34 GMT
+  recorded_at: Mon, 27 Feb 2017 15:10:19 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/ashe/estimateHours?coarse=true&soc=4135
@@ -438,9 +446,9 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="9+b7sbeNweJme5KkvZDdZrzW/yA="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="YgTLoGvPihEEyrytJKl95uLZZRE="
       Date:
-      - Mon, 20 Feb 2017 14:23:34 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
   response:
     status:
       code: 200
@@ -449,7 +457,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 14:23:35 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -464,7 +472,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"soc":41,"series":[{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 14:23:35 GMT
+  recorded_at: Mon, 27 Feb 2017 15:10:19 GMT
 - request:
     method: get
     uri: https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?coarse=true&soc=4135
@@ -473,9 +481,9 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="B/Q1u9iCPilm4nRjGVdFO3Y2bGo="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="YgTLoGvPihEEyrytJKl95uLZZRE="
       Date:
-      - Mon, 20 Feb 2017 14:23:35 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
   response:
     status:
       code: 200
@@ -484,7 +492,7 @@ http_interactions:
       Server:
       - nginx/1.2.7
       Date:
-      - Mon, 20 Feb 2017 14:23:35 GMT
+      - Mon, 27 Feb 2017 15:10:19 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -499,5 +507,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"soc":41,"series":[{"year":2013,"estpay":710},{"year":2015,"estpay":490}]}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 14:23:35 GMT
+  recorded_at: Mon, 27 Feb 2017 15:10:19 GMT
 recorded_with: VCR 3.0.3
