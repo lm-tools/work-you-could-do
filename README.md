@@ -7,6 +7,8 @@ A tool to help people explore work they could do.
 - [Bundler]
 - [PostgreSQL] 9.4
 
+test
+
 ## Installation
 
 Clone the repository:
