@@ -8,30 +8,30 @@ describe LmiClient do
   end
 
   describe "#soc_search", :vcr do
-    it "uses hmac for authentication" do
+    it "returns 200" do
       response = @lmi_client.soc_search "check_authentication"
-      expect(response.headers["x-auth-type"]).to eq("HMAC")
+      expect(response.code).to eq(200)
     end
   end
 
   describe "#hours_lookup", :vcr do
-    it "uses hmac for authentication" do
+    it "returns 200" do
       response = @lmi_client.hours_lookup "4135"
-      expect(response.headers["x-auth-type"]).to eq("HMAC")
+      expect(response.code).to eq(200)
     end
   end
 
   describe "#pay_lookup", :vcr do
-    it "uses hmac for authentication" do
+    it "returns 200" do
       response = @lmi_client.pay_lookup "4135"
-      expect(response.headers["x-auth-type"]).to eq("HMAC")
+      expect(response.code).to eq(200)
     end
   end
 
   describe "#soc_code_lookup", :vcr do
-    it "uses hmac for authentication" do
+    it "returns 200" do
       response = @lmi_client.soc_code_lookup "4135"
-      expect(response.headers["x-auth-type"]).to eq("HMAC")
+      expect(response.code).to eq(200)
     end
   end
 end

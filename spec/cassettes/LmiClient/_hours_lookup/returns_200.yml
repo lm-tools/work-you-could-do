@@ -8,31 +8,29 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="WjCOb26fRYZzvhtlSh8fwJPLxHg="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="dgQKXNghKXBOlaRwcWQYpSaa4G4="
       Date:
-      - Mon, 20 Feb 2017 16:19:50 GMT
+      - Mon, 24 Apr 2017 14:04:35 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - nginx/1.2.7
+      - nginx/1.10.0 (Ubuntu)
       Date:
-      - Mon, 20 Feb 2017 16:19:51 GMT
+      - Mon, 24 Apr 2017 14:04:36 GMT
       Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '46'
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      X-Auth-Type:
-      - HMAC
       Access-Control-Allow-Origin:
       - "*"
     body:
       encoding: UTF-8
       string: '{"soc":41,"series":[{"year":2015,"hours":39}]}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 16:19:51 GMT
+  recorded_at: Mon, 24 Apr 2017 14:04:36 GMT
 recorded_with: VCR 3.0.3
