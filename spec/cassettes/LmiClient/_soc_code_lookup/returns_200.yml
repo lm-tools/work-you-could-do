@@ -8,26 +8,24 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="bFao/Zmt3jl1UO2g7t6fgjiGAyc="
+      - Signature keyId="U9CMRK1DQSa5iX4N5wXrLQ==",algorithm="hmac-sha1",signature="PAgfgOnqioOUjGp3NbBMiwKcO1o="
       Date:
-      - Mon, 20 Feb 2017 16:20:58 GMT
+      - Mon, 24 Apr 2017 14:04:36 GMT
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - nginx/1.2.7
+      - nginx/1.10.0 (Ubuntu)
       Date:
-      - Mon, 20 Feb 2017 16:20:58 GMT
+      - Mon, 24 Apr 2017 14:04:36 GMT
       Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '1349'
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      X-Auth-Type:
-      - HMAC
       Access-Control-Allow-Origin:
       - "*"
     body:
@@ -41,14 +39,14 @@ http_interactions:
         sorts, catalogues and maintains library records;\n locates and retrieves material
         on request for borrowers;\n issues library material and records date of issue/
         due date for return;\n classifies, labels and indexes new books;\n performs
-        simple repairs on old books.","add_titles":["Abstractor (press cuttings)","Agent,
-        cutting, press","Assistant, archives","Assistant, bibliographic","Assistant,
-        chief (library)","Assistant, clerical (library)","Assistant, counter (library)","Assistant,
-        information (educational establishments)","Assistant, information (library)","Assistant,
-        library","Assistant, resource, learning","Assistant, services, bibliographic","Assistant
-        (library)","Attendant, library","Clerk, cuttings, press","Clerk, library","Clerk
-        (library)","Clipper, press (press cutting agency)","Looker-out, book","Reader
-        (press cutting agency)","Supervisor, library"]}'
+        simple repairs on old books.","add_titles":["Assistant (library)","Assistant,
+        library","Assistant, clerical (library)","Assistant, services, bibliographic","Supervisor,
+        library","Looker-out, book","Assistant, chief (library)","Assistant, information
+        (educational establishments)","Abstractor","Clerk, library","Reader (press
+        cutting agency)","Clerk (library)","Assistant, bibliographic","Assistant,
+        counter (library)","Agent, cutting, press","Clerk, cuttings, press","Assistant,
+        resource, learning","Assistant, archives","Attendant, library","Assistant,
+        information (library)","Clipper, press (press cutting agency)"]}'
     http_version: 
-  recorded_at: Mon, 20 Feb 2017 16:20:58 GMT
+  recorded_at: Mon, 24 Apr 2017 14:04:36 GMT
 recorded_with: VCR 3.0.3
