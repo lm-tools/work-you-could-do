@@ -16,9 +16,9 @@ gem "jquery-rails"
 gem "sass-rails", "~> 5.0"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 1.3.0"
-gem 'lograge'
-gem 'logstash-event'
-gem 'logstash-logger'
+gem "lograge"
+gem "logstash-event"
+gem "logstash-logger"
 gem "rake", "< 11.0"
 
 group :development, :test do

@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :info
   config.colorize_logging = false
 
   # Prepend all log lines with the following tags.
@@ -76,7 +76,6 @@ Rails.application.configure do
 
   config.lograge.formatter = Lograge::Formatters::Logstash.new
   config.lograge.enabled = true
-
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
