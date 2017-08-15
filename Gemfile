@@ -13,13 +13,13 @@ gem "silencer"
 gem "govuk_frontend_toolkit"
 gem "govuk_template"
 gem "jquery-rails"
-gem "sass-rails", "~> 5.0"
-gem "therubyracer", platforms: :ruby
-gem "uglifier", ">= 1.3.0"
 gem "lograge"
 gem "logstash-event"
 gem "logstash-logger"
 gem "rake", "< 11.0"
+gem "sass-rails", "~> 5.0"
+gem "therubyracer", platforms: :ruby
+gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "pry-byebug"
