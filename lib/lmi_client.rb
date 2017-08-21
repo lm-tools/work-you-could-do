@@ -10,6 +10,7 @@ class LmiClient
   end
 
   def soc_search(keyword)
+    Rails.logger.info("lmi4all soc_search")
     response = self.class.get(
       "/soc/search",
       query: { q: keyword },
@@ -19,6 +20,7 @@ class LmiClient
   end
 
   def hours_lookup(soc_code)
+    Rails.logger.info("lmi4all estimateHours")
     self.class.get(
       "/ashe/estimateHours?soc=#{soc_code}&coarse=true",
       headers: generate_hmac_headers
@@ -26,6 +28,7 @@ class LmiClient
   end
 
   def pay_lookup(soc_code)
+    Rails.logger.info("lmi4all estimatePay")
     self.class.get(
       "/ashe/estimatePay?soc=#{soc_code}&coarse=true",
       headers: generate_hmac_headers
@@ -33,6 +36,7 @@ class LmiClient
   end
 
   def soc_code_lookup(soc_code)
+    Rails.logger.info("lmi4all soc/code")
     self.class.get(
       "/soc/code/#{soc_code}",
       headers: generate_hmac_headers
