@@ -43,4 +43,10 @@ Rails.application.configure do
   config.web_console.whitelisted_ips = %w(10.0.0.0/8
                                           172.16.0.0/12
                                           192.168.0.0/16)
+
+
+  # config.cache_store = :memory_store, { size: 64.megabytes }
+  config.cache_store = :redis_store, 'redis://192.168.255.100:6379/1'
+
+  config.action_controller.perform_caching = true
 end

@@ -3,6 +3,10 @@ class LmiForAll
     @lmi_client = lmi_client
   end
 
+  def search_cache(query)
+    Rails.cache.fetch('LmiForAll.search' + query) { search(query) }
+  end
+
   def search(query)
     @lmi_client
       .soc_search(query)
