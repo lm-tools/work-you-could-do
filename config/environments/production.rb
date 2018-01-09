@@ -25,6 +25,7 @@ Rails.application.configure do
   # Enable serving of static files from rails
   # See https://github.com/heroku/rails_12factor
   config.serve_static_files = true
+  config.static_cache_control = "public, max-age=3153600"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
