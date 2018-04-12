@@ -18,9 +18,6 @@
   <p>To find work you could do, please enter a role, skill or interest.</p>
 <% else %>
   <section class="search-results">
-    <h3 class="bold-medium job-description-title">
-      <%= pluralize_without_count(@search_results.size, "Role") %> related to <%= @query %>
-    </h3>
     <% if @search_results.empty? %>
       <% content_for(:page_title_prefix, "No results found for: #{@query}") %>
       <p>No roles matched your search. Please check the spelling or try a different search.</p>
