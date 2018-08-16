@@ -17,9 +17,9 @@ RUN RAILS_ENV=production bin/rake assets:precompile
 RUN for f in $(grep -rl /assets/ public/assets/*.css); \
     do sed -i s#/assets/##g $f && gzip --keep --force $f; done
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["bin/passenger", "start", "-p", "3000", "--max-pool-size", "3"]
+CMD ["bin/passenger", "start", "-p", "80", "--max-pool-size", "3"]
 
 ARG version
 RUN echo $version > /srv/app/public/version
