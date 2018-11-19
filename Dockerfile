@@ -17,9 +17,13 @@ RUN RAILS_ENV=production bin/rake assets:precompile
 RUN for f in $(grep -rl /assets/ public/assets/*.css); \
     do sed -i s#/assets/##g $f && gzip --keep --force $f; done
 
+# setup secrets file
+ENV ENV_FILE='./empty.env'
+RUN touch empty.env
+
 EXPOSE 80
 
-CMD ["bin/passenger", "start", "-p", "80", "--max-pool-size", "3"]
+CMD set -a && . $ENV_FILE && set +a && bin/passenger start -p 80 --max-pool-size 3
 
 ARG version
 RUN echo $version > /srv/app/public/version
