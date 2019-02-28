@@ -14,7 +14,8 @@ When(/^I remove all of my saved occupations$/) do
 end
 
 Then(/^I should see a confirmation that the occupation is removed$/) do
-  confirmation_message = "#{specific_search_result.fetch(:title)} removed"
+  confirmation_message =
+    "‘#{specific_search_result.fetch(:title)}’ removed."
   expect(page).to have_content(confirmation_message)
 end
 

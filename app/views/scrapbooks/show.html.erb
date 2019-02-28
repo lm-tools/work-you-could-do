@@ -8,26 +8,26 @@
   </ol>
 <% end %>
 
-  <h2 class="heading-xlarge">Your saved roles</h2>
+<h1 class="heading-xlarge">Your saved roles</h1>
 
-  <% if current_scrapbook.occupations.any? %>
-    <div id="scrapbook-preamble">
-      <%= render "scrapbooks/preamble" %>
-    </div>
-    <% current_scrapbook.occupations.each do |occupation| %>
-      <section id="occupation-<%= occupation.soc_code %>">
-        <%= render "occupations/details", occupation: occupation %>
-        <%= form_tag(scrapbook_saved_occupation_path(current_scrapbook, occupation), remote: true, method: "DELETE",
-              id: "remove-occupation-#{occupation.soc_code}-form", class: "remove-occupation-form") do |f| %>
-          <input type="submit" id="remove-occupation-<%= occupation.soc_code %>" class="link-button" value="Remove role">
-        <% end %>
-      </section>
-      <hr>
-    <% end %>
-  <% else %>
-    <div id="scrapbook-preamble">
-      <%= render "scrapbooks/preamble_empty" %>
-    </div>
+<% if current_scrapbook.occupations.any? %>
+  <div id="scrapbook-preamble">
+    <%= render "scrapbooks/preamble" %>
+  </div>
+  <% current_scrapbook.occupations.each do |occupation| %>
+    <section id="occupation-<%= occupation.soc_code %>">
+      <%= render "scrapbooks/details", occupation: occupation %>
+      <%= form_tag(scrapbook_saved_occupation_path(current_scrapbook, occupation), remote: true, method: "DELETE",
+            id: "remove-occupation-#{occupation.soc_code}-form", class: "remove-occupation-form") do |f| %>
+        <input type="submit" id="remove-occupation-<%= occupation.soc_code %>" class="link-button" value="Remove role" aria-describedby="occupation-title-<%= occupation.soc_code %>">
+      <% end %>
+    </section>
+    <hr>
   <% end %>
+<% else %>
+  <div id="scrapbook-preamble">
+    <%= render "scrapbooks/preamble_empty" %>
+  </div>
+<% end %>
 
 <p><a href="<%= new_scrapbook_search_path(current_scrapbook) %>" class="link-back">Search again</a></p>

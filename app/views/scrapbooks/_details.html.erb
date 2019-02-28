@@ -1,0 +1,37 @@
+<section class="occupation-detail">
+  <header>
+    <h2 class="heading-large" id="occupation-title-<%= occupation.soc_code %>"><%= occupation.title %></h2>
+  </header>
+
+  <p id="occupation-description-<%= occupation.soc_code %>"><%= occupation.description %></p>
+
+  <div class="grid-row">
+    <div class="column-half">
+      <h3 class="heading-small">Kind of work you’d do</h3>
+      <ul class="list-bullet" id="occupation-tasks-<%= occupation.soc_code %>">
+        <% formatted_tasks(occupation.tasks).each do |task| %>
+          <li><%=task%></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="column-half">
+      <h3 class="heading-small">Words to use in your online search</h3>
+      <em id="occupation-additional-titles-<%= occupation.soc_code %>"><%= occupation.additional_titles %></em>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-half">
+      <h3 class="heading-small">Qualifications you’ll need</h3>
+      <p id="occupation-qualifications-<%= occupation.soc_code %>"><%= occupation.qualifications %></p>
+    </div>
+    <div class="column-half">
+      <h3 class="heading-small">Your typical pay and hours</h3>
+      <ul>
+        <li>Around <span id="occupation-week-hours-<%= occupation.soc_code %>"><%= occupation.week_hours %></span> hours a week</li>
+        <li>Around £<span id="occupation-week-pay-<%= occupation.soc_code %>"><%= occupation.week_pay %></span> a week</li>
+      </ul>
+    </div>
+  </div>
+</section>
