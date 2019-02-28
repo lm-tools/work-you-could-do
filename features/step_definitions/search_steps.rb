@@ -48,7 +48,7 @@ Then(/^I should see all of its details$/) do
                   week_pay)
 
   attributes.each do |attribute|
-    element = find("#occupation-#{attribute.to_s.tr('_', '-')}")
+    element = find("[id^=occupation-#{attribute.to_s.tr('_', '-')}-]")
     expect(element).to have_content(specific_search_result[attribute])
   end
 end
