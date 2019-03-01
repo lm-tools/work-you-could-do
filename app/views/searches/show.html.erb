@@ -8,13 +8,13 @@
 </ol>
 <% end %>
 
-<h2 class="heading-xlarge">Find information on roles</h2>
+<h1 class="heading-xlarge">Find information on roles</h1>
 
 <%= render "searches/form", query: @query, show_hints: @search_results.empty? %>
 
 <% if @query.blank? %>
   <% content_for(:page_title_prefix, "No search entered") %>
-  <h3 class="bold-medium job-description-title">No search entered</h3>
+  <h2 class="bold-medium job-description-title">No search entered</h2>
   <p>To find work you could do, please enter a role, skill or interest.</p>
 <% else %>
   <section class="search-results">
@@ -25,9 +25,9 @@
       <% content_for(:page_title_prefix, "Search results for: #{@query}") %>
       <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, from_query: @query) %>" class="search-result">
-        <h4 class="bold-small">
+        <h3 class="bold-small">
           <%= search_result.title %>
-        </h4>
+        </h3>
         <p><%= search_result.description %></p>
       </a>
       <% end %>
