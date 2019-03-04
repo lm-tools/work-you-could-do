@@ -29,16 +29,15 @@
 
 <% content_for :content do %>
   <main id="content">
-    <header class="content-header">
+    <div class="content-header">
       <div id="current-scrapbook-link-container">
         <% if show_current_scrapbook_link? %>
           <%= render "scrapbooks/link_to_current_scrapbook" %>
         <% end %>
       </div>
-      <div id="global-breadcrumb">
-        <%= yield :breadcrumbs %>
-      </div>
-    </header>
+
+      <%= yield :breadcrumbs %>
+    </div>
 
     <%= content_for?(:application_content) ? yield(:application_content) : yield %>
   </main>

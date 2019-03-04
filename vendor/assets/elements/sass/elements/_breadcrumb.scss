@@ -6,7 +6,7 @@
 
   @extend %grid-row;
 
-  ol {
+  .breadcrumbs {
 
     @include grid-column(1);
     padding-top: 0.75em;
