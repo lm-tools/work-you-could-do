@@ -1,11 +1,13 @@
 <% content_for(:page_title_prefix, "Saved roles") %>
 
 <% content_for :breadcrumbs do %>
-  <ol>
-    <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
-    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
-    <li>Saved roles</li>
-  </ol>
+  <nav id="global-breadcrumb">
+    <ol>
+      <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
+      <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+      <li>Saved roles</li>
+    </ol>
+  </nav>
 <% end %>
 
 <h1 class="heading-xlarge">Your saved roles</h1>

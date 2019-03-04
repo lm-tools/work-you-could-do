@@ -1,12 +1,14 @@
 <% content_for(:page_title_prefix, "Saved roles") %>
 
 <% content_for :breadcrumbs do %>
-  <ol>
-    <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
-    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
-    <li><a href="<%= scrapbook_path(current_scrapbook) %>">Saved roles</a></li>
-    <li>Removed</li>
-  </ol>
+  <nav id="global-breadcrumb">
+    <ol>
+      <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
+      <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+      <li><a href="<%= scrapbook_path(current_scrapbook) %>">Saved roles</a></li>
+      <li>Removed</li>
+    </ol>
+  </nav>
 <% end %>
 
 <%= render "saved_occupations/destroy_confirmation_box", occupation: @occupation %>

@@ -2,7 +2,7 @@ require "base64"
 
 class LmiClient
   include HTTParty
-  base_uri "https://api.lmiforall.org.uk/api/v1"
+  base_uri "http://api.lmiforall.org.uk/api/v1"
 
   def initialize
     @secret_key = Rails.application.secrets.lmi_secret_key

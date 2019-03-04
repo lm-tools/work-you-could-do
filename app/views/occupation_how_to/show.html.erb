@@ -1,13 +1,15 @@
 <% content_for(:page_title_prefix, "How to use this information") %>
 
 <% content_for :breadcrumbs do %>
-  <ol>
-    <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
-    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
-    <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>">Results</a></li>
-    <li><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @from_query) %>"><%= @occupation.title %></a></li>
-    <li>How-to</li>
-  </ol>
+  <nav id="global-breadcrumb">
+    <ol>
+      <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
+      <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+      <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>">Results</a></li>
+      <li><a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: @occupation.soc_code, query: @from_query) %>"><%= @occupation.title %></a></li>
+      <li>How-to</li>
+    </ol>
+  </nav>
 <% end %>
 
 <%= render "occupation_how_to/details", occupation: @occupation %>

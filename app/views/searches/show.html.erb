@@ -1,11 +1,13 @@
 <%# NOTE! :page_title_prefix content_for blocks are directly in the erb below %>
 
 <% content_for :breadcrumbs do %>
-<ol>
-  <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
-  <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
-  <li>Results</li>
-</ol>
+  <nav id="global-breadcrumb">
+    <ol>
+      <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
+      <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+      <li>Results</li>
+    </ol>
+  </nav>
 <% end %>
 
 <h1 class="heading-xlarge">Find information on roles</h1>
@@ -25,9 +27,9 @@
       <% content_for(:page_title_prefix, "Search results for: #{@query}") %>
       <% @search_results.each do |search_result| %>
       <a href="<%= scrapbook_occupation_path(current_scrapbook, soc_code: search_result.soc, from_query: @query) %>" class="search-result">
-        <h3 class="bold-small">
+        <h2 class="bold-small">
           <%= search_result.title %>
-        </h3>
+        </h2>
         <p><%= search_result.description %></p>
       </a>
       <% end %>
