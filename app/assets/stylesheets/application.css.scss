@@ -101,7 +101,7 @@ a.search-result {
   @extend %contain-floats;
 }
 
-#global-breadcrumb ol, #current-scrapbook-link-container {
+.breadcrumbs, #current-scrapbook-link-container {
   padding-top: 0.75em;
   padding-bottom: 0;
 }

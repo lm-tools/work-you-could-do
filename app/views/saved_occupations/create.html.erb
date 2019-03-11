@@ -1,13 +1,15 @@
 <% content_for(:page_title_prefix, @occupation.title) %>
 
 <% content_for :breadcrumbs do %>
-  <ol>
-    <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
-    <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
-    <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>">Results</a></li>
-    <li><a href="<%= scrapbook_occupation_path(current_scrapbook, @occupation, from_query: @from_query) %>"><%= @occupation.title %></a></li>
-    <li>Saved</li>
-  </ol>
+  <nav id="global-breadcrumb">
+    <ul class="breadcrumbs">
+      <li><a href="<%= scrapbook_introduction_path(current_scrapbook) %>">Introduction</a></li>
+      <li><a href="<%= new_scrapbook_search_path(current_scrapbook) %>">Search</a></li>
+      <li><a href="<%= scrapbook_search_path(current_scrapbook, query: @from_query) %>">Results</a></li>
+      <li><a href="<%= scrapbook_occupation_path(current_scrapbook, @occupation, from_query: @from_query) %>"><%= @occupation.title %></a></li>
+      <li>Saved</li>
+    </ul>
+  </nav>
 <% end %>
 
 <%= render "saved_occupations/confirmation_box", occupation: @occupation %>
