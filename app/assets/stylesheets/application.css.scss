@@ -5,8 +5,8 @@
 @import "grid_layout";
 @import "design-patterns/buttons";
 @import "elements";
-
 @import "link-button";
+@import "overrides";
 
 .multi-entry-text-input {
   li {
@@ -95,6 +95,13 @@ a.search-result {
   &:hover {
     border-color: $black;
   }
+
+  &:focus,
+  &:active {
+    .search-result__heading {
+      color: $dark-blue;
+    }
+  }
 }
 
 .content-header {
@@ -140,4 +147,3 @@ a.search-result {
     margin-top: $gutter-half;
   }
 }
-

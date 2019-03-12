@@ -1,0 +1,31 @@
+/**
+  For improved accessibility we need to override certain rules coming from 3rd party stylesheets (govuk).
+ */
+
+$dark-blue: #073873;
+$true-black: #000;
+
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline-width: 3px;
+  outline-color: $black;
+}
+
+.form-control {
+  border-color: $black;
+}
+
+.form-control:focus {
+  outline-width: 2px;
+}
+
+#logo:focus {
+  outline-color: $focus-colour;
+}
+
+.button:focus {
+  outline: 3px solid $true-black;
+}
