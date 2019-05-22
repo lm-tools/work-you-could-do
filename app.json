@@ -5,12 +5,13 @@
     "postdeploy": "bin/rake db:setup"
   },
   "env": {
-    "GOOGLE_TAG_MANAGER_ID":    { "required": false },
-    "RAILS_ENV":                { "required": true, "value": "production" },
-    "RAILS_SERVE_STATIC_FILES": { "required": true, "value": "enabled" },
-    "SECRET_KEY_BASE":          { "required": true, "generator": "secret" },
-    "LMI_SECRET_KEY":           { "required": true, "value": "jtIbUmq6TjmYTFSk71HeBA==" },
-    "LMI_KEY_ID":               { "required": true, "value": "U9CMRK1DQSa5iX4N5wXrLQ==" }
+    "GOOGLE_TAG_MANAGER_ID":        { "required": false },
+    "GOOGLE_SITE_VERIFICATION_ID":  { "required": false },
+    "RAILS_ENV":                    { "required": true, "value": "production" },
+    "RAILS_SERVE_STATIC_FILES":     { "required": true, "value": "enabled" },
+    "SECRET_KEY_BASE":              { "required": true, "generator": "secret" },
+    "LMI_SECRET_KEY":               { "required": true, "value": "jtIbUmq6TjmYTFSk71HeBA==" },
+    "LMI_KEY_ID":                   { "required": true, "value": "U9CMRK1DQSa5iX4N5wXrLQ==" }
   },
   "addons": [
     "heroku-postgresql"
