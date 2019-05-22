@@ -94,6 +94,7 @@ Application requires this environment variables to be set:
 * `GOOGLE_TAG_MANAGER_ID`
 * `LMI_SECRET_KEY`
 * `LMI_KEY_ID`
+* `GOOGLE_SITE_VERIFICATION_ID`
 
 ## Run locally in Docker containers
 
