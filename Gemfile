@@ -39,7 +39,7 @@ group :test do
   gem "capybara"
   gem "cucumber-rails", require: false
   gem "database_cleaner"
-  gem "poltergeist"
+  gem "poltergeist", ">= 1.12.0"
   gem "vcr", "~> 3.0"
   gem "webmock"
 end
