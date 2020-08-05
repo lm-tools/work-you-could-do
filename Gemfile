@@ -1,45 +1,45 @@
 source "http://rubygems.org"
 ruby "2.3.0"
 
-gem "passenger"
+gem "passenger", ">= 5.1.1"
 gem "pg"
-gem "rails", "~> 4.2"
+gem "rails", "~> 5.2", ">= 5.2.4.3"
 
 gem "httparty"
-gem "jbuilder", "~> 2.0"
+gem "jbuilder", "~> 2.6", ">= 2.6.4"
 gem "mail"
-gem "silencer"
+gem "silencer", ">= 0.6.0"
 
-gem "govuk_frontend_toolkit"
-gem "govuk_template"
-gem "jquery-rails"
-gem "lograge"
+gem "govuk_frontend_toolkit", ">= 5.0.2"
+gem "govuk_template", ">= 0.19.2"
+gem "jquery-rails", ">= 4.2.2"
+gem "lograge", ">= 0.9.0"
 gem "logstash-event"
 gem "logstash-logger"
 gem "rake", "< 11.0"
-gem "sass-rails", "~> 5.0"
+gem "sass-rails", "~> 5.0", ">= 5.0.6"
 gem "therubyracer", platforms: :ruby
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 3.5.2"
 end
 
 group :development do
   gem "rubocop"
-  gem "spring"
-  gem "spring-commands-cucumber"
-  gem "spring-commands-rspec"
-  gem "web-console", "~> 2.0"
+  gem "spring", ">= 2.0.0"
+  gem "spring-commands-cucumber", ">= 1.0.1"
+  gem "spring-commands-rspec", ">= 1.0.4"
+  gem "web-console", "~> 2.3", ">= 2.3.0"
 end
 
 group :test do
-  gem "capybara"
-  gem "cucumber-rails", require: false
+  gem "capybara", ">= 2.11.0"
+  gem "cucumber-rails", ">= 1.6.0", require: false
   gem "database_cleaner"
-  gem "poltergeist"
+  gem "poltergeist", ">= 1.12.0"
   gem "vcr", "~> 3.0"
   gem "webmock"
 end
