@@ -1,3 +1,7 @@
+# Deprecated
+
+This repository is no longer maintained. This has been superseded by National Career Service
+
 # Work you could do
 
 A tool to help people explore work they could do.
