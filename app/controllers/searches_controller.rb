@@ -11,7 +11,7 @@ class SearchesController < ApplicationController
 
   def search_for_soc_occupations(query)
     LmiForAll.new(LmiClient.new)
-             .search(query)
+             .search_cache(query)
              .map { |result| OpenStruct.new(result) }
   end
 end
